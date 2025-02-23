@@ -25,8 +25,8 @@ export default function About() {
               <span className="font-handwriting text-4xl">Mim</span>
             </h2>
             <p className=" text-justify text-lg text-gray-700">
-              Tenho {age} de idade, possuo uma vasta gama de projetos no meu
-              repositório no{" "}
+              Tenho {age} anos de idade, possuo uma vasta gama de projetos no
+              meu repositório no{" "}
               <a
                 href="https://github.com/LeonardoVieiraGuimaraes?tab=repositories"
                 target="_blank"
