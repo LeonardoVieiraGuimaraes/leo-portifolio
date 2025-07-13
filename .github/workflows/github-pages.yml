@@ -3,8 +3,16 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main
+      - gh-pages  # Mudança: só executa na branch gh-pages
   workflow_dispatch:
+    inputs:
+      deploy_target:
+        description: 'Deploy target'
+        required: true
+        default: 'github-pages'
+        type: choice
+        options:
+        - github-pages
 
 jobs:
   deploy:
