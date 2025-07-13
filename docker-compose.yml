@@ -12,7 +12,7 @@ services:
     container_name: leo-portfolio
     restart: unless-stopped
     ports:
-      - "3000:80"  # Mapeia porta local 3000 para porta 80 do container
+      - "8080:80"  # Mapeia porta local 8080 para porta 80 do container
     volumes:
       - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
     networks:
