@@ -13,6 +13,9 @@ RUN npm ci --silent
 # Copiar código fonte
 COPY . .
 
+# Limpar qualquer build anterior e forçar rebuild
+RUN rm -rf dist node_modules/.vite
+
 # Build para home server
 ENV DEPLOY_TARGET=homeserver
 RUN npm run build:homeserver
