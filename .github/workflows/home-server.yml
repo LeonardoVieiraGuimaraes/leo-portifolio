@@ -28,9 +28,7 @@ jobs:
         run: npm ci
 
       - name: 🔨 Build for Home Server
-        run: |
-          export DEPLOY_TARGET=homeserver
-          npm run build:homeserver
+        run: npm run build:homeserver:linux
 
       - name: ☁️ Setup Cloudflare
         run: |

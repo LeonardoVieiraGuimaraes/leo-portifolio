@@ -6,8 +6,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build:github": "DEPLOY_TARGET=github tsc && vite build",
-    "build:homeserver": "DEPLOY_TARGET=homeserver tsc && vite build",
+    "build:github": "cross-env DEPLOY_TARGET=github tsc && vite build",
+    "build:homeserver": "cross-env DEPLOY_TARGET=homeserver tsc && vite build",
+    "build:github:linux": "DEPLOY_TARGET=github tsc && vite build",
+    "build:homeserver:linux": "DEPLOY_TARGET=homeserver tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "predeploy": "npm run build:github",

@@ -28,9 +28,7 @@ jobs:
         run: npm ci
 
       - name: 🔨 Build for GitHub Pages
-        run: |
-          export DEPLOY_TARGET=github
-          npm run build:github
+        run: npm run build:github:linux
 
       - name: 🚀 Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3

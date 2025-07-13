@@ -5,26 +5,28 @@ import react from "@vitejs/plugin-react";
 export default defineConfig(({ command, mode }) => {
   // Determina o base path baseado no ambiente
   const deployTarget = process.env.DEPLOY_TARGET;
+  const isGitHubActions = process.env.GITHUB_ACTIONS === "true";
   
   // Log para debug
   console.log("🔧 Vite Config:");
   console.log("  DEPLOY_TARGET:", deployTarget);
-  console.log("  GITHUB_ACTIONS:", process.env.GITHUB_ACTIONS);
+  console.log("  GITHUB_ACTIONS:", isGitHubActions);
   console.log("  NODE_ENV:", process.env.NODE_ENV);
+  console.log("  Command:", command);
+  console.log("  Mode:", mode);
   
-  // Lógica mais robusta para determinar o ambiente
+  // Lógica simplificada e mais clara
   let base = "/";
   
-  if (deployTarget === "github" || process.env.GITHUB_ACTIONS === "true") {
-    base = "/leo-portifolio/";
+  // GitHub Pages: sempre que DEPLOY_TARGET=github
+  if (deployTarget === "github") {
+    base = "/leo_portifolio/";
     console.log("  📍 GitHub Pages mode: base =", base);
-  } else if (deployTarget === "homeserver" || deployTarget === "local") {
+  } 
+  // Home Server: DEPLOY_TARGET=homeserver ou qualquer outro caso
+  else {
     base = "/";
     console.log("  📍 Home Server mode: base =", base);
-  } else {
-    // Default para home server se não especificado
-    base = "/";
-    console.log("  📍 Default mode (Home Server): base =", base);
   }
   
   return {
