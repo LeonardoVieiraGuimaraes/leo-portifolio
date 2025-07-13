@@ -3,16 +3,11 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - gh-pages  # Mudança: só executa na branch gh-pages
+      - main
+    paths-ignore:
+      - 'README.md'
+      - 'comandos.txt'
   workflow_dispatch:
-    inputs:
-      deploy_target:
-        description: 'Deploy target'
-        required: true
-        default: 'github-pages'
-        type: choice
-        options:
-        - github-pages
 
 jobs:
   deploy:
@@ -30,10 +25,12 @@ jobs:
           cache: "npm"
 
       - name: 📦 Install dependencies
-        run: npm install
+        run: npm ci
 
-      - name: 🔨 Build project
-        run: npm run build:github:linux
+      - name: 🔨 Build for GitHub Pages
+        run: |
+          export DEPLOY_TARGET=github
+          npm run build:github
 
       - name: 🚀 Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3

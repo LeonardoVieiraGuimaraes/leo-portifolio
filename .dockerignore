@@ -4,7 +4,7 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Build
+# Build artifacts (não copiar builds locais)
 dist
 build
 
@@ -18,6 +18,23 @@ build
 .vscode
 .idea
 *.swp
+*.swo
+
+# Git
+.git
+.gitignore
+
+# Docker
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# Documentation
+README.md
+comandos.txt
+
+# GitHub workflows (não necessário no container)
+.github/
 *.swo
 
 # OS

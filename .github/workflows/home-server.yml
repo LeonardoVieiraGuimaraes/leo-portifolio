@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - main
+    paths-ignore:
+      - 'README.md'
+      - 'comandos.txt'
   workflow_dispatch:
 
 jobs:
@@ -22,7 +25,12 @@ jobs:
           cache: "npm"
 
       - name: 📦 Install dependencies
-        run: npm install
+        run: npm ci
+
+      - name: 🔨 Build for Home Server
+        run: |
+          export DEPLOY_TARGET=homeserver
+          npm run build:homeserver
 
       - name: ☁️ Setup Cloudflare
         run: |
@@ -42,58 +50,38 @@ jobs:
           echo "  UserKnownHostsFile /dev/null" >> ~/.ssh/config
           chmod 600 ~/.ssh/config
 
-      - name: 🔧 Test SSH connection
-        run: |
-          echo "Testing SSH connection..."
-          ssh -o ProxyCommand="cloudflared access ssh --hostname %h" \
-              -o ConnectTimeout=10 \
-              leonardovieiraxy@ssh.leoproti.com.br "echo 'SSH connection successful!'"
-
-      - name: 📁 Prepare files
-        run: |
-          mkdir -p leo-portifolio
-          cp docker-compose.yml leo-portifolio/
-          cp nginx.conf leo-portifolio/
-          cp Dockerfile leo-portifolio/
-          cp package*.json leo-portifolio/
-          cp -r src leo-portifolio/src
-          cp -r public leo-portifolio/public
-          cp tsconfig*.json leo-portifolio/
-          cp vite.config.ts leo-portifolio/
-          cp tailwind.config.js leo-portifolio/
-          cp postcss.config.js leo-portifolio/
-
-      - name: � Configure Cloudflare credentials
+      - name: 🔧 Configure Cloudflare credentials
         run: |
           mkdir -p ~/.cloudflared
           echo "${{ secrets.CLOUDFLARE_TUNNEL_TOKEN }}" > ~/.cloudflared/cert.pem
           chmod 600 ~/.cloudflared/cert.pem
 
-      - name: 🧹 Clean server directory first
+      - name: 🧹 Clean and prepare server
         run: |
           ssh -o ProxyCommand="cloudflared access ssh --hostname %h" \
               leonardovieiraxy@ssh.leoproti.com.br << 'EOF'
             # Criar pasta projetos se não existir
             mkdir -p /home/leonardovieiraxy/projetos
             
-            # Parar e remover containers existentes
+            # Parar containers se existirem
             if [ -d "/home/leonardovieiraxy/projetos/leo-portifolio" ]; then
-              echo "=== Parando containers existentes ==="
               cd /home/leonardovieiraxy/projetos/leo-portifolio
-              docker compose down --remove-orphans || true
-              docker container prune -f || true
-              docker image rm leo-portifolio_portfolio || true
-              cd /home/leonardovieiraxy/projetos
-              
-              echo "=== Removendo pasta antiga ==="
-              rm -rf leo-portifolio
+              docker compose down || true
             fi
           EOF
 
-      - name: 📤 Transfer files
+      - name: 📤 Transfer project files
         run: |
+          # Criar pasta temporária com arquivos necessários
+          mkdir -p temp-deploy
+          cp docker-compose.yml temp-deploy/
+          cp Dockerfile temp-deploy/
+          cp nginx.conf temp-deploy/
+          cp -r dist temp-deploy/
+          
+          # Transferir arquivos
           scp -o ProxyCommand="cloudflared access ssh --hostname %h" \
-              -r leo-portifolio leonardovieiraxy@ssh.leoproti.com.br:/home/leonardovieiraxy/projetos/
+              -r temp-deploy/* leonardovieiraxy@ssh.leoproti.com.br:/home/leonardovieiraxy/projetos/leo-portifolio/
 
       - name: 🚀 Deploy on server
         run: |
@@ -101,24 +89,12 @@ jobs:
               leonardovieiraxy@ssh.leoproti.com.br << 'EOF'
             cd /home/leonardovieiraxy/projetos/leo-portifolio
             
-            # Debug: verificar arquivos
-            echo "=== Arquivos na pasta ==="
-            ls -la
-            
-            # Build e start com logs detalhados (sem limpeza adicional)
-            echo "=== Fazendo build ==="
-            docker compose build --no-cache --pull
-            
-            echo "=== Iniciando containers ==="
+            # Build e start do container
+            docker compose build --no-cache
             docker compose up -d
             
             # Verificar status
-            echo "=== Status dos containers ==="
             docker compose ps
-            
-            # Mostrar logs se houver erro
-            echo "=== Logs dos containers ==="
-            docker compose logs
             
             # Limpeza
             docker system prune -f
