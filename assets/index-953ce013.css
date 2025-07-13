@@ -943,7 +943,7 @@ video {
   background-image: linear-gradient(to top right, var(--tw-gradient-stops));
 }
 .bg-profile {
-  background-image: url('/leo-portifolio/images/fotoPerfil.jpg');
+  background-image: url('/images/fotoPerfil.jpg');
 }
 .from-gray-700 {
   --tw-gradient-from: #374151 var(--tw-gradient-from-position);
