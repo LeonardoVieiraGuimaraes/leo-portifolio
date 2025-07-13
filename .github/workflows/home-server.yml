@@ -38,8 +38,21 @@ jobs:
           echo "${{ secrets.HOME_SERVER_SSH_KEY }}" > ~/.ssh/id_ed25519
           chmod 600 ~/.ssh/id_ed25519
           ssh-keyscan -H ssh.leoproti.com.br >> ~/.ssh/known_hosts
+          
+          # Debug: verificar se a chave foi criada corretamente
+          ls -la ~/.ssh/
+          file ~/.ssh/id_ed25519
+          ssh-keygen -l -f ~/.ssh/id_ed25519
 
-      - name: 📁 Prepare files
+      - name: � Test SSH connection
+        run: |
+          echo "Testing SSH connection..."
+          ssh -o ProxyCommand="cloudflared access ssh --hostname %h" \
+              -o ConnectTimeout=10 \
+              -o StrictHostKeyChecking=no \
+              leonardovieiraxy@ssh.leoproti.com.br "echo 'SSH connection successful!'"
+
+      - name: �📁 Prepare files
         run: |
           mkdir -p leo-portifolio
           cp docker-compose.yml leo-portifolio/
