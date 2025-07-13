@@ -83,17 +83,16 @@ jobs:
             echo "=== Arquivos na pasta ==="
             ls -la
             
-            # Debug: verificar se Dockerfile existe
-            echo "=== Verificando Dockerfile ==="
-            ls -la Dockerfile || echo "Dockerfile não encontrado!"
-            
-            # Parar containers antigos
-            echo "=== Parando containers antigos ==="
-            docker compose down
+            # Limpar tudo relacionado ao projeto
+            echo "=== Limpando containers e imagens antigas ==="
+            docker compose down --remove-orphans || true
+            docker container prune -f
+            docker image rm leo-portifolio_portfolio || true
+            docker image prune -f
             
             # Build e start com logs detalhados
             echo "=== Fazendo build ==="
-            docker compose build --no-cache
+            docker compose build --no-cache --pull
             
             echo "=== Iniciando containers ==="
             docker compose up -d
