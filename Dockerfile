@@ -18,7 +18,7 @@ RUN rm -rf dist node_modules/.vite
 
 # Build para home server
 ENV DEPLOY_TARGET=homeserver
-RUN npm run build:homeserver
+RUN npm run build:homeserver:linux
 
 # Verificar se build está correto
 RUN echo "Verificando build..." && \

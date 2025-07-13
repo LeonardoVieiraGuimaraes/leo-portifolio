@@ -11,6 +11,8 @@
     "build:homeserver": "cross-env DEPLOY_TARGET=homeserver npm run build",
     "build:local": "cross-env DEPLOY_TARGET=local npm run build",
     "build:clean": "rm -rf dist && npm run build:homeserver",
+    "build:github:linux": "DEPLOY_TARGET=github tsc && vite build",
+    "build:homeserver:linux": "DEPLOY_TARGET=homeserver tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "preview:homeserver": "cross-env DEPLOY_TARGET=homeserver vite preview",
