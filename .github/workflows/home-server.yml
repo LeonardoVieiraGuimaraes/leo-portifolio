@@ -1,0 +1,76 @@
+name: Deploy to Home Server
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    name: 🏠 Deploy to Home Server
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: 🚚 Checkout code
+        uses: actions/checkout@v3
+
+      - name: ⚙️ Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+          cache: "npm"
+
+      - name: 📦 Install dependencies
+        run: npm install
+
+      - name: 🔨 Build project
+        run: npm run build:homeserver
+
+      - name: ☁️ Setup Cloudflare
+        run: |
+          wget -q https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb
+          sudo dpkg -i cloudflared-linux-amd64.deb
+
+      - name: 🔑 Setup SSH key
+        uses: webfactory/ssh-agent@v0.7.0
+        with:
+          ssh-private-key: ${{ secrets.HOME_SERVER_SSH_KEY }}
+
+      - name: 🔐 Configure SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "Host ssh.leoproti.com.br" >> ~/.ssh/config
+          echo "  StrictHostKeyChecking no" >> ~/.ssh/config
+          echo "  UserKnownHostsFile /dev/null" >> ~/.ssh/config
+          chmod 600 ~/.ssh/config
+
+      - name: 🔧 Test SSH connection
+        run: |
+          echo "Testing SSH connection..."
+          ssh -o ProxyCommand="cloudflared access ssh --hostname %h" \
+              -o ConnectTimeout=10 \
+              leonardovieiraxy@ssh.leoproti.com.br "echo 'SSH connection successful!'"
+
+      - name: 📁 Prepare files
+        run: |
+          mkdir -p leo-portifolio
+          cp docker-compose.yml leo-portifolio/
+          cp nginx.conf leo-portifolio/
+          cp -r dist leo-portifolio/dist
+
+      - name: 📤 Transfer files
+        run: |
+          echo "${{ secrets.CLOUDFLARE_TUNNEL_TOKEN }}" | cloudflared tunnel login
+          scp -o ProxyCommand="cloudflared access ssh --hostname %h" \
+              -r leo-portifolio leonardovieiraxy@ssh.leoproti.com.br:/home/leonardovieiraxy/
+
+      - name: 🚀 Deploy on server
+        run: |
+          ssh -o ProxyCommand="cloudflared access ssh --hostname %h" \
+              leonardovieiraxy@ssh.leoproti.com.br << 'EOF'
+            cd /home/leonardovieiraxy/leo-portifolio
+            docker compose down
+            docker compose up -d --build
+            docker system prune -f
+          EOF
