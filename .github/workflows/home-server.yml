@@ -59,17 +59,24 @@ jobs:
           cp nginx.conf leo-portifolio/
           cp -r dist leo-portifolio/dist
 
+      - name: � Configure Cloudflare credentials
+        run: |
+          mkdir -p ~/.cloudflared
+          echo "${{ secrets.CLOUDFLARE_TUNNEL_TOKEN }}" > ~/.cloudflared/cert.pem
+          chmod 600 ~/.cloudflared/cert.pem
+
       - name: 📤 Transfer files
         run: |
-          echo "${{ secrets.CLOUDFLARE_TUNNEL_TOKEN }}" | cloudflared tunnel login
           scp -o ProxyCommand="cloudflared access ssh --hostname %h" \
-              -r leo-portifolio leonardovieiraxy@ssh.leoproti.com.br:/home/leonardovieiraxy/
+              -r leo-portifolio leonardovieiraxy@ssh.leoproti.com.br:/home/leonardovieiraxy/projetos/
 
       - name: 🚀 Deploy on server
         run: |
           ssh -o ProxyCommand="cloudflared access ssh --hostname %h" \
               leonardovieiraxy@ssh.leoproti.com.br << 'EOF'
-            cd /home/leonardovieiraxy/leo-portifolio
+            # Criar pasta projetos se não existir
+            mkdir -p /home/leonardovieiraxy/projetos
+            cd /home/leonardovieiraxy/projetos/leo-portifolio
             docker compose down
             docker compose up -d --build
             docker system prune -f
