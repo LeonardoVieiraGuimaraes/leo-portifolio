@@ -9,10 +9,18 @@
     "build": "tsc && vite build",
     "build:github": "cross-env DEPLOY_TARGET=github npm run build",
     "build:homeserver": "cross-env DEPLOY_TARGET=homeserver npm run build",
+    "build:local": "cross-env DEPLOY_TARGET=local npm run build",
+    "build:clean": "rm -rf dist && npm run build:homeserver",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
+    "preview:homeserver": "cross-env DEPLOY_TARGET=homeserver vite preview",
     "predeploy": "npm run build:github",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "docker:build": "npm run build:homeserver && docker compose build",
+    "docker:up": "docker compose up -d",
+    "docker:down": "docker compose down",
+    "docker:restart": "npm run docker:down && npm run docker:build && npm run docker:up",
+    "docker:logs": "docker compose logs -f portfolio"
   },
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
@@ -37,6 +45,7 @@
     "gh-pages": "^6.0.0",
     "postcss": "^8.4.31",
     "tailwindcss": "^3.3.5",
+    "terser": "^5.43.1",
     "typescript": "^5.0.2",
     "vite": "^4.4.5"
   }
