@@ -8,7 +8,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "build:github": "cross-env DEPLOY_TARGET=github npm run build",
-    "build:hostinger": "cross-env DEPLOY_TARGET=hostinger npm run build",
+    "build:homeserver": "cross-env DEPLOY_TARGET=homeserver npm run build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "predeploy": "npm run build:github",

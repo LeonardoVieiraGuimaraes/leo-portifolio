@@ -1,0 +1,76 @@
+name: Deploy to Home Server
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Target environment'
+        required: true
+        default: 'homeserver'
+        type: choice
+        options:
+          - homeserver
+          - github
+
+jobs:
+  web-deploy:
+    name: � Deploy to Home Server
+    runs-on: ubuntu-latest
+    if: github.event.inputs.environment == 'homeserver' || github.event.inputs.environment == ''
+    
+    steps:
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v3
+
+      - name: Set up Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build for Home Server
+        run: npm run build:homeserver
+        env:
+          DEPLOY_TARGET: homeserver
+
+      - name: Setup Cloudflare
+        run: |
+          # Download cloudflared
+          wget -q https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb
+          sudo dpkg -i cloudflared-linux-amd64.deb
+
+      - name: Prepare SSH key
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.HOME_SERVER_SSH_KEY }}" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          ssh-keyscan -H ssh.leoproti.com.br >> ~/.ssh/known_hosts
+
+      - name: Prepare files for transfer
+        run: |
+          mkdir -p leo-portifolio
+          cp docker-compose.yml leo-portifolio/
+          cp nginx.conf leo-portifolio/
+          cp -r dist leo-portifolio/dist
+
+      - name: Transfer files via Cloudflare Tunnel
+        run: |
+          # Authenticate with Cloudflare
+          echo "${{ secrets.CLOUDFLARE_TUNNEL_TOKEN }}" | cloudflared tunnel login
+          
+          # Copy files using SCP through Cloudflare tunnel
+          scp -o ProxyCommand="cloudflared access ssh --hostname %h" \
+              -r leo-portifolio leonardovieiraxy@ssh.leoproti.com.br:/home/leonardovieiraxy/
+
+      - name: Deploy on Home Server
+        run: |
+          ssh -o ProxyCommand="cloudflared access ssh --hostname %h" \
+              leonardovieiraxy@ssh.leoproti.com.br << 'EOF'
+            cd /home/leonardovieiraxy/leo-portifolio
+            docker compose down
+            docker compose up -d --build
+            docker system prune -f
+          EOF
