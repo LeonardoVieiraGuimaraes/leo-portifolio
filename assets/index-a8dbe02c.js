@@ -7944,8 +7944,8 @@ function Contact() {
     },
     {
       name: "Email",
-      description: "leonardovieiraxy@hotmail.com",
-      link: "mailto:leonardovieiraxy@hotmail.com?subject=Olá...",
+      description: "leonardovieiraxy@leoproti.com.br",
+      link: "mailto:leonardovieiraxy@leoproti.com.br?subject=Contato%20via%20Portfólio",
       icon: /* @__PURE__ */ jsxRuntimeExports.jsx(HiOutlineEnvelope, { className: "h-10 w-10" })
     },
     {
