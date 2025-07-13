@@ -32,17 +32,14 @@ jobs:
           wget -q https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb
           sudo dpkg -i cloudflared-linux-amd64.deb
 
-      - name: 🔑 Prepare SSH key
+      - name: 🔑 Setup SSH key
+        uses: webfactory/ssh-agent@v0.7.0
+        with:
+          ssh-private-key: ${{ secrets.HOME_SERVER_SSH_KEY }}
+
+      - name: 🔐 Add server to known hosts
         run: |
-          mkdir -p ~/.ssh
-          echo "${{ secrets.HOME_SERVER_SSH_KEY }}" > ~/.ssh/id_ed25519
-          chmod 600 ~/.ssh/id_ed25519
           ssh-keyscan -H ssh.leoproti.com.br >> ~/.ssh/known_hosts
-          
-          # Debug: verificar se a chave foi criada corretamente
-          ls -la ~/.ssh/
-          file ~/.ssh/id_ed25519
-          ssh-keygen -l -f ~/.ssh/id_ed25519
 
       - name: � Test SSH connection
         run: |
