@@ -63,11 +63,17 @@ jobs:
             # Criar pasta projetos se não existir
             mkdir -p /home/leonardovieiraxy/projetos
             
-            # Parar containers se existirem
+            # Parar e remover containers/pasta existentes
             if [ -d "/home/leonardovieiraxy/projetos/leo-portifolio" ]; then
               cd /home/leonardovieiraxy/projetos/leo-portifolio
               docker compose down || true
+              cd ..
+              rm -rf leo-portifolio
             fi
+            
+            # Criar nova pasta com permissões corretas
+            mkdir -p /home/leonardovieiraxy/projetos/leo-portifolio
+            chmod 755 /home/leonardovieiraxy/projetos/leo-portifolio
           EOF
 
       - name: 📤 Transfer project files
@@ -79,9 +85,11 @@ jobs:
           cp nginx.conf temp-deploy/
           cp -r dist temp-deploy/
           
-          # Transferir arquivos
-          scp -o ProxyCommand="cloudflared access ssh --hostname %h" \
-              -r temp-deploy/* leonardovieiraxy@ssh.leoproti.com.br:/home/leonardovieiraxy/projetos/leo-portifolio/
+          # Transferir arquivos usando rsync (mais robusto que scp)
+          rsync -avz --delete \
+                -e "ssh -o ProxyCommand='cloudflared access ssh --hostname %h'" \
+                temp-deploy/ \
+                leonardovieiraxy@ssh.leoproti.com.br:/home/leonardovieiraxy/projetos/leo-portifolio/
 
       - name: 🚀 Deploy on server
         run: |
@@ -89,12 +97,27 @@ jobs:
               leonardovieiraxy@ssh.leoproti.com.br << 'EOF'
             cd /home/leonardovieiraxy/projetos/leo-portifolio
             
+            # Debug: verificar arquivos transferidos
+            echo "=== Arquivos na pasta ==="
+            ls -la
+            echo "=== Arquivos dist ==="
+            ls -la dist/ | head -5
+            
             # Build e start do container
+            echo "=== Building container ==="
             docker compose build --no-cache
+            
+            echo "=== Starting container ==="
             docker compose up -d
             
             # Verificar status
+            echo "=== Container status ==="
             docker compose ps
+            
+            # Teste básico
+            echo "=== Testing site ==="
+            sleep 5
+            curl -I http://localhost:8080 || echo "Site não respondeu"
             
             # Limpeza
             docker system prune -f
