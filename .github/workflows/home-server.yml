@@ -57,6 +57,7 @@ jobs:
           mkdir -p leo-portifolio
           cp docker-compose.yml leo-portifolio/
           cp nginx.conf leo-portifolio/
+          cp Dockerfile leo-portifolio/
           cp -r dist leo-portifolio/dist
 
       - name: � Configure Cloudflare credentials
@@ -77,7 +78,34 @@ jobs:
             # Criar pasta projetos se não existir
             mkdir -p /home/leonardovieiraxy/projetos
             cd /home/leonardovieiraxy/projetos/leo-portifolio
+            
+            # Debug: verificar arquivos
+            echo "=== Arquivos na pasta ==="
+            ls -la
+            
+            # Debug: verificar se Dockerfile existe
+            echo "=== Verificando Dockerfile ==="
+            ls -la Dockerfile || echo "Dockerfile não encontrado!"
+            
+            # Parar containers antigos
+            echo "=== Parando containers antigos ==="
             docker compose down
-            docker compose up -d --build
+            
+            # Build e start com logs detalhados
+            echo "=== Fazendo build ==="
+            docker compose build --no-cache
+            
+            echo "=== Iniciando containers ==="
+            docker compose up -d
+            
+            # Verificar status
+            echo "=== Status dos containers ==="
+            docker compose ps
+            
+            # Mostrar logs se houver erro
+            echo "=== Logs dos containers ==="
+            docker compose logs
+            
+            # Limpeza
             docker system prune -f
           EOF
