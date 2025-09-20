@@ -48,11 +48,11 @@ jobs:
           echo "  UserKnownHostsFile /dev/null" >> ~/.ssh/config
           chmod 600 ~/.ssh/config
 
-      - name: 🔧 Configure Cloudflare credentials
-        run: |
-          mkdir -p ~/.cloudflared
-          echo "${{ secrets.CLOUDFLARE_TUNNEL_TOKEN }}" > ~/.cloudflared/cert.pem
-          chmod 600 ~/.cloudflared/cert.pem
+      # - name: 🔧 Configure Cloudflare credentials
+      #   run: |
+      #     mkdir -p ~/.cloudflared
+      #     echo "${{ secrets.CLOUDFLARE_TUNNEL_TOKEN }}" > ~/.cloudflared/cert.pem
+      #     chmod 600 ~/.cloudflared/cert.pem
 
       - name: 🧹 Clean and prepare server
         run: |
