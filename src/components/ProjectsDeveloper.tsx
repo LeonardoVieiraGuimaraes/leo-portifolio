@@ -42,7 +42,7 @@ export default function ProjectsDeveloper() {
           </h2>
           <p className="relative text-lg text-white">
             Ao longo da minha carreira como desenvolvedor front-end e back-end,
-            realizei diversos projetos significativos. Aqui estão alguns deles:
+            realizei diversos projetos relevantes. Veja alguns exemplos:
           </p>
           {/* <div className="absolute left-1/2 top-3 z-0 h-10 w-10 rounded-lg bg-blue-400/10" /> */}
         </div>

@@ -55,7 +55,7 @@ export default function Contact() {
     },
     {
       name: "São Francisco",
-      description: "Minas Geraisl - Brasil",
+      description: "Minas Gerais - Brasil",
       link: "https://maps.app.goo.gl/J8GYMwibv7pjR8HE7",
       icon: <HiOutlineMapPin className="h-10 w-10" />,
     },
@@ -72,8 +72,7 @@ export default function Contact() {
             <span className="font-handwriting text-4xl">Comigo</span>
           </h2>
           <p className="text-sm">
-            Entre em contato por formulário ou WhatsApp, com certeza irei poder
-            te ajudar.
+            Entre em contato pelo formulário ou WhatsApp. Terei prazer em ajudar você!
           </p>
         </div>
 
