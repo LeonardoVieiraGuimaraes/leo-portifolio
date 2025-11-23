@@ -40,22 +40,7 @@ export default function About() {
               Doutorando em Modelagem Matemática e Computacional no CEFET em Belo Horizonte, minha
               expertise também abrange especialização em Matemática e
               Estatística. Graduei-me em Engenharia de Computação e Matemática,
-              desempenhando o papel de Professor de Ensino Superior, lecionando
-              disciplinas como Arquitetura Web, Programação Web, Banco de Dados, 
-              Matemática Financeira, Probabilidade, Tecnologia
-              da Informação e Gestão de Finanças. Além disso, atuo na Cidade 
-              Administrativa de Belo Horizonte no NIM (Núcleo de Inovação e Modernização), 
-              desenvolvendo projetos de TI e prestando suporte no sistema de 
-              gestão agropecuária do IMA, demonstrando minha versatilidade 
-              profissional. Ao longo da minha carreira, participei ativamente e 
-              continuo colaborando com
-              instituições de renome como IFNMG, UNIASSELVI e FADENORTE,
-              agregando experiência e conhecimento diversificado. Destaco meu
-              compromisso com o aprendizado contínuo, evidenciado pela
-              participação em cursos complementares e eventos acadêmicos. Sou um
-              profissional maduro, dedicado à aplicação prática do conhecimento
-              adquirido, e permaneço aberto a novos desafios e aprendizados que
-              contribuam para o meu constante desenvolvimento profissional.
+              atuando como Professor de Ensino Superior e lecionando disciplinas como Arquitetura Web, Programação Web, Banco de Dados, Matemática Financeira, Probabilidade, Tecnologia da Informação e Gestão de Finanças. Também atuo na Cidade Administrativa de Belo Horizonte, no NIM (Núcleo de Inovação e Modernização), desenvolvendo projetos de TI e prestando suporte ao sistema de gestão agropecuária do IMA, o que demonstra minha versatilidade profissional. Ao longo da carreira, participei ativamente e continuo colaborando com instituições de renome como IFNMG, UNIASSELVI e FADENORTE, agregando experiência e conhecimento diversificados. Destaco meu compromisso com o aprendizado contínuo, evidenciado pela participação em cursos complementares e eventos acadêmicos. Sou um profissional dedicado à aplicação prática do conhecimento adquirido e estou sempre aberto a novos desafios e aprendizados que contribuam para meu constante desenvolvimento profissional.
             </p>
           </div>
           <div className="flex flex-row">
