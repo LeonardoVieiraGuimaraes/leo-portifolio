@@ -8354,7 +8354,7 @@ function Hero() {
           /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "h-1 w-12 rounded-full bg-blue-800" }),
           "Professor e Desenvolvedor Front-end e Back-end"
         ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-gray-100 my-6 text-justify", children: "Desenvolvedor web apaixonado por código, com formação em Matemática e Engenharia da Computação. Atuo como professor de ensino superior e desenvolvedor de soluções tecnológicas, criando projetos inovadores na interseção da matemática, tecnologia e educação." }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-gray-100 my-6 text-justify", children: "Desenvolvedor web com formação em Matemática e Engenharia da Computação, Mestre em Modelagem Computacional e Doutorando em Modelagem Matemática e Computacional. Atuo como professor de ensino superior e desenvolvedor de soluções tecnológicas, criando projetos inovadores na interseção da matemática, tecnologia e educação." }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex items-center justify-center md:justify-start gap-2", children: /* @__PURE__ */ jsxRuntimeExports.jsxs(
           "a",
           {
