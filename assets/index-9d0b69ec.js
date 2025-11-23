@@ -7668,7 +7668,7 @@ function About() {
             children: "GitHub"
           }
         ),
-        ", conto com uma sólida formação acadêmica e ampla experiência. Mestre em Modelagem Computacional e Sistemas pela UNIMONTES e atualmente Doutorando em Modelagem Matemática e Computacional no CEFET em Belo Horizonte, minha expertise também abrange especialização em Matemática e Estatística. Graduei-me em Engenharia de Computação e Matemática, desempenhando o papel de Professor de Ensino Superior, lecionando disciplinas como Arquitetura Web, Programação Web, Banco de Dados, Matemática Financeira, Probabilidade, Tecnologia da Informação e Gestão de Finanças. Além disso, atuo na Cidade Administrativa de Belo Horizonte no NIM (Núcleo de Inovação e Modernização), desenvolvendo projetos de TI e prestando suporte no sistema de gestão agropecuária do IMA, demonstrando minha versatilidade profissional. Ao longo da minha carreira, participei ativamente e continuo colaborando com instituições de renome como IFNMG, UNIASSELVI e FADENORTE, agregando experiência e conhecimento diversificado. Destaco meu compromisso com o aprendizado contínuo, evidenciado pela participação em cursos complementares e eventos acadêmicos. Sou um profissional maduro, dedicado à aplicação prática do conhecimento adquirido, e permaneço aberto a novos desafios e aprendizados que contribuam para o meu constante desenvolvimento profissional."
+        ", conto com uma sólida formação acadêmica e ampla experiência. Mestre em Modelagem Computacional e Sistemas pela UNIMONTES e atualmente Doutorando em Modelagem Matemática e Computacional no CEFET em Belo Horizonte, minha expertise também abrange especialização em Matemática e Estatística. Graduei-me em Engenharia de Computação e Matemática, atuando como Professor de Ensino Superior e lecionando disciplinas como Arquitetura Web, Programação Web, Banco de Dados, Matemática Financeira, Probabilidade, Tecnologia da Informação e Gestão de Finanças. Também atuo na Cidade Administrativa de Belo Horizonte, no NIM (Núcleo de Inovação e Modernização), desenvolvendo projetos de TI e prestando suporte ao sistema de gestão agropecuária do IMA, o que demonstra minha versatilidade profissional. Ao longo da carreira, participei ativamente e continuo colaborando com instituições de renome como IFNMG, UNIASSELVI e FADENORTE, agregando experiência e conhecimento diversificados. Destaco meu compromisso com o aprendizado contínuo, evidenciado pela participação em cursos complementares e eventos acadêmicos. Sou um profissional dedicado à aplicação prática do conhecimento adquirido e estou sempre aberto a novos desafios e aprendizados que contribuam para meu constante desenvolvimento profissional."
       ] })
     ] }),
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-row", children: [
@@ -7950,7 +7950,7 @@ function Contact() {
     },
     {
       name: "São Francisco",
-      description: "Minas Geraisl - Brasil",
+      description: "Minas Gerais - Brasil",
       link: "https://maps.app.goo.gl/J8GYMwibv7pjR8HE7",
       icon: /* @__PURE__ */ jsxRuntimeExports.jsx(HiOutlineMapPin, { className: "h-10 w-10" })
     }
@@ -7961,7 +7961,7 @@ function Contact() {
         /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "mr-2 font-headline text-3xl font-semibold", children: "Fale" }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-handwriting text-4xl", children: "Comigo" })
       ] }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm", children: "Entre em contato por formulário ou WhatsApp, com certeza irei poder te ajudar." })
+      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm", children: "Entre em contato pelo formulário ou WhatsApp. Terei prazer em ajudar você!" })
     ] }),
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col gap-6 md:flex-row", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "basis-2/3", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("form", { ref: form, onSubmit: sendEmail, children: [
@@ -8408,7 +8408,7 @@ function ProjectsDeveloper() {
               /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "mr-2 font-headline text-3xl font-semibold z-40", children: "Projetos" }),
               /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-handwriting text-4xl", children: "Desenvolvimento de Sistemas" })
             ] }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "relative text-lg text-white", children: "Ao longo da minha carreira como desenvolvedor front-end e back-end, realizei diversos projetos significativos. Aqui estão alguns deles:" })
+            /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "relative text-lg text-white", children: "Ao longo da minha carreira como desenvolvedor front-end e back-end, realizei diversos projetos relevantes. Veja alguns exemplos:" })
           ] }),
           /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid grid-cols-2 mt-5 mb-5 gap-4 md:grid-cols-3", children: projects.map((project, index2) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
             "div",
