@@ -8354,7 +8354,7 @@ function Hero() {
           /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "h-1 w-12 rounded-full bg-blue-800" }),
           "Professor e Desenvolvedor Front-end e Back-end"
         ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-gray-100 my-6 text-justify", children: "Desenvolvedor web apaixonado por código, graduado em Matemática e Engenharia da Computação, com mestrado em Modelagem Computacional e doutorando em Modelagem Matemática e Computacional no CEFET-BH. Compartilho meu conhecimento como professor de ensino superior, lecionando Arquitetura Web, Programação Web e Banco de Dados, enquanto desenvolvo projetos de TI no NIM da Cidade Administrativa de Belo Horizonte." }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-gray-100 my-6 text-justify", children: "Desenvolvedor web apaixonado por código, com formação em Matemática e Engenharia da Computação. Atuo como professor de ensino superior e desenvolvedor de soluções tecnológicas, criando projetos inovadores na interseção da matemática, tecnologia e educação." }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex items-center justify-center md:justify-start gap-2", children: /* @__PURE__ */ jsxRuntimeExports.jsxs(
           "a",
           {
