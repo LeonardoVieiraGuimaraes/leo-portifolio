@@ -9,20 +9,20 @@ export default function ProjectsDeveloper() {
       link: "https://sae.leoproti.com.br/",
       colSpan: "col-span-1",
     },
-    {
-      title: "Sistema Atendimento ao Paciente",
-      description: "Projeto Desenvolvido em Dajngo",
-      image: "/images/projects/developer/projetoEnfermagem02.png",
-      link: "https://enfermagem.leoproti.com.br/",
-      colSpan: "col-span-1",
-    },
-    {
-      title: "Primeiro Portfólio",
-      description: "Portfólio desenvolvido em HTML, CSS e JavaScript",
-      image: "/images/projects/developer/portifoliov1.png",
-      link: "https://portifoliov1.leoproti.com.br/",
-      colSpan: "col-span-1",
-    },
+    // {
+    //   title: "Sistema Atendimento ao Paciente",
+    //   description: "Projeto Desenvolvido em Dajngo",
+    //   image: "/images/projects/developer/projetoEnfermagem02.png",
+    //   link: "https://enfermagem.leoproti.com.br/",
+    //   colSpan: "col-span-1",
+    // },
+    // {
+    //   title: "Primeiro Portfólio",
+    //   description: "Portfólio desenvolvido em HTML, CSS e JavaScript",
+    //   image: "/images/projects/developer/portifoliov1.png",
+    //   link: "https://portifoliov1.leoproti.com.br/",
+    //   colSpan: "col-span-1",
+    // },
   ];
 
   return (
