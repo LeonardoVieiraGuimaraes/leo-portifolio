@@ -8399,7 +8399,7 @@ function ProjectsDeveloper() {
   return /* @__PURE__ */ jsxRuntimeExports.jsxs(
     "section",
     {
-      className: "bg-gradient-to-tr to-blue-600 from-gray-900 text-white",
+      className: "bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 text-white",
       id: "projectsDeveloper",
       children: [
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container mx-auto max-w-6xl p-4 py-8", children: [
@@ -8423,7 +8423,7 @@ function ProjectsDeveloper() {
                     alt: ""
                   }
                 ),
-                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "absolute inset-0 flex h-full w-full flex-col items-center justify-center rounded-lg bg-blue-600 text-white opacity-0 transition-opacity group-hover:opacity-70" }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "absolute inset-0 flex h-full w-full flex-col items-center justify-center rounded-lg bg-gradient-to-br from-blue-600 to-indigo-700 text-white opacity-0 transition-opacity group-hover:opacity-90" }),
                 /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "absolute inset-0 flex h-full w-full flex-col items-center justify-center rounded-lg text-white opacity-0 transition-opacity group-hover:opacity-100", children: [
                   /* @__PURE__ */ jsxRuntimeExports.jsx("h4", { className: "font-headline text-lg text-center font-semibold ", children: project.title }),
                   /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "p-4 text-center", children: project.description }),
@@ -8431,7 +8431,7 @@ function ProjectsDeveloper() {
                     "button",
                     {
                       onClick: () => window.open(project.link, "_blank"),
-                      className: "flex items-center justify-center px-4 py-2 bg-white text-gray-700 rounded shadow hover:bg-gray-200",
+                      className: "flex items-center justify-center gap-2 px-6 py-3 bg-white text-blue-600 font-semibold rounded-lg shadow-lg hover:bg-blue-50 hover:scale-105 transition-all duration-300",
                       children: [
                         /* @__PURE__ */ jsxRuntimeExports.jsx(HiArrowTopRightOnSquare, { className: "h-6 w-6" }),
                         " Ver Aulas"
@@ -8444,7 +8444,7 @@ function ProjectsDeveloper() {
             index2
           )) })
         ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute right-0 -mt-[6px] h-3 w-48 rounded-l-full bg-gradient-to-r from-gray-700 to-gray-600 md:w-96" })
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute right-0 -mt-[6px] h-3 w-48 rounded-l-full bg-gradient-to-r from-blue-600 to-indigo-600 md:w-96" })
       ]
     }
   );
