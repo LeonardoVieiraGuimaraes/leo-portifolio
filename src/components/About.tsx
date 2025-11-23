@@ -37,16 +37,18 @@ export default function About() {
               </a>
               , conto com uma sólida formação acadêmica e ampla experiência.
               Mestre em Modelagem Computacional e Sistemas pela UNIMONTES e atualmente 
-              Doutorando em Modelagem Matemática e Computacional no CEFET-BH, minha
+              Doutorando em Modelagem Matemática e Computacional no CEFET em Belo Horizonte, minha
               expertise também abrange especialização em Matemática e
               Estatística. Graduei-me em Engenharia de Computação e Matemática,
               desempenhando o papel de Professor de Ensino Superior, lecionando
               disciplinas como Arquitetura Web, Programação Web, Banco de Dados, 
               Matemática Financeira, Probabilidade, Tecnologia
-              da Informação e Gestão de Finanças. Além disso, contribuo na área
-              administrativa como Assistente em Gestão de Defesa Agropecuária no
-              IMA, demonstrando minha versatilidade profissional. Ao longo da
-              minha carreira, participei ativamente e continuo colaborando com
+              da Informação e Gestão de Finanças. Além disso, atuo na Cidade 
+              Administrativa de Belo Horizonte no NIM (Núcleo de Inovação e Modernização), 
+              desenvolvendo projetos de TI e prestando suporte no sistema de 
+              gestão agropecuária do IMA, demonstrando minha versatilidade 
+              profissional. Ao longo da minha carreira, participei ativamente e 
+              continuo colaborando com
               instituições de renome como IFNMG, UNIASSELVI e FADENORTE,
               agregando experiência e conhecimento diversificado. Destaco meu
               compromisso com o aprendizado contínuo, evidenciado pela
