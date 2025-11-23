@@ -8354,7 +8354,7 @@ function Hero() {
           /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "h-1 w-12 rounded-full bg-blue-800" }),
           "Professor e Desenvolvedor Front-end e Back-end"
         ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-gray-100 my-6 text-justify", children: "Desenvolvedor web apaixonado por código, graduado em Matemática e Engenharia da Computação, com mestrado em Modelagem Computacional. Compartilho meu conhecimento como professor de ensino superior, enquanto continuo a criar soluções inovadoras na interseção da matemática e da tecnologia." }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-gray-100 my-6 text-justify", children: "Desenvolvedor web apaixonado por código, graduado em Matemática e Engenharia da Computação, com mestrado em Modelagem Computacional e doutorando em Modelagem Matemática e Computacional no CEFET-BH. Compartilho meu conhecimento como professor de ensino superior, lecionando Arquitetura Web, Programação Web e Banco de Dados, enquanto desenvolvo projetos de TI no NIM da Cidade Administrativa de Belo Horizonte." }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex items-center justify-center md:justify-start gap-2", children: /* @__PURE__ */ jsxRuntimeExports.jsxs(
           "a",
           {
@@ -8380,21 +8380,21 @@ function ProjectsDeveloper() {
       image: "/images/projects/developer/projetoEnfermagem01.png",
       link: "https://sae.leoproti.com.br/",
       colSpan: "col-span-1"
-    },
-    {
-      title: "Sistema Atendimento ao Paciente",
-      description: "Projeto Desenvolvido em Dajngo",
-      image: "/images/projects/developer/projetoEnfermagem02.png",
-      link: "https://enfermagem.leoproti.com.br/",
-      colSpan: "col-span-1"
-    },
-    {
-      title: "Primeiro Portfólio",
-      description: "Portfólio desenvolvido em HTML, CSS e JavaScript",
-      image: "/images/projects/developer/portifoliov1.png",
-      link: "https://portifoliov1.leoproti.com.br/",
-      colSpan: "col-span-1"
     }
+    // {
+    //   title: "Sistema Atendimento ao Paciente",
+    //   description: "Projeto Desenvolvido em Dajngo",
+    //   image: "/images/projects/developer/projetoEnfermagem02.png",
+    //   link: "https://enfermagem.leoproti.com.br/",
+    //   colSpan: "col-span-1",
+    // },
+    // {
+    //   title: "Primeiro Portfólio",
+    //   description: "Portfólio desenvolvido em HTML, CSS e JavaScript",
+    //   image: "/images/projects/developer/portifoliov1.png",
+    //   link: "https://portifoliov1.leoproti.com.br/",
+    //   colSpan: "col-span-1",
+    // },
   ];
   return /* @__PURE__ */ jsxRuntimeExports.jsxs(
     "section",
