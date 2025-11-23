@@ -27,7 +27,7 @@ export default function ProjectsDeveloper() {
 
   return (
     <section
-      className="bg-gradient-to-tr to-blue-600 from-gray-900 text-white"
+      className="bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 text-white"
       id="projectsDeveloper"
     >
       <div className="container mx-auto max-w-6xl p-4 py-8">
@@ -59,7 +59,7 @@ export default function ProjectsDeveloper() {
                 alt=""
               />
 
-              <span className="absolute inset-0 flex h-full w-full flex-col items-center justify-center rounded-lg bg-blue-600 text-white opacity-0 transition-opacity group-hover:opacity-70"></span>
+              <span className="absolute inset-0 flex h-full w-full flex-col items-center justify-center rounded-lg bg-gradient-to-br from-blue-600 to-indigo-700 text-white opacity-0 transition-opacity group-hover:opacity-90"></span>
               <div className="absolute inset-0 flex h-full w-full flex-col items-center justify-center rounded-lg text-white opacity-0 transition-opacity group-hover:opacity-100">
                 <h4 className="font-headline text-lg text-center font-semibold ">
                   {project.title}
@@ -68,7 +68,7 @@ export default function ProjectsDeveloper() {
 
                 <button
                   onClick={() => window.open(project.link, "_blank")}
-                  className="flex items-center justify-center px-4 py-2 bg-white text-gray-700 rounded shadow hover:bg-gray-200"
+                  className="flex items-center justify-center gap-2 px-6 py-3 bg-white text-blue-600 font-semibold rounded-lg shadow-lg hover:bg-blue-50 hover:scale-105 transition-all duration-300"
                 >
                   <HiArrowTopRightOnSquare className="h-6 w-6" />
                   {} Ver Aulas
@@ -86,7 +86,7 @@ export default function ProjectsDeveloper() {
           ))}
         </div>
       </div>
-      <div className="absolute right-0 -mt-[6px] h-3 w-48 rounded-l-full bg-gradient-to-r from-gray-700 to-gray-600 md:w-96" />
+      <div className="absolute right-0 -mt-[6px] h-3 w-48 rounded-l-full bg-gradient-to-r from-blue-600 to-indigo-600 md:w-96" />
     </section>
   );
 }
