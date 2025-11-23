@@ -36,11 +36,13 @@ export default function About() {
                 GitHub
               </a>
               , conto com uma sólida formação acadêmica e ampla experiência.
-              Mestre em Modelagem Computacional e Sistemas pela UNIMONTES, minha
+              Mestre em Modelagem Computacional e Sistemas pela UNIMONTES e atualmente 
+              Doutorando em Modelagem Matemática e Computacional no CEFET-BH, minha
               expertise também abrange especialização em Matemática e
               Estatística. Graduei-me em Engenharia de Computação e Matemática,
               desempenhando o papel de Professor de Ensino Superior, lecionando
-              disciplinas como Matemática Financeira, Probabilidade, Tecnologia
+              disciplinas como Arquitetura Web, Programação Web, Banco de Dados, 
+              Matemática Financeira, Probabilidade, Tecnologia
               da Informação e Gestão de Finanças. Além disso, contribuo na área
               administrativa como Assistente em Gestão de Defesa Agropecuária no
               IMA, demonstrando minha versatilidade profissional. Ao longo da
