@@ -26,12 +26,10 @@ export default function Hero() {
         </h2>
 
         <p className="text-gray-100 my-6 text-justify">
-          Desenvolvedor web apaixonado por código, graduado em Matemática e
-          Engenharia da Computação, com mestrado em Modelagem Computacional e 
-          doutorando em Modelagem Matemática e Computacional no CEFET-BH.
-          Compartilho meu conhecimento como professor de ensino superior, lecionando 
-          Arquitetura Web, Programação Web e Banco de Dados, enquanto desenvolvo 
-          projetos de TI no NIM da Cidade Administrativa de Belo Horizonte.
+          Desenvolvedor web apaixonado por código, com formação em Matemática e
+          Engenharia da Computação. Atuo como professor de ensino superior e 
+          desenvolvedor de soluções tecnológicas, criando projetos inovadores 
+          na interseção da matemática, tecnologia e educação.
         </p>
 
         <div className="flex items-center justify-center md:justify-start gap-2">
