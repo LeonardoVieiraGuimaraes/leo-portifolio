@@ -55,15 +55,6 @@ export default function Hero() {
             Currículo Lattes
           </a>
         </div>
-
-        <div className="flex items-center justify-center md:justify-start gap-2 mt-4">
-          <a
-            href="mailto:leonardovieiraxy@hotmail.com"
-            className="underline text-blue-300 hover:text-blue-500 font-semibold"
-          >
-            leonardovieiraxy@hotmail.com
-          </a>
-        </div>
       </div>
       {/* <div className="basis-1/2"> </div>
       </div> */}
