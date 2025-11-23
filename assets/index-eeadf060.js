@@ -7944,8 +7944,8 @@ function Contact() {
     },
     {
       name: "Email",
-      description: "leonardovieiraxy@leoproti.com.br",
-      link: "mailto:leonardovieiraxy@leoproti.com.br?subject=Contato%20via%20Portfólio",
+      description: "leonardovieiraxy@hotmail.com",
+      link: "mailto:leonardovieiraxy@hotmail.com?subject=Contato%20via%20Portfólio",
       icon: /* @__PURE__ */ jsxRuntimeExports.jsx(HiOutlineEnvelope, { className: "h-10 w-10" })
     },
     {
@@ -8366,14 +8366,6 @@ function Hero() {
               /* @__PURE__ */ jsxRuntimeExports.jsx(HiDownload, {}),
               "Currículo Lattes"
             ]
-          }
-        ) }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex items-center justify-center md:justify-start gap-2 mt-4", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
-          "a",
-          {
-            href: "mailto:leonardovieiraxy@hotmail.com",
-            className: "underline text-blue-300 hover:text-blue-500 font-semibold",
-            children: "leonardovieiraxy@hotmail.com"
           }
         ) })
       ] })
