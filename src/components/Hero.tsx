@@ -59,12 +59,8 @@ export default function Hero() {
         <div className="flex items-center justify-center md:justify-start gap-2 mt-4">
           <a
             href="mailto:leonardovieiraxy@hotmail.com"
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-gradient-to-r from-blue-700 to-blue-400 text-white font-semibold shadow-lg hover:from-blue-800 hover:to-blue-500 transition-all duration-300"
-            style={{ boxShadow: '0 4px 24px 0 rgba(30, 64, 175, 0.15)' }}
+            className="underline text-blue-300 hover:text-blue-500 font-semibold"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25H4.5a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-.659 1.591l-7.5 7.5a2.25 2.25 0 01-3.182 0l-7.5-7.5A2.25 2.25 0 012.25 6.993V6.75" />
-            </svg>
             leonardovieiraxy@hotmail.com
           </a>
         </div>
