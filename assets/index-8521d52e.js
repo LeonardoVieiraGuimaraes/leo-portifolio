@@ -7649,37 +7649,39 @@ function About() {
   const age = differenceInYears(today, birthDate);
   return /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "container mx-auto my-12 px-4", id: "about", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "relative mx-auto mt-8 max-w-6xl", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "card relative w-full overflow-hidden rounded-2xl border border-white/10 bg-slate-900/80 p-6 md:p-10", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(34,211,238,0.12),transparent_35%),radial-gradient(circle_at_80%_0%,rgba(167,139,250,0.12),transparent_30%)]" }),
-    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative space-y-6", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center space-y-3", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-3xl md:text-4xl font-semibold text-white", children: "Sobre mim" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "text-slate-300", children: [
-          "Tenho ",
-          age,
-          " anos, sou professor universitário e desenvolvedor full stack. Conecto engenharia, matemática e produto para entregar soluções que resolvem problemas de negócio e educação."
-        ] })
-      ] }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-slate-200 leading-relaxed text-justify", children: "Mestre em Modelagem Computacional e Sistemas (UNIMONTES) e doutorando em Modelagem Matemática e Computacional (CEFET/MG). Atuo criando APIs, front-ends e automações, e leciono disciplinas de Arquitetura Web, Programação, Banco de Dados, Probabilidade e Matemática Financeira. No NIM (Cidade Administrativa de Belo Horizonte) trabalho com projetos de TI e suporte ao sistema agropecuário do IMA. Sigo entregando valor e aprendendo continuamente." }),
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-wrap gap-3", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-cyan-200", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "relative flex h-3 w-3", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "relative inline-flex h-3 w-3 rounded-full bg-emerald-400" })
-          ] }),
-          "Disponível para projetos e oportunidades"
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative grid grid-cols-1 md:grid-cols-3 gap-8 items-start", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "order-first md:order-last flex justify-center md:col-span-1", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "h-56 w-44 md:h-72 md:w-56 rounded-lg bg-gray-600 bg-profile bg-cover bg-center flex-shrink-0" }) }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "space-y-6 md:col-span-2", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-left space-y-3", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-3xl md:text-4xl font-semibold text-white", children: "Sobre mim" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "text-slate-300", children: [
+            "Tenho ",
+            age,
+            " anos, sou professor universitário e desenvolvedor full stack. Conecto engenharia, matemática e produto para entregar soluções que resolvem problemas de negócio e educação."
+          ] })
         ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(
-          "a",
-          {
-            href: "https://github.com/LeonardoVieiraGuimaraes?tab=repositories",
-            target: "_blank",
-            rel: "noopener noreferrer",
-            className: "button-secondary border border-white/20 hover:border-white/40",
-            children: "Ver repositórios no GitHub"
-          }
-        )
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-slate-200 leading-relaxed text-justify", children: "Mestre em Modelagem Computacional e Sistemas (UNIMONTES) e doutorando em Modelagem Matemática e Computacional (CEFET/MG). Atuo criando APIs, front-ends e automações, e leciono disciplinas de Arquitetura Web, Programação, Banco de Dados, Probabilidade e Matemática Financeira. No NIM (Cidade Administrativa de Belo Horizonte) trabalho com projetos de TI e suporte ao sistema agropecuário do IMA. Sigo entregando valor e aprendendo continuamente." }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-wrap gap-3", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-cyan-200", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "relative flex h-3 w-3", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "relative inline-flex h-3 w-3 rounded-full bg-emerald-400" })
+            ] }),
+            "Disponível para projetos e oportunidades"
+          ] }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx(
+            "a",
+            {
+              href: "https://github.com/LeonardoVieiraGuimaraes?tab=repositories",
+              target: "_blank",
+              rel: "noopener noreferrer",
+              className: "button-secondary border border-white/20 hover:border-white/40",
+              children: "Ver repositórios no GitHub"
+            }
+          )
+        ] })
       ] })
-    ] }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute -left-2 -top-4 h-24 w-20 rounded-lg bg-gray-600 bg-profile bg-cover bg-center md:-left-1 md:-top-1 md:h-64 md:w-40" })
+    ] })
   ] }) }) });
 }
 const store = {
