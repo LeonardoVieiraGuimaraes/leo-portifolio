@@ -20,7 +20,7 @@ export default defineConfig(({ command, mode }) => {
   
   // GitHub Pages: sempre que DEPLOY_TARGET=github
   if (deployTarget === "github") {
-    base = "/leo_portifolio/";
+    base = "/leo-portifolio/";
     console.log("  📍 GitHub Pages mode: base =", base);
   } 
   // Home Server: DEPLOY_TARGET=homeserver ou qualquer outro caso
