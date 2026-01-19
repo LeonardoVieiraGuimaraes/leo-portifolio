@@ -7649,39 +7649,37 @@ function About() {
   const age = differenceInYears(today, birthDate);
   return /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "container mx-auto my-12 px-4", id: "about", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "relative mx-auto mt-8 max-w-6xl", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "card relative w-full overflow-hidden rounded-2xl border border-white/10 bg-slate-900/80 p-6 md:p-10", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(34,211,238,0.12),transparent_35%),radial-gradient(circle_at_80%_0%,rgba(167,139,250,0.12),transparent_30%)]" }),
-    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative grid grid-cols-1 md:grid-cols-3 gap-8 items-start", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "order-first md:order-last flex justify-center md:col-span-1", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "h-56 w-44 md:h-72 md:w-56 rounded-lg bg-gray-600 bg-profile bg-cover bg-center flex-shrink-0" }) }),
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "space-y-6 md:col-span-2", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-left space-y-3", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-3xl md:text-4xl font-semibold text-white", children: "Sobre mim" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "text-slate-300", children: [
-            "Tenho ",
-            age,
-            " anos, sou professor universitário e desenvolvedor full stack. Conecto engenharia, matemática e produto para entregar soluções que resolvem problemas de negócio e educação."
-          ] })
-        ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-slate-200 leading-relaxed text-justify", children: "Mestre em Modelagem Computacional e Sistemas (UNIMONTES) e doutorando em Modelagem Computacional (CEFET/MG). Comecei como aluno em disciplina isolada na UFMG e posteriormente ingressei como aluno regular no doutorado da CEFET. Atuo criando APIs, front-ends e automações, e leciono disciplinas de Arquitetura Web, Programação, Banco de Dados, Probabilidade e Matemática Financeira. No NIM (Cidade Administrativa de Belo Horizonte) trabalho com projetos de TI e suporte ao sistema agropecuário do IMA. Sigo entregando valor e aprendendo continuamente." }),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-wrap gap-3", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-cyan-200", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "relative flex h-3 w-3", children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" }),
-              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "relative inline-flex h-3 w-3 rounded-full bg-emerald-400" })
-            ] }),
-            "Disponível para projetos e oportunidades"
-          ] }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx(
-            "a",
-            {
-              href: "https://github.com/LeonardoVieiraGuimaraes?tab=repositories",
-              target: "_blank",
-              rel: "noopener noreferrer",
-              className: "button-secondary border border-white/20 hover:border-white/40",
-              children: "Ver repositórios no GitHub"
-            }
-          )
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative space-y-6", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center space-y-3", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-3xl md:text-4xl font-semibold text-white", children: "Sobre mim" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "text-slate-300", children: [
+          "Tenho ",
+          age,
+          " anos, sou professor universitário e desenvolvedor full stack. Conecto engenharia, matemática e produto para entregar soluções que resolvem problemas de negócio e educação."
         ] })
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-slate-200 leading-relaxed text-justify", children: "Mestre em Modelagem Computacional e Sistemas (UNIMONTES) e doutorando em Modelagem Matemática e Computacional (CEFET/MG). Atuo criando APIs, front-ends e automações, e leciono disciplinas de Arquitetura Web, Programação, Banco de Dados, Probabilidade e Matemática Financeira. No NIM (Cidade Administrativa de Belo Horizonte) trabalho com projetos de TI e suporte ao sistema agropecuário do IMA. Sigo entregando valor e aprendendo continuamente." }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-wrap gap-3", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-cyan-200", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "relative flex h-3 w-3", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "relative inline-flex h-3 w-3 rounded-full bg-emerald-400" })
+          ] }),
+          "Disponível para projetos e oportunidades"
+        ] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx(
+          "a",
+          {
+            href: "https://github.com/LeonardoVieiraGuimaraes?tab=repositories",
+            target: "_blank",
+            rel: "noopener noreferrer",
+            className: "button-secondary border border-white/20 hover:border-white/40",
+            children: "Ver repositórios no GitHub"
+          }
+        )
       ] })
-    ] })
+    ] }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute -left-2 -top-4 h-24 w-20 rounded-lg bg-gray-600 bg-profile bg-cover bg-center md:-left-1 md:-top-1 md:h-64 md:w-40" })
   ] }) }) });
 }
 const store = {
@@ -7932,58 +7930,7 @@ function HiOutlineEnvelope(props) {
 function HiOutlineMapPin(props) {
   return GenIcon({ "tag": "svg", "attr": { "fill": "none", "viewBox": "0 0 24 24", "strokeWidth": "1.5", "stroke": "currentColor", "aria-hidden": "true" }, "child": [{ "tag": "path", "attr": { "strokeLinecap": "round", "strokeLinejoin": "round", "d": "M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" } }, { "tag": "path", "attr": { "strokeLinecap": "round", "strokeLinejoin": "round", "d": "M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" } }] })(props);
 }
-const ThemeContext = reactExports.createContext(void 0);
-function ThemeProvider({ children }) {
-  const [theme, setTheme] = reactExports.useState("dark");
-  const [mounted, setMounted] = reactExports.useState(false);
-  reactExports.useEffect(() => {
-    try {
-      const stored = localStorage.getItem("theme");
-      if (stored && (stored === "dark" || stored === "light")) {
-        setTheme(stored);
-      } else {
-        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-        setTheme(prefersDark ? "dark" : "light");
-      }
-    } catch (error) {
-      console.warn("Theme storage error:", error);
-      setTheme("dark");
-    }
-    setMounted(true);
-  }, []);
-  reactExports.useEffect(() => {
-    if (!mounted)
-      return;
-    try {
-      localStorage.setItem("theme", theme);
-    } catch (error) {
-      console.warn("Theme storage error:", error);
-    }
-    const root = document.documentElement;
-    if (theme === "dark") {
-      root.classList.add("dark");
-      root.classList.remove("light");
-    } else {
-      root.classList.add("light");
-      root.classList.remove("dark");
-    }
-  }, [theme, mounted]);
-  const toggleTheme = () => {
-    setTheme((prev) => prev === "dark" ? "light" : "dark");
-  };
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(ThemeContext.Provider, { value: { theme, toggleTheme }, children });
-}
-function useTheme() {
-  const context = reactExports.useContext(ThemeContext);
-  if (!context) {
-    throw new Error("useTheme must be used within ThemeProvider");
-  }
-  return context;
-}
 function Contact() {
-  const { theme } = useTheme();
-  const isLight = theme === "light";
-  const background = isLight ? "linear-gradient(180deg, #f9fafb 0%, #eef2f7 60%, #f9fafb 100%)" : "linear-gradient(135deg, #0b1220 0%, #0f172a 60%, #0b1220 100%)";
   const form = reactExports.useRef(null);
   const [loading, setLoading] = reactExports.useState(false);
   const [success, setSuccess] = reactExports.useState(false);
@@ -8030,110 +7977,97 @@ function Contact() {
       icon: /* @__PURE__ */ jsxRuntimeExports.jsx(HiOutlineMapPin, { className: "h-10 w-10" })
     }
   ];
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(
-    "section",
-    {
-      className: "relative text-white",
-      id: "contact",
-      style: { background },
-      children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container mx-auto max-w-6xl px-4 py-16", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mb-8 text-center space-y-3", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200", children: "Contato" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-3xl md:text-4xl font-semibold", children: "Vamos conversar" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-slate-300", children: "Me envie uma mensagem ou chame no WhatsApp. Retorno rápido para falar sobre projetos e oportunidades." })
+  return /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "bg-slate-900/60 text-white", id: "contact", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container mx-auto max-w-6xl px-4 py-16", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mb-8 text-center space-y-3", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200", children: "Contato" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-3xl md:text-4xl font-semibold", children: "Vamos conversar" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-slate-300", children: "Me envie uma mensagem ou chame no WhatsApp. Retorno rápido para falar sobre projetos e oportunidades." })
+    ] }),
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid gap-6 md:grid-cols-3", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "card md:col-span-2 rounded-2xl p-6", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("form", { ref: form, onSubmit: sendEmail, className: "space-y-4", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("label", { htmlFor: "message", className: "mb-2 block text-sm font-semibold text-slate-200", children: "Mensagem" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx(
+            "textarea",
+            {
+              id: "message",
+              name: "message",
+              className: "h-32 w-full rounded-lg border border-white/10 bg-white/5 p-3 text-white outline-none focus:border-cyan-300",
+              required: true
+            }
+          )
         ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid gap-6 md:grid-cols-3", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "card md:col-span-2 rounded-2xl p-6", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("form", { ref: form, onSubmit: sendEmail, className: "space-y-4", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid gap-4 md:grid-cols-2", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("label", { htmlFor: "fullName", className: "mb-2 block text-sm font-semibold text-slate-200", children: "Seu nome" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx(
+              "input",
+              {
+                className: "w-full rounded-lg border border-white/10 bg-white/5 p-3 text-white outline-none focus:border-cyan-300",
+                type: "text",
+                name: "fullName",
+                id: "fullName",
+                required: true
+              }
+            )
+          ] }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("label", { htmlFor: "email", className: "mb-2 block text-sm font-semibold text-slate-200", children: "Seu email" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx(
+              "input",
+              {
+                className: "w-full rounded-lg border border-white/10 bg-white/5 p-3 text-white outline-none focus:border-cyan-300",
+                type: "email",
+                name: "email",
+                id: "email",
+                required: true
+              }
+            )
+          ] })
+        ] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-3", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsxs(
+            "button",
+            {
+              type: "submit",
+              className: "button inline-flex items-center gap-2",
+              disabled: loading,
+              children: [
+                loading && /* @__PURE__ */ jsxRuntimeExports.jsx(FaSpinner, { className: "h-4 w-4 animate-spin" }),
+                success && /* @__PURE__ */ jsxRuntimeExports.jsx(HiCheckCircle, { className: "h-4 w-4" }),
+                "Enviar mensagem"
+              ]
+            }
+          ),
+          error && /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm text-rose-200", children: "Ocorreu um erro ao enviar. Tente novamente mais tarde." })
+        ] })
+      ] }) }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "space-y-4", children: contacts.map((contact, index2) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
+        "div",
+        {
+          className: "card flex items-center gap-4 rounded-2xl border border-white/10 bg-white/5 p-4",
+          children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex h-12 w-12 items-center justify-center rounded-xl bg-cyan-500/10 text-cyan-300", children: contact.icon }),
             /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsx("label", { htmlFor: "message", className: "mb-2 block text-sm font-semibold text-[var(--text)]", children: "Mensagem" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "font-semibold text-white", children: contact.name }),
               /* @__PURE__ */ jsxRuntimeExports.jsx(
-                "textarea",
+                "a",
                 {
-                  id: "message",
-                  name: "message",
-                  className: "h-32 w-full rounded-lg border border-[color:var(--border)] bg-[color:var(--panel)] p-3 text-[var(--text)] outline-none focus:border-[color:var(--accent)]",
-                  required: true
+                  href: contact.link,
+                  target: "_blank",
+                  className: "text-sm text-cyan-200 underline underline-offset-2",
+                  rel: "noreferrer",
+                  children: contact.description
                 }
               )
-            ] }),
-            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid gap-4 md:grid-cols-2", children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
-                /* @__PURE__ */ jsxRuntimeExports.jsx("label", { htmlFor: "fullName", className: "mb-2 block text-sm font-semibold text-[var(--text)]", children: "Seu nome" }),
-                /* @__PURE__ */ jsxRuntimeExports.jsx(
-                  "input",
-                  {
-                    className: "w-full rounded-lg border border-[color:var(--border)] bg-[color:var(--panel)] p-3 text-[var(--text)] outline-none focus:border-[color:var(--accent)]",
-                    type: "text",
-                    name: "fullName",
-                    id: "fullName",
-                    required: true
-                  }
-                )
-              ] }),
-              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
-                /* @__PURE__ */ jsxRuntimeExports.jsx("label", { htmlFor: "email", className: "mb-2 block text-sm font-semibold text-[var(--text)]", children: "Seu email" }),
-                /* @__PURE__ */ jsxRuntimeExports.jsx(
-                  "input",
-                  {
-                    className: "w-full rounded-lg border border-[color:var(--border)] bg-[color:var(--panel)] p-3 text-[var(--text)] outline-none focus:border-[color:var(--accent)]",
-                    type: "email",
-                    name: "email",
-                    id: "email",
-                    required: true
-                  }
-                )
-              ] })
-            ] }),
-            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-3", children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsxs(
-                "button",
-                {
-                  type: "submit",
-                  className: "button inline-flex items-center gap-2",
-                  disabled: loading,
-                  children: [
-                    loading && /* @__PURE__ */ jsxRuntimeExports.jsx(FaSpinner, { className: "h-4 w-4 animate-spin" }),
-                    success && /* @__PURE__ */ jsxRuntimeExports.jsx(HiCheckCircle, { className: "h-4 w-4" }),
-                    "Enviar mensagem"
-                  ]
-                }
-              ),
-              error && /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm text-rose-200", children: "Ocorreu um erro ao enviar. Tente novamente mais tarde." })
             ] })
-          ] }) }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "space-y-4", children: contacts.map((contact, index2) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
-            "div",
-            {
-              className: "card flex items-center gap-4 rounded-2xl border border-white/10 bg-white/5 p-4",
-              children: [
-                /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex h-12 w-12 items-center justify-center rounded-xl bg-cyan-500/10 text-cyan-300 [.light_&]:bg-cyan-100 [.light_&]:text-cyan-700", children: contact.icon }),
-                /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "font-semibold text-white", children: contact.name }),
-                  /* @__PURE__ */ jsxRuntimeExports.jsx(
-                    "a",
-                    {
-                      href: contact.link,
-                      target: "_blank",
-                      className: "text-sm text-cyan-200 underline underline-offset-2",
-                      rel: "noreferrer",
-                      children: contact.description
-                    }
-                  )
-                ] })
-              ]
-            },
-            `contact-${index2}`
-          )) })
-        ] })
-      ] })
-    }
-  );
+          ]
+        },
+        `contact-${index2}`
+      )) })
+    ] })
+  ] }) });
 }
-const getImagePath = (path) => {
-  const basePath = "/leo_portifolio/";
-  const cleanPath = path.startsWith("/") ? path.slice(1) : path;
-  return `${basePath}${cleanPath}`;
-};
 const socialLinks = [
   {
     name: "Github",
@@ -8167,37 +8101,25 @@ const socialLinks = [
   }
 ];
 function Footer() {
-  const { theme } = useTheme();
-  const isLight = theme === "light";
-  const background = isLight ? "var(--panel)" : "rgba(15, 23, 42, 0.8)";
-  const borderColor = "var(--border)";
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(
-    "footer",
-    {
-      id: "footer",
-      className: "border-t",
-      style: { backgroundColor: background, borderColor },
-      children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container mx-auto flex max-w-6xl flex-col gap-4 px-4 py-6 text-sm text-slate-300 md:flex-row md:items-center md:justify-between", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-3", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: getImagePath("images/logo.svg"), alt: "Logo", className: "h-12 w-auto" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-white font-semibold", children: "Leonardo Vieira Guimarães" }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xs text-slate-400", children: "Portfólio • Produtos digitais, dados e educação" })
-          ] })
-        ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("ul", { className: "flex flex-nowrap items-center gap-3", children: socialLinks.map((link) => /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: /* @__PURE__ */ jsxRuntimeExports.jsx(
-          "a",
-          {
-            href: link.url,
-            target: "_blank",
-            rel: "noopener noreferrer",
-            className: "text-slate-200 hover:text-cyan-300",
-            children: /* @__PURE__ */ jsxRuntimeExports.jsx(link.icon, { size: 22 })
-          }
-        ) }, link.name)) })
+  return /* @__PURE__ */ jsxRuntimeExports.jsx("footer", { id: "footer", className: "border-t border-white/5 bg-slate-950/80", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container mx-auto flex max-w-6xl flex-col gap-4 px-4 py-6 text-sm text-slate-300 md:flex-row md:items-center md:justify-between", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-3", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: "/images/logo.svg", alt: "Logo", className: "h-12 w-auto" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-white font-semibold", children: "Leonardo Vieira Guimarães" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xs text-slate-400", children: "Portfólio • Produtos digitais, dados e educação" })
       ] })
-    }
-  );
+    ] }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("ul", { className: "flex flex-nowrap items-center gap-3", children: socialLinks.map((link) => /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+      "a",
+      {
+        href: link.url,
+        target: "_blank",
+        rel: "noopener noreferrer",
+        className: "text-slate-200 hover:text-cyan-300",
+        children: /* @__PURE__ */ jsxRuntimeExports.jsx(link.icon, { size: 22 })
+      }
+    ) }, link.name)) })
+  ] }) });
 }
 function Bars3Icon({
   title,
@@ -8247,6 +8169,59 @@ function XMarkIcon({
 }
 const ForwardRef = reactExports.forwardRef(XMarkIcon);
 const XMarkIcon$1 = ForwardRef;
+const ThemeContext = reactExports.createContext(void 0);
+function ThemeProvider({ children }) {
+  const [theme, setTheme] = reactExports.useState("dark");
+  const [mounted, setMounted] = reactExports.useState(false);
+  reactExports.useEffect(() => {
+    try {
+      const stored = localStorage.getItem("theme");
+      if (stored && (stored === "dark" || stored === "light")) {
+        setTheme(stored);
+      } else {
+        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        setTheme(prefersDark ? "dark" : "light");
+      }
+    } catch (error) {
+      console.warn("Theme storage error:", error);
+      setTheme("dark");
+    }
+    setMounted(true);
+  }, []);
+  reactExports.useEffect(() => {
+    if (!mounted)
+      return;
+    try {
+      localStorage.setItem("theme", theme);
+    } catch (error) {
+      console.warn("Theme storage error:", error);
+    }
+    const root = document.documentElement;
+    if (theme === "dark") {
+      root.classList.add("dark");
+      root.classList.remove("light");
+    } else {
+      root.classList.add("light");
+      root.classList.remove("dark");
+    }
+  }, [theme, mounted]);
+  const toggleTheme = () => {
+    setTheme((prev) => prev === "dark" ? "light" : "dark");
+  };
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(ThemeContext.Provider, { value: { theme, toggleTheme }, children });
+}
+function useTheme() {
+  const context = reactExports.useContext(ThemeContext);
+  if (!context) {
+    throw new Error("useTheme must be used within ThemeProvider");
+  }
+  return context;
+}
+const getImagePath = (path) => {
+  const basePath = "/leo_portifolio/";
+  const cleanPath = path.startsWith("/") ? path.slice(1) : path;
+  return `${basePath}${cleanPath}`;
+};
 function Header() {
   const [isOpen, setIsOpen] = reactExports.useState(false);
   const [dropdownOpen, setDropdownOpen] = reactExports.useState(false);
@@ -8443,22 +8418,17 @@ function Header() {
   ] }) });
 }
 function Hero() {
-  const { theme } = useTheme();
-  const isLight = theme === "light";
-  const background = isLight ? "radial-gradient(circle at 12% 18%, rgba(14,165,233,0.08), transparent 26%), radial-gradient(circle at 82% 0%, rgba(124,58,237,0.08), transparent 32%), linear-gradient(180deg, #f9fafb 0%, #eef2f7 62%, #f9fafb 100%)" : "linear-gradient(135deg, #0b1220 0%, #0f172a 60%, #0b1220 100%)";
-  const glowCyan = isLight ? "bg-cyan-400/15" : "bg-cyan-500/10";
-  const glowViolet = isLight ? "bg-violet-400/14" : "bg-violet-500/10";
   return /* @__PURE__ */ jsxRuntimeExports.jsxs("section", { className: "relative overflow-hidden", id: "hero", children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0", style: { background } }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: `absolute -left-20 -top-32 h-80 w-80 rounded-full ${glowCyan} blur-3xl` }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: `absolute right-0 top-10 h-72 w-72 rounded-full ${glowViolet} blur-3xl` }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900" }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute -left-20 -top-32 h-80 w-80 rounded-full bg-cyan-500/10 blur-3xl" }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute right-0 top-10 h-72 w-72 rounded-full bg-violet-500/10 blur-3xl" }),
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative container mx-auto flex max-w-6xl flex-col gap-8 p-6 pb-24 pt-24 md:flex-row md:items-center md:justify-between", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-w-2xl space-y-6", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-3 text-sm text-cyan-200 [.light_&]:text-cyan-700", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 font-semibold uppercase tracking-wide [.light_&]:border-cyan-200 [.light_&]:bg-cyan-50", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-3 text-sm text-cyan-200", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 font-semibold uppercase tracking-wide", children: [
             /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "relative flex h-2 w-2", children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75 [.light_&]:bg-emerald-600" }),
-              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "relative inline-flex h-2 w-2 rounded-full bg-emerald-400 [.light_&]:bg-emerald-600" })
+              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "relative inline-flex h-2 w-2 rounded-full bg-emerald-400" })
             ] }),
             "Disponível para novos projetos"
           ] }),
@@ -8467,19 +8437,11 @@ function Hero() {
         /* @__PURE__ */ jsxRuntimeExports.jsx("h1", { className: "text-4xl font-semibold leading-tight text-white sm:text-5xl md:text-6xl", children: "Transformando dados e código em produtos digitais que entregam impacto real." }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-lg text-slate-300", children: "Sou Leonardo Vieira Guimarães: desenvolvedor full stack, professor universitário e pesquisador. Combino engenharia, matemática e produto para criar soluções web, mobile e acadêmicas que resolvem problemas de negócio e educação." }),
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-wrap gap-3", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsxs(
-            "a",
-            {
-              href: "https://docs.google.com/document/d/1hLeOBX7zAz-BtYLxXKWK6RtYEWqWnCo4Z5IA5Kvwzsk/edit?usp=drive_link",
-              target: "_blank",
-              rel: "noopener",
-              className: "button flex items-center gap-2",
-              children: [
-                /* @__PURE__ */ jsxRuntimeExports.jsx(HiArrowDownTray, { className: "h-5 w-5" }),
-                "Currículo"
-              ]
-            }
-          ),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("a", { href: "#projectsDeveloper", className: "button flex items-center gap-2", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx(HiArrowTopRightOnSquare, { className: "h-5 w-5" }),
+            "Ver projetos"
+          ] }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#contact", className: "button-secondary flex items-center gap-2", children: "Fale comigo" }),
           /* @__PURE__ */ jsxRuntimeExports.jsxs(
             "a",
             {
@@ -8524,9 +8486,6 @@ function Hero() {
   ] });
 }
 function ProjectsDeveloper() {
-  const { theme } = useTheme();
-  const isLight = theme === "light";
-  const background = isLight ? "linear-gradient(180deg, #f9fafb 0%, #eef2f7 55%, #f9fafb 100%)" : "linear-gradient(135deg, #0b1220 0%, #0f172a 60%, #0b1220 100%)";
   const projects = [
     {
       title: "Sistema SAE",
@@ -8551,72 +8510,64 @@ function ProjectsDeveloper() {
     //   colSpan: "col-span-1",
     // },
   ];
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(
-    "section",
-    {
-      className: "relative text-white",
-      id: "projectsDeveloper",
-      style: { background },
-      children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative container mx-auto max-w-6xl px-4 py-16", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center space-y-3", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200", children: "Portfólio" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-3xl md:text-4xl font-semibold", children: "Desenvolvimento de sistemas" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-slate-300", children: "Projetos web e APIs com foco em produto, dados e entrega contínua." })
-        ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3", children: projects.map((project, index2) => {
-          var _a;
-          return /* @__PURE__ */ jsxRuntimeExports.jsxs(
-            "div",
-            {
-              className: `card group relative overflow-hidden rounded-xl ${project.colSpan}`,
-              children: [
-                /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative h-48 overflow-hidden", children: [
-                  /* @__PURE__ */ jsxRuntimeExports.jsx(
-                    "img",
-                    {
-                      className: "h-full w-full object-cover transition duration-500 group-hover:scale-105",
-                      src: getImagePath(project.image),
-                      alt: project.title
-                    }
-                  ),
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-900/30 to-transparent" })
-                ] }),
-                /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative space-y-3 p-4", children: [
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex flex-wrap gap-2 text-xs text-cyan-200", children: (_a = project.tags) == null ? void 0 : _a.map((tag) => /* @__PURE__ */ jsxRuntimeExports.jsx(
-                    "span",
-                    {
-                      className: "rounded-full border border-white/10 bg-white/5 px-3 py-1",
-                      children: tag
-                    },
-                    tag
-                  )) }),
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("h4", { className: "text-xl font-semibold", children: project.title }),
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm text-slate-300", children: project.description }),
-                  /* @__PURE__ */ jsxRuntimeExports.jsxs(
-                    "button",
-                    {
-                      onClick: () => window.open(project.link, "_blank"),
-                      className: "button-secondary mt-2 inline-flex items-center gap-2 border border-white/20 hover:border-white/40",
-                      children: [
-                        /* @__PURE__ */ jsxRuntimeExports.jsx(HiArrowTopRightOnSquare, { className: "h-5 w-5" }),
-                        "Ver projeto"
-                      ]
-                    }
-                  )
-                ] })
-              ]
-            },
-            index2
-          );
-        }) })
-      ] })
-    }
-  );
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs("section", { className: "relative text-white", id: "projectsDeveloper", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900" }),
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative container mx-auto max-w-6xl px-4 py-16", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center space-y-3", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200", children: "Portfólio" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-3xl md:text-4xl font-semibold", children: "Desenvolvimento de sistemas" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-slate-300", children: "Projetos web e APIs com foco em produto, dados e entrega contínua." })
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3", children: projects.map((project, index2) => {
+        var _a;
+        return /* @__PURE__ */ jsxRuntimeExports.jsxs(
+          "div",
+          {
+            className: `card group relative overflow-hidden rounded-xl ${project.colSpan}`,
+            children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative h-48 overflow-hidden", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx(
+                  "img",
+                  {
+                    className: "h-full w-full object-cover transition duration-500 group-hover:scale-105",
+                    src: getImagePath(project.image),
+                    alt: project.title
+                  }
+                ),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-900/30 to-transparent" })
+              ] }),
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative space-y-3 p-4", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex flex-wrap gap-2 text-xs text-cyan-200", children: (_a = project.tags) == null ? void 0 : _a.map((tag) => /* @__PURE__ */ jsxRuntimeExports.jsx(
+                  "span",
+                  {
+                    className: "rounded-full border border-white/10 bg-white/5 px-3 py-1",
+                    children: tag
+                  },
+                  tag
+                )) }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("h4", { className: "text-xl font-semibold", children: project.title }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm text-slate-300", children: project.description }),
+                /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                  "button",
+                  {
+                    onClick: () => window.open(project.link, "_blank"),
+                    className: "button-secondary mt-2 inline-flex items-center gap-2 border border-white/20 hover:border-white/40",
+                    children: [
+                      /* @__PURE__ */ jsxRuntimeExports.jsx(HiArrowTopRightOnSquare, { className: "h-5 w-5" }),
+                      "Ver projeto"
+                    ]
+                  }
+                )
+              ] })
+            ]
+          },
+          index2
+        );
+      }) })
+    ] })
+  ] });
 }
 function ProjectsAcademics() {
-  const { theme } = useTheme();
-  const isLight = theme === "light";
-  const background = isLight ? "linear-gradient(180deg, #f9fafb 0%, #eef2f7 55%, #f9fafb 100%)" : "linear-gradient(135deg, #0b1220 0%, #0f172a 60%, #0b1220 100%)";
   const projects = [
     {
       title: "Dissertaçao Graduação Engenharia da Computação",
@@ -8683,72 +8634,64 @@ function ProjectsAcademics() {
       colSpan: "col-span-1"
     }
   ];
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(
-    "section",
-    {
-      className: "relative text-white",
-      id: "projectsAcademics",
-      style: { background },
-      children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative container mx-auto max-w-6xl px-4 py-16", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center space-y-3", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200", children: "Pesquisa" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-3xl md:text-4xl font-semibold", children: "Projetos acadêmicos" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-slate-300", children: "Dissertações, artigos e projetos que conectam ciência, tecnologia e dados." })
-        ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3", children: projects.map((project, index2) => {
-          var _a;
-          return /* @__PURE__ */ jsxRuntimeExports.jsxs(
-            "div",
-            {
-              className: `card group relative overflow-hidden rounded-xl ${project.colSpan}`,
-              children: [
-                /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative h-48 overflow-hidden", children: [
-                  /* @__PURE__ */ jsxRuntimeExports.jsx(
-                    "img",
-                    {
-                      className: "h-full w-full object-cover transition duration-500 group-hover:scale-105",
-                      src: getImagePath(project.image),
-                      alt: project.title
-                    }
-                  ),
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-900/30 to-transparent" })
-                ] }),
-                /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative space-y-3 p-4", children: [
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex flex-wrap gap-2 text-xs text-cyan-200", children: (_a = project.tags) == null ? void 0 : _a.map((tag) => /* @__PURE__ */ jsxRuntimeExports.jsx(
-                    "span",
-                    {
-                      className: "rounded-full border border-white/10 bg-white/5 px-3 py-1",
-                      children: tag
-                    },
-                    tag
-                  )) }),
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("h4", { className: "text-xl font-semibold", children: project.title }),
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm text-slate-300", children: project.description }),
-                  /* @__PURE__ */ jsxRuntimeExports.jsxs(
-                    "button",
-                    {
-                      onClick: () => window.open(project.link, "_blank"),
-                      className: "button-secondary mt-2 inline-flex items-center gap-2 border border-white/20 hover:border-white/40",
-                      children: [
-                        /* @__PURE__ */ jsxRuntimeExports.jsx(HiArrowTopRightOnSquare, { className: "h-5 w-5" }),
-                        "Ver projeto"
-                      ]
-                    }
-                  )
-                ] })
-              ]
-            },
-            index2
-          );
-        }) })
-      ] })
-    }
-  );
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs("section", { className: "relative text-white", id: "projectsAcademics", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900" }),
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative container mx-auto max-w-6xl px-4 py-16", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center space-y-3", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200", children: "Pesquisa" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-3xl md:text-4xl font-semibold", children: "Projetos acadêmicos" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-slate-300", children: "Dissertações, artigos e projetos que conectam ciência, tecnologia e dados." })
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3", children: projects.map((project, index2) => {
+        var _a;
+        return /* @__PURE__ */ jsxRuntimeExports.jsxs(
+          "div",
+          {
+            className: `card group relative overflow-hidden rounded-xl ${project.colSpan}`,
+            children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative h-48 overflow-hidden", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx(
+                  "img",
+                  {
+                    className: "h-full w-full object-cover transition duration-500 group-hover:scale-105",
+                    src: getImagePath(project.image),
+                    alt: project.title
+                  }
+                ),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-900/30 to-transparent" })
+              ] }),
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative space-y-3 p-4", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex flex-wrap gap-2 text-xs text-cyan-200", children: (_a = project.tags) == null ? void 0 : _a.map((tag) => /* @__PURE__ */ jsxRuntimeExports.jsx(
+                  "span",
+                  {
+                    className: "rounded-full border border-white/10 bg-white/5 px-3 py-1",
+                    children: tag
+                  },
+                  tag
+                )) }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("h4", { className: "text-xl font-semibold", children: project.title }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm text-slate-300", children: project.description }),
+                /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                  "button",
+                  {
+                    onClick: () => window.open(project.link, "_blank"),
+                    className: "button-secondary mt-2 inline-flex items-center gap-2 border border-white/20 hover:border-white/40",
+                    children: [
+                      /* @__PURE__ */ jsxRuntimeExports.jsx(HiArrowTopRightOnSquare, { className: "h-5 w-5" }),
+                      "Ver projeto"
+                    ]
+                  }
+                )
+              ] })
+            ]
+          },
+          index2
+        );
+      }) })
+    ] })
+  ] });
 }
 function ProjectsProfessor() {
-  const { theme } = useTheme();
-  const isLight = theme === "light";
-  const background = isLight ? "linear-gradient(180deg, #f9fafb 0%, #eef2f7 55%, #f9fafb 100%)" : "linear-gradient(135deg, #0b1220 0%, #0f172a 60%, #0b1220 100%)";
   const projects = [
     {
       title: "Estátitica e Probabilidade",
@@ -8775,67 +8718,62 @@ function ProjectsProfessor() {
       colSpan: "col-span-1"
     }
   ];
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(
-    "section",
-    {
-      className: "relative text-white",
-      id: "projectsProfessor",
-      style: { background },
-      children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative container mx-auto max-w-6xl px-4 py-16", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center space-y-3", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200", children: "Educação" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-3xl md:text-4xl font-semibold", children: "Projetos e videoaulas" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-slate-300", children: "Conteúdo prático de estatística, finanças e tecnologia para sala de aula e online." })
-        ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3", children: projects.map((project, index2) => {
-          var _a;
-          return /* @__PURE__ */ jsxRuntimeExports.jsxs(
-            "div",
-            {
-              className: `card group relative overflow-hidden rounded-xl ${project.colSpan}`,
-              children: [
-                /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative h-48 overflow-hidden", children: [
-                  /* @__PURE__ */ jsxRuntimeExports.jsx(
-                    "img",
-                    {
-                      className: "h-full w-full object-cover transition duration-500 group-hover:scale-105",
-                      src: getImagePath(project.image),
-                      alt: project.title
-                    }
-                  ),
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-900/30 to-transparent" })
-                ] }),
-                /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative space-y-3 p-4", children: [
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex flex-wrap gap-2 text-xs text-cyan-200", children: (_a = project.tags) == null ? void 0 : _a.map((tag) => /* @__PURE__ */ jsxRuntimeExports.jsx(
-                    "span",
-                    {
-                      className: "rounded-full border border-white/10 bg-white/5 px-3 py-1",
-                      children: tag
-                    },
-                    tag
-                  )) }),
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("h4", { className: "text-xl font-semibold", children: project.title }),
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm text-slate-300", children: project.description }),
-                  /* @__PURE__ */ jsxRuntimeExports.jsxs(
-                    "button",
-                    {
-                      onClick: () => window.open(project.link, "_blank"),
-                      className: "button-secondary mt-2 inline-flex items-center gap-2 border border-white/20 hover:border-white/40",
-                      children: [
-                        /* @__PURE__ */ jsxRuntimeExports.jsx(HiArrowTopRightOnSquare, { className: "h-5 w-5" }),
-                        "Ver projeto"
-                      ]
-                    }
-                  )
-                ] })
-              ]
-            },
-            index2
-          );
-        }) })
-      ] })
-    }
-  );
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs("section", { className: "relative text-white", id: "projectsProfessor", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900" }),
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative container mx-auto max-w-6xl px-4 py-16", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center space-y-3", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200", children: "Educação" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-3xl md:text-4xl font-semibold", children: "Projetos e videoaulas" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-slate-300", children: "Conteúdo prático de estatística, finanças e tecnologia para sala de aula e online." })
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3", children: projects.map((project, index2) => {
+        var _a;
+        return /* @__PURE__ */ jsxRuntimeExports.jsxs(
+          "div",
+          {
+            className: `card group relative overflow-hidden rounded-xl ${project.colSpan}`,
+            children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative h-48 overflow-hidden", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx(
+                  "img",
+                  {
+                    className: "h-full w-full object-cover transition duration-500 group-hover:scale-105",
+                    src: getImagePath(project.image),
+                    alt: project.title
+                  }
+                ),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-900/30 to-transparent" })
+              ] }),
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative space-y-3 p-4", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex flex-wrap gap-2 text-xs text-cyan-200", children: (_a = project.tags) == null ? void 0 : _a.map((tag) => /* @__PURE__ */ jsxRuntimeExports.jsx(
+                  "span",
+                  {
+                    className: "rounded-full border border-white/10 bg-white/5 px-3 py-1",
+                    children: tag
+                  },
+                  tag
+                )) }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("h4", { className: "text-xl font-semibold", children: project.title }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm text-slate-300", children: project.description }),
+                /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                  "button",
+                  {
+                    onClick: () => window.open(project.link, "_blank"),
+                    className: "button-secondary mt-2 inline-flex items-center gap-2 border border-white/20 hover:border-white/40",
+                    children: [
+                      /* @__PURE__ */ jsxRuntimeExports.jsx(HiArrowTopRightOnSquare, { className: "h-5 w-5" }),
+                      "Ver projeto"
+                    ]
+                  }
+                )
+              ] })
+            ]
+          },
+          index2
+        );
+      }) })
+    ] })
+  ] });
 }
 function Services() {
   const services = [
@@ -8873,7 +8811,7 @@ function Services() {
         children: [
           /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 bg-gradient-to-br from-white/5 via-white/0 to-white/5" }),
           /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative space-y-3", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "inline-flex h-14 w-14 items-center justify-center rounded-xl bg-cyan-500/15 text-cyan-300 [.light_&]:bg-cyan-100 [.light_&]:text-cyan-700", children: service.icon }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "inline-flex h-14 w-14 items-center justify-center rounded-xl bg-cyan-500/15 text-cyan-300", children: service.icon }),
             /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "text-xl font-semibold text-white", children: service.title }),
             /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm text-slate-300 leading-relaxed", children: service.description })
           ] })
@@ -8915,7 +8853,7 @@ function Process() {
     /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-10 grid grid-cols-1 gap-4 md:grid-cols-2", children: steps.map((step, index2) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "card relative h-full overflow-hidden rounded-xl p-6", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 bg-gradient-to-br from-white/5 via-white/0 to-white/5" }),
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative flex items-start gap-4", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex h-12 w-12 items-center justify-center rounded-full bg-cyan-500/10 text-cyan-300 [.light_&]:bg-cyan-100 [.light_&]:text-cyan-700", children: step.icon }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex h-12 w-12 items-center justify-center rounded-full bg-cyan-500/10 text-cyan-300", children: step.icon }),
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "space-y-2", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-3", children: [
             /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "text-xs font-semibold uppercase tracking-wide text-cyan-200", children: [
@@ -8931,18 +8869,9 @@ function Process() {
   ] });
 }
 function Skills() {
-  const { theme } = useTheme();
-  const isLight = theme === "light";
-  const background = isLight ? "linear-gradient(180deg, #f9fafb 0%, #eef2f7 55%, #f9fafb 100%)" : "rgba(15, 23, 42, 0.4)";
   const educations = [
     {
-      name: "Doutorando em Modelagem Computacional | CEFET/MG"
-    },
-    {
-      name: "Aluno em Disciplina Isolada | UFMG (Doutorado)"
-    },
-    {
-      name: "Mestre em Modelagem Computacional e Sistemas | UNIMONTES"
+      name: "Mestre me Modelagem Computacional e Sistemas | UNIMONTES"
     },
     {
       name: "Graduação Bacharelado em Ciência da Computação | FACIT"
@@ -9024,66 +8953,58 @@ function Skills() {
       level: 40
     }
   ];
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(
-    "section",
-    {
-      className: "relative",
-      id: "skills",
-      style: { background },
-      children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container mx-auto max-w-6xl px-4 py-16", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center space-y-3 mb-8", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200", children: "Formação & stack" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-3xl md:text-4xl font-semibold text-white", children: "Educação e skills" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-slate-300", children: "Base sólida em modelagem, dados e engenharia para construir e ensinar tecnologia." })
+  return /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "bg-slate-900/40", id: "skills", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container mx-auto max-w-6xl px-4 py-16", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center space-y-3 mb-8", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200", children: "Formação & stack" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-3xl md:text-4xl font-semibold text-white", children: "Educação e skills" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-slate-300", children: "Base sólida em modelagem, dados e engenharia para construir e ensinar tecnologia." })
+    ] }),
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid gap-6 md:grid-cols-2", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "card rounded-2xl p-6", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("h3", { className: "mb-4 flex items-center gap-2 text-lg font-semibold text-white", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx(HiAcademicCap, { className: "h-7 w-7 text-cyan-300" }),
+          "Educação"
         ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid gap-6 md:grid-cols-2", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "card rounded-2xl p-6", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsxs("h3", { className: "mb-4 flex items-center gap-2 text-lg font-semibold text-white", children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsx(HiAcademicCap, { className: "h-7 w-7 text-cyan-300 [.light_&]:text-cyan-700" }),
-              "Educação"
-            ] }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "space-y-3 text-slate-200", children: educations.map((education, index2) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "space-y-3 text-slate-200", children: educations.map((education, index2) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
+          "div",
+          {
+            className: "flex items-center gap-3 rounded-lg border border-white/5 bg-white/5 px-4 py-3",
+            children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "h-2 w-2 rounded-full bg-cyan-300" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-sm font-semibold", children: education.name })
+            ]
+          },
+          `education-${index2}`
+        )) })
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "card rounded-2xl p-6", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("h3", { className: "mb-4 flex items-center gap-2 text-lg font-semibold text-white", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx(HiCodeBracketSquare, { className: "h-7 w-7 text-cyan-300" }),
+          "Skills"
+        ] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid grid-cols-2 gap-4 md:grid-cols-3", children: skills.sort((a, b) => b.level - a.level).map((skill, index2) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "space-y-2", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex h-12 w-12 items-center justify-center rounded-lg bg-white/10", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+            "img",
+            {
+              src: skill.icon,
+              alt: skill.name,
+              className: "h-8 w-8 rounded"
+            }
+          ) }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm font-semibold text-white", children: skill.name }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "h-2 w-full rounded-full bg-white/10", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
               "div",
               {
-                className: "flex items-center gap-3 rounded-lg border border-white/5 bg-white/5 px-4 py-3",
-                children: [
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "h-2 w-2 rounded-full bg-cyan-300" }),
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-sm font-semibold", children: education.name })
-                ]
-              },
-              `education-${index2}`
-            )) })
-          ] }),
-          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "card rounded-2xl p-6", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsxs("h3", { className: "mb-4 flex items-center gap-2 text-lg font-semibold text-white", children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsx(HiCodeBracketSquare, { className: "h-7 w-7 text-cyan-300 [.light_&]:text-cyan-700" }),
-              "Skills"
-            ] }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid grid-cols-2 gap-4 md:grid-cols-3", children: skills.sort((a, b) => b.level - a.level).map((skill, index2) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "space-y-2", children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex h-12 w-12 items-center justify-center rounded-lg bg-white/10", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
-                "img",
-                {
-                  src: skill.icon,
-                  alt: skill.name,
-                  className: "h-8 w-8 rounded"
-                }
-              ) }),
-              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
-                /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm font-semibold text-white", children: skill.name }),
-                /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "h-2 w-full rounded-full bg-white/10", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
-                  "div",
-                  {
-                    className: "h-2 rounded-full bg-gradient-to-r from-cyan-400 to-violet-400",
-                    style: { width: `${skill.level}%` }
-                  }
-                ) })
-              ] })
-            ] }, `skill-${index2}`)) })
+                className: "h-2 rounded-full bg-gradient-to-r from-cyan-400 to-violet-400",
+                style: { width: `${skill.level}%` }
+              }
+            ) })
           ] })
-        ] })
+        ] }, `skill-${index2}`)) })
       ] })
-    }
-  );
+    ] })
+  ] }) });
 }
 function App() {
   return /* @__PURE__ */ jsxRuntimeExports.jsx(ThemeProvider, { children: /* @__PURE__ */ jsxRuntimeExports.jsxs("main", { children: [
