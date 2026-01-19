@@ -102,7 +102,7 @@ h1, h2, h3, h4 {
   }
 
   .button-hero {
-    @apply inline-flex items-center justify-center gap-2 rounded-lg px-5 py-2.5 text-sm font-semibold transition duration-200 border min-w-[160px];
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 text-xs sm:text-sm font-semibold transition duration-200 border whitespace-nowrap flex-shrink-0 min-w-[120px] sm:min-w-[140px];
     border-color: rgba(255, 255, 255, 0.16);
     color: var(--text);
     background: linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
