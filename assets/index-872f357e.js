@@ -8217,6 +8217,11 @@ function useTheme() {
   }
   return context;
 }
+const getImagePath = (path) => {
+  const basePath = "/";
+  const cleanPath = path.startsWith("/") ? path.slice(1) : path;
+  return `${basePath}${cleanPath}`;
+};
 function Header() {
   const [isOpen, setIsOpen] = reactExports.useState(false);
   const [dropdownOpen, setDropdownOpen] = reactExports.useState(false);
@@ -8267,7 +8272,7 @@ function Header() {
             "img",
             {
               className: "block md:hidden h-14 w-auto",
-              src: "images/logo.svg",
+              src: getImagePath("images/logo.svg"),
               alt: "Logo"
             }
           ),
@@ -8275,7 +8280,7 @@ function Header() {
             "img",
             {
               className: "hidden md:block h-14 w-auto",
-              src: "images/logo.svg",
+              src: getImagePath("images/logo.svg"),
               alt: "Logo"
             }
           )
@@ -8525,7 +8530,7 @@ function ProjectsDeveloper() {
                   "img",
                   {
                     className: "h-full w-full object-cover transition duration-500 group-hover:scale-105",
-                    src: `${project.image}`,
+                    src: getImagePath(project.image),
                     alt: project.title
                   }
                 ),
@@ -8649,7 +8654,7 @@ function ProjectsAcademics() {
                   "img",
                   {
                     className: "h-full w-full object-cover transition duration-500 group-hover:scale-105",
-                    src: `${project.image}`,
+                    src: getImagePath(project.image),
                     alt: project.title
                   }
                 ),
@@ -8733,7 +8738,7 @@ function ProjectsProfessor() {
                   "img",
                   {
                     className: "h-full w-full object-cover transition duration-500 group-hover:scale-105",
-                    src: `${project.image}`,
+                    src: getImagePath(project.image),
                     alt: project.title
                   }
                 ),
