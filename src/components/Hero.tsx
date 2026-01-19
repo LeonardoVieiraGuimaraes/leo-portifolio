@@ -81,11 +81,12 @@ export default function Hero() {
             </a>
           </div>
 
-          <div className="grid grid-cols-1 gap-4 pt-6 sm:grid-cols-3">
+          <div className="grid grid-cols-1 gap-4 pt-6 sm:grid-cols-4">
             {[
               "+12 anos docência",
               "+8 anos desenvolvimento",
-              "Eng. Comp. + Mat.",
+              "Eng. Computação",
+              "Matemática",
             ].map((item) => (
               <div
                 key={item}
