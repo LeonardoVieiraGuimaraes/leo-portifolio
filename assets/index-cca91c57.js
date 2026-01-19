@@ -7870,8 +7870,14 @@ function FaInfoCircle(props) {
 function FaLaptopCode(props) {
   return GenIcon({ "tag": "svg", "attr": { "viewBox": "0 0 640 512" }, "child": [{ "tag": "path", "attr": { "d": "M255.03 261.65c6.25 6.25 16.38 6.25 22.63 0l11.31-11.31c6.25-6.25 6.25-16.38 0-22.63L253.25 192l35.71-35.72c6.25-6.25 6.25-16.38 0-22.63l-11.31-11.31c-6.25-6.25-16.38-6.25-22.63 0l-58.34 58.34c-6.25 6.25-6.25 16.38 0 22.63l58.35 58.34zm96.01-11.3l11.31 11.31c6.25 6.25 16.38 6.25 22.63 0l58.34-58.34c6.25-6.25 6.25-16.38 0-22.63l-58.34-58.34c-6.25-6.25-16.38-6.25-22.63 0l-11.31 11.31c-6.25 6.25-6.25 16.38 0 22.63L386.75 192l-35.71 35.72c-6.25 6.25-6.25 16.38 0 22.63zM624 416H381.54c-.74 19.81-14.71 32-32.74 32H288c-18.69 0-33.02-17.47-32.77-32H16c-8.8 0-16 7.2-16 16v16c0 35.2 28.8 64 64 64h512c35.2 0 64-28.8 64-64v-16c0-8.8-7.2-16-16-16zM576 48c0-26.4-21.6-48-48-48H112C85.6 0 64 21.6 64 48v336h512V48zm-64 272H128V64h384v256z" } }] })(props);
 }
+function FaMoon(props) {
+  return GenIcon({ "tag": "svg", "attr": { "viewBox": "0 0 512 512" }, "child": [{ "tag": "path", "attr": { "d": "M283.211 512c78.962 0 151.079-35.925 198.857-94.792 7.068-8.708-.639-21.43-11.562-19.35-124.203 23.654-238.262-71.576-238.262-196.954 0-72.222 38.662-138.635 101.498-174.394 9.686-5.512 7.25-20.197-3.756-22.23A258.156 258.156 0 0 0 283.211 0c-141.309 0-256 114.511-256 256 0 141.309 114.511 256 256 256z" } }] })(props);
+}
 function FaSpinner(props) {
   return GenIcon({ "tag": "svg", "attr": { "viewBox": "0 0 512 512" }, "child": [{ "tag": "path", "attr": { "d": "M304 48c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-48 368c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm208-208c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zM96 256c0-26.51-21.49-48-48-48S0 229.49 0 256s21.49 48 48 48 48-21.49 48-48zm12.922 99.078c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.491-48-48-48zm294.156 0c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.49-48-48-48zM108.922 60.922c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.491-48-48-48z" } }] })(props);
+}
+function FaSun(props) {
+  return GenIcon({ "tag": "svg", "attr": { "viewBox": "0 0 512 512" }, "child": [{ "tag": "path", "attr": { "d": "M256 160c-52.9 0-96 43.1-96 96s43.1 96 96 96 96-43.1 96-96-43.1-96-96-96zm246.4 80.5l-94.7-47.3 33.5-100.4c4.5-13.6-8.4-26.5-21.9-21.9l-100.4 33.5-47.4-94.8c-6.4-12.8-24.6-12.8-31 0l-47.3 94.7L92.7 70.8c-13.6-4.5-26.5 8.4-21.9 21.9l33.5 100.4-94.7 47.4c-12.8 6.4-12.8 24.6 0 31l94.7 47.3-33.5 100.5c-4.5 13.6 8.4 26.5 21.9 21.9l100.4-33.5 47.3 94.7c6.4 12.8 24.6 12.8 31 0l47.3-94.7 100.4 33.5c13.6 4.5 26.5-8.4 21.9-21.9l-33.5-100.4 94.7-47.3c13-6.5 13-24.7.2-31.1zm-155.9 106c-49.9 49.9-131.1 49.9-181 0-49.9-49.9-49.9-131.1 0-181 49.9-49.9 131.1-49.9 181 0 49.9 49.9 49.9 131.1 0 181z" } }] })(props);
 }
 function FaTools(props) {
   return GenIcon({ "tag": "svg", "attr": { "viewBox": "0 0 512 512" }, "child": [{ "tag": "path", "attr": { "d": "M501.1 395.7L384 278.6c-23.1-23.1-57.6-27.6-85.4-13.9L192 158.1V96L64 0 0 64l96 128h62.1l106.6 106.6c-13.6 27.8-9.2 62.3 13.9 85.4l117.1 117.1c14.6 14.6 38.2 14.6 52.7 0l52.7-52.7c14.5-14.6 14.5-38.2 0-52.7zM331.7 225c28.3 0 54.9 11 74.9 31l19.4 19.4c15.8-6.9 30.8-16.5 43.8-29.5 37.1-37.1 49.7-89.3 37.9-136.7-2.2-9-13.5-12.1-20.1-5.5l-74.4 74.4-67.9-11.3L334 98.9l74.4-74.4c6.6-6.6 3.4-17.9-5.7-20.2-47.4-11.7-99.6.9-136.6 37.9-28.5 28.5-41.9 66.1-41.2 103.6l82.1 82.1c8.1-1.9 16.5-2.9 24.7-2.9zm-103.9 82l-56.7-56.7L18.7 402.8c-25 25-25 65.5 0 90.5s65.5 25 90.5 0l123.6-123.6c-7.6-19.9-9.9-41.6-5-62.7zM64 472c-13.2 0-24-10.8-24-24 0-13.3 10.7-24 24-24s24 10.7 24 24c0 13.2-10.7 24-24 24z" } }] })(props);
@@ -8163,9 +8169,44 @@ function XMarkIcon({
 }
 const ForwardRef = reactExports.forwardRef(XMarkIcon);
 const XMarkIcon$1 = ForwardRef;
+const ThemeContext = reactExports.createContext(void 0);
+function ThemeProvider({ children }) {
+  const [theme, setTheme] = reactExports.useState(() => {
+    if (typeof window !== "undefined") {
+      const stored = localStorage.getItem("theme");
+      if (stored)
+        return stored;
+      return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    return "dark";
+  });
+  reactExports.useEffect(() => {
+    localStorage.setItem("theme", theme);
+    const root = document.documentElement;
+    if (theme === "dark") {
+      root.classList.add("dark");
+      root.classList.remove("light");
+    } else {
+      root.classList.add("light");
+      root.classList.remove("dark");
+    }
+  }, [theme]);
+  const toggleTheme = () => {
+    setTheme((prev) => prev === "dark" ? "light" : "dark");
+  };
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(ThemeContext.Provider, { value: { theme, toggleTheme }, children });
+}
+function useTheme() {
+  const context = reactExports.useContext(ThemeContext);
+  if (!context) {
+    throw new Error("useTheme must be used within ThemeProvider");
+  }
+  return context;
+}
 function Header() {
   const [isOpen, setIsOpen] = reactExports.useState(false);
   const [dropdownOpen, setDropdownOpen] = reactExports.useState(false);
+  const { theme, toggleTheme } = useTheme();
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
@@ -8190,7 +8231,7 @@ function Header() {
     },
     { name: "Video Aulas", icon: /* @__PURE__ */ jsxRuntimeExports.jsx(FaVideo, {}), href: "#projectsProfessor" }
   ];
-  return /* @__PURE__ */ jsxRuntimeExports.jsx("header", { children: /* @__PURE__ */ jsxRuntimeExports.jsxs("nav", { className: "fixed z-50 w-full border-b border-white/5 bg-slate-900/80 backdrop-blur-md", children: [
+  return /* @__PURE__ */ jsxRuntimeExports.jsx("header", { children: /* @__PURE__ */ jsxRuntimeExports.jsxs("nav", { className: "fixed z-50 w-full border-b border-white/5 bg-slate-900/80 dark:bg-slate-900/80 light:bg-slate-100/80 backdrop-blur-md transition-colors duration-300", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "max-w-6xl mx-auto px-4", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative flex items-center justify-between h-16", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-y-0 right-0 flex items-center md:hidden", children: /* @__PURE__ */ jsxRuntimeExports.jsxs(
         "button",
@@ -8225,55 +8266,66 @@ function Header() {
             }
           )
         ] }) }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "hidden md:block md:ml-6 ", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex space-x-4 ", children: navLinks.map(
-          (link, index2) => link.name === "Projetos" ? /* @__PURE__ */ jsxRuntimeExports.jsxs(
-            "div",
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "hidden md:block md:ml-6 ", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex space-x-4 items-center", children: [
+          navLinks.map(
+            (link, index2) => link.name === "Projetos" ? /* @__PURE__ */ jsxRuntimeExports.jsxs(
+              "div",
+              {
+                className: "relative",
+                onMouseLeave: () => setDropdownOpen(false),
+                children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                    "button",
+                    {
+                      onClick: () => setDropdownOpen(!dropdownOpen),
+                      onMouseOver: () => setDropdownOpen(true),
+                      className: "text-slate-200 hover:bg-white/5 hover:text-white px-3 py-2 rounded-md flex items-center font-headline text-lg font-semibold transition",
+                      children: [
+                        link.icon,
+                        " ",
+                        link.name
+                      ]
+                    },
+                    index2
+                  ),
+                  dropdownOpen && /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute left-0 w-auto pt-2 pb-2 bg-slate-900/95 border border-white/5 rounded-lg shadow-xl", children: projects.map((projects2, index22) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                    "a",
+                    {
+                      href: projects2.href,
+                      className: "text-slate-200 hover:bg-white/5 hover:text-white px-3 py-2 rounded-md text-base font-medium flex items-center",
+                      children: [
+                        projects2.icon,
+                        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "ml-2", children: projects2.name })
+                      ]
+                    },
+                    index22
+                  )) })
+                ]
+              },
+              index2
+            ) : /* @__PURE__ */ jsxRuntimeExports.jsxs(
+              "a",
+              {
+                href: link.href,
+                className: "text-slate-200 hover:text-white hover:bg-white/5 px-3 py-2 rounded-md flex items-center font-headline text-lg font-semibold transition",
+                children: [
+                  link.icon,
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "ml-2", children: link.name })
+                ]
+              },
+              index2
+            )
+          ),
+          /* @__PURE__ */ jsxRuntimeExports.jsx(
+            "button",
             {
-              className: "relative",
-              onMouseLeave: () => setDropdownOpen(false),
-              children: [
-                /* @__PURE__ */ jsxRuntimeExports.jsxs(
-                  "button",
-                  {
-                    onClick: () => setDropdownOpen(!dropdownOpen),
-                    onMouseOver: () => setDropdownOpen(true),
-                    className: "text-slate-200 hover:bg-white/5 hover:text-white px-3 py-2 rounded-md flex items-center font-headline text-lg font-semibold transition",
-                    children: [
-                      link.icon,
-                      " ",
-                      link.name
-                    ]
-                  },
-                  index2
-                ),
-                dropdownOpen && /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute left-0 w-auto pt-2 pb-2 bg-slate-900/95 border border-white/5 rounded-lg shadow-xl", children: projects.map((projects2, index22) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
-                  "a",
-                  {
-                    href: projects2.href,
-                    className: "text-slate-200 hover:bg-white/5 hover:text-white px-3 py-2 rounded-md text-base font-medium flex items-center",
-                    children: [
-                      projects2.icon,
-                      /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "ml-2", children: projects2.name })
-                    ]
-                  },
-                  index22
-                )) })
-              ]
-            },
-            index2
-          ) : /* @__PURE__ */ jsxRuntimeExports.jsxs(
-            "a",
-            {
-              href: link.href,
-              className: "text-slate-200 hover:text-white hover:bg-white/5 px-3 py-2 rounded-md flex items-center font-headline text-lg font-semibold transition",
-              children: [
-                link.icon,
-                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "ml-2", children: link.name })
-              ]
-            },
-            index2
+              onClick: toggleTheme,
+              className: "text-slate-200 hover:text-white hover:bg-white/5 px-3 py-2 rounded-md flex items-center font-headline text-lg font-semibold transition ml-2",
+              title: `Mudar para ${theme === "dark" ? "light" : "dark"} mode`,
+              children: theme === "dark" ? /* @__PURE__ */ jsxRuntimeExports.jsx(FaSun, {}) : /* @__PURE__ */ jsxRuntimeExports.jsx(FaMoon, {})
+            }
           )
-        ) }) })
+        ] }) })
       ] })
     ] }) }),
     /* @__PURE__ */ jsxRuntimeExports.jsx(
@@ -8281,53 +8333,67 @@ function Header() {
       {
         className: `${isOpen ? "block" : "hidden"} md:hidden`,
         id: "mobile-menu",
-        children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "px-2 pt-2 pb-3 space-y-1", children: navLinks.map(
-          (link, index2) => link.name === "Projetos" ? /* @__PURE__ */ jsxRuntimeExports.jsxs(
-            "div",
+        children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "px-2 pt-2 pb-3 space-y-1", children: [
+          navLinks.map(
+            (link, index2) => link.name === "Projetos" ? /* @__PURE__ */ jsxRuntimeExports.jsxs(
+              "div",
+              {
+                className: "relative",
+                onMouseLeave: () => setDropdownOpen(false),
+                children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                    "button",
+                    {
+                      onClick: () => setDropdownOpen(!dropdownOpen),
+                      onMouseOver: () => setDropdownOpen(true),
+                      className: "text-slate-200 hover:bg-white/5 hover:text-white px-3 py-2 rounded-md text-base font-medium flex items-center",
+                      children: [
+                        link.icon,
+                        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "ml-2", children: link.name })
+                      ]
+                    }
+                  ),
+                  dropdownOpen && /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "px-2 pt-2 pb-3 space-y-1", children: projects.map((projects2, index22) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                    "a",
+                    {
+                      href: projects2.href,
+                      className: "text-slate-200 hover:bg-white/5 hover:text-white px-3 py-2 rounded-md text-base font-medium flex items-center",
+                      children: [
+                        projects2.icon,
+                        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "ml-2", children: projects2.name })
+                      ]
+                    },
+                    index22
+                  )) })
+                ]
+              },
+              index2
+            ) : /* @__PURE__ */ jsxRuntimeExports.jsxs(
+              "a",
+              {
+                href: link.href,
+                className: "text-slate-200 hover:bg-white/5 hover:text-white px-3 py-2 rounded-md text-base font-medium flex items-center",
+                children: [
+                  link.icon,
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "ml-2", children: link.name })
+                ]
+              },
+              index2
+            )
+          ),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs(
+            "button",
             {
-              className: "relative",
-              onMouseLeave: () => setDropdownOpen(false),
+              onClick: toggleTheme,
+              className: "text-slate-200 hover:text-white hover:bg-white/5 px-3 py-2 rounded-md text-base font-medium flex items-center w-full transition",
+              title: `Mudar para ${theme === "dark" ? "light" : "dark"} mode`,
               children: [
-                /* @__PURE__ */ jsxRuntimeExports.jsxs(
-                  "button",
-                  {
-                    onClick: () => setDropdownOpen(!dropdownOpen),
-                    onMouseOver: () => setDropdownOpen(true),
-                    className: "text-slate-200 hover:bg-white/5 hover:text-white px-3 py-2 rounded-md text-base font-medium flex items-center",
-                    children: [
-                      link.icon,
-                      /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "ml-2", children: link.name })
-                    ]
-                  }
-                ),
-                dropdownOpen && /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "px-2 pt-2 pb-3 space-y-1", children: projects.map((projects2, index22) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
-                  "a",
-                  {
-                    href: projects2.href,
-                    className: "text-slate-200 hover:bg-white/5 hover:text-white px-3 py-2 rounded-md text-base font-medium flex items-center",
-                    children: [
-                      projects2.icon,
-                      /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "ml-2", children: projects2.name })
-                    ]
-                  },
-                  index22
-                )) })
+                theme === "dark" ? /* @__PURE__ */ jsxRuntimeExports.jsx(FaSun, {}) : /* @__PURE__ */ jsxRuntimeExports.jsx(FaMoon, {}),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "ml-2", children: theme === "dark" ? "Light Mode" : "Dark Mode" })
               ]
-            },
-            index2
-          ) : /* @__PURE__ */ jsxRuntimeExports.jsxs(
-            "a",
-            {
-              href: link.href,
-              className: "text-slate-200 hover:bg-white/5 hover:text-white px-3 py-2 rounded-md text-base font-medium flex items-center",
-              children: [
-                link.icon,
-                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "ml-2", children: link.name })
-              ]
-            },
-            index2
+            }
           )
-        ) })
+        ] })
       }
     )
   ] }) });
@@ -8922,7 +8988,7 @@ function Skills() {
   ] }) });
 }
 function App() {
-  return /* @__PURE__ */ jsxRuntimeExports.jsxs("main", { children: [
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(ThemeProvider, { children: /* @__PURE__ */ jsxRuntimeExports.jsxs("main", { children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx(Header, {}),
     /* @__PURE__ */ jsxRuntimeExports.jsx(Hero, {}),
     /* @__PURE__ */ jsxRuntimeExports.jsx(About, {}),
@@ -8934,7 +9000,7 @@ function App() {
     /* @__PURE__ */ jsxRuntimeExports.jsx(Skills, {}),
     /* @__PURE__ */ jsxRuntimeExports.jsx(Contact, {}),
     /* @__PURE__ */ jsxRuntimeExports.jsx(Footer, {})
-  ] });
+  ] }) });
 }
 const index = "";
 client.createRoot(document.getElementById("root")).render(
