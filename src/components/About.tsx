@@ -1,4 +1,5 @@
 import { differenceInYears } from "date-fns";
+import { FaGithub } from "react-icons/fa";
 
 export default function About() {
   const birthDate = new Date(1984, 10 - 1, 2);
@@ -52,8 +53,9 @@ export default function About() {
                   href="https://github.com/LeonardoVieiraGuimaraes?tab=repositories"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="button-secondary border border-white/20 hover:border-white/40"
+                  className="button-secondary border border-white/20 hover:border-white/40 flex items-center gap-2"
                 >
+                  <FaGithub className="h-5 w-5" />
                   Ver repositórios no GitHub
                 </a>
               </div>
