@@ -16,13 +16,13 @@
 }
 
 :root.light {
-  --bg: #ffffff;
-  --panel: #f0f4f8;
+  --bg: #fdfefe;
+  --panel: #f7fafc;
   --muted: #6b7280;
-  --text: #111827;
+  --text: #1f2937;
   --accent: #0891b2;
   --accent-2: #7c3aed;
-  --border: rgba(0, 0, 0, 0.1);
+  --border: rgba(0, 0, 0, 0.08);
 }
 
 * {
@@ -109,15 +109,15 @@ h1, h2, h3, h4 {
   }
 
   :root.light .card {
-    background: rgba(255, 255, 255, 0.8);
-    border-color: rgba(8, 145, 178, 0.15);
-    box-shadow: 0 10px 40px rgba(8, 145, 178, 0.08);
+    background: #ffffff;
+    border-color: rgba(8, 145, 178, 0.12);
+    box-shadow: 0 10px 30px rgba(8, 145, 178, 0.05);
   }
 
   /* Light mode navbar styles */
   :root.light nav {
-    background-color: rgba(255, 255, 255, 0.9) !important;
-    border-color: rgba(8, 145, 178, 0.2) !important;
+    background-color: rgba(255, 255, 255, 0.92) !important;
+    border-color: rgba(8, 145, 178, 0.12) !important;
   }
 
   :root.light nav a,
@@ -154,20 +154,20 @@ h1, h2, h3, h4 {
 
   /* Light mode text overrides for readability */
   :root.light .text-white {
-    color: #0f172a !important;
+    color: #1f2937 !important;
   }
   :root.light .text-slate-50,
   :root.light .text-slate-100,
   :root.light .text-slate-200 {
-    color: #111827 !important;
-  }
-  :root.light .text-slate-300 {
     color: #1f2937 !important;
   }
+  :root.light .text-slate-300 {
+    color: #27303f !important;
+  }
   :root.light .text-slate-400 {
-    color: #374151 !important;
+    color: #3b4658 !important;
   }
   :root.light .text-slate-500 {
-    color: #475569 !important;
+    color: #4b5565 !important;
   }
 }
