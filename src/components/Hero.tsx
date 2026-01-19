@@ -85,7 +85,7 @@ export default function Hero() {
             {[
               "+12 anos docência",
               "+8 anos desenvolvimento",
-              "Engenharia da computação + Matemática",
+              "Eng. Computação + Matemática",
             ].map((item) => (
               <div
                 key={item}
