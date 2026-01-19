@@ -82,7 +82,7 @@ export default function Hero() {
           </div>
 
           <div className="grid grid-cols-2 gap-4 pt-6 sm:grid-cols-3">
-            {["+12 anos docência", "+8 anos desenvolvimento", "Engenharia + Matemática"].map(
+            {["+12 anos docência", "+8 anos desenvolvimento", "Engenharia da computação + Matemática"].map(
               (item) => (
                 <div
                   key={item}
