@@ -6,7 +6,7 @@ export default function About() {
   const age = differenceInYears(today, birthDate);
 
   return (
-    <section className="container mx-auto my-4  p-5" id="about">
+    <section className="container mx-auto my-12 px-4" id="about">
       {/* <a
           href="https://www.instagram.com/seu_usuario_do_instagram"
           target="_blank"
@@ -17,41 +17,46 @@ export default function About() {
           <FaInstagram size={24} />
         </a> */}
 
-      <div className="relative mx-auto mt-20 max-w-6xl">
-        <div className=" w-full rounded-lg bg-blue-100 p-4 ps-16  md:ps-44 md:pr-12">
-          <div className=" p-4 text-center">
-            <h2 className=" z-50 mb-2 font-bold text-blue-900">
-              <span className="mr-2 font-headline text-3xl">Sobre</span>
-              <span className="font-handwriting text-4xl">Mim</span>
-            </h2>
-            <p className=" text-justify text-lg text-gray-700">
-              Tenho {age} anos de idade, possuo uma vasta gama de projetos no
-              meu repositório no{" "}
+      <div className="relative mx-auto mt-8 max-w-6xl">
+        <div className="card relative w-full overflow-hidden rounded-2xl border border-white/10 bg-slate-900/80 p-6 md:p-10">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(34,211,238,0.12),transparent_35%),radial-gradient(circle_at_80%_0%,rgba(167,139,250,0.12),transparent_30%)]" />
+          <div className="relative space-y-6">
+            <div className="text-center space-y-3">
+              <h2 className="text-3xl md:text-4xl font-semibold text-white">
+                Sobre mim
+              </h2>
+              <p className="text-slate-300">
+                Tenho {age} anos, sou professor universitário e desenvolvedor full stack. Conecto
+                engenharia, matemática e produto para entregar soluções que resolvem problemas de
+                negócio e educação.
+              </p>
+            </div>
+
+            <p className="text-slate-200 leading-relaxed text-justify">
+              Mestre em Modelagem Computacional e Sistemas (UNIMONTES) e doutorando em Modelagem
+              Matemática e Computacional (CEFET/MG). Atuo criando APIs, front-ends e automações, e
+              leciono disciplinas de Arquitetura Web, Programação, Banco de Dados, Probabilidade e
+              Matemática Financeira. No NIM (Cidade Administrativa de Belo Horizonte) trabalho com
+              projetos de TI e suporte ao sistema agropecuário do IMA. Sigo entregando valor e
+              aprendendo continuamente.
+            </p>
+
+            <div className="flex flex-wrap gap-3">
+              <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-cyan-200">
+                <span className="relative flex h-3 w-3">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
+                  <span className="relative inline-flex h-3 w-3 rounded-full bg-emerald-400" />
+                </span>
+                Disponível para projetos e oportunidades
+              </div>
               <a
                 href="https://github.com/LeonardoVieiraGuimaraes?tab=repositories"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-500 hover:text-blue-800 hover:underline"
+                className="button-secondary border border-white/20 hover:border-white/40"
               >
-                GitHub
+                Ver repositórios no GitHub
               </a>
-              , conto com uma sólida formação acadêmica e ampla experiência.
-              Mestre em Modelagem Computacional e Sistemas pela UNIMONTES e atualmente 
-              Doutorando em Modelagem Matemática e Computacional no CEFET em Belo Horizonte, minha
-              expertise também abrange especialização em Matemática e
-              Estatística. Graduei-me em Engenharia de Computação e Matemática,
-              atuando como Professor de Ensino Superior e lecionando disciplinas como Arquitetura Web, Programação Web, Banco de Dados, Matemática Financeira, Probabilidade, Tecnologia da Informação e Gestão de Finanças. Também atuo na Cidade Administrativa de Belo Horizonte, no NIM (Núcleo de Inovação e Modernização), desenvolvendo projetos de TI e prestando suporte ao sistema de gestão agropecuária do IMA, o que demonstra minha versatilidade profissional. Ao longo da carreira, participei ativamente e continuo colaborando com instituições de renome como IFNMG, UNIASSELVI e FADENORTE, agregando experiência e conhecimento diversificados. Destaco meu compromisso com o aprendizado contínuo, evidenciado pela participação em cursos complementares e eventos acadêmicos. Sou um profissional dedicado à aplicação prática do conhecimento adquirido e estou sempre aberto a novos desafios e aprendizados que contribuam para meu constante desenvolvimento profissional.
-            </p>
-          </div>
-          <div className="flex flex-row">
-            <div className="font-headline font-bold uppercase text-blue-900">
-              Disponível:
-            </div>
-            <div>
-              <span className="relative flex h-4 w-4 left-3 mt-1">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"></span>
-                <span className="relative inline-flex h-3 w-3 rounded-full bg-green-500"></span>
-              </span>
             </div>
           </div>
           {/* <div className=" w-full h-full rounded-lg bg-gray-50 p-4 text-center">

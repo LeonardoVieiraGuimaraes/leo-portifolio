@@ -8,6 +8,7 @@ import ProjectsDeveloper from "./components/ProjectsDeveloper";
 import ProjectsAcademics from "./components/ProjectsAcademics";
 import ProjectsProfessor from "./components/ProjectsProfessor";
 import Services from "./components/Services";
+import Process from "./components/Process";
 import Skills from "./components/Skills";
 
 // import Textimonials from "./components/Textimonials";
@@ -20,6 +21,7 @@ function App() {
       <Hero />
       <About />
       <Services />
+      <Process />
       <ProjectsAcademics />
       <ProjectsDeveloper />
       <ProjectsProfessor />

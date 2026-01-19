@@ -49,7 +49,7 @@ export default function Header() {
 
   return (
     <header>
-      <nav className="bg-gray-800 fixed w-full z-50">
+      <nav className="fixed z-50 w-full border-b border-white/5 bg-slate-900/80 backdrop-blur-md">
         <div className="max-w-6xl mx-auto px-4">
           <div className="relative flex items-center justify-between h-16">
             <div className="absolute inset-y-0 right-0 flex items-center md:hidden">
@@ -95,18 +95,18 @@ export default function Header() {
                         <button
                           onClick={() => setDropdownOpen(!dropdownOpen)}
                           onMouseOver={() => setDropdownOpen(true)}
-                          className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md flex items-center font-headline text-lg font-semibold"
+                              className="text-slate-200 hover:bg-white/5 hover:text-white px-3 py-2 rounded-md flex items-center font-headline text-lg font-semibold transition"
                           key={index}
                         >
                           {link.icon} {link.name}
                         </button>
                         {dropdownOpen && (
-                          <div className="absolute left-0 w-auto pt-2 pb-2  bg-gray-800">
+                              <div className="absolute left-0 w-auto pt-2 pb-2 bg-slate-900/95 border border-white/5 rounded-lg shadow-xl">
                             {projects.map((projects, index) => (
                               <a
                                 key={index}
                                 href={projects.href}
-                                className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium flex items-center"
+                                    className="text-slate-200 hover:bg-white/5 hover:text-white px-3 py-2 rounded-md text-base font-medium flex items-center"
                               >
                                 {projects.icon}
                                 <span className="ml-2">{projects.name}</span>
@@ -119,7 +119,7 @@ export default function Header() {
                       <a
                         key={index}
                         href={link.href}
-                        className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md flex items-center font-headline text-lg font-semibold"
+                        className="text-slate-200 hover:text-white hover:bg-white/5 px-3 py-2 rounded-md flex items-center font-headline text-lg font-semibold transition"
                       >
                         {link.icon}
                         <span className="ml-2">{link.name}</span>
@@ -146,7 +146,7 @@ export default function Header() {
                   <button
                     onClick={() => setDropdownOpen(!dropdownOpen)}
                     onMouseOver={() => setDropdownOpen(true)}
-                    className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium flex items-center"
+                    className="text-slate-200 hover:bg-white/5 hover:text-white px-3 py-2 rounded-md text-base font-medium flex items-center"
                   >
                     {link.icon}
                     <span className="ml-2">{link.name}</span>
@@ -157,7 +157,7 @@ export default function Header() {
                         <a
                           key={index}
                           href={projects.href}
-                          className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium flex items-center"
+                          className="text-slate-200 hover:bg-white/5 hover:text-white px-3 py-2 rounded-md text-base font-medium flex items-center"
                         >
                           {projects.icon}
                           <span className="ml-2">{projects.name}</span>
@@ -170,7 +170,7 @@ export default function Header() {
                 <a
                   key={index}
                   href={link.href}
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium flex items-center"
+                  className="text-slate-200 hover:bg-white/5 hover:text-white px-3 py-2 rounded-md text-base font-medium flex items-center"
                 >
                   {link.icon}
                   <span className="ml-2">{link.name}</span>

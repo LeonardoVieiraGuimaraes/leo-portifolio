@@ -88,73 +88,69 @@ export default function Skills() {
   ];
 
   return (
-    <section className="bg-gray-300" id="skills">
-      <div className="container mx-auto max-w-6xl p-4 py-12">
-        <div className="relative mb-4 p-4 text-center">
-          <h2 className="relative z-40 mb-2 font-bold">
-            <span className="mr-2 font-headline text-3xl text-gray-800">
-              Educação &
-            </span>
-            <span className="font-handwriting text-4xl text-blue-800">
-              Skills
-            </span>
-          </h2>
-          <p className="relative text-sm text-gray-700">
-            Professor TI e Matemática | Front-end e Back-end Developer
+    <section className="bg-slate-900/40" id="skills">
+      <div className="container mx-auto max-w-6xl px-4 py-16">
+        <div className="text-center space-y-3 mb-8">
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200">
+            Formação & stack
           </p>
-          <div className="absolute left-1/2 top-3 z-0 h-10 w-10 rounded-lg bg-blue-400/10" />
+          <h2 className="text-3xl md:text-4xl font-semibold text-white">Educação e skills</h2>
+          <p className="text-slate-300">
+            Base sólida em modelagem, dados e engenharia para construir e ensinar tecnologia.
+          </p>
         </div>
-        <h3 className="mb-4 flex items-center gap-2 text-lg font-extrabold text-gray-700">
-          <HiAcademicCap className="h-8 w-8 text-blue-600" />
-          Educação
-        </h3>
-        {/* <div className="flex flex-col gap-8 md:flex-row"> */}
-        <div className="grid grid-cols-1 gap-2 font-semibold md:grid-cols-2">
-          {educations.map((education, index) => (
-            <div
-              key={`education-${index}`}
-              className="mb-2 rounded-lg bg-white p-4 text-sm font-semibold text-gray-900"
-            >
-              {education.name}
-            </div>
-          ))}
-        </div>
-        <div>
-          <h3 className="mb-4 mt-4 flex items-center gap-2 text-lg font-extrabold text-gray-700">
-            <HiCodeBracketSquare className="h-8 w-8 text-blue-600" />
-            Skills
-          </h3>
 
-          <div className="grid grid-cols-1 gap-4 font-semibold md:grid-cols-4">
-            {skills
-              .sort((a, b) => b.level - a.level)
-              .map((skill, index) => (
+        <div className="grid gap-6 md:grid-cols-2">
+          <div className="card rounded-2xl p-6">
+            <h3 className="mb-4 flex items-center gap-2 text-lg font-semibold text-white">
+              <HiAcademicCap className="h-7 w-7 text-cyan-300" />
+              Educação
+            </h3>
+            <div className="space-y-3 text-slate-200">
+              {educations.map((education, index) => (
                 <div
-                  key={`skill-${index}`}
-                  className="flex flex-row items-center gap-2 md:flex-col md:items-start"
+                  key={`education-${index}`}
+                  className="flex items-center gap-3 rounded-lg border border-white/5 bg-white/5 px-4 py-3"
                 >
-                  <div className="flex h-14 w-14 items-center justify-center rounded-lg bg-white p-2">
-                    <img
-                      src={skill.icon}
-                      alt={skill.name}
-                      className="h-10 w-10 rounded"
-                    />
-                  </div>
-                  <div className="w-full flex-grow">
-                    <h4 className="font-headlin text-gray-900">{skill.name}</h4>
-                    <div className="h-2.5 w-full rounded-full bg-white">
-                      <div
-                        className={`h-2.5 rounded-full bg-blue-600`}
-                        style={{ width: `${skill.level}%` }}
-                      ></div>
-                    </div>
-                  </div>
+                  <span className="h-2 w-2 rounded-full bg-cyan-300" />
+                  <span className="text-sm font-semibold">{education.name}</span>
                 </div>
               ))}
+            </div>
+          </div>
+
+          <div className="card rounded-2xl p-6">
+            <h3 className="mb-4 flex items-center gap-2 text-lg font-semibold text-white">
+              <HiCodeBracketSquare className="h-7 w-7 text-cyan-300" />
+              Skills
+            </h3>
+            <div className="grid grid-cols-2 gap-4 md:grid-cols-3">
+              {skills
+                .sort((a, b) => b.level - a.level)
+                .map((skill, index) => (
+                  <div key={`skill-${index}`} className="space-y-2">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-white/10">
+                      <img
+                        src={skill.icon}
+                        alt={skill.name}
+                        className="h-8 w-8 rounded"
+                      />
+                    </div>
+                    <div>
+                      <p className="text-sm font-semibold text-white">{skill.name}</p>
+                      <div className="h-2 w-full rounded-full bg-white/10">
+                        <div
+                          className="h-2 rounded-full bg-gradient-to-r from-cyan-400 to-violet-400"
+                          style={{ width: `${skill.level}%` }}
+                        ></div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+            </div>
           </div>
         </div>
       </div>
-      {/* </div> */}
     </section>
   );
 }
