@@ -8130,7 +8130,7 @@ function Contact() {
   );
 }
 const getImagePath = (path) => {
-  const basePath = "/";
+  const basePath = "/leo_portifolio/";
   const cleanPath = path.startsWith("/") ? path.slice(1) : path;
   return `${basePath}${cleanPath}`;
 };
@@ -8467,11 +8467,19 @@ function Hero() {
         /* @__PURE__ */ jsxRuntimeExports.jsx("h1", { className: "text-4xl font-semibold leading-tight text-white sm:text-5xl md:text-6xl", children: "Transformando dados e código em produtos digitais que entregam impacto real." }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-lg text-slate-300", children: "Sou Leonardo Vieira Guimarães: desenvolvedor full stack, professor universitário e pesquisador. Combino engenharia, matemática e produto para criar soluções web, mobile e acadêmicas que resolvem problemas de negócio e educação." }),
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-wrap gap-3", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsxs("a", { href: "#projectsDeveloper", className: "button flex items-center gap-2", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx(HiArrowTopRightOnSquare, { className: "h-5 w-5" }),
-            "Ver projetos"
-          ] }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#contact", className: "button-secondary flex items-center gap-2", children: "Fale comigo" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs(
+            "a",
+            {
+              href: "https://docs.google.com/document/d/1hLeOBX7zAz-BtYLxXKWK6RtYEWqWnCo4Z5IA5Kvwzsk/edit?usp=drive_link",
+              target: "_blank",
+              rel: "noopener",
+              className: "button flex items-center gap-2",
+              children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx(HiArrowDownTray, { className: "h-5 w-5" }),
+                "Currículo"
+              ]
+            }
+          ),
           /* @__PURE__ */ jsxRuntimeExports.jsxs(
             "a",
             {
