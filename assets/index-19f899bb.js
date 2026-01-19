@@ -8130,7 +8130,7 @@ function Contact() {
   );
 }
 const getImagePath = (path) => {
-  const basePath = "/";
+  const basePath = "/leo_portifolio/";
   const cleanPath = path.startsWith("/") ? path.slice(1) : path;
   return `${basePath}${cleanPath}`;
 };
