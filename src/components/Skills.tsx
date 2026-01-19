@@ -61,7 +61,7 @@ export default function Skills() {
     },
     {
       name: "Django Ninja",
-      icon: "images/skills/django.svg",
+      icon: "images/skills/djangoNinja.png",
       level: 70,
     },
     {
@@ -71,7 +71,7 @@ export default function Skills() {
     },
     {
       name: "Spring Boot",
-      icon: "images/skills/java.svg",
+      icon: "images/skills/Spring_Boot.svg",
       level: 60,
     },
     {
