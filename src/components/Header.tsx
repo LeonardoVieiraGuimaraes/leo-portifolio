@@ -189,14 +189,6 @@ export default function Header() {
                 </a>
               )
             )}
-            <button
-              onClick={toggleTheme}
-              className="text-slate-200 hover:text-white hover:bg-white/5 px-3 py-2 rounded-md text-base font-medium flex items-center w-full transition"
-              title={`Mudar para ${theme === "dark" ? "light" : "dark"} mode`}
-            >
-              {theme === "dark" ? <FaSun /> : <FaMoon />}
-              <span className="ml-2">{theme === "dark" ? "Light Mode" : "Dark Mode"}</span>
-            </button>
           </div>
         </div>
       </nav>
