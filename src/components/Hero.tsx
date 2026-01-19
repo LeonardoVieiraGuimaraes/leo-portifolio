@@ -98,13 +98,13 @@ export default function Hero() {
         <div className="relative hidden md:block">
           <div className="card relative h-96 w-80 overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 p-6">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(34,211,238,0.18),transparent_30%),radial-gradient(circle_at_80%_0%,rgba(167,139,250,0.2),transparent_35%)]" />
-            <div className="relative flex h-full flex-col justify-between">
+            <div className="relative flex h-full flex-col justify-start gap-4">
               <div>
                 <p className="text-sm uppercase tracking-wide text-cyan-200">Perfil</p>
                 <h3 className="text-2xl font-semibold text-white">Leonardo V. Guimarães</h3>
                 <p className="text-slate-300">Belo Horizonte • Remoto Brasil</p>
               </div>
-              <div className="space-y-2 text-sm text-slate-200 mt-2">
+              <div className="space-y-2 text-sm text-slate-200">
                 <p>Full Stack • Frontend: React, TypeScript, Tailwind</p>
                 <p>Backend: Node.js, Python, Django, Django Ninja, Spring Boot</p>
                 <p>Professor universitário • Doutorando Modelagem Computacional</p>
