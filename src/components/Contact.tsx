@@ -6,8 +6,16 @@ import {
   HiOutlineEnvelope,
   HiOutlineMapPin,
 } from "react-icons/hi2";
+import { useTheme } from "../context/ThemeContext";
 
 export default function Contact() {
+  const { theme } = useTheme();
+  const isLight = theme === "light";
+
+  const background = isLight
+    ? "linear-gradient(180deg, #f9fafb 0%, #eef2f7 60%, #f9fafb 100%)"
+    : "linear-gradient(135deg, #0b1220 0%, #0f172a 60%, #0b1220 100%)";
+
   const form = useRef<HTMLFormElement>(null);
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
@@ -62,7 +70,11 @@ export default function Contact() {
   ];
 
   return (
-    <section className="bg-slate-900/60 text-white" id="contact">
+    <section
+      className="relative text-white"
+      id="contact"
+      style={{ background }}
+    >
       <div className="container mx-auto max-w-6xl px-4 py-16">
         <div className="mb-8 text-center space-y-3">
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200">
@@ -78,23 +90,23 @@ export default function Contact() {
           <div className="card md:col-span-2 rounded-2xl p-6">
             <form ref={form} onSubmit={sendEmail} className="space-y-4">
               <div>
-                <label htmlFor="message" className="mb-2 block text-sm font-semibold text-slate-200">
+                <label htmlFor="message" className="mb-2 block text-sm font-semibold text-[var(--text)]">
                   Mensagem
                 </label>
                 <textarea
                   id="message"
                   name="message"
-                  className="h-32 w-full rounded-lg border border-white/10 bg-white/5 p-3 text-white outline-none focus:border-cyan-300"
+                  className="h-32 w-full rounded-lg border border-[color:var(--border)] bg-[color:var(--panel)] p-3 text-[var(--text)] outline-none focus:border-[color:var(--accent)]"
                   required
                 />
               </div>
               <div className="grid gap-4 md:grid-cols-2">
                 <div>
-                  <label htmlFor="fullName" className="mb-2 block text-sm font-semibold text-slate-200">
+                  <label htmlFor="fullName" className="mb-2 block text-sm font-semibold text-[var(--text)]">
                     Seu nome
                   </label>
                   <input
-                    className="w-full rounded-lg border border-white/10 bg-white/5 p-3 text-white outline-none focus:border-cyan-300"
+                    className="w-full rounded-lg border border-[color:var(--border)] bg-[color:var(--panel)] p-3 text-[var(--text)] outline-none focus:border-[color:var(--accent)]"
                     type="text"
                     name="fullName"
                     id="fullName"
@@ -102,11 +114,11 @@ export default function Contact() {
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="mb-2 block text-sm font-semibold text-slate-200">
+                  <label htmlFor="email" className="mb-2 block text-sm font-semibold text-[var(--text)]">
                     Seu email
                   </label>
                   <input
-                    className="w-full rounded-lg border border-white/10 bg-white/5 p-3 text-white outline-none focus:border-cyan-300"
+                    className="w-full rounded-lg border border-[color:var(--border)] bg-[color:var(--panel)] p-3 text-[var(--text)] outline-none focus:border-[color:var(--accent)]"
                     type="email"
                     name="email"
                     id="email"

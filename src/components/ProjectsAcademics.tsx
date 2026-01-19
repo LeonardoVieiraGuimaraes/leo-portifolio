@@ -1,7 +1,15 @@
 import { HiArrowTopRightOnSquare } from "react-icons/hi2";
 import { getImagePath } from "../utils/paths";
+import { useTheme } from "../context/ThemeContext";
 
 export default function ProjectsAcademics() {
+  const { theme } = useTheme();
+  const isLight = theme === "light";
+
+  const background = isLight
+    ? "linear-gradient(180deg, #f9fafb 0%, #eef2f7 55%, #f9fafb 100%)"
+    : "linear-gradient(135deg, #0b1220 0%, #0f172a 60%, #0b1220 100%)";
+
   const projects = [
     {
       title: "Dissertaçao Graduação Engenharia da Computação",
@@ -80,8 +88,11 @@ export default function ProjectsAcademics() {
   ];
 
   return (
-    <section className="relative text-white" id="projectsAcademics">
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900" />
+    <section
+      className="relative text-white"
+      id="projectsAcademics"
+      style={{ background }}
+    >
       <div className="relative container mx-auto max-w-6xl px-4 py-16">
         <div className="text-center space-y-3">
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200">

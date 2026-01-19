@@ -1,6 +1,14 @@
 import { HiAcademicCap, HiCodeBracketSquare } from "react-icons/hi2";
+import { useTheme } from "../context/ThemeContext";
 
 export default function Skills() {
+  const { theme } = useTheme();
+  const isLight = theme === "light";
+
+  const background = isLight
+    ? "linear-gradient(180deg, #f9fafb 0%, #eef2f7 55%, #f9fafb 100%)"
+    : "rgba(15, 23, 42, 0.4)";
+
   const educations = [
     {
       name: "Mestre me Modelagem Computacional e Sistemas | UNIMONTES",
@@ -88,7 +96,11 @@ export default function Skills() {
   ];
 
   return (
-    <section className="bg-slate-900/40" id="skills">
+    <section
+      className="relative"
+      id="skills"
+      style={{ background }}
+    >
       <div className="container mx-auto max-w-6xl px-4 py-16">
         <div className="text-center space-y-3 mb-8">
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200">

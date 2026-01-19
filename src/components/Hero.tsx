@@ -1,11 +1,22 @@
 import { HiArrowTopRightOnSquare, HiArrowDownTray } from "react-icons/hi2";
+import { useTheme } from "../context/ThemeContext";
 
 export default function Hero() {
+  const { theme } = useTheme();
+  const isLight = theme === "light";
+
+  const background = isLight
+    ? "radial-gradient(circle at 12% 18%, rgba(14,165,233,0.08), transparent 26%), radial-gradient(circle at 82% 0%, rgba(124,58,237,0.08), transparent 32%), linear-gradient(180deg, #f9fafb 0%, #eef2f7 62%, #f9fafb 100%)"
+    : "linear-gradient(135deg, #0b1220 0%, #0f172a 60%, #0b1220 100%)";
+
+  const glowCyan = isLight ? "bg-cyan-400/15" : "bg-cyan-500/10";
+  const glowViolet = isLight ? "bg-violet-400/14" : "bg-violet-500/10";
+
   return (
     <section className="relative overflow-hidden" id="hero">
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900" />
-      <div className="absolute -left-20 -top-32 h-80 w-80 rounded-full bg-cyan-500/10 blur-3xl" />
-      <div className="absolute right-0 top-10 h-72 w-72 rounded-full bg-violet-500/10 blur-3xl" />
+      <div className="absolute inset-0" style={{ background }} />
+      <div className={`absolute -left-20 -top-32 h-80 w-80 rounded-full ${glowCyan} blur-3xl`} />
+      <div className={`absolute right-0 top-10 h-72 w-72 rounded-full ${glowViolet} blur-3xl`} />
 
       <div className="relative container mx-auto flex max-w-6xl flex-col gap-8 p-6 pb-24 pt-24 md:flex-row md:items-center md:justify-between">
         <div className="max-w-2xl space-y-6">
