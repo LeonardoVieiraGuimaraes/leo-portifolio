@@ -107,6 +107,7 @@ export default function Hero() {
                 <p className="text-slate-300">Belo Horizonte • Remoto Brasil</p>
               </div>
               <div className="space-y-2 text-sm text-slate-200">
+                <p>👨‍💼 Professor universitário</p>
                 <p>Full Stack • Frontend: React, TypeScript, Tailwind</p>
                 <p>Backend: Node.js, Python, Django, Django Ninja, Spring Boot</p>
                 <p className="text-cyan-200 font-semibold pt-2">Formação Acadêmica</p>
