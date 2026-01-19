@@ -81,18 +81,21 @@ export default function Hero() {
             </a>
           </div>
 
-          <div className="grid grid-cols-1 gap-4 pt-6 sm:grid-cols-4">
+          <div className="grid grid-cols-1 gap-4 pt-6 sm:grid-cols-2">
             {[
-              "+12 anos docência",
-              "+8 anos desenvolvimento",
-              "Eng. Computação",
-              "Matemática",
+              { label: "+12 anos docência", icon: "👨‍🏫" },
+              { label: "+8 anos desenvolvimento", icon: "💻" },
+              { label: "Engenharia da Computação", icon: "⚙️" },
+              { label: "Licenciatura em Matemática", icon: "📐" },
+              { label: "Mestre Modelagem Computacional", icon: "🎓" },
+              { label: "Doutorando Modelagem Computacional", icon: "📊" },
             ].map((item) => (
               <div
-                key={item}
-                className="card rounded-lg px-4 py-3 text-xs text-slate-200 sm:text-sm"
+                key={item.label}
+                className="card rounded-lg px-4 py-3 text-xs text-slate-200 sm:text-sm flex items-center gap-3"
               >
-                {item}
+                <span className="text-lg">{item.icon}</span>
+                <span>{item.label}</span>
               </div>
             ))}
           </div>
