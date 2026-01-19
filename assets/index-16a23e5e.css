@@ -579,13 +579,13 @@ video {
 }
 
 :root.light .button-secondary {
-    background: rgba(8, 145, 178, 0.06);
-    border-color: rgba(8, 145, 178, 0.2);
-    color: #1f2937;
+    background: rgba(255, 255, 255, 0.7);
+    border-color: rgba(14, 165, 233, 0.18);
+    color: #0f172a;
   }
 
 :root.light .button-secondary:hover {
-    background: rgba(8, 145, 178, 0.12);
+    background: rgba(14, 165, 233, 0.12);
   }
 
 .card {
@@ -597,15 +597,15 @@ video {
 
 :root.light .card {
     background: #ffffff;
-    border-color: rgba(8, 145, 178, 0.1);
-    box-shadow: 0 8px 24px rgba(8, 145, 178, 0.04);
+    border-color: rgba(15, 23, 42, 0.06);
+    box-shadow: 0 8px 22px rgba(15, 23, 42, 0.06);
   }
 
 /* Light mode navbar styles */
 
 :root.light nav {
-    background-color: rgba(255, 255, 255, 0.9) !important;
-    border-color: rgba(8, 145, 178, 0.1) !important;
+    background-color: rgba(255, 255, 255, 0.92) !important;
+    border-color: rgba(15, 23, 42, 0.06) !important;
   }
 
 :root.light nav a,
@@ -644,25 +644,25 @@ video {
 /* Light mode text overrides for readability */
 
 :root.light .text-white {
-    color: #243041 !important;
+    color: #0f172a !important;
   }
 
 :root.light .text-slate-50,
   :root.light .text-slate-100,
   :root.light .text-slate-200 {
-    color: #2b3648 !important;
+    color: #1f2937 !important;
   }
 
 :root.light .text-slate-300 {
-    color: #344158 !important;
+    color: #273449 !important;
   }
 
 :root.light .text-slate-400 {
-    color: #3f4c61 !important;
+    color: #334155 !important;
   }
 
 :root.light .text-slate-500 {
-    color: #505b6d !important;
+    color: #475569 !important;
   }
 
 .sr-only{
@@ -1139,6 +1139,10 @@ video {
   border-top-width: 1px;
 }
 
+.border-\[color\:var\(--border\)\]{
+  border-color: var(--border);
+}
+
 .border-white\/10{
   border-color: rgb(255 255 255 / 0.1);
 }
@@ -1149,6 +1153,10 @@ video {
 
 .border-white\/5{
   border-color: rgb(255 255 255 / 0.05);
+}
+
+.bg-\[color\:var\(--panel\)\]{
+  background-color: var(--panel);
 }
 
 .bg-blue-400\/10{
@@ -1174,24 +1182,12 @@ video {
   background-color: rgb(75 85 99 / var(--tw-bg-opacity));
 }
 
-.bg-slate-900\/40{
-  background-color: rgb(15 23 42 / 0.4);
-}
-
-.bg-slate-900\/60{
-  background-color: rgb(15 23 42 / 0.6);
-}
-
 .bg-slate-900\/80{
   background-color: rgb(15 23 42 / 0.8);
 }
 
 .bg-slate-900\/95{
   background-color: rgb(15 23 42 / 0.95);
-}
-
-.bg-slate-950\/80{
-  background-color: rgb(2 6 23 / 0.8);
 }
 
 .bg-violet-500\/10{
@@ -1227,7 +1223,7 @@ video {
 }
 
 .bg-profile{
-  background-image: url('/images/fotoPerfil.jpg');
+  background-image: url('/leo_portifolio/images/fotoPerfil.jpg');
 }
 
 .from-cyan-400{
@@ -1262,11 +1258,6 @@ video {
 .via-slate-900\/30{
   --tw-gradient-to: rgb(15 23 42 / 0)  var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), rgb(15 23 42 / 0.3) var(--tw-gradient-via-position), var(--tw-gradient-to);
-}
-
-.via-slate-950{
-  --tw-gradient-to: rgb(2 6 23 / 0)  var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), #020617 var(--tw-gradient-via-position), var(--tw-gradient-to);
 }
 
 .via-white\/0{
@@ -1500,6 +1491,10 @@ video {
   letter-spacing: 0.025em;
 }
 
+.text-\[var\(--text\)\]{
+  color: var(--text);
+}
+
 .text-blue-800{
   --tw-text-opacity: 1;
   color: rgb(30 64 175 / var(--tw-text-opacity));
@@ -1639,13 +1634,13 @@ video {
 }
 
 :root.light {
-  --bg: #f8fafc;
-  --panel: #f2f6fb;
-  --muted: #6b7280;
-  --text: #243041;
-  --accent: #0891b2;
+  --bg: #f9fafb;
+  --panel: #eef2f7;
+  --muted: #4b5563;
+  --text: #111827;
+  --accent: #0ea5e9;
   --accent-2: #7c3aed;
-  --border: rgba(0, 0, 0, 0.08);
+  --border: rgba(15, 23, 42, 0.08);
 }
 
 * {
@@ -1665,9 +1660,9 @@ body {
 }
 
 :root.light body {
-  background: radial-gradient(circle at 10% 20%, rgba(8, 145, 178, 0.05), transparent 25%),
-    radial-gradient(circle at 80% 0%, rgba(124, 58, 237, 0.05), transparent 30%),
-    linear-gradient(180deg, #f8fafc 0%, #f2f6fb 60%, #f8fafc 100%);
+  background: radial-gradient(circle at 10% 20%, rgba(14, 165, 233, 0.04), transparent 25%),
+    radial-gradient(circle at 80% 0%, rgba(124, 58, 237, 0.04), transparent 30%),
+    linear-gradient(180deg, #f9fafb 0%, #eef2f7 60%, #f9fafb 100%);
   color: var(--text);
   min-height: 100vh;
 }
@@ -1705,7 +1700,7 @@ h1, h2, h3, h4 {
 }
 
 :root.light .hover\:text-white:hover {
-    color: #243041 !important;
+    color: #0f172a !important;
   }
 
 .hover\:border-white\/40:hover{
@@ -1731,9 +1726,8 @@ h1, h2, h3, h4 {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.focus\:border-cyan-300:focus{
-  --tw-border-opacity: 1;
-  border-color: rgb(103 232 249 / var(--tw-border-opacity));
+.focus\:border-\[color\:var\(--accent\)\]:focus{
+  border-color: var(--accent);
 }
 
 .focus\:outline-none:focus{
