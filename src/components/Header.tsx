@@ -54,7 +54,7 @@ export default function Header() {
 
   return (
     <header>
-      <nav className="fixed z-50 w-full border-b border-white/5 bg-slate-900/80 dark:bg-slate-900/80 light:bg-slate-100/80 backdrop-blur-md transition-colors duration-300">
+      <nav className="fixed z-50 w-full border-b border-white/5 dark:border-white/5 light:border-blue-500/20 bg-slate-900/80 dark:bg-slate-900/80 light:bg-white/90 backdrop-blur-md transition-colors duration-300">
         <div className="max-w-6xl mx-auto px-4">
           <div className="relative flex items-center justify-between h-16">
             <div className="absolute inset-y-0 right-0 flex items-center md:hidden">
