@@ -153,7 +153,7 @@ export default function Contact() {
                 key={`contact-${index}`}
                 className="card flex items-center gap-4 rounded-2xl border border-white/10 bg-white/5 p-4"
               >
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-cyan-500/10 text-cyan-300">
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-cyan-500/10 text-cyan-300 [.light_&]:bg-cyan-100 [.light_&]:text-cyan-700">
                   {contact.icon}
                 </div>
                 <div>

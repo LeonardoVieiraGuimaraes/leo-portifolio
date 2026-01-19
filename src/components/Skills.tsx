@@ -115,7 +115,7 @@ export default function Skills() {
         <div className="grid gap-6 md:grid-cols-2">
           <div className="card rounded-2xl p-6">
             <h3 className="mb-4 flex items-center gap-2 text-lg font-semibold text-white">
-              <HiAcademicCap className="h-7 w-7 text-cyan-300" />
+              <HiAcademicCap className="h-7 w-7 text-cyan-300 [.light_&]:text-cyan-700" />
               Educação
             </h3>
             <div className="space-y-3 text-slate-200">
@@ -133,7 +133,7 @@ export default function Skills() {
 
           <div className="card rounded-2xl p-6">
             <h3 className="mb-4 flex items-center gap-2 text-lg font-semibold text-white">
-              <HiCodeBracketSquare className="h-7 w-7 text-cyan-300" />
+              <HiCodeBracketSquare className="h-7 w-7 text-cyan-300 [.light_&]:text-cyan-700" />
               Skills
             </h3>
             <div className="grid grid-cols-2 gap-4 md:grid-cols-3">

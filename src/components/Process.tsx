@@ -43,7 +43,7 @@ export default function Process() {
           <div key={step.title} className="card relative h-full overflow-hidden rounded-xl p-6">
             <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-white/0 to-white/5" />
             <div className="relative flex items-start gap-4">
-              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-cyan-500/10 text-cyan-300">
+              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-cyan-500/10 text-cyan-300 [.light_&]:bg-cyan-100 [.light_&]:text-cyan-700">
                 {step.icon}
               </div>
               <div className="space-y-2">

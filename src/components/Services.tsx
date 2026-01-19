@@ -54,7 +54,7 @@ export default function Services() {
           >
             <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-white/0 to-white/5" />
             <div className="relative space-y-3">
-              <div className="inline-flex h-14 w-14 items-center justify-center rounded-xl bg-cyan-500/15 text-cyan-300">
+              <div className="inline-flex h-14 w-14 items-center justify-center rounded-xl bg-cyan-500/15 text-cyan-300 [.light_&]:bg-cyan-100 [.light_&]:text-cyan-700">
                 {service.icon}
               </div>
               <h3 className="text-xl font-semibold text-white">{service.title}</h3>

@@ -170,4 +170,23 @@ h1, h2, h3, h4 {
   :root.light .text-slate-500 {
     color: #475569 !important;
   }
+
+  /* Light mode cyan/accent text overrides */
+  :root.light .text-cyan-200 {
+    color: #0369a1 !important;
+  }
+  :root.light .text-cyan-300 {
+    color: #0891b2 !important;
+  }
+  :root.light .text-emerald-400 {
+    color: #059669 !important;
+  }
+
+  /* Light mode icon/accent backgrounds */
+  :root.light .bg-cyan-500\/10 {
+    background-color: rgba(6, 182, 212, 0.08) !important;
+  }
+  :root.light .bg-cyan-500\/15 {
+    background-color: rgba(6, 182, 212, 0.12) !important;
+  }
 }
