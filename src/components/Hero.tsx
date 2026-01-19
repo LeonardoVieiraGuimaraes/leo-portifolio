@@ -37,9 +37,9 @@ export default function Hero() {
           </h1>
 
           <p className="text-lg text-slate-300">
-            Sou Leonardo Vieira Guimarães: desenvolvedor full stack, professor universitário e
-            pesquisador. Combino engenharia, matemática e produto para criar soluções web, mobile
-            e acadêmicas que resolvem problemas de negócio e educação.
+            Sou Leonardo Vieira Guimarães, desenvolvedor full stack e professor. Construo produtos
+            web/mobile e plataformas de dados que alinham tecnologia, educação e resultado de
+            negócio.
           </p>
 
           <div className="flex flex-wrap gap-2 sm:gap-3 sm:flex-nowrap sm:overflow-visible">

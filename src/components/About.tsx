@@ -25,21 +25,23 @@ export default function About() {
                   Sobre mim
                 </h2>
                 <p className="text-slate-300">
-                  Tenho {age} anos, sou professor universitário e desenvolvedor full stack. Conecto
-                  engenharia, matemática e produto para entregar soluções que resolvem problemas de
-                  negócio e educação.
+                  {age} anos, professor universitário e desenvolvedor full stack. Uso engenharia e
+                  matemática para transformar produtos digitais e experiências de aprendizagem.
                 </p>
               </div>
 
-              <p className="text-slate-200 leading-relaxed text-justify">
-                Mestre em Modelagem Computacional e Sistemas (UNIMONTES) e doutorando em Modelagem
-                Computacional (CEFET/MG). Comecei como aluno em disciplina isolada na UFMG e posteriormente 
-                ingressei como aluno regular no doutorado da CEFET. Atuo criando APIs, front-ends e automações, e
-                leciono disciplinas de Arquitetura Web, Programação, Banco de Dados, Probabilidade e
-                Matemática Financeira. No NIM (Cidade Administrativa de Belo Horizonte) trabalho com
-                projetos de TI e suporte ao sistema agropecuário do IMA. Sigo entregando valor e
-                aprendendo continuamente.
-              </p>
+              <div className="space-y-4 text-slate-200 leading-relaxed text-justify">
+                <p>
+                  Mestre em Modelagem Computacional e Sistemas (UNIMONTES) e doutorando em Modelagem
+                  Computacional (CEFET/MG). Atuo em APIs, front-ends e automações, leciono Arquitetura Web,
+                  Programação e Banco de Dados, e apoio projetos de TI no NIM (Cidade Administrativa).
+                </p>
+                <p>
+                  No GitHub compartilho projetos variados: dashboards e automações em Python/Node, APIs em
+                  Django/Django Ninja e Spring Boot, front-ends em React/TypeScript e protótipos mobile com
+                  React Native. Foco em código limpo, documentação e entregas reprodutíveis.
+                </p>
+              </div>
 
               <div className="flex flex-wrap gap-3">
                 <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-cyan-200">
