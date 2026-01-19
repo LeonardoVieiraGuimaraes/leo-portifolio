@@ -32,7 +32,8 @@ export default function About() {
 
               <p className="text-slate-200 leading-relaxed text-justify">
                 Mestre em Modelagem Computacional e Sistemas (UNIMONTES) e doutorando em Modelagem
-                Matemática e Computacional (CEFET/MG). Atuo criando APIs, front-ends e automações, e
+                Computacional (CEFET/MG). Comecei como aluno em disciplina isolada na UFMG e posteriormente 
+                ingressei como aluno regular no doutorado da CEFET. Atuo criando APIs, front-ends e automações, e
                 leciono disciplinas de Arquitetura Web, Programação, Banco de Dados, Probabilidade e
                 Matemática Financeira. No NIM (Cidade Administrativa de Belo Horizonte) trabalho com
                 projetos de TI e suporte ao sistema agropecuário do IMA. Sigo entregando valor e

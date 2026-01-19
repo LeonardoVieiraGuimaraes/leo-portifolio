@@ -11,7 +11,13 @@ export default function Skills() {
 
   const educations = [
     {
-      name: "Mestre me Modelagem Computacional e Sistemas | UNIMONTES",
+      name: "Doutorando em Modelagem Computacional | CEFET/MG",
+    },
+    {
+      name: "Aluno em Disciplina Isolada | UFMG (Doutorado)",
+    },
+    {
+      name: "Mestre em Modelagem Computacional e Sistemas | UNIMONTES",
     },
     {
       name: "Graduação Bacharelado em Ciência da Computação | FACIT",
