@@ -16,10 +16,10 @@
 }
 
 :root.light {
-  --bg: #fdfefe;
-  --panel: #f7fafc;
+  --bg: #f8fafc;
+  --panel: #f2f6fb;
   --muted: #6b7280;
-  --text: #1f2937;
+  --text: #243041;
   --accent: #0891b2;
   --accent-2: #7c3aed;
   --border: rgba(0, 0, 0, 0.08);
@@ -42,9 +42,9 @@ body {
 }
 
 :root.light body {
-  background: radial-gradient(circle at 10% 20%, rgba(8, 145, 178, 0.06), transparent 25%),
-    radial-gradient(circle at 80% 0%, rgba(124, 58, 237, 0.06), transparent 30%),
-    linear-gradient(180deg, #ffffff 0%, #f0f4f8 60%, #ffffff 100%);
+  background: radial-gradient(circle at 10% 20%, rgba(8, 145, 178, 0.05), transparent 25%),
+    radial-gradient(circle at 80% 0%, rgba(124, 58, 237, 0.05), transparent 30%),
+    linear-gradient(180deg, #f8fafc 0%, #f2f6fb 60%, #f8fafc 100%);
   color: var(--text);
   min-height: 100vh;
 }
@@ -92,13 +92,13 @@ h1, h2, h3, h4 {
   }
 
   :root.light .button-secondary {
-    background: rgba(8, 145, 178, 0.08);
-    border-color: rgba(8, 145, 178, 0.3);
-    color: #0891b2;
+    background: rgba(8, 145, 178, 0.06);
+    border-color: rgba(8, 145, 178, 0.2);
+    color: #1f2937;
   }
 
   :root.light .button-secondary:hover {
-    background: rgba(8, 145, 178, 0.15);
+    background: rgba(8, 145, 178, 0.12);
   }
 
   .card {
@@ -110,14 +110,14 @@ h1, h2, h3, h4 {
 
   :root.light .card {
     background: #ffffff;
-    border-color: rgba(8, 145, 178, 0.12);
-    box-shadow: 0 10px 30px rgba(8, 145, 178, 0.05);
+    border-color: rgba(8, 145, 178, 0.1);
+    box-shadow: 0 8px 24px rgba(8, 145, 178, 0.04);
   }
 
   /* Light mode navbar styles */
   :root.light nav {
-    background-color: rgba(255, 255, 255, 0.92) !important;
-    border-color: rgba(8, 145, 178, 0.12) !important;
+    background-color: rgba(255, 255, 255, 0.9) !important;
+    border-color: rgba(8, 145, 178, 0.1) !important;
   }
 
   :root.light nav a,
@@ -154,20 +154,20 @@ h1, h2, h3, h4 {
 
   /* Light mode text overrides for readability */
   :root.light .text-white {
-    color: #1f2937 !important;
+    color: #243041 !important;
   }
   :root.light .text-slate-50,
   :root.light .text-slate-100,
   :root.light .text-slate-200 {
-    color: #1f2937 !important;
+    color: #2b3648 !important;
   }
   :root.light .text-slate-300 {
-    color: #27303f !important;
+    color: #344158 !important;
   }
   :root.light .text-slate-400 {
-    color: #3b4658 !important;
+    color: #3f4c61 !important;
   }
   :root.light .text-slate-500 {
-    color: #4b5565 !important;
+    color: #505b6d !important;
   }
 }
