@@ -82,23 +82,25 @@ export default function Hero() {
           </div>
 
           <div className="grid grid-cols-2 gap-4 pt-6 sm:grid-cols-3">
-            {["+12 anos docência", "+8 anos desenvolvimento", "Engenharia da computação + Matemática"].map(
-              (item) => (
-                <div
-                  key={item}
-                  className="card rounded-lg px-4 py-3 text-sm text-slate-200"
-                >
-                  {item}
-                </div>
-              )
-            )}
+            {[
+              { text: "+12 anos docência" },
+              { text: "+8 anos desenvolvimento" },
+              { text: "Engenharia da computação + Matemática", wide: true },
+            ].map((item) => (
+              <div
+                key={item.text}
+                className={`card rounded-lg px-4 py-3 text-sm text-slate-200 ${item.wide ? "col-span-2 sm:col-span-2" : ""}`}
+              >
+                {item.text}
+              </div>
+            ))}
           </div>
         </div>
 
         <div className="relative hidden md:block">
-          <div className="card relative h-96 w-96 overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 p-6">
+          <div className="card relative w-80 min-h-[18rem] overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 p-6">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(34,211,238,0.18),transparent_30%),radial-gradient(circle_at_80%_0%,rgba(167,139,250,0.2),transparent_35%)]" />
-            <div className="relative flex h-full flex-col justify-start gap-4">
+            <div className="relative flex h-full flex-col justify-start gap-3">
               <div>
                 <p className="text-sm uppercase tracking-wide text-cyan-200">Perfil</p>
                 <h3 className="text-2xl font-semibold text-white">Leonardo V. Guimarães</h3>
