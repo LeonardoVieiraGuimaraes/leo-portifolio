@@ -8171,17 +8171,31 @@ const ForwardRef = reactExports.forwardRef(XMarkIcon);
 const XMarkIcon$1 = ForwardRef;
 const ThemeContext = reactExports.createContext(void 0);
 function ThemeProvider({ children }) {
-  const [theme, setTheme] = reactExports.useState(() => {
-    if (typeof window !== "undefined") {
-      const stored = localStorage.getItem("theme");
-      if (stored)
-        return stored;
-      return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-    }
-    return "dark";
-  });
+  const [theme, setTheme] = reactExports.useState("dark");
+  const [mounted, setMounted] = reactExports.useState(false);
   reactExports.useEffect(() => {
-    localStorage.setItem("theme", theme);
+    try {
+      const stored = localStorage.getItem("theme");
+      if (stored && (stored === "dark" || stored === "light")) {
+        setTheme(stored);
+      } else {
+        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        setTheme(prefersDark ? "dark" : "light");
+      }
+    } catch (error) {
+      console.warn("Theme storage error:", error);
+      setTheme("dark");
+    }
+    setMounted(true);
+  }, []);
+  reactExports.useEffect(() => {
+    if (!mounted)
+      return;
+    try {
+      localStorage.setItem("theme", theme);
+    } catch (error) {
+      console.warn("Theme storage error:", error);
+    }
     const root = document.documentElement;
     if (theme === "dark") {
       root.classList.add("dark");
@@ -8190,7 +8204,7 @@ function ThemeProvider({ children }) {
       root.classList.add("light");
       root.classList.remove("dark");
     }
-  }, [theme]);
+  }, [theme, mounted]);
   const toggleTheme = () => {
     setTheme((prev) => prev === "dark" ? "light" : "dark");
   };
