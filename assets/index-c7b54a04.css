@@ -641,6 +641,30 @@ video {
     border-color: rgba(8, 145, 178, 0.2) !important;
   }
 
+/* Light mode text overrides for readability */
+
+:root.light .text-white {
+    color: #0f172a !important;
+  }
+
+:root.light .text-slate-50,
+  :root.light .text-slate-100,
+  :root.light .text-slate-200 {
+    color: #111827 !important;
+  }
+
+:root.light .text-slate-300 {
+    color: #1f2937 !important;
+  }
+
+:root.light .text-slate-400 {
+    color: #374151 !important;
+  }
+
+:root.light .text-slate-500 {
+    color: #475569 !important;
+  }
+
 .sr-only{
   position: absolute;
   width: 1px;
@@ -1679,6 +1703,10 @@ h1, h2, h3, h4 {
 :root.light h4 {
   color: #0f172a;
 }
+
+:root.light .hover\:text-white:hover {
+    color: #0f172a !important;
+  }
 
 .hover\:border-white\/40:hover{
   border-color: rgb(255 255 255 / 0.4);
