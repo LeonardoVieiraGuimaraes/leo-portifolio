@@ -101,6 +101,33 @@ h1, h2, h3, h4 {
     background: rgba(14, 165, 233, 0.12);
   }
 
+  .button-hero {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-5 py-2.5 text-sm font-semibold transition duration-200 border min-w-[160px];
+    border-color: rgba(255, 255, 255, 0.16);
+    color: var(--text);
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(10px);
+  }
+
+  .button-hero:hover {
+    border-color: rgba(34, 211, 238, 0.6);
+    background: linear-gradient(145deg, rgba(34, 211, 238, 0.18), rgba(167, 139, 250, 0.16));
+    transform: translateY(-1px);
+  }
+
+  :root.light .button-hero {
+    border-color: rgba(14, 165, 233, 0.2);
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(236, 248, 255, 0.9));
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+    color: #0f172a;
+  }
+
+  :root.light .button-hero:hover {
+    border-color: rgba(124, 58, 237, 0.25);
+    background: linear-gradient(145deg, rgba(14, 165, 233, 0.15), rgba(124, 58, 237, 0.12));
+  }
+
   .card {
     background: rgba(255, 255, 255, 0.04);
     border: 1px solid var(--border);

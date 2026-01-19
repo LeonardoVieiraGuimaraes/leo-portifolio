@@ -47,7 +47,7 @@ export default function Hero() {
               href="https://docs.google.com/document/d/1hLeOBX7zAz-BtYLxXKWK6RtYEWqWnCo4Z5IA5Kvwzsk/edit?usp=drive_link"
               target="_blank"
               rel="noopener"
-              className="button flex items-center gap-2"
+              className="button-hero"
             >
               <HiArrowDownTray className="h-5 w-5" />
               Currículo
@@ -56,7 +56,7 @@ export default function Hero() {
               href="https://www.linkedin.com/in/leonardo-vieira-guimaraes/"
               target="_blank"
               rel="noopener"
-              className="button flex items-center gap-2 bg-blue-600 hover:bg-blue-700"
+              className="button-hero"
             >
               <FaLinkedin className="h-5 w-5" />
               LinkedIn
@@ -65,7 +65,7 @@ export default function Hero() {
               href="https://github.com/LeonardoVieiraGuimaraes"
               target="_blank"
               rel="noopener"
-              className="button flex items-center gap-2 bg-gray-800 hover:bg-gray-900"
+              className="button-hero"
             >
               <FaGithub className="h-5 w-5" />
               GitHub
@@ -74,7 +74,7 @@ export default function Hero() {
               href="https://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K4869231A0&tokenCaptchar=03AFcWeA5Xz3lD3vn5HMS9GhkTKnLTFNnn8jIdHmV_gGRxrMmhMj41i_6Lu2oqfAtLP5wyFXdVZJpjXvvBdtYwHXjTs7bE8nxmxjvutCykBoUD2ABe3QL8PkNAaHKTtLibwnOmDCBThU6EIF0OCwoUk3e6_hV4UtOLpidaeAc6fBZ14zZG19qOnFiRwAKpKlyL0jk1LNgurGjYKluX58WYGzMccWrP14UUtkFZSYCZDIBW4iSf0xGtUqMQwkZc_ESopuXY1_gWxABMsK8llBEOZIvkifBmUADeP1rEEQbejucQ03IqK8ZGZfN99DsnBlHuL9GVfkhai8JypHpWhybU2GuFky2xySYJMSxkDwiepFsyOuYY07WsmkoTjvMSawClnvm06zTG6_6WgBXjejxcFD3D3Vfa-Ay7FpMvh3pMXn5k0bNz2U374mFAC7Iv4HXSjcDgNAulCcPKNOtn2P_E8qru4Ryhl1nhWmctHNrd0mMifRWb9T1DzKINX51NK7NmU6ZOFE-LO4MpwNgG6xl-ncQYWWolaYe7BTRm1rPxdHJWH_GeLHQnRFeaOLWrtvZMO6tbdUw1hmo4"
               target="_blank"
               rel="noopener"
-              className="button-secondary flex items-center gap-2 border border-white/20 hover:border-white/40"
+              className="button-hero"
             >
               <HiArrowDownTray className="h-5 w-5" />
               Currículo Lattes
