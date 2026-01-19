@@ -85,11 +85,11 @@ export default function Hero() {
             {[
               "+12 anos docência",
               "+8 anos desenvolvimento",
-              "Eng. Computação + Matemática",
+              "Eng. Comp. + Mat.",
             ].map((item) => (
               <div
                 key={item}
-                className="card rounded-lg px-4 py-3 text-sm text-slate-200"
+                className="card rounded-lg px-4 py-3 text-xs text-slate-200 sm:text-sm"
               >
                 {item}
               </div>
