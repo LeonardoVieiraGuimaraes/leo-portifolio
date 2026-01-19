@@ -81,17 +81,17 @@ export default function Hero() {
             </a>
           </div>
 
-          <div className="grid grid-cols-2 gap-4 pt-6 sm:grid-cols-3">
+          <div className="grid grid-cols-1 gap-4 pt-6 sm:grid-cols-3">
             {[
-              { text: "+12 anos docência" },
-              { text: "+8 anos desenvolvimento" },
-              { text: "Engenharia da computação + Matemática", wide: true },
+              "+12 anos docência",
+              "+8 anos desenvolvimento",
+              "Engenharia da computação + Matemática",
             ].map((item) => (
               <div
-                key={item.text}
-                className={`card rounded-lg px-4 py-3 text-sm text-slate-200 ${item.wide ? "col-span-2 sm:col-span-2" : ""}`}
+                key={item}
+                className="card rounded-lg px-4 py-3 text-sm text-slate-200"
               >
-                {item.text}
+                {item}
               </div>
             ))}
           </div>
