@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root,
+:root.dark {
+  --bg: #0b1220;
+  --panel: #0f172a;
+  --muted: #94a3b8;
+  --text: #e2e8f0;
+  --accent: #22d3ee;
+  --accent-2: #a78bfa;
+  --border: rgba(255, 255, 255, 0.08);
+}
+
+:root.light {
+  --bg: #ffffff;
+  --panel: #f0f4f8;
+  --muted: #6b7280;
+  --text: #111827;
+  --accent: #0891b2;
+  --accent-2: #7c3aed;
+  --border: rgba(0, 0, 0, 0.1);
+}
+
+* {
+  font-family: 'Space Grotesk', 'Manrope', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+:root.dark body {
+  background: radial-gradient(circle at 10% 20%, rgba(34, 211, 238, 0.08), transparent 25%),
+    radial-gradient(circle at 80% 0%, rgba(167, 139, 250, 0.1), transparent 30%),
+    linear-gradient(180deg, #0b1220 0%, #0f172a 60%, #0b1220 100%);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+:root.light body {
+  background: radial-gradient(circle at 10% 20%, rgba(8, 145, 178, 0.06), transparent 25%),
+    radial-gradient(circle at 80% 0%, rgba(124, 58, 237, 0.06), transparent 30%),
+    linear-gradient(180deg, #ffffff 0%, #f0f4f8 60%, #ffffff 100%);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+::selection {
+  background: rgba(34, 211, 238, 0.25);
+  color: #e2e8f0;
+}
+
+:root.light ::selection {
+  background: rgba(8, 145, 178, 0.25);
+  color: #111827;
+}
+
+h1, h2, h3, h4 {
+  letter-spacing: -0.02em;
+  transition: color 0.3s ease;
+}
+
+:root.light h1,
+:root.light h2,
+:root.light h3,
+:root.light h4 {
+  color: #0f172a;
+}
+
+@layer components {
+  .button {
+    @apply cursor-pointer rounded-lg px-5 py-2.5 text-sm font-semibold transition duration-200;
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    color: #0b1220;
+    box-shadow: 0 8px 30px rgba(34, 211, 238, 0.25);
+  }
+
+  :root.light .button {
+    color: #ffffff;
+    box-shadow: 0 8px 30px rgba(8, 145, 178, 0.2);
+  }
+
+  .button-secondary {
+    @apply cursor-pointer rounded-lg px-5 py-2.5 text-sm font-semibold transition duration-200 border;
+    border-color: var(--border);
+    color: var(--text);
+    background: rgba(255, 255, 255, 0.04);
+  }
+
+  :root.light .button-secondary {
+    background: rgba(8, 145, 178, 0.08);
+    border-color: rgba(8, 145, 178, 0.3);
+    color: #0891b2;
+  }
+
+  :root.light .button-secondary:hover {
+    background: rgba(8, 145, 178, 0.15);
+  }
+
+  .card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--border);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+  }
+
+  :root.light .card {
+    background: rgba(255, 255, 255, 0.8);
+    border-color: rgba(8, 145, 178, 0.15);
+    box-shadow: 0 10px 40px rgba(8, 145, 178, 0.08);
+  }
+
+  /* Light mode navbar styles */
+  :root.light nav {
+    background-color: rgba(255, 255, 255, 0.9) !important;
+    border-color: rgba(8, 145, 178, 0.2) !important;
+  }
+
+  :root.light nav a,
+  :root.light nav button {
+    color: #0f172a;
+  }
+
+  :root.light nav a:hover,
+  :root.light nav button:hover {
+    background-color: rgba(8, 145, 178, 0.1) !important;
+    color: #0891b2;
+  }
+
+  :root.light [id="mobile-menu"] {
+    background-color: rgba(255, 255, 255, 0.95) !important;
+  }
+
+  :root.light [id="mobile-menu"] a,
+  :root.light [id="mobile-menu"] button {
+    color: #0f172a;
+  }
+
+  :root.light [id="mobile-menu"] a:hover,
+  :root.light [id="mobile-menu"] button:hover {
+    background-color: rgba(8, 145, 178, 0.1) !important;
+    color: #0891b2;
+  }
+
+  /* Light mode dropdown menu */
+  :root.light div.absolute.left-0 {
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    border-color: rgba(8, 145, 178, 0.2) !important;
+  }
+}
