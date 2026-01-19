@@ -14,6 +14,7 @@ import {
 
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { useTheme } from "../context/ThemeContext";
+import { getImagePath } from "../utils/paths";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -77,12 +78,12 @@ export default function Header() {
                 <a href="">
                   <img
                     className="block md:hidden h-14 w-auto"
-                    src="images/logo.svg"
+                    src={getImagePath("images/logo.svg")}
                     alt="Logo"
                   />
                   <img
                     className="hidden md:block h-14 w-auto"
-                    src="images/logo.svg"
+                    src={getImagePath("images/logo.svg")}
                     alt="Logo"
                   />
                 </a>

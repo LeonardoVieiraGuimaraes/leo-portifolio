@@ -1,4 +1,5 @@
 import { HiArrowTopRightOnSquare } from "react-icons/hi2";
+import { getImagePath } from "../utils/paths";
 
 export default function ProjectsDeveloper() {
   const projects = [
@@ -51,7 +52,7 @@ export default function ProjectsDeveloper() {
               <div className="relative h-48 overflow-hidden">
                 <img
                   className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-                  src={`${project.image}`}
+                  src={getImagePath(project.image)}
                   alt={project.title}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-900/30 to-transparent" />
