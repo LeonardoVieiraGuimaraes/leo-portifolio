@@ -7660,7 +7660,7 @@ function About() {
             " anos, sou professor universitário e desenvolvedor full stack. Conecto engenharia, matemática e produto para entregar soluções que resolvem problemas de negócio e educação."
           ] })
         ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-slate-200 leading-relaxed text-justify", children: "Mestre em Modelagem Computacional e Sistemas (UNIMONTES) e doutorando em Modelagem Matemática e Computacional (CEFET/MG). Atuo criando APIs, front-ends e automações, e leciono disciplinas de Arquitetura Web, Programação, Banco de Dados, Probabilidade e Matemática Financeira. No NIM (Cidade Administrativa de Belo Horizonte) trabalho com projetos de TI e suporte ao sistema agropecuário do IMA. Sigo entregando valor e aprendendo continuamente." }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-slate-200 leading-relaxed text-justify", children: "Mestre em Modelagem Computacional e Sistemas (UNIMONTES) e doutorando em Modelagem Computacional (CEFET/MG). Comecei como aluno em disciplina isolada na UFMG e posteriormente ingressei como aluno regular no doutorado da CEFET. Atuo criando APIs, front-ends e automações, e leciono disciplinas de Arquitetura Web, Programação, Banco de Dados, Probabilidade e Matemática Financeira. No NIM (Cidade Administrativa de Belo Horizonte) trabalho com projetos de TI e suporte ao sistema agropecuário do IMA. Sigo entregando valor e aprendendo continuamente." }),
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-wrap gap-3", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-cyan-200", children: [
             /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "relative flex h-3 w-3", children: [
@@ -8130,7 +8130,7 @@ function Contact() {
   );
 }
 const getImagePath = (path) => {
-  const basePath = "/";
+  const basePath = "/leo_portifolio/";
   const cleanPath = path.startsWith("/") ? path.slice(1) : path;
   return `${basePath}${cleanPath}`;
 };
@@ -8928,7 +8928,13 @@ function Skills() {
   const background = isLight ? "linear-gradient(180deg, #f9fafb 0%, #eef2f7 55%, #f9fafb 100%)" : "rgba(15, 23, 42, 0.4)";
   const educations = [
     {
-      name: "Mestre me Modelagem Computacional e Sistemas | UNIMONTES"
+      name: "Doutorando em Modelagem Computacional | CEFET/MG"
+    },
+    {
+      name: "Aluno em Disciplina Isolada | UFMG (Doutorado)"
+    },
+    {
+      name: "Mestre em Modelagem Computacional e Sistemas | UNIMONTES"
     },
     {
       name: "Graduação Bacharelado em Ciência da Computação | FACIT"
