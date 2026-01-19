@@ -665,6 +665,30 @@ video {
     color: #475569 !important;
   }
 
+/* Light mode cyan/accent text overrides */
+
+:root.light .text-cyan-200 {
+    color: #0369a1 !important;
+  }
+
+:root.light .text-cyan-300 {
+    color: #0891b2 !important;
+  }
+
+:root.light .text-emerald-400 {
+    color: #059669 !important;
+  }
+
+/* Light mode icon/accent backgrounds */
+
+:root.light .bg-cyan-500\/10 {
+    background-color: rgba(6, 182, 212, 0.08) !important;
+  }
+
+:root.light .bg-cyan-500\/15 {
+    background-color: rgba(6, 182, 212, 0.12) !important;
+  }
+
 .sr-only{
   position: absolute;
   width: 1px;
@@ -1223,7 +1247,7 @@ video {
 }
 
 .bg-profile{
-  background-image: url('/images/fotoPerfil.jpg');
+  background-image: url('/leo_portifolio/images/fotoPerfil.jpg');
 }
 
 .from-cyan-400{
@@ -1703,6 +1727,10 @@ h1, h2, h3, h4 {
     color: #0f172a !important;
   }
 
+:root.light .hover\:text-cyan-300:hover {
+    color: #0891b2 !important;
+  }
+
 .hover\:border-white\/40:hover{
   border-color: rgb(255 255 255 / 0.4);
 }
@@ -1861,4 +1889,29 @@ h1, h2, h3, h4 {
   .lg\:grid-cols-4{
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
+}
+
+.light .\[\.light_\&\]\:border-cyan-200{
+  --tw-border-opacity: 1;
+  border-color: rgb(165 243 252 / var(--tw-border-opacity));
+}
+
+.light .\[\.light_\&\]\:bg-cyan-100{
+  --tw-bg-opacity: 1;
+  background-color: rgb(207 250 254 / var(--tw-bg-opacity));
+}
+
+.light .\[\.light_\&\]\:bg-cyan-50{
+  --tw-bg-opacity: 1;
+  background-color: rgb(236 254 255 / var(--tw-bg-opacity));
+}
+
+.light .\[\.light_\&\]\:bg-emerald-600{
+  --tw-bg-opacity: 1;
+  background-color: rgb(5 150 105 / var(--tw-bg-opacity));
+}
+
+.light .\[\.light_\&\]\:text-cyan-700{
+  --tw-text-opacity: 1;
+  color: rgb(14 116 144 / var(--tw-text-opacity));
 }

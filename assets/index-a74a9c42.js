@@ -8106,7 +8106,7 @@ function Contact() {
             {
               className: "card flex items-center gap-4 rounded-2xl border border-white/10 bg-white/5 p-4",
               children: [
-                /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex h-12 w-12 items-center justify-center rounded-xl bg-cyan-500/10 text-cyan-300", children: contact.icon }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex h-12 w-12 items-center justify-center rounded-xl bg-cyan-500/10 text-cyan-300 [.light_&]:bg-cyan-100 [.light_&]:text-cyan-700", children: contact.icon }),
                 /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
                   /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "font-semibold text-white", children: contact.name }),
                   /* @__PURE__ */ jsxRuntimeExports.jsx(
@@ -8130,7 +8130,7 @@ function Contact() {
   );
 }
 const getImagePath = (path) => {
-  const basePath = "/";
+  const basePath = "/leo_portifolio/";
   const cleanPath = path.startsWith("/") ? path.slice(1) : path;
   return `${basePath}${cleanPath}`;
 };
@@ -8454,11 +8454,11 @@ function Hero() {
     /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: `absolute right-0 top-10 h-72 w-72 rounded-full ${glowViolet} blur-3xl` }),
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative container mx-auto flex max-w-6xl flex-col gap-8 p-6 pb-24 pt-24 md:flex-row md:items-center md:justify-between", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-w-2xl space-y-6", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-3 text-sm text-cyan-200", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 font-semibold uppercase tracking-wide", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-3 text-sm text-cyan-200 [.light_&]:text-cyan-700", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 font-semibold uppercase tracking-wide [.light_&]:border-cyan-200 [.light_&]:bg-cyan-50", children: [
             /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "relative flex h-2 w-2", children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" }),
-              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "relative inline-flex h-2 w-2 rounded-full bg-emerald-400" })
+              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75 [.light_&]:bg-emerald-600" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "relative inline-flex h-2 w-2 rounded-full bg-emerald-400 [.light_&]:bg-emerald-600" })
             ] }),
             "Disponível para novos projetos"
           ] }),
@@ -8865,7 +8865,7 @@ function Services() {
         children: [
           /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 bg-gradient-to-br from-white/5 via-white/0 to-white/5" }),
           /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative space-y-3", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "inline-flex h-14 w-14 items-center justify-center rounded-xl bg-cyan-500/15 text-cyan-300", children: service.icon }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "inline-flex h-14 w-14 items-center justify-center rounded-xl bg-cyan-500/15 text-cyan-300 [.light_&]:bg-cyan-100 [.light_&]:text-cyan-700", children: service.icon }),
             /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "text-xl font-semibold text-white", children: service.title }),
             /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm text-slate-300 leading-relaxed", children: service.description })
           ] })
@@ -8907,7 +8907,7 @@ function Process() {
     /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-10 grid grid-cols-1 gap-4 md:grid-cols-2", children: steps.map((step, index2) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "card relative h-full overflow-hidden rounded-xl p-6", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 bg-gradient-to-br from-white/5 via-white/0 to-white/5" }),
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative flex items-start gap-4", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex h-12 w-12 items-center justify-center rounded-full bg-cyan-500/10 text-cyan-300", children: step.icon }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex h-12 w-12 items-center justify-center rounded-full bg-cyan-500/10 text-cyan-300 [.light_&]:bg-cyan-100 [.light_&]:text-cyan-700", children: step.icon }),
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "space-y-2", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-3", children: [
             /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "text-xs font-semibold uppercase tracking-wide text-cyan-200", children: [
@@ -9025,7 +9025,7 @@ function Skills() {
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid gap-6 md:grid-cols-2", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "card rounded-2xl p-6", children: [
             /* @__PURE__ */ jsxRuntimeExports.jsxs("h3", { className: "mb-4 flex items-center gap-2 text-lg font-semibold text-white", children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsx(HiAcademicCap, { className: "h-7 w-7 text-cyan-300" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx(HiAcademicCap, { className: "h-7 w-7 text-cyan-300 [.light_&]:text-cyan-700" }),
               "Educação"
             ] }),
             /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "space-y-3 text-slate-200", children: educations.map((education, index2) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
@@ -9042,7 +9042,7 @@ function Skills() {
           ] }),
           /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "card rounded-2xl p-6", children: [
             /* @__PURE__ */ jsxRuntimeExports.jsxs("h3", { className: "mb-4 flex items-center gap-2 text-lg font-semibold text-white", children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsx(HiCodeBracketSquare, { className: "h-7 w-7 text-cyan-300" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx(HiCodeBracketSquare, { className: "h-7 w-7 text-cyan-300 [.light_&]:text-cyan-700" }),
               "Skills"
             ] }),
             /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid grid-cols-2 gap-4 md:grid-cols-3", children: skills.sort((a, b) => b.level - a.level).map((skill, index2) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "space-y-2", children: [
