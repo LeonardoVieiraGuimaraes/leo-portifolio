@@ -42,7 +42,7 @@ export default function Hero() {
             e acadêmicas que resolvem problemas de negócio e educação.
           </p>
 
-          <div className="flex gap-1.5 flex-nowrap overflow-x-auto pb-2 sm:pb-0 sm:overflow-visible sm:gap-3 -mx-6 px-6 sm:mx-0 sm:px-0">
+          <div className="flex flex-wrap gap-2 sm:gap-3 sm:flex-nowrap sm:overflow-visible">
             <a
               href="https://docs.google.com/document/d/1hLeOBX7zAz-BtYLxXKWK6RtYEWqWnCo4Z5IA5Kvwzsk/edit?usp=drive_link"
               target="_blank"
