@@ -57,7 +57,14 @@ export default function Header() {
       <nav className="fixed z-50 w-full border-b border-white/5 dark:border-white/5 light:border-blue-500/20 bg-slate-900/80 dark:bg-slate-900/80 light:bg-white/90 backdrop-blur-md transition-colors duration-300">
         <div className="max-w-6xl mx-auto px-4">
           <div className="relative flex items-center justify-between h-16">
-            <div className="absolute inset-y-0 right-0 flex items-center md:hidden">
+            <div className="absolute inset-y-0 right-0 flex items-center gap-2 md:hidden">
+              <button
+                onClick={toggleTheme}
+                className="inline-flex items-center justify-center p-2 rounded-md text-gray-200 hover:text-white hover:bg-white/5 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                title={`Mudar para ${theme === "dark" ? "light" : "dark"} mode`}
+              >
+                {theme === "dark" ? <FaSun className="h-5 w-5" /> : <FaMoon className="h-5 w-5" />}
+              </button>
               <button
                 type="button"
                 className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
