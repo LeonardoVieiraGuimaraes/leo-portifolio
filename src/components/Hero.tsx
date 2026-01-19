@@ -104,7 +104,7 @@ export default function Hero() {
                 <h3 className="text-2xl font-semibold text-white">Leonardo V. Guimarães</h3>
                 <p className="text-slate-300">Belo Horizonte • Remoto Brasil</p>
               </div>
-              <div className="space-y-2 text-sm text-slate-200">
+              <div className="space-y-2 text-sm text-slate-200 mt-2">
                 <p>Full Stack • Frontend: React, TypeScript, Tailwind</p>
                 <p>Backend: Node.js, Python, Django, Django Ninja, Spring Boot</p>
                 <p>Professor universitário • Doutorando Modelagem Computacional</p>
