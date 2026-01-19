@@ -85,10 +85,6 @@ export default function Hero() {
             {[
               { label: "+12 anos docência", icon: "👨‍🏫" },
               { label: "+8 anos desenvolvimento", icon: "💻" },
-              { label: "Engenharia da Computação", icon: "⚙️" },
-              { label: "Licenciatura em Matemática", icon: "📐" },
-              { label: "Mestre Modelagem Computacional", icon: "🎓" },
-              { label: "Doutorando Modelagem Computacional", icon: "📊" },
             ].map((item) => (
               <div
                 key={item.label}
@@ -113,8 +109,11 @@ export default function Hero() {
               <div className="space-y-2 text-sm text-slate-200">
                 <p>Full Stack • Frontend: React, TypeScript, Tailwind</p>
                 <p>Backend: Node.js, Python, Django, Django Ninja, Spring Boot</p>
-                <p>Professor universitário • Doutorando Modelagem Computacional</p>
-                <p className="text-cyan-200">Disponível para projetos e vagas</p>
+                <p className="text-cyan-200 font-semibold pt-2">Formação Acadêmica</p>
+                <p>🎓 Engenharia da Computação</p>
+                <p>📐 Licenciatura em Matemática</p>
+                <p>🏆 Mestre Modelagem Computacional</p>
+                <p className="text-cyan-200">📊 Doutorando Modelagem Computacional</p>
               </div>
             </div>
           </div>
