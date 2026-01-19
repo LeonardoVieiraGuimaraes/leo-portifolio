@@ -62,7 +62,7 @@ export default function Contact() {
       icon: <HiOutlineEnvelope className="h-10 w-10" />,
     },
     {
-      name: "São Francisco",
+      name: "Belo Horizonte",
       description: "Minas Gerais - Brasil",
       link: "https://maps.app.goo.gl/J8GYMwibv7pjR8HE7",
       icon: <HiOutlineMapPin className="h-10 w-10" />,
@@ -130,7 +130,7 @@ export default function Contact() {
               <div className="flex items-center gap-3">
                 <button
                   type="submit"
-                  className="button inline-flex items-center gap-2"
+                  className="button-hero"
                   disabled={loading}
                 >
                   {loading && <FaSpinner className="h-4 w-4 animate-spin" />}
