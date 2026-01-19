@@ -4,7 +4,8 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+:root,
+:root.dark {
   --bg: #0b1220;
   --panel: #0f172a;
   --muted: #94a3b8;
@@ -14,14 +15,36 @@
   --border: rgba(255, 255, 255, 0.08);
 }
 
+:root.light {
+  --bg: #f8fafc;
+  --panel: #f1f5f9;
+  --muted: #64748b;
+  --text: #1e293b;
+  --accent: #0891b2;
+  --accent-2: #7c3aed;
+  --border: rgba(0, 0, 0, 0.08);
+}
+
 * {
   font-family: 'Space Grotesk', 'Manrope', system-ui, -apple-system, sans-serif;
 }
 
 body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+:root.dark body {
   background: radial-gradient(circle at 10% 20%, rgba(34, 211, 238, 0.08), transparent 25%),
     radial-gradient(circle at 80% 0%, rgba(167, 139, 250, 0.1), transparent 30%),
     linear-gradient(180deg, #0b1220 0%, #0f172a 60%, #0b1220 100%);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+:root.light body {
+  background: radial-gradient(circle at 10% 20%, rgba(8, 145, 178, 0.08), transparent 25%),
+    radial-gradient(circle at 80% 0%, rgba(124, 58, 237, 0.08), transparent 30%),
+    linear-gradient(180deg, #f8fafc 0%, #f1f5f9 60%, #f8fafc 100%);
   color: var(--text);
   min-height: 100vh;
 }
@@ -31,8 +54,14 @@ body {
   color: #e2e8f0;
 }
 
+:root.light ::selection {
+  background: rgba(8, 145, 178, 0.25);
+  color: #1e293b;
+}
+
 h1, h2, h3, h4 {
   letter-spacing: -0.02em;
+  transition: color 0.3s ease;
 }
 
 @layer components {
@@ -43,6 +72,11 @@ h1, h2, h3, h4 {
     box-shadow: 0 8px 30px rgba(34, 211, 238, 0.25);
   }
 
+  :root.light .button {
+    color: #f8fafc;
+    box-shadow: 0 8px 30px rgba(8, 145, 178, 0.25);
+  }
+
   .button-secondary {
     @apply cursor-pointer rounded-lg px-5 py-2.5 text-sm font-semibold transition duration-200 border;
     border-color: var(--border);
@@ -50,9 +84,19 @@ h1, h2, h3, h4 {
     background: rgba(255, 255, 255, 0.04);
   }
 
+  :root.light .button-secondary {
+    background: rgba(0, 0, 0, 0.04);
+  }
+
   .card {
     background: rgba(255, 255, 255, 0.04);
     border: 1px solid var(--border);
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+  }
+
+  :root.light .card {
+    background: rgba(0, 0, 0, 0.02);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
   }
 }
