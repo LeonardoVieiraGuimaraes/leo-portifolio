@@ -96,7 +96,7 @@ export default function Hero() {
         </div>
 
         <div className="relative hidden md:block">
-          <div className="card relative h-80 w-72 overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 p-6">
+          <div className="card relative h-96 w-80 overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 p-6">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(34,211,238,0.18),transparent_30%),radial-gradient(circle_at_80%_0%,rgba(167,139,250,0.2),transparent_35%)]" />
             <div className="relative flex h-full flex-col justify-between">
               <div>
