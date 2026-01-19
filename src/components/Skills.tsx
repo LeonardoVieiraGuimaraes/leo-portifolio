@@ -60,9 +60,19 @@ export default function Skills() {
       level: 80,
     },
     {
+      name: "Django Ninja",
+      icon: "images/skills/django.svg",
+      level: 70,
+    },
+    {
       name: "Python",
       icon: "images/skills/python.svg",
       level: 80,
+    },
+    {
+      name: "Spring Boot",
+      icon: "images/skills/java.svg",
+      level: 60,
     },
     {
       name: "Docker",
@@ -72,11 +82,6 @@ export default function Skills() {
     {
       name: "Nginx",
       icon: "images/skills/nginx.svg",
-      level: 50,
-    },
-    {
-      name: "Java",
-      icon: "images/skills/java.svg",
       level: 50,
     },
     {
