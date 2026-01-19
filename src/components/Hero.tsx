@@ -106,15 +106,23 @@ export default function Hero() {
                 <h3 className="text-2xl font-semibold text-white">Leonardo V. Guimarães</h3>
                 <p className="text-slate-300">Belo Horizonte • Remoto Brasil</p>
               </div>
-              <div className="space-y-2 text-sm text-slate-200">
-                <p>👨‍💼 Professor universitário</p>
-                <p>Full Stack • Frontend: React, TypeScript, Tailwind</p>
-                <p>Backend: Node.js, Python, Django, Django Ninja, Spring Boot</p>
-                <p className="text-cyan-200 font-semibold pt-2">Formação Acadêmica</p>
-                <p>🎓 Engenharia da Computação</p>
-                <p>📐 Licenciatura em Matemática</p>
-                <p>🏆 Mestre Modelagem Computacional</p>
-                <p>📊 Doutorando Modelagem Computacional</p>
+              <div className="space-y-3 text-sm text-slate-200">
+                <p className="text-cyan-300 font-semibold">👨‍💼 Professor Universitário</p>
+                
+                <div className="space-y-1.5 text-xs">
+                  <p className="text-cyan-200 font-semibold">💻 Full Stack</p>
+                  <p>🔹 Frontend: React, TypeScript, Tailwind</p>
+                  <p>🔹 Backend: Node.js, Python, Django, Spring Boot</p>
+                  <p>🔹 Mobile: React Native</p>
+                </div>
+                
+                <div className="space-y-1.5 border-t border-white/10 pt-2.5">
+                  <p className="text-cyan-200 font-semibold">🎓 Formação Acadêmica</p>
+                  <p>📚 Engenharia da Computação</p>
+                  <p>📐 Licenciatura em Matemática</p>
+                  <p>🏆 Mestre Modelagem Computacional</p>
+                  <p>📊 Doutorando Modelagem Computacional</p>
+                </div>
               </div>
             </div>
           </div>
