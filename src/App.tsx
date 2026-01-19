@@ -10,27 +10,30 @@ import ProjectsProfessor from "./components/ProjectsProfessor";
 import Services from "./components/Services";
 import Process from "./components/Process";
 import Skills from "./components/Skills";
+import { ThemeProvider } from "./context/ThemeContext";
 
 // import Textimonials from "./components/Textimonials";
 
 function App() {
   return (
-    <main>
-      <Header />
-      {/* <Header2 /> */}
-      <Hero />
-      <About />
-      <Services />
-      <Process />
-      <ProjectsAcademics />
-      <ProjectsDeveloper />
-      <ProjectsProfessor />
+    <ThemeProvider>
+      <main>
+        <Header />
+        {/* <Header2 /> */}
+        <Hero />
+        <About />
+        <Services />
+        <Process />
+        <ProjectsAcademics />
+        <ProjectsDeveloper />
+        <ProjectsProfessor />
 
-      <Skills />
-      {/* <Textimonials /> */}
-      <Contact />
-      <Footer />
-    </main>
+        <Skills />
+        {/* <Textimonials /> */}
+        <Contact />
+        <Footer />
+      </main>
+    </ThemeProvider>
   );
 }
 
