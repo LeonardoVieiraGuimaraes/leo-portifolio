@@ -62,62 +62,51 @@ export default function Contact() {
   ];
 
   return (
-    <section className="bg-blue-700 text-white" id="contact">
-      <div className="container mx-auto max-w-6xl p-4 py-8">
-        <div className="mb-6">
-          <h2 className="z-50 mb-2">
-            <span className="mr-2 font-headline text-3xl font-semibold">
-              Fale
-            </span>
-            <span className="font-handwriting text-4xl">Comigo</span>
-          </h2>
-          <p className="text-sm">
-            Entre em contato pelo formulário ou WhatsApp. Terei prazer em ajudar você!
+    <section className="bg-slate-900/60 text-white" id="contact">
+      <div className="container mx-auto max-w-6xl px-4 py-16">
+        <div className="mb-8 text-center space-y-3">
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200">
+            Contato
+          </p>
+          <h2 className="text-3xl md:text-4xl font-semibold">Vamos conversar</h2>
+          <p className="text-slate-300">
+            Me envie uma mensagem ou chame no WhatsApp. Retorno rápido para falar sobre projetos e oportunidades.
           </p>
         </div>
 
-        <div className="flex flex-col gap-6 md:flex-row">
-          <div className="basis-2/3">
-            <form ref={form} onSubmit={sendEmail}>
-              <div className="mb-4">
-                <label
-                  htmlFor="message"
-                  className="mb-2 block ps-4 font-headline font-semibold"
-                >
-                  Mensagem:
+        <div className="grid gap-6 md:grid-cols-3">
+          <div className="card md:col-span-2 rounded-2xl p-6">
+            <form ref={form} onSubmit={sendEmail} className="space-y-4">
+              <div>
+                <label htmlFor="message" className="mb-2 block text-sm font-semibold text-slate-200">
+                  Mensagem
                 </label>
                 <textarea
                   id="message"
                   name="message"
-                  className="h-36 w-full rounded-lg border border-white bg-transparent p-2 outline-none"
+                  className="h-32 w-full rounded-lg border border-white/10 bg-white/5 p-3 text-white outline-none focus:border-cyan-300"
                   required
                 />
               </div>
-              <div className="mb-6 flex flex-col gap-4 md:flex-row">
-                <div className="flex-grow">
-                  <label
-                    htmlFor="fullName"
-                    className="mb-2 block ps-4 font-headline font-semibold"
-                  >
-                    Seu nome:
+              <div className="grid gap-4 md:grid-cols-2">
+                <div>
+                  <label htmlFor="fullName" className="mb-2 block text-sm font-semibold text-slate-200">
+                    Seu nome
                   </label>
                   <input
-                    className="w-full rounded-lg border border-white bg-transparent p-2 outline-none"
+                    className="w-full rounded-lg border border-white/10 bg-white/5 p-3 text-white outline-none focus:border-cyan-300"
                     type="text"
                     name="fullName"
                     id="fullName"
                     required
                   />
                 </div>
-                <div className="flex-grow">
-                  <label
-                    htmlFor="email"
-                    className="mb-2 block ps-4 font-headline font-semibold"
-                  >
-                    Seu email:
+                <div>
+                  <label htmlFor="email" className="mb-2 block text-sm font-semibold text-slate-200">
+                    Seu email
                   </label>
                   <input
-                    className="w-full rounded-lg border border-white bg-transparent p-2 outline-none"
+                    className="w-full rounded-lg border border-white/10 bg-white/5 p-3 text-white outline-none focus:border-cyan-300"
                     type="email"
                     name="email"
                     id="email"
@@ -126,10 +115,10 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div>
+              <div className="flex items-center gap-3">
                 <button
                   type="submit"
-                  className="button flex items-center bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg"
+                  className="button inline-flex items-center gap-2"
                   disabled={loading}
                 >
                   {loading && <FaSpinner className="h-4 w-4 animate-spin" />}
@@ -138,27 +127,30 @@ export default function Contact() {
                 </button>
 
                 {error && (
-                  <p className="mt-2">
-                    Ocorreu um erro ao enviar a mensagem, tente novamente mais
-                    tarde.
+                  <p className="text-sm text-rose-200">
+                    Ocorreu um erro ao enviar. Tente novamente mais tarde.
                   </p>
                 )}
               </div>
             </form>
           </div>
-          <div className="basis-1/3">
+
+          <div className="space-y-4">
             {contacts.map((contact, index) => (
               <div
                 key={`contact-${index}`}
-                className="mb-4 flex items-center gap-4 rounded-lg border border-dashed border-gray-400 p-4"
+                className="card flex items-center gap-4 rounded-2xl border border-white/10 bg-white/5 p-4"
               >
-                {contact.icon}
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-cyan-500/10 text-cyan-300">
+                  {contact.icon}
+                </div>
                 <div>
-                  <p className="font-headline font-semibold">{contact.name}</p>
+                  <p className="font-semibold text-white">{contact.name}</p>
                   <a
                     href={contact.link}
                     target="_blank"
-                    className="text-gray-300 underline underline-offset-2"
+                    className="text-sm text-cyan-200 underline underline-offset-2"
+                    rel="noreferrer"
                   >
                     {contact.description}
                   </a>

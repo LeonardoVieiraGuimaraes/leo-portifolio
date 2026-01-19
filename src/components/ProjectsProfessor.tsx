@@ -7,6 +7,7 @@ export default function ProjectsProfessor() {
       description: "Video aulas de Estátitica e Probabilidade",
       image: "/images/projects/professor/aulaEstatisticaProbabilidade.png",
       link: "https://www.youtube.com/playlist?list=PLbLoehbSIAYUFCykmhDHcOhAIv7er7rou",
+      tags: ["YouTube", "Estatística"],
       colSpan: "col-span-1",
     },
 
@@ -15,6 +16,7 @@ export default function ProjectsProfessor() {
       description: "Video aulas de Matemática Financeira",
       image: "/images/projects/professor/aulaMatematicaFinanceira.png",
       link: "https://www.youtube.com/playlist?list=PLbLoehbSIAYXHvrPFdzPvz2StCvwDVNym",
+      tags: ["Finanças", "Educação"],
       colSpan: "col-span-1",
     },
     {
@@ -22,70 +24,66 @@ export default function ProjectsProfessor() {
       description: "Video aulas Projeto Integrador",
       image: "/images/projects/professor/aulaProjetoIntegrador.png",
       link: "https://www.youtube.com/playlist?list=PLbLoehbSIAYVKOSuhf2p27tRaFlXAFG1T",
+      tags: ["Projetos", "Tecnologia"],
       colSpan: "col-span-1",
     },
   ];
 
   return (
-    <section
-      className="bg-gradient-to-tr to-blue-600 from-gray-900 text-white"
-      id="projectsProfessor"
-    >
-      <div className="container mx-auto max-w-6xl p-4 py-8">
-        <div className="relative p-6 text-center">
-          <h2 className="relative z-40 mb-2 text-white">
-            <span className="mr-2 font-headline text-3xl font-semibold z-40">
-              Projetos e Videoaulas
-            </span>
-            <span className="font-handwriting text-4xl">Professor</span>
-          </h2>
-          <p className="relative text-lg text-white">
-            A seguir, apresento algumas videoaulas e projetos que elaborei
-            durante minha trajetória como professor.
+    <section className="relative text-white" id="projectsProfessor">
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900" />
+      <div className="relative container mx-auto max-w-6xl px-4 py-16">
+        <div className="text-center space-y-3">
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200">
+            Educação
           </p>
-          {/* <div className="absolute left-1/2 top-3 z-0 h-10 w-10 rounded-lg bg-blue-400/10" /> */}
+          <h2 className="text-3xl md:text-4xl font-semibold">Projetos e videoaulas</h2>
+          <p className="text-slate-300">
+            Conteúdo prático de estatística, finanças e tecnologia para sala de aula e online.
+          </p>
         </div>
 
-        <div className="grid grid-cols-2 mt-10 gap-4 md:grid-cols-3">
+        <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project, index) => (
             <div
-              className={`group relative cursor-default rounded-lg ${project.colSpan}`}
+              className={`card group relative overflow-hidden rounded-xl ${project.colSpan}`}
               key={index}
             >
-              <img
-                className={`h-52 cursor-default rounded-lg bg-cover bg-center w-full`}
-                src={`${project.image}`}
-                alt=""
-              />
+              <div className="relative h-48 overflow-hidden">
+                <img
+                  className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                  src={`${project.image}`}
+                  alt={project.title}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-900/30 to-transparent" />
+              </div>
 
-              <span className="absolute inset-0 flex h-full w-full flex-col items-center justify-center rounded-lg bg-blue-600 text-white opacity-0 transition-opacity group-hover:opacity-70"></span>
-              <div className="absolute inset-0 flex h-full w-full flex-col items-center justify-center rounded-lg text-white opacity-0 transition-opacity group-hover:opacity-100">
-                <h4 className="font-headline text-lg text-center font-semibold ">
-                  {project.title}
-                </h4>
-                <p className="p-4 text-center">{project.description}</p>
+              <div className="relative space-y-3 p-4">
+                <div className="flex flex-wrap gap-2 text-xs text-cyan-200">
+                  {(project as { tags?: string[] }).tags?.map((tag) => (
+                    <span
+                      key={tag}
+                      className="rounded-full border border-white/10 bg-white/5 px-3 py-1"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                <h4 className="text-xl font-semibold">{project.title}</h4>
+                <p className="text-sm text-slate-300">{project.description}</p>
 
                 <button
                   onClick={() => window.open(project.link, "_blank")}
-                  className="flex items-center justify-center px-4 py-2 bg-white text-gray-700 rounded shadow hover:bg-gray-200"
+                  className="button-secondary mt-2 inline-flex items-center gap-2 border border-white/20 hover:border-white/40"
                 >
-                  <HiArrowTopRightOnSquare className="h-6 w-6" />
-                  {} Ver projeto
+                  <HiArrowTopRightOnSquare className="h-5 w-5" />
+                  Ver projeto
                 </button>
               </div>
-              {/* <a
-                    href={project.link}
-                    target="_blank"
-                    className="flex items-center justify-center"
-                  >
-                    <HiArrowTopRightOnSquare className="h-6 w-6" />
-                    Ver projeto
-                  </a> */}
             </div>
           ))}
         </div>
       </div>
-      <div className="absolute right-0 -mt-[6px] h-3 w-48 rounded-l-full bg-gradient-to-r from-gray-700 to-gray-600 md:w-96" />
     </section>
   );
 }

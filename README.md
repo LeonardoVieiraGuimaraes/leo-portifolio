@@ -1,27 +1,49 @@
-# React + TypeScript + Vite
+# Leonardo Vieira - Portfólio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Portfólio profissional de Leonardo Vieira, professor de programação e desenvolvedor full-stack com mais de 12 anos de experiência em educação e 8+ anos em desenvolvimento de software.
 
-Currently, two official plugins are available:
+## 🎨 Design
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Tema**: Dark mode com design moderno
+- **Estilo**: Glass morphism, gradientes e animações suaves
+- **Responsivo**: Mobile-first, adaptado para todos os dispositivos
 
-## Expanding the ESLint configuration
+## 🛠️ Stack Tecnológico
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **Frontend**: React 18.2 + TypeScript
+- **Build**: Vite 4.4.5
+- **Styling**: Tailwind CSS 3.3.5 + CSS personalizado
+- **Icons**: React Icons
+- **Deployment**: Docker + Nginx + Cloudflare Tunnel
 
-- Configure the top-level `parserOptions` property like this:
+## 🚀 Scripts Disponíveis
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+```bash
+npm run dev                  # Iniciar servidor de desenvolvimento
+npm run build:homeserver    # Build para home server
+npm run build:github        # Build para GitHub Pages
+npm run preview             # Preview do build
+npm run lint               # Validar código
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## 📁 Estrutura do Projeto
+
+```
+src/
+├── components/
+│   ├── About.tsx
+│   ├── Contact.tsx
+│   ├── Footer.tsx
+│   ├── Header.tsx
+│   ├── Hero.tsx
+│   ├── Process.tsx
+│   └── [Projetos e componentes]
+├── index.css
+├── main.tsx
+└── App.tsx
+```
+
+## 🌐 Acesso
+
+- **Live**: https://leoproti.com.br
+- **GitHub**: https://github.com/LeonardoVieiraGuimaraes

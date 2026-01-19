@@ -1,10 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --bg: #0b1220;
+  --panel: #0f172a;
+  --muted: #94a3b8;
+  --text: #e2e8f0;
+  --accent: #22d3ee;
+  --accent-2: #a78bfa;
+  --border: rgba(255, 255, 255, 0.08);
+}
 
-@Layer components {
-    .button {
-      @apply cursor-pointer rounded-md bg-white px-4 py-2 font-headline text-sm font-semibold transition;
-    }
+* {
+  font-family: 'Space Grotesk', 'Manrope', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at 10% 20%, rgba(34, 211, 238, 0.08), transparent 25%),
+    radial-gradient(circle at 80% 0%, rgba(167, 139, 250, 0.1), transparent 30%),
+    linear-gradient(180deg, #0b1220 0%, #0f172a 60%, #0b1220 100%);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+::selection {
+  background: rgba(34, 211, 238, 0.25);
+  color: #e2e8f0;
+}
+
+h1, h2, h3, h4 {
+  letter-spacing: -0.02em;
+}
+
+@layer components {
+  .button {
+    @apply cursor-pointer rounded-lg px-5 py-2.5 text-sm font-semibold transition duration-200;
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    color: #0b1220;
+    box-shadow: 0 8px 30px rgba(34, 211, 238, 0.25);
   }
+
+  .button-secondary {
+    @apply cursor-pointer rounded-lg px-5 py-2.5 text-sm font-semibold transition duration-200 border;
+    border-color: var(--border);
+    color: var(--text);
+    background: rgba(255, 255, 255, 0.04);
+  }
+
+  .card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--border);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+  }
+}

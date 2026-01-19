@@ -33,30 +33,35 @@ export default function Services() {
   ];
 
   return (
-    <section className="container mx-auto pt-12 my-12 max-w-6xl" id="services">
-      <div className="p-4 text-center">
-        <p className="text-sm font-semibold uppercase text-blue-600">
-          O que faço de melhor
+    <section className="container mx-auto max-w-6xl px-4 py-16" id="services">
+      <div className="text-center space-y-3">
+        <p className="text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200">
+          O que faço
         </p>
-        <h2 className="mb-2 font-bold text-blue-900">
-          <span className="mr-2 font-headline text-3xl">Meus</span>
-          <span className="font-handwriting text-4xl">Serviços</span>
+        <h2 className="text-3xl md:text-4xl font-semibold text-white">
+          Soluções ponta a ponta para produtos digitais e educação
         </h2>
-        <p className=" text-lg text-gray-700">
-          Posso atender uma gama completa de serviços, do front-end ao back-end
-          com banco de dados, sistemas e professor.
+        <p className="text-slate-300">
+          Do discovery à entrega: front-end, back-end, dados, mobile e trilhas educacionais.
         </p>
       </div>
 
-      <div className="px-2 grid grid-cols-2 mt-10 gap-4 md:grid-cols-4">
+      <div className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
         {services.map((service, index) => (
           <div
-            className="basis-1/3 rounded-lg bg-blue-700 p-4 text-white"
+            className="card relative h-full overflow-hidden rounded-xl p-5"
             key={`service-${index}`}
           >
-            <div className="mb-2">{service.icon}</div>
-            <h3 className="text-xl font-bold">{service.title}</h3>
-            <p className="text-sm">{service.description}</p>
+            <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-white/0 to-white/5" />
+            <div className="relative space-y-3">
+              <div className="inline-flex h-14 w-14 items-center justify-center rounded-xl bg-cyan-500/15 text-cyan-300">
+                {service.icon}
+              </div>
+              <h3 className="text-xl font-semibold text-white">{service.title}</h3>
+              <p className="text-sm text-slate-300 leading-relaxed">
+                {service.description}
+              </p>
+            </div>
           </div>
         ))}
       </div>
