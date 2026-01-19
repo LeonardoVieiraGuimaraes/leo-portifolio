@@ -553,8 +553,8 @@ video {
 }
 
 :root.light .button {
-    color: #f8fafc;
-    box-shadow: 0 8px 30px rgba(8, 145, 178, 0.25);
+    color: #ffffff;
+    box-shadow: 0 8px 30px rgba(8, 145, 178, 0.2);
   }
 
 .button-secondary{
@@ -579,7 +579,13 @@ video {
 }
 
 :root.light .button-secondary {
-    background: rgba(0, 0, 0, 0.04);
+    background: rgba(8, 145, 178, 0.08);
+    border-color: rgba(8, 145, 178, 0.3);
+    color: #0891b2;
+  }
+
+:root.light .button-secondary:hover {
+    background: rgba(8, 145, 178, 0.15);
   }
 
 .card {
@@ -590,8 +596,49 @@ video {
   }
 
 :root.light .card {
-    background: rgba(0, 0, 0, 0.02);
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    background: rgba(255, 255, 255, 0.8);
+    border-color: rgba(8, 145, 178, 0.15);
+    box-shadow: 0 10px 40px rgba(8, 145, 178, 0.08);
+  }
+
+/* Light mode navbar styles */
+
+:root.light nav {
+    background-color: rgba(255, 255, 255, 0.9) !important;
+    border-color: rgba(8, 145, 178, 0.2) !important;
+  }
+
+:root.light nav a,
+  :root.light nav button {
+    color: #0f172a;
+  }
+
+:root.light nav a:hover,
+  :root.light nav button:hover {
+    background-color: rgba(8, 145, 178, 0.1) !important;
+    color: #0891b2;
+  }
+
+:root.light [id="mobile-menu"] {
+    background-color: rgba(255, 255, 255, 0.95) !important;
+  }
+
+:root.light [id="mobile-menu"] a,
+  :root.light [id="mobile-menu"] button {
+    color: #0f172a;
+  }
+
+:root.light [id="mobile-menu"] a:hover,
+  :root.light [id="mobile-menu"] button:hover {
+    background-color: rgba(8, 145, 178, 0.1) !important;
+    color: #0891b2;
+  }
+
+/* Light mode dropdown menu */
+
+:root.light div.absolute.left-0 {
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    border-color: rgba(8, 145, 178, 0.2) !important;
   }
 
 .sr-only{
@@ -1604,13 +1651,13 @@ video {
 }
 
 :root.light {
-  --bg: #f8fafc;
-  --panel: #f1f5f9;
-  --muted: #64748b;
-  --text: #1e293b;
+  --bg: #ffffff;
+  --panel: #f0f4f8;
+  --muted: #6b7280;
+  --text: #111827;
   --accent: #0891b2;
   --accent-2: #7c3aed;
-  --border: rgba(0, 0, 0, 0.08);
+  --border: rgba(0, 0, 0, 0.1);
 }
 
 * {
@@ -1630,9 +1677,9 @@ body {
 }
 
 :root.light body {
-  background: radial-gradient(circle at 10% 20%, rgba(8, 145, 178, 0.08), transparent 25%),
-    radial-gradient(circle at 80% 0%, rgba(124, 58, 237, 0.08), transparent 30%),
-    linear-gradient(180deg, #f8fafc 0%, #f1f5f9 60%, #f8fafc 100%);
+  background: radial-gradient(circle at 10% 20%, rgba(8, 145, 178, 0.06), transparent 25%),
+    radial-gradient(circle at 80% 0%, rgba(124, 58, 237, 0.06), transparent 30%),
+    linear-gradient(180deg, #ffffff 0%, #f0f4f8 60%, #ffffff 100%);
   color: var(--text);
   min-height: 100vh;
 }
@@ -1649,17 +1696,24 @@ body {
 
 :root.light ::-moz-selection {
   background: rgba(8, 145, 178, 0.25);
-  color: #1e293b;
+  color: #111827;
 }
 
 :root.light ::selection {
   background: rgba(8, 145, 178, 0.25);
-  color: #1e293b;
+  color: #111827;
 }
 
 h1, h2, h3, h4 {
   letter-spacing: -0.02em;
   transition: color 0.3s ease;
+}
+
+:root.light h1,
+:root.light h2,
+:root.light h3,
+:root.light h4 {
+  color: #0f172a;
 }
 
 .hover\:border-white\/40:hover{
@@ -1731,6 +1785,10 @@ h1, h2, h3, h4 {
 }
 
 @media (prefers-color-scheme: dark){
+
+  .dark\:border-white\/5{
+    border-color: rgb(255 255 255 / 0.05);
+  }
 
   .dark\:bg-slate-900\/80{
     background-color: rgb(15 23 42 / 0.8);
