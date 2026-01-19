@@ -7647,36 +7647,37 @@ function About() {
   const birthDate = new Date(1984, 10 - 1, 2);
   const today = /* @__PURE__ */ new Date();
   const age = differenceInYears(today, birthDate);
-  return /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "container mx-auto my-4  p-5", id: "about", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "relative mx-auto mt-20 max-w-6xl", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: " w-full rounded-lg bg-blue-100 p-4 ps-16  md:ps-44 md:pr-12", children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: " p-4 text-center", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("h2", { className: " z-50 mb-2 font-bold text-blue-900", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "mr-2 font-headline text-3xl", children: "Sobre" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-handwriting text-4xl", children: "Mim" })
+  return /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "container mx-auto my-12 px-4", id: "about", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "relative mx-auto mt-8 max-w-6xl", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "card relative w-full overflow-hidden rounded-2xl border border-white/10 bg-slate-900/80 p-6 md:p-10", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(34,211,238,0.12),transparent_35%),radial-gradient(circle_at_80%_0%,rgba(167,139,250,0.12),transparent_30%)]" }),
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative space-y-6", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center space-y-3", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-3xl md:text-4xl font-semibold text-white", children: "Sobre mim" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "text-slate-300", children: [
+          "Tenho ",
+          age,
+          " anos, sou professor universitário e desenvolvedor full stack. Conecto engenharia, matemática e produto para entregar soluções que resolvem problemas de negócio e educação."
+        ] })
       ] }),
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: " text-justify text-lg text-gray-700", children: [
-        "Tenho ",
-        age,
-        " anos de idade, possuo uma vasta gama de projetos no meu repositório no",
-        " ",
+      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-slate-200 leading-relaxed text-justify", children: "Mestre em Modelagem Computacional e Sistemas (UNIMONTES) e doutorando em Modelagem Matemática e Computacional (CEFET/MG). Atuo criando APIs, front-ends e automações, e leciono disciplinas de Arquitetura Web, Programação, Banco de Dados, Probabilidade e Matemática Financeira. No NIM (Cidade Administrativa de Belo Horizonte) trabalho com projetos de TI e suporte ao sistema agropecuário do IMA. Sigo entregando valor e aprendendo continuamente." }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-wrap gap-3", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-cyan-200", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "relative flex h-3 w-3", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "relative inline-flex h-3 w-3 rounded-full bg-emerald-400" })
+          ] }),
+          "Disponível para projetos e oportunidades"
+        ] }),
         /* @__PURE__ */ jsxRuntimeExports.jsx(
           "a",
           {
             href: "https://github.com/LeonardoVieiraGuimaraes?tab=repositories",
             target: "_blank",
             rel: "noopener noreferrer",
-            className: "text-blue-500 hover:text-blue-800 hover:underline",
-            children: "GitHub"
+            className: "button-secondary border border-white/20 hover:border-white/40",
+            children: "Ver repositórios no GitHub"
           }
-        ),
-        ", conto com uma sólida formação acadêmica e ampla experiência. Mestre em Modelagem Computacional e Sistemas pela UNIMONTES e atualmente Doutorando em Modelagem Matemática e Computacional no CEFET em Belo Horizonte, minha expertise também abrange especialização em Matemática e Estatística. Graduei-me em Engenharia de Computação e Matemática, atuando como Professor de Ensino Superior e lecionando disciplinas como Arquitetura Web, Programação Web, Banco de Dados, Matemática Financeira, Probabilidade, Tecnologia da Informação e Gestão de Finanças. Também atuo na Cidade Administrativa de Belo Horizonte, no NIM (Núcleo de Inovação e Modernização), desenvolvendo projetos de TI e prestando suporte ao sistema de gestão agropecuária do IMA, o que demonstra minha versatilidade profissional. Ao longo da carreira, participei ativamente e continuo colaborando com instituições de renome como IFNMG, UNIASSELVI e FADENORTE, agregando experiência e conhecimento diversificados. Destaco meu compromisso com o aprendizado contínuo, evidenciado pela participação em cursos complementares e eventos acadêmicos. Sou um profissional dedicado à aplicação prática do conhecimento adquirido e estou sempre aberto a novos desafios e aprendizados que contribuam para meu constante desenvolvimento profissional."
+        )
       ] })
-    ] }),
-    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-row", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "font-headline font-bold uppercase text-blue-900", children: "Disponível:" }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { children: /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "relative flex h-4 w-4 left-3 mt-1", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "relative inline-flex h-3 w-3 rounded-full bg-green-500" })
-      ] }) })
     ] }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute -left-2 -top-4 h-24 w-20 rounded-lg bg-gray-600 bg-profile bg-cover bg-center md:-left-1 md:-top-1 md:h-64 md:w-40" })
   ] }) }) });
@@ -7881,8 +7882,14 @@ function FaVideo(props) {
 function HiAcademicCap(props) {
   return GenIcon({ "tag": "svg", "attr": { "viewBox": "0 0 24 24", "fill": "currentColor", "aria-hidden": "true" }, "child": [{ "tag": "path", "attr": { "d": "M11.7 2.805a.75.75 0 01.6 0A60.65 60.65 0 0122.83 8.72a.75.75 0 01-.231 1.337 49.949 49.949 0 00-9.902 3.912l-.003.002-.34.18a.75.75 0 01-.707 0A50.009 50.009 0 007.5 12.174v-.224c0-.131.067-.248.172-.311a54.614 54.614 0 014.653-2.52.75.75 0 00-.65-1.352 56.129 56.129 0 00-4.78 2.589 1.858 1.858 0 00-.859 1.228 49.803 49.803 0 00-4.634-1.527.75.75 0 01-.231-1.337A60.653 60.653 0 0111.7 2.805z" } }, { "tag": "path", "attr": { "d": "M13.06 15.473a48.45 48.45 0 017.666-3.282c.134 1.414.22 2.843.255 4.285a.75.75 0 01-.46.71 47.878 47.878 0 00-8.105 4.342.75.75 0 01-.832 0 47.877 47.877 0 00-8.104-4.342.75.75 0 01-.461-.71c.035-1.442.121-2.87.255-4.286A48.4 48.4 0 016 13.18v1.27a1.5 1.5 0 00-.14 2.508c-.09.38-.222.753-.397 1.11.452.213.901.434 1.346.661a6.729 6.729 0 00.551-1.608 1.5 1.5 0 00.14-2.67v-.645a48.549 48.549 0 013.44 1.668 2.25 2.25 0 002.12 0z" } }, { "tag": "path", "attr": { "d": "M4.462 19.462c.42-.419.753-.89 1-1.394.453.213.902.434 1.347.661a6.743 6.743 0 01-1.286 1.794.75.75 0 11-1.06-1.06z" } }] })(props);
 }
+function HiArrowDownTray(props) {
+  return GenIcon({ "tag": "svg", "attr": { "viewBox": "0 0 24 24", "fill": "currentColor", "aria-hidden": "true" }, "child": [{ "tag": "path", "attr": { "fillRule": "evenodd", "d": "M12 2.25a.75.75 0 01.75.75v11.69l3.22-3.22a.75.75 0 111.06 1.06l-4.5 4.5a.75.75 0 01-1.06 0l-4.5-4.5a.75.75 0 111.06-1.06l3.22 3.22V3a.75.75 0 01.75-.75zm-9 13.5a.75.75 0 01.75.75v2.25a1.5 1.5 0 001.5 1.5h13.5a1.5 1.5 0 001.5-1.5V16.5a.75.75 0 011.5 0v2.25a3 3 0 01-3 3H5.25a3 3 0 01-3-3V16.5a.75.75 0 01.75-.75z", "clipRule": "evenodd" } }] })(props);
+}
 function HiArrowTopRightOnSquare(props) {
   return GenIcon({ "tag": "svg", "attr": { "viewBox": "0 0 24 24", "fill": "currentColor", "aria-hidden": "true" }, "child": [{ "tag": "path", "attr": { "fillRule": "evenodd", "d": "M15.75 2.25H21a.75.75 0 01.75.75v5.25a.75.75 0 01-1.5 0V4.81L8.03 17.03a.75.75 0 01-1.06-1.06L19.19 3.75h-3.44a.75.75 0 010-1.5zm-10.5 4.5a1.5 1.5 0 00-1.5 1.5v10.5a1.5 1.5 0 001.5 1.5h10.5a1.5 1.5 0 001.5-1.5V10.5a.75.75 0 011.5 0v8.25a3 3 0 01-3 3H5.25a3 3 0 01-3-3V8.25a3 3 0 013-3h8.25a.75.75 0 010 1.5H5.25z", "clipRule": "evenodd" } }] })(props);
+}
+function HiArrowTrendingUp(props) {
+  return GenIcon({ "tag": "svg", "attr": { "viewBox": "0 0 24 24", "fill": "currentColor", "aria-hidden": "true" }, "child": [{ "tag": "path", "attr": { "fillRule": "evenodd", "d": "M15.22 6.268a.75.75 0 01.968-.432l5.942 2.28a.75.75 0 01.431.97l-2.28 5.941a.75.75 0 11-1.4-.537l1.63-4.251-1.086.483a11.2 11.2 0 00-5.45 5.174.75.75 0 01-1.199.19L9 12.31l-6.22 6.22a.75.75 0 11-1.06-1.06l6.75-6.75a.75.75 0 011.06 0l3.606 3.605a12.694 12.694 0 015.68-4.973l1.086-.484-4.251-1.631a.75.75 0 01-.432-.97z", "clipRule": "evenodd" } }] })(props);
 }
 function HiCheckCircle(props) {
   return GenIcon({ "tag": "svg", "attr": { "viewBox": "0 0 24 24", "fill": "currentColor", "aria-hidden": "true" }, "child": [{ "tag": "path", "attr": { "fillRule": "evenodd", "d": "M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z", "clipRule": "evenodd" } }] })(props);
@@ -7898,6 +7905,15 @@ function HiComputerDesktop(props) {
 }
 function HiDevicePhoneMobile(props) {
   return GenIcon({ "tag": "svg", "attr": { "viewBox": "0 0 24 24", "fill": "currentColor", "aria-hidden": "true" }, "child": [{ "tag": "path", "attr": { "d": "M10.5 18.75a.75.75 0 000 1.5h3a.75.75 0 000-1.5h-3z" } }, { "tag": "path", "attr": { "fillRule": "evenodd", "d": "M8.625.75A3.375 3.375 0 005.25 4.125v15.75a3.375 3.375 0 003.375 3.375h6.75a3.375 3.375 0 003.375-3.375V4.125A3.375 3.375 0 0015.375.75h-6.75zM7.5 4.125C7.5 3.504 8.004 3 8.625 3H9.75v.375c0 .621.504 1.125 1.125 1.125h2.25c.621 0 1.125-.504 1.125-1.125V3h1.125c.621 0 1.125.504 1.125 1.125v15.75c0 .621-.504 1.125-1.125 1.125h-6.75A1.125 1.125 0 017.5 19.875V4.125z", "clipRule": "evenodd" } }] })(props);
+}
+function HiMagnifyingGlassCircle(props) {
+  return GenIcon({ "tag": "svg", "attr": { "viewBox": "0 0 24 24", "fill": "currentColor", "aria-hidden": "true" }, "child": [{ "tag": "path", "attr": { "d": "M8.25 10.875a2.625 2.625 0 115.25 0 2.625 2.625 0 01-5.25 0z" } }, { "tag": "path", "attr": { "fillRule": "evenodd", "d": "M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm-1.125 4.5a4.125 4.125 0 102.338 7.524l2.007 2.006a.75.75 0 101.06-1.06l-2.006-2.007a4.125 4.125 0 00-3.399-6.463z", "clipRule": "evenodd" } }] })(props);
+}
+function HiSparkles(props) {
+  return GenIcon({ "tag": "svg", "attr": { "viewBox": "0 0 24 24", "fill": "currentColor", "aria-hidden": "true" }, "child": [{ "tag": "path", "attr": { "fillRule": "evenodd", "d": "M9 4.5a.75.75 0 01.721.544l.813 2.846a3.75 3.75 0 002.576 2.576l2.846.813a.75.75 0 010 1.442l-2.846.813a3.75 3.75 0 00-2.576 2.576l-.813 2.846a.75.75 0 01-1.442 0l-.813-2.846a3.75 3.75 0 00-2.576-2.576l-2.846-.813a.75.75 0 010-1.442l2.846-.813A3.75 3.75 0 007.466 7.89l.813-2.846A.75.75 0 019 4.5zM18 1.5a.75.75 0 01.728.568l.258 1.036c.236.94.97 1.674 1.91 1.91l1.036.258a.75.75 0 010 1.456l-1.036.258c-.94.236-1.674.97-1.91 1.91l-.258 1.036a.75.75 0 01-1.456 0l-.258-1.036a2.625 2.625 0 00-1.91-1.91l-1.036-.258a.75.75 0 010-1.456l1.036-.258a2.625 2.625 0 001.91-1.91l.258-1.036A.75.75 0 0118 1.5zM16.5 15a.75.75 0 01.712.513l.394 1.183c.15.447.5.799.948.948l1.183.395a.75.75 0 010 1.422l-1.183.395c-.447.15-.799.5-.948.948l-.395 1.183a.75.75 0 01-1.422 0l-.395-1.183a1.5 1.5 0 00-.948-.948l-1.183-.395a.75.75 0 010-1.422l1.183-.395c.447-.15.799-.5.948-.948l.395-1.183A.75.75 0 0116.5 15z", "clipRule": "evenodd" } }] })(props);
+}
+function HiWrenchScrewdriver(props) {
+  return GenIcon({ "tag": "svg", "attr": { "viewBox": "0 0 24 24", "fill": "currentColor", "aria-hidden": "true" }, "child": [{ "tag": "path", "attr": { "fillRule": "evenodd", "d": "M12 6.75a5.25 5.25 0 016.775-5.025.75.75 0 01.313 1.248l-3.32 3.319c.063.475.276.934.641 1.299.365.365.824.578 1.3.64l3.318-3.319a.75.75 0 011.248.313 5.25 5.25 0 01-5.472 6.756c-1.018-.086-1.87.1-2.309.634L7.344 21.3A3.298 3.298 0 112.7 16.657l8.684-7.151c.533-.44.72-1.291.634-2.309A5.342 5.342 0 0112 6.75zM4.117 19.125a.75.75 0 01.75-.75h.008a.75.75 0 01.75.75v.008a.75.75 0 01-.75.75h-.008a.75.75 0 01-.75-.75v-.008z", "clipRule": "evenodd" } }, { "tag": "path", "attr": { "d": "M10.076 8.64l-2.201-2.2V4.874a.75.75 0 00-.364-.643l-3.75-2.25a.75.75 0 00-.916.113l-.75.75a.75.75 0 00-.113.916l2.25 3.75a.75.75 0 00.643.364h1.564l2.062 2.062 1.575-1.297z" } }, { "tag": "path", "attr": { "fillRule": "evenodd", "d": "M12.556 17.329l4.183 4.182a3.375 3.375 0 004.773-4.773l-3.306-3.305a6.803 6.803 0 01-1.53.043c-.394-.034-.682-.006-.867.042a.589.589 0 00-.167.063l-3.086 3.748zm3.414-1.36a.75.75 0 011.06 0l1.875 1.876a.75.75 0 11-1.06 1.06L15.97 17.03a.75.75 0 010-1.06z", "clipRule": "evenodd" } }] })(props);
 }
 function HiOutlineAcademicCap(props) {
   return GenIcon({ "tag": "svg", "attr": { "fill": "none", "viewBox": "0 0 24 24", "strokeWidth": "1.5", "stroke": "currentColor", "aria-hidden": "true" }, "child": [{ "tag": "path", "attr": { "strokeLinecap": "round", "strokeLinejoin": "round", "d": "M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5" } }] })(props);
@@ -7955,49 +7971,33 @@ function Contact() {
       icon: /* @__PURE__ */ jsxRuntimeExports.jsx(HiOutlineMapPin, { className: "h-10 w-10" })
     }
   ];
-  return /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "bg-blue-700 text-white", id: "contact", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container mx-auto max-w-6xl p-4 py-8", children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mb-6", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("h2", { className: "z-50 mb-2", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "mr-2 font-headline text-3xl font-semibold", children: "Fale" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-handwriting text-4xl", children: "Comigo" })
-      ] }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm", children: "Entre em contato pelo formulário ou WhatsApp. Terei prazer em ajudar você!" })
+  return /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "bg-slate-900/60 text-white", id: "contact", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container mx-auto max-w-6xl px-4 py-16", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mb-8 text-center space-y-3", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200", children: "Contato" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-3xl md:text-4xl font-semibold", children: "Vamos conversar" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-slate-300", children: "Me envie uma mensagem ou chame no WhatsApp. Retorno rápido para falar sobre projetos e oportunidades." })
     ] }),
-    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col gap-6 md:flex-row", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "basis-2/3", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("form", { ref: form, onSubmit: sendEmail, children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mb-4", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx(
-            "label",
-            {
-              htmlFor: "message",
-              className: "mb-2 block ps-4 font-headline font-semibold",
-              children: "Mensagem:"
-            }
-          ),
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid gap-6 md:grid-cols-3", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "card md:col-span-2 rounded-2xl p-6", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("form", { ref: form, onSubmit: sendEmail, className: "space-y-4", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("label", { htmlFor: "message", className: "mb-2 block text-sm font-semibold text-slate-200", children: "Mensagem" }),
           /* @__PURE__ */ jsxRuntimeExports.jsx(
             "textarea",
             {
               id: "message",
               name: "message",
-              className: "h-36 w-full rounded-lg border border-white bg-transparent p-2 outline-none",
+              className: "h-32 w-full rounded-lg border border-white/10 bg-white/5 p-3 text-white outline-none focus:border-cyan-300",
               required: true
             }
           )
         ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mb-6 flex flex-col gap-4 md:flex-row", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex-grow", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx(
-              "label",
-              {
-                htmlFor: "fullName",
-                className: "mb-2 block ps-4 font-headline font-semibold",
-                children: "Seu nome:"
-              }
-            ),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid gap-4 md:grid-cols-2", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("label", { htmlFor: "fullName", className: "mb-2 block text-sm font-semibold text-slate-200", children: "Seu nome" }),
             /* @__PURE__ */ jsxRuntimeExports.jsx(
               "input",
               {
-                className: "w-full rounded-lg border border-white bg-transparent p-2 outline-none",
+                className: "w-full rounded-lg border border-white/10 bg-white/5 p-3 text-white outline-none focus:border-cyan-300",
                 type: "text",
                 name: "fullName",
                 id: "fullName",
@@ -8005,19 +8005,12 @@ function Contact() {
               }
             )
           ] }),
-          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex-grow", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx(
-              "label",
-              {
-                htmlFor: "email",
-                className: "mb-2 block ps-4 font-headline font-semibold",
-                children: "Seu email:"
-              }
-            ),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("label", { htmlFor: "email", className: "mb-2 block text-sm font-semibold text-slate-200", children: "Seu email" }),
             /* @__PURE__ */ jsxRuntimeExports.jsx(
               "input",
               {
-                className: "w-full rounded-lg border border-white bg-transparent p-2 outline-none",
+                className: "w-full rounded-lg border border-white/10 bg-white/5 p-3 text-white outline-none focus:border-cyan-300",
                 type: "email",
                 name: "email",
                 id: "email",
@@ -8026,12 +8019,12 @@ function Contact() {
             )
           ] })
         ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-3", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsxs(
             "button",
             {
               type: "submit",
-              className: "button flex items-center bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg",
+              className: "button inline-flex items-center gap-2",
               disabled: loading,
               children: [
                 loading && /* @__PURE__ */ jsxRuntimeExports.jsx(FaSpinner, { className: "h-4 w-4 animate-spin" }),
@@ -8040,23 +8033,24 @@ function Contact() {
               ]
             }
           ),
-          error && /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-2", children: "Ocorreu um erro ao enviar a mensagem, tente novamente mais tarde." })
+          error && /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm text-rose-200", children: "Ocorreu um erro ao enviar. Tente novamente mais tarde." })
         ] })
       ] }) }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "basis-1/3", children: contacts.map((contact, index2) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "space-y-4", children: contacts.map((contact, index2) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
         "div",
         {
-          className: "mb-4 flex items-center gap-4 rounded-lg border border-dashed border-gray-400 p-4",
+          className: "card flex items-center gap-4 rounded-2xl border border-white/10 bg-white/5 p-4",
           children: [
-            contact.icon,
+            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex h-12 w-12 items-center justify-center rounded-xl bg-cyan-500/10 text-cyan-300", children: contact.icon }),
             /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "font-headline font-semibold", children: contact.name }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "font-semibold text-white", children: contact.name }),
               /* @__PURE__ */ jsxRuntimeExports.jsx(
                 "a",
                 {
                   href: contact.link,
                   target: "_blank",
-                  className: "text-gray-300 underline underline-offset-2",
+                  className: "text-sm text-cyan-200 underline underline-offset-2",
+                  rel: "noreferrer",
                   children: contact.description
                 }
               )
@@ -8101,16 +8095,22 @@ const socialLinks = [
   }
 ];
 function Footer() {
-  return /* @__PURE__ */ jsxRuntimeExports.jsx("footer", { id: "footer", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container mx-auto flex max-w-6xl py-4 px-4 text-sm", children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex-grow flex items-center", children: /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: "/images/logo.svg", alt: "Logo", className: "h-14 w-auto" }) }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("ul", { className: "flex flex-nowrap gap-2 items-center", children: socialLinks.map((link) => /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+  return /* @__PURE__ */ jsxRuntimeExports.jsx("footer", { id: "footer", className: "border-t border-white/5 bg-slate-950/80", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container mx-auto flex max-w-6xl flex-col gap-4 px-4 py-6 text-sm text-slate-300 md:flex-row md:items-center md:justify-between", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-3", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: "/images/logo.svg", alt: "Logo", className: "h-12 w-auto" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-white font-semibold", children: "Leonardo Vieira Guimarães" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xs text-slate-400", children: "Portfólio • Produtos digitais, dados e educação" })
+      ] })
+    ] }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("ul", { className: "flex flex-nowrap items-center gap-3", children: socialLinks.map((link) => /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: /* @__PURE__ */ jsxRuntimeExports.jsx(
       "a",
       {
         href: link.url,
         target: "_blank",
         rel: "noopener noreferrer",
-        className: "hover:text-blue-500",
-        children: /* @__PURE__ */ jsxRuntimeExports.jsx(link.icon, { size: 25 })
+        className: "text-slate-200 hover:text-cyan-300",
+        children: /* @__PURE__ */ jsxRuntimeExports.jsx(link.icon, { size: 22 })
       }
     ) }, link.name)) })
   ] }) });
@@ -8190,7 +8190,7 @@ function Header() {
     },
     { name: "Video Aulas", icon: /* @__PURE__ */ jsxRuntimeExports.jsx(FaVideo, {}), href: "#projectsProfessor" }
   ];
-  return /* @__PURE__ */ jsxRuntimeExports.jsx("header", { children: /* @__PURE__ */ jsxRuntimeExports.jsxs("nav", { className: "bg-gray-800 fixed w-full z-50", children: [
+  return /* @__PURE__ */ jsxRuntimeExports.jsx("header", { children: /* @__PURE__ */ jsxRuntimeExports.jsxs("nav", { className: "fixed z-50 w-full border-b border-white/5 bg-slate-900/80 backdrop-blur-md", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "max-w-6xl mx-auto px-4", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative flex items-center justify-between h-16", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-y-0 right-0 flex items-center md:hidden", children: /* @__PURE__ */ jsxRuntimeExports.jsxs(
         "button",
@@ -8237,7 +8237,7 @@ function Header() {
                   {
                     onClick: () => setDropdownOpen(!dropdownOpen),
                     onMouseOver: () => setDropdownOpen(true),
-                    className: "text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md flex items-center font-headline text-lg font-semibold",
+                    className: "text-slate-200 hover:bg-white/5 hover:text-white px-3 py-2 rounded-md flex items-center font-headline text-lg font-semibold transition",
                     children: [
                       link.icon,
                       " ",
@@ -8246,11 +8246,11 @@ function Header() {
                   },
                   index2
                 ),
-                dropdownOpen && /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute left-0 w-auto pt-2 pb-2  bg-gray-800", children: projects.map((projects2, index22) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                dropdownOpen && /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute left-0 w-auto pt-2 pb-2 bg-slate-900/95 border border-white/5 rounded-lg shadow-xl", children: projects.map((projects2, index22) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
                   "a",
                   {
                     href: projects2.href,
-                    className: "text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium flex items-center",
+                    className: "text-slate-200 hover:bg-white/5 hover:text-white px-3 py-2 rounded-md text-base font-medium flex items-center",
                     children: [
                       projects2.icon,
                       /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "ml-2", children: projects2.name })
@@ -8265,7 +8265,7 @@ function Header() {
             "a",
             {
               href: link.href,
-              className: "text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md flex items-center font-headline text-lg font-semibold",
+              className: "text-slate-200 hover:text-white hover:bg-white/5 px-3 py-2 rounded-md flex items-center font-headline text-lg font-semibold transition",
               children: [
                 link.icon,
                 /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "ml-2", children: link.name })
@@ -8293,7 +8293,7 @@ function Header() {
                   {
                     onClick: () => setDropdownOpen(!dropdownOpen),
                     onMouseOver: () => setDropdownOpen(true),
-                    className: "text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium flex items-center",
+                    className: "text-slate-200 hover:bg-white/5 hover:text-white px-3 py-2 rounded-md text-base font-medium flex items-center",
                     children: [
                       link.icon,
                       /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "ml-2", children: link.name })
@@ -8304,7 +8304,7 @@ function Header() {
                   "a",
                   {
                     href: projects2.href,
-                    className: "text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium flex items-center",
+                    className: "text-slate-200 hover:bg-white/5 hover:text-white px-3 py-2 rounded-md text-base font-medium flex items-center",
                     children: [
                       projects2.icon,
                       /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "ml-2", children: projects2.name })
@@ -8319,7 +8319,7 @@ function Header() {
             "a",
             {
               href: link.href,
-              className: "text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-base font-medium flex items-center",
+              className: "text-slate-200 hover:bg-white/5 hover:text-white px-3 py-2 rounded-md text-base font-medium flex items-center",
               children: [
                 link.icon,
                 /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "ml-2", children: link.name })
@@ -8332,45 +8332,73 @@ function Header() {
     )
   ] }) });
 }
-function HiDownload(props) {
-  return GenIcon({ "tag": "svg", "attr": { "viewBox": "0 0 20 20", "fill": "currentColor", "aria-hidden": "true" }, "child": [{ "tag": "path", "attr": { "fillRule": "evenodd", "d": "M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z", "clipRule": "evenodd" } }] })(props);
-}
 function Hero() {
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(
-    "section",
-    {
-      className: "rounded-br-[60px] bg-gradient-to-tr to-blue-600 from-gray-900 text-white",
-      id: "hero",
-      children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container mx-auto max-w-6xl flex-col-reverse p-4 py-20 md:flex-row", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("h1", { className: "mb-6 text-center md:text-left", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "block font-handwriting text-3xl", children: "Olá, me chamo" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "mr-2 font-headline text-5xl font-semibold", children: "Leonardo" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "font-headline text-4xl font-semibold text-blue-400", children: [
-            " ",
-            "Vieira Guimarães"
-          ] })
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs("section", { className: "relative overflow-hidden", id: "hero", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900" }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute -left-20 -top-32 h-80 w-80 rounded-full bg-cyan-500/10 blur-3xl" }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute right-0 top-10 h-72 w-72 rounded-full bg-violet-500/10 blur-3xl" }),
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative container mx-auto flex max-w-6xl flex-col gap-8 p-6 pb-24 pt-24 md:flex-row md:items-center md:justify-between", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-w-2xl space-y-6", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-3 text-sm text-cyan-200", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 font-semibold uppercase tracking-wide", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "relative flex h-2 w-2", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "relative inline-flex h-2 w-2 rounded-full bg-emerald-400" })
+            ] }),
+            "Disponível para novos projetos"
+          ] }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-slate-300", children: "Professor | Dev Full Stack" })
         ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("h2", { className: "font-semibold flex items-center gap-2 text-center md:text-left", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "h-1 w-12 rounded-full bg-blue-800" }),
-          "Professor e Desenvolvedor Front-end e Back-end"
+        /* @__PURE__ */ jsxRuntimeExports.jsx("h1", { className: "text-4xl font-semibold leading-tight text-white sm:text-5xl md:text-6xl", children: "Transformando dados e código em produtos digitais que entregam impacto real." }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-lg text-slate-300", children: "Sou Leonardo Vieira Guimarães: desenvolvedor full stack, professor universitário e pesquisador. Combino engenharia, matemática e produto para criar soluções web, mobile e acadêmicas que resolvem problemas de negócio e educação." }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-wrap gap-3", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("a", { href: "#projectsDeveloper", className: "button flex items-center gap-2", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx(HiArrowTopRightOnSquare, { className: "h-5 w-5" }),
+            "Ver projetos"
+          ] }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#contact", className: "button-secondary flex items-center gap-2", children: "Fale comigo" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs(
+            "a",
+            {
+              href: "https://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K4869231A0&tokenCaptchar=03AFcWeA5Xz3lD3vn5HMS9GhkTKnLTFNnn8jIdHmV_gGRxrMmhMj41i_6Lu2oqfAtLP5wyFXdVZJpjXvvBdtYwHXjTs7bE8nxmxjvutCykBoUD2ABe3QL8PkNAaHKTtLibwnOmDCBThU6EIF0OCwoUk3e6_hV4UtOLpidaeAc6fBZ14zZG19qOnFiRwAKpKlyL0jk1LNgurGjYKluX58WYGzMccWrP14UUtkFZSYCZDIBW4iSf0xGtUqMQwkZc_ESopuXY1_gWxABMsK8llBEOZIvkifBmUADeP1rEEQbejucQ03IqK8ZGZfN99DsnBlHuL9GVfkhai8JypHpWhybU2GuFky2xySYJMSxkDwiepFsyOuYY07WsmkoTjvMSawClnvm06zTG6_6WgBXjejxcFD3D3Vfa-Ay7FpMvh3pMXn5k0bNz2U374mFAC7Iv4HXSjcDgNAulCcPKNOtn2P_E8qru4Ryhl1nhWmctHNrd0mMifRWb9T1DzKINX51NK7NmU6ZOFE-LO4MpwNgG6xl-ncQYWWolaYe7BTRm1rPxdHJWH_GeLHQnRFeaOLWrtvZMO6tbdUw1hmo4",
+              target: "_blank",
+              rel: "noopener",
+              className: "button-secondary flex items-center gap-2 border border-white/20 hover:border-white/40",
+              children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx(HiArrowDownTray, { className: "h-5 w-5" }),
+                "Currículo Lattes"
+              ]
+            }
+          )
         ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-gray-100 my-6 text-justify", children: "Desenvolvedor web com formação em Matemática e Engenharia da Computação, Mestre em Modelagem Computacional e Doutorando em Modelagem Matemática e Computacional. Atuo como professor de ensino superior e desenvolvedor de soluções tecnológicas, criando projetos inovadores na interseção da matemática, tecnologia e educação." }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex items-center justify-center md:justify-start gap-2", children: /* @__PURE__ */ jsxRuntimeExports.jsxs(
-          "a",
-          {
-            href: "https://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K4869231A0&tokenCaptchar=03AFcWeA5Xz3lD3vn5HMS9GhkTKnLTFNnn8jIdHmV_gGRxrMmhMj41i_6Lu2oqfAtLP5wyFXdVZJpjXvvBdtYwHXjTs7bE8nxmxjvutCykBoUD2ABe3QL8PkNAaHKTtLibwnOmDCBThU6EIF0OCwoUk3e6_hV4UtOLpidaeAc6fBZ14zZG19qOnFiRwAKpKlyL0jk1LNgurGjYKluX58WYGzMccWrP14UUtkFZSYCZDIBW4iSf0xGtUqMQwkZc_ESopuXY1_gWxABMsK8llBEOZIvkifBmUADeP1rEEQbejucQ03IqK8ZGZfN99DsnBlHuL9GVfkhai8JypHpWhybU2GuFky2xySYJMSxkDwiepFsyOuYY07WsmkoTjvMSawClnvm06zTG6_6WgBXjejxcFD3D3Vfa-Ay7FpMvh3pMXn5k0bNz2U374mFAC7Iv4HXSjcDgNAulCcPKNOtn2P_E8qru4Ryhl1nhWmctHNrd0mMifRWb9T1DzKINX51NK7NmU6ZOFE-LO4MpwNgG6xl-ncQYWWolaYe7BTRm1rPxdHJWH_GeLHQnRFeaOLWrtvZMO6tbdUw1hmo4",
-            target: "_blank",
-            rel: "noopener",
-            className: "button text-gray-600 hover:text-gray-900 flex items-center gap-2",
-            children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsx(HiDownload, {}),
-              "Currículo Lattes"
-            ]
-          }
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid grid-cols-2 gap-4 pt-6 sm:grid-cols-3", children: ["+12 anos docência", "+8 anos desenvolvimento", "Engenharia + Matemática"].map(
+          (item) => /* @__PURE__ */ jsxRuntimeExports.jsx(
+            "div",
+            {
+              className: "card rounded-lg px-4 py-3 text-sm text-slate-200",
+              children: item
+            },
+            item
+          )
         ) })
-      ] })
-    }
-  );
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "relative hidden md:block", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "card relative h-80 w-72 overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 p-6", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(34,211,238,0.18),transparent_30%),radial-gradient(circle_at_80%_0%,rgba(167,139,250,0.2),transparent_35%)]" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative flex h-full flex-col justify-between", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm uppercase tracking-wide text-cyan-200", children: "Perfil" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "text-2xl font-semibold text-white", children: "Leonardo V. Guimarães" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-slate-300", children: "Belo Horizonte • Remoto Brasil" })
+          ] }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "space-y-2 text-sm text-slate-200", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("p", { children: "Full Stack (React, Node, Python, Django)" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("p", { children: "Professor universitário • Modelagem Computacional" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-cyan-200", children: "Disponível para projetos e vagas" })
+          ] })
+        ] })
+      ] }) })
+    ] })
+  ] });
 }
 function ProjectsDeveloper() {
   const projects = [
@@ -8379,6 +8407,7 @@ function ProjectsDeveloper() {
       description: "Projeto Mestrado de Enfermagem Atendimento Gestantes",
       image: "/images/projects/developer/projetoEnfermagem01.png",
       link: "https://sae.leoproti.com.br/",
+      tags: ["React", "Django", "PostgreSQL"],
       colSpan: "col-span-1"
     }
     // {
@@ -8396,58 +8425,62 @@ function ProjectsDeveloper() {
     //   colSpan: "col-span-1",
     // },
   ];
-  return /* @__PURE__ */ jsxRuntimeExports.jsxs(
-    "section",
-    {
-      className: "bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 text-white",
-      id: "projectsDeveloper",
-      children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container mx-auto max-w-6xl p-4 py-8", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative p-6 text-center", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsxs("h2", { className: "relative z-40 mb-2 text-white", children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "mr-2 font-headline text-3xl font-semibold z-40", children: "Projetos" }),
-              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-handwriting text-4xl", children: "Desenvolvimento de Sistemas" })
-            ] }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "relative text-lg text-white", children: "Ao longo da minha carreira como desenvolvedor front-end e back-end, realizei diversos projetos relevantes. Veja alguns exemplos:" })
-          ] }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid grid-cols-2 mt-5 mb-5 gap-4 md:grid-cols-3", children: projects.map((project, index2) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
-            "div",
-            {
-              className: `group relative cursor-default rounded-lg ${project.colSpan}`,
-              children: [
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs("section", { className: "relative text-white", id: "projectsDeveloper", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900" }),
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative container mx-auto max-w-6xl px-4 py-16", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center space-y-3", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200", children: "Portfólio" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-3xl md:text-4xl font-semibold", children: "Desenvolvimento de sistemas" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-slate-300", children: "Projetos web e APIs com foco em produto, dados e entrega contínua." })
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3", children: projects.map((project, index2) => {
+        var _a;
+        return /* @__PURE__ */ jsxRuntimeExports.jsxs(
+          "div",
+          {
+            className: `card group relative overflow-hidden rounded-xl ${project.colSpan}`,
+            children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative h-48 overflow-hidden", children: [
                 /* @__PURE__ */ jsxRuntimeExports.jsx(
                   "img",
                   {
-                    className: `h-52 cursor-default rounded-lg bg-cover bg-center w-full`,
+                    className: "h-full w-full object-cover transition duration-500 group-hover:scale-105",
                     src: `${project.image}`,
-                    alt: ""
+                    alt: project.title
                   }
                 ),
-                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "absolute inset-0 flex h-full w-full flex-col items-center justify-center rounded-lg bg-gradient-to-br from-blue-600 to-indigo-700 text-white opacity-0 transition-opacity group-hover:opacity-90" }),
-                /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "absolute inset-0 flex h-full w-full flex-col items-center justify-center rounded-lg text-white opacity-0 transition-opacity group-hover:opacity-100", children: [
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("h4", { className: "font-headline text-lg text-center font-semibold ", children: project.title }),
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "p-4 text-center", children: project.description }),
-                  /* @__PURE__ */ jsxRuntimeExports.jsxs(
-                    "button",
-                    {
-                      onClick: () => window.open(project.link, "_blank"),
-                      className: "flex items-center justify-center gap-2 px-6 py-3 bg-white text-blue-600 font-semibold rounded-lg shadow-lg hover:bg-blue-50 hover:scale-105 transition-all duration-300",
-                      children: [
-                        /* @__PURE__ */ jsxRuntimeExports.jsx(HiArrowTopRightOnSquare, { className: "h-6 w-6" }),
-                        " Ver Aulas"
-                      ]
-                    }
-                  )
-                ] })
-              ]
-            },
-            index2
-          )) })
-        ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute right-0 -mt-[6px] h-3 w-48 rounded-l-full bg-gradient-to-r from-blue-600 to-indigo-600 md:w-96" })
-      ]
-    }
-  );
+                /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-900/30 to-transparent" })
+              ] }),
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative space-y-3 p-4", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex flex-wrap gap-2 text-xs text-cyan-200", children: (_a = project.tags) == null ? void 0 : _a.map((tag) => /* @__PURE__ */ jsxRuntimeExports.jsx(
+                  "span",
+                  {
+                    className: "rounded-full border border-white/10 bg-white/5 px-3 py-1",
+                    children: tag
+                  },
+                  tag
+                )) }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("h4", { className: "text-xl font-semibold", children: project.title }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm text-slate-300", children: project.description }),
+                /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                  "button",
+                  {
+                    onClick: () => window.open(project.link, "_blank"),
+                    className: "button-secondary mt-2 inline-flex items-center gap-2 border border-white/20 hover:border-white/40",
+                    children: [
+                      /* @__PURE__ */ jsxRuntimeExports.jsx(HiArrowTopRightOnSquare, { className: "h-5 w-5" }),
+                      "Ver projeto"
+                    ]
+                  }
+                )
+              ] })
+            ]
+          },
+          index2
+        );
+      }) })
+    ] })
+  ] });
 }
 function ProjectsAcademics() {
   const projects = [
@@ -8456,6 +8489,7 @@ function ProjectsAcademics() {
       description: "Sistema de Identificação de Bovinos Usando RFID",
       image: "/images/projects/academics/dissertacaoEngenhariaComputacao.png",
       link: "https://drive.google.com/file/d/1jj_w4hFihZVSzSOlFSGCwHkuno2t5WGT/view?usp=sharing",
+      tags: ["RFID", "Engenharia"],
       colSpan: "col-span-1"
     },
     {
@@ -8463,6 +8497,7 @@ function ProjectsAcademics() {
       description: "Monitoramento no processo de desidratação de unvas basedo em imagens",
       image: "/images/projects/academics/dissetacaoMestrado.png",
       link: "https://drive.google.com/file/d/1-l2qG_lpE9hZyoBhIYU7o79xSEl6815P/view",
+      tags: ["Processamento de imagens", "Pesquisa"],
       colSpan: "col-span-1"
     },
     {
@@ -8470,6 +8505,7 @@ function ProjectsAcademics() {
       description: "Mineração de dados analisando a Influência das notas obtidas pelos anunos do Enem e Enade",
       image: "/images/projects/academics/doutoradoMineracaoDadosProjeto.png",
       link: "https://drive.google.com/file/d/1MdopkYDRjYKNr92dlhYR50HfK0z3nIFI/view?usp=drive_link",
+      tags: ["Mineração de dados", "Educação"],
       colSpan: "col-span-1"
     },
     {
@@ -8477,6 +8513,7 @@ function ProjectsAcademics() {
       description: "Mineração de ados analisando as ocorrências de acidentes no trânsito brasileiro",
       image: "/images/projects/academics/doutoradoMineracaoDadosTrabalhoIII.png",
       link: "https://drive.google.com/file/d/1OXEAMs3jHTyWvv7OtsPg8gESEDdbbtxO/view?usp=drive_link",
+      tags: ["Dados públicos", "Segurança"],
       colSpan: "col-span-1"
     },
     {
@@ -8484,6 +8521,7 @@ function ProjectsAcademics() {
       description: "Melhorando a detecção de pontos de recursos baseados em CNN por meio de informações correspondentes",
       image: "/images/projects/academics/DoutaradoVisaoComputacional.png",
       link: "https://drive.google.com/file/d/1EAIF3-2NhG-A2O-y7W1S8Q1ASOn2Krfi/view?usp=sharing",
+      tags: ["Visão computacional", "CNN"],
       colSpan: "col-span-1 md:col-span-2"
     },
     {
@@ -8491,6 +8529,7 @@ function ProjectsAcademics() {
       description: "Artigo publicado ISSN 22367160",
       image: "/images/projects/academics/artigoRFIDEngenhariaComputacao.png",
       link: "https://drive.google.com/file/d/1WDsuPN1N3Tw-WZdfPAbRMYgtCF8KncLu/view?usp=sharing",
+      tags: ["RFID", "Artigo"],
       colSpan: "col-span-1/2"
     },
     {
@@ -8498,6 +8537,7 @@ function ProjectsAcademics() {
       description: "Artigo publicado ISSN 22367160",
       image: "/images/projects/academics/especializacaoMatematicaFinanceira.png",
       link: "https://drive.google.com/file/d/1owo7hjjOpRAFNyyYyA6zktvlsPK-P3Eu/view?usp=sharing",
+      tags: ["Finanças", "Artigo"],
       colSpan: "col-span-1"
     },
     {
@@ -8505,61 +8545,66 @@ function ProjectsAcademics() {
       description: "Projetos Doutrado de Ciência da Computação UFMG",
       image: "/images/projects/academics/doutoradoProjetoVisaoComputacional.png",
       link: "https://www.youtube.com/playlist?list=PLbLoehbSIAYWV50N_Y2OzrlRRZy0bjGRY",
+      tags: ["Visão computacional", "YouTube"],
       colSpan: "col-span-1"
     }
   ];
-  return /* @__PURE__ */ jsxRuntimeExports.jsxs(
-    "section",
-    {
-      className: "bg-gradient-to-tr to-blue-600 from-gray-900 text-white",
-      id: "projectsAcademics",
-      children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container mx-auto max-w-6xl p-4 py-8", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative p-6 text-center", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsxs("h2", { className: "relative z-40 mb-2 text-white", children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "mr-2 font-headline text-3xl font-semibold z-40", children: "Projetos" }),
-              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-handwriting text-4xl", children: "Academicos" })
-            ] }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "relative text-lg text-white", children: "Durante minha jornada acadêmica e carreira profissional, tive a oportunidade de desenvolver várias dissertações, artigos e projetos importantes. A seguir, apresento alguns desses trabalhos:" })
-          ] }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid grid-cols-2 mt-10 gap-4 md:grid-cols-3", children: projects.map((project, index2) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
-            "div",
-            {
-              className: `group relative cursor-default rounded-lg ${project.colSpan}`,
-              children: [
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs("section", { className: "relative text-white", id: "projectsAcademics", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900" }),
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative container mx-auto max-w-6xl px-4 py-16", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center space-y-3", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200", children: "Pesquisa" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-3xl md:text-4xl font-semibold", children: "Projetos acadêmicos" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-slate-300", children: "Dissertações, artigos e projetos que conectam ciência, tecnologia e dados." })
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3", children: projects.map((project, index2) => {
+        var _a;
+        return /* @__PURE__ */ jsxRuntimeExports.jsxs(
+          "div",
+          {
+            className: `card group relative overflow-hidden rounded-xl ${project.colSpan}`,
+            children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative h-48 overflow-hidden", children: [
                 /* @__PURE__ */ jsxRuntimeExports.jsx(
                   "img",
                   {
-                    className: `h-52 cursor-default rounded-lg bg-cover bg-center w-full`,
+                    className: "h-full w-full object-cover transition duration-500 group-hover:scale-105",
                     src: `${project.image}`,
-                    alt: ""
+                    alt: project.title
                   }
                 ),
-                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "absolute inset-0 flex h-full w-full flex-col items-center justify-center rounded-lg bg-blue-600 text-white opacity-0 transition-opacity group-hover:opacity-70" }),
-                /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "absolute inset-0 flex h-full w-full flex-col items-center justify-center rounded-lg text-white opacity-0 transition-opacity group-hover:opacity-100", children: [
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("h4", { className: "font-headline text-lg text-center font-semibold ", children: project.title }),
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "p-4 text-center", children: project.description }),
-                  /* @__PURE__ */ jsxRuntimeExports.jsxs(
-                    "button",
-                    {
-                      onClick: () => window.open(project.link, "_blank"),
-                      className: "flex items-center justify-center px-4 py-2 bg-white text-gray-700 rounded shadow hover:bg-gray-200",
-                      children: [
-                        /* @__PURE__ */ jsxRuntimeExports.jsx(HiArrowTopRightOnSquare, { className: "h-6 w-6" }),
-                        " Ver projeto"
-                      ]
-                    }
-                  )
-                ] })
-              ]
-            },
-            index2
-          )) })
-        ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute right-0 -mt-[6px] h-3 w-48 rounded-l-full bg-gradient-to-r from-gray-700 to-gray-600 md:w-96" })
-      ]
-    }
-  );
+                /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-900/30 to-transparent" })
+              ] }),
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative space-y-3 p-4", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex flex-wrap gap-2 text-xs text-cyan-200", children: (_a = project.tags) == null ? void 0 : _a.map((tag) => /* @__PURE__ */ jsxRuntimeExports.jsx(
+                  "span",
+                  {
+                    className: "rounded-full border border-white/10 bg-white/5 px-3 py-1",
+                    children: tag
+                  },
+                  tag
+                )) }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("h4", { className: "text-xl font-semibold", children: project.title }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm text-slate-300", children: project.description }),
+                /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                  "button",
+                  {
+                    onClick: () => window.open(project.link, "_blank"),
+                    className: "button-secondary mt-2 inline-flex items-center gap-2 border border-white/20 hover:border-white/40",
+                    children: [
+                      /* @__PURE__ */ jsxRuntimeExports.jsx(HiArrowTopRightOnSquare, { className: "h-5 w-5" }),
+                      "Ver projeto"
+                    ]
+                  }
+                )
+              ] })
+            ]
+          },
+          index2
+        );
+      }) })
+    ] })
+  ] });
 }
 function ProjectsProfessor() {
   const projects = [
@@ -8568,6 +8613,7 @@ function ProjectsProfessor() {
       description: "Video aulas de Estátitica e Probabilidade",
       image: "/images/projects/professor/aulaEstatisticaProbabilidade.png",
       link: "https://www.youtube.com/playlist?list=PLbLoehbSIAYUFCykmhDHcOhAIv7er7rou",
+      tags: ["YouTube", "Estatística"],
       colSpan: "col-span-1"
     },
     {
@@ -8575,6 +8621,7 @@ function ProjectsProfessor() {
       description: "Video aulas de Matemática Financeira",
       image: "/images/projects/professor/aulaMatematicaFinanceira.png",
       link: "https://www.youtube.com/playlist?list=PLbLoehbSIAYXHvrPFdzPvz2StCvwDVNym",
+      tags: ["Finanças", "Educação"],
       colSpan: "col-span-1"
     },
     {
@@ -8582,61 +8629,66 @@ function ProjectsProfessor() {
       description: "Video aulas Projeto Integrador",
       image: "/images/projects/professor/aulaProjetoIntegrador.png",
       link: "https://www.youtube.com/playlist?list=PLbLoehbSIAYVKOSuhf2p27tRaFlXAFG1T",
+      tags: ["Projetos", "Tecnologia"],
       colSpan: "col-span-1"
     }
   ];
-  return /* @__PURE__ */ jsxRuntimeExports.jsxs(
-    "section",
-    {
-      className: "bg-gradient-to-tr to-blue-600 from-gray-900 text-white",
-      id: "projectsProfessor",
-      children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container mx-auto max-w-6xl p-4 py-8", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative p-6 text-center", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsxs("h2", { className: "relative z-40 mb-2 text-white", children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "mr-2 font-headline text-3xl font-semibold z-40", children: "Projetos e Videoaulas" }),
-              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-handwriting text-4xl", children: "Professor" })
-            ] }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "relative text-lg text-white", children: "A seguir, apresento algumas videoaulas e projetos que elaborei durante minha trajetória como professor." })
-          ] }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid grid-cols-2 mt-10 gap-4 md:grid-cols-3", children: projects.map((project, index2) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
-            "div",
-            {
-              className: `group relative cursor-default rounded-lg ${project.colSpan}`,
-              children: [
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs("section", { className: "relative text-white", id: "projectsProfessor", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900" }),
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative container mx-auto max-w-6xl px-4 py-16", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center space-y-3", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200", children: "Educação" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-3xl md:text-4xl font-semibold", children: "Projetos e videoaulas" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-slate-300", children: "Conteúdo prático de estatística, finanças e tecnologia para sala de aula e online." })
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3", children: projects.map((project, index2) => {
+        var _a;
+        return /* @__PURE__ */ jsxRuntimeExports.jsxs(
+          "div",
+          {
+            className: `card group relative overflow-hidden rounded-xl ${project.colSpan}`,
+            children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative h-48 overflow-hidden", children: [
                 /* @__PURE__ */ jsxRuntimeExports.jsx(
                   "img",
                   {
-                    className: `h-52 cursor-default rounded-lg bg-cover bg-center w-full`,
+                    className: "h-full w-full object-cover transition duration-500 group-hover:scale-105",
                     src: `${project.image}`,
-                    alt: ""
+                    alt: project.title
                   }
                 ),
-                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "absolute inset-0 flex h-full w-full flex-col items-center justify-center rounded-lg bg-blue-600 text-white opacity-0 transition-opacity group-hover:opacity-70" }),
-                /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "absolute inset-0 flex h-full w-full flex-col items-center justify-center rounded-lg text-white opacity-0 transition-opacity group-hover:opacity-100", children: [
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("h4", { className: "font-headline text-lg text-center font-semibold ", children: project.title }),
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "p-4 text-center", children: project.description }),
-                  /* @__PURE__ */ jsxRuntimeExports.jsxs(
-                    "button",
-                    {
-                      onClick: () => window.open(project.link, "_blank"),
-                      className: "flex items-center justify-center px-4 py-2 bg-white text-gray-700 rounded shadow hover:bg-gray-200",
-                      children: [
-                        /* @__PURE__ */ jsxRuntimeExports.jsx(HiArrowTopRightOnSquare, { className: "h-6 w-6" }),
-                        " Ver projeto"
-                      ]
-                    }
-                  )
-                ] })
-              ]
-            },
-            index2
-          )) })
-        ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute right-0 -mt-[6px] h-3 w-48 rounded-l-full bg-gradient-to-r from-gray-700 to-gray-600 md:w-96" })
-      ]
-    }
-  );
+                /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-900/30 to-transparent" })
+              ] }),
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative space-y-3 p-4", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex flex-wrap gap-2 text-xs text-cyan-200", children: (_a = project.tags) == null ? void 0 : _a.map((tag) => /* @__PURE__ */ jsxRuntimeExports.jsx(
+                  "span",
+                  {
+                    className: "rounded-full border border-white/10 bg-white/5 px-3 py-1",
+                    children: tag
+                  },
+                  tag
+                )) }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("h4", { className: "text-xl font-semibold", children: project.title }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm text-slate-300", children: project.description }),
+                /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                  "button",
+                  {
+                    onClick: () => window.open(project.link, "_blank"),
+                    className: "button-secondary mt-2 inline-flex items-center gap-2 border border-white/20 hover:border-white/40",
+                    children: [
+                      /* @__PURE__ */ jsxRuntimeExports.jsx(HiArrowTopRightOnSquare, { className: "h-5 w-5" }),
+                      "Ver projeto"
+                    ]
+                  }
+                )
+              ] })
+            ]
+          },
+          index2
+        );
+      }) })
+    ] })
+  ] });
 }
 function Services() {
   const services = [
@@ -8661,27 +8713,74 @@ function Services() {
       icon: /* @__PURE__ */ jsxRuntimeExports.jsx(HiOutlineAcademicCap, { className: "h-12 w-12" })
     }
   ];
-  return /* @__PURE__ */ jsxRuntimeExports.jsxs("section", { className: "container mx-auto pt-12 my-12 max-w-6xl", id: "services", children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "p-4 text-center", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm font-semibold uppercase text-blue-600", children: "O que faço de melhor" }),
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("h2", { className: "mb-2 font-bold text-blue-900", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "mr-2 font-headline text-3xl", children: "Meus" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-handwriting text-4xl", children: "Serviços" })
-      ] }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: " text-lg text-gray-700", children: "Posso atender uma gama completa de serviços, do front-end ao back-end com banco de dados, sistemas e professor." })
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs("section", { className: "container mx-auto max-w-6xl px-4 py-16", id: "services", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center space-y-3", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200", children: "O que faço" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-3xl md:text-4xl font-semibold text-white", children: "Soluções ponta a ponta para produtos digitais e educação" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-slate-300", children: "Do discovery à entrega: front-end, back-end, dados, mobile e trilhas educacionais." })
     ] }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "px-2 grid grid-cols-2 mt-10 gap-4 md:grid-cols-4", children: services.map((service, index2) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
+    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-10 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4", children: services.map((service, index2) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
       "div",
       {
-        className: "basis-1/3 rounded-lg bg-blue-700 p-4 text-white",
+        className: "card relative h-full overflow-hidden rounded-xl p-5",
         children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mb-2", children: service.icon }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "text-xl font-bold", children: service.title }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm", children: service.description })
+          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 bg-gradient-to-br from-white/5 via-white/0 to-white/5" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative space-y-3", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "inline-flex h-14 w-14 items-center justify-center rounded-xl bg-cyan-500/15 text-cyan-300", children: service.icon }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "text-xl font-semibold text-white", children: service.title }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm text-slate-300 leading-relaxed", children: service.description })
+          ] })
         ]
       },
       `service-${index2}`
     )) })
+  ] });
+}
+function Process() {
+  const steps = [
+    {
+      title: "Coleta de dados",
+      description: "Mapeio fontes, levanto requisitos e garanto qualidade dos insumos antes de construir.",
+      icon: /* @__PURE__ */ jsxRuntimeExports.jsx(HiMagnifyingGlassCircle, { className: "h-8 w-8" })
+    },
+    {
+      title: "Tratamento",
+      description: "Limpeza, padronização e modelagem para deixar dados e requisitos prontos para uso.",
+      icon: /* @__PURE__ */ jsxRuntimeExports.jsx(HiWrenchScrewdriver, { className: "h-8 w-8" })
+    },
+    {
+      title: "Construção",
+      description: "Desenvolvimento de APIs, front-end, dashboards ou automações focadas no resultado.",
+      icon: /* @__PURE__ */ jsxRuntimeExports.jsx(HiSparkles, { className: "h-8 w-8" })
+    },
+    {
+      title: "Entrega e iteração",
+      description: "Deploy automatizado, monitoramento e evolução contínua com feedbacks rápidos.",
+      icon: /* @__PURE__ */ jsxRuntimeExports.jsx(HiArrowTrendingUp, { className: "h-8 w-8" })
+    }
+  ];
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs("section", { className: "container mx-auto max-w-6xl px-4 pb-16", id: "process", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center space-y-3", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200", children: "Metodologia" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-3xl md:text-4xl font-semibold text-white", children: "Processo estruturado para entregar com qualidade" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-slate-300", children: "Passos claros para reduzir risco, alinhar expectativas e garantir valor em produção." })
+    ] }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-10 grid grid-cols-1 gap-4 md:grid-cols-2", children: steps.map((step, index2) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "card relative h-full overflow-hidden rounded-xl p-6", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 bg-gradient-to-br from-white/5 via-white/0 to-white/5" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative flex items-start gap-4", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex h-12 w-12 items-center justify-center rounded-full bg-cyan-500/10 text-cyan-300", children: step.icon }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "space-y-2", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-3", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "text-xs font-semibold uppercase tracking-wide text-cyan-200", children: [
+              "0",
+              index2 + 1
+            ] }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "text-xl font-semibold text-white", children: step.title })
+          ] }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm leading-relaxed text-slate-300", children: step.description })
+        ] })
+      ] })
+    ] }, step.title)) })
   ] });
 }
 function Skills() {
@@ -8769,59 +8868,56 @@ function Skills() {
       level: 40
     }
   ];
-  return /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "bg-gray-300", id: "skills", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container mx-auto max-w-6xl p-4 py-12", children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative mb-4 p-4 text-center", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("h2", { className: "relative z-40 mb-2 font-bold", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "mr-2 font-headline text-3xl text-gray-800", children: "Educação &" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-handwriting text-4xl text-blue-800", children: "Skills" })
-      ] }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "relative text-sm text-gray-700", children: "Professor TI e Matemática | Front-end e Back-end Developer" }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute left-1/2 top-3 z-0 h-10 w-10 rounded-lg bg-blue-400/10" })
+  return /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "bg-slate-900/40", id: "skills", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container mx-auto max-w-6xl px-4 py-16", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center space-y-3 mb-8", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200", children: "Formação & stack" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-3xl md:text-4xl font-semibold text-white", children: "Educação e skills" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-slate-300", children: "Base sólida em modelagem, dados e engenharia para construir e ensinar tecnologia." })
     ] }),
-    /* @__PURE__ */ jsxRuntimeExports.jsxs("h3", { className: "mb-4 flex items-center gap-2 text-lg font-extrabold text-gray-700", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx(HiAcademicCap, { className: "h-8 w-8 text-blue-600" }),
-      "Educação"
-    ] }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid grid-cols-1 gap-2 font-semibold md:grid-cols-2", children: educations.map((education, index2) => /* @__PURE__ */ jsxRuntimeExports.jsx(
-      "div",
-      {
-        className: "mb-2 rounded-lg bg-white p-4 text-sm font-semibold text-gray-900",
-        children: education.name
-      },
-      `education-${index2}`
-    )) }),
-    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("h3", { className: "mb-4 mt-4 flex items-center gap-2 text-lg font-extrabold text-gray-700", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx(HiCodeBracketSquare, { className: "h-8 w-8 text-blue-600" }),
-        "Skills"
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid gap-6 md:grid-cols-2", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "card rounded-2xl p-6", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("h3", { className: "mb-4 flex items-center gap-2 text-lg font-semibold text-white", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx(HiAcademicCap, { className: "h-7 w-7 text-cyan-300" }),
+          "Educação"
+        ] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "space-y-3 text-slate-200", children: educations.map((education, index2) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
+          "div",
+          {
+            className: "flex items-center gap-3 rounded-lg border border-white/5 bg-white/5 px-4 py-3",
+            children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "h-2 w-2 rounded-full bg-cyan-300" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-sm font-semibold", children: education.name })
+            ]
+          },
+          `education-${index2}`
+        )) })
       ] }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid grid-cols-1 gap-4 font-semibold md:grid-cols-4", children: skills.sort((a, b) => b.level - a.level).map((skill, index2) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
-        "div",
-        {
-          className: "flex flex-row items-center gap-2 md:flex-col md:items-start",
-          children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex h-14 w-14 items-center justify-center rounded-lg bg-white p-2", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
-              "img",
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "card rounded-2xl p-6", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("h3", { className: "mb-4 flex items-center gap-2 text-lg font-semibold text-white", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx(HiCodeBracketSquare, { className: "h-7 w-7 text-cyan-300" }),
+          "Skills"
+        ] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid grid-cols-2 gap-4 md:grid-cols-3", children: skills.sort((a, b) => b.level - a.level).map((skill, index2) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "space-y-2", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex h-12 w-12 items-center justify-center rounded-lg bg-white/10", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+            "img",
+            {
+              src: skill.icon,
+              alt: skill.name,
+              className: "h-8 w-8 rounded"
+            }
+          ) }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm font-semibold text-white", children: skill.name }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "h-2 w-full rounded-full bg-white/10", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+              "div",
               {
-                src: skill.icon,
-                alt: skill.name,
-                className: "h-10 w-10 rounded"
+                className: "h-2 rounded-full bg-gradient-to-r from-cyan-400 to-violet-400",
+                style: { width: `${skill.level}%` }
               }
-            ) }),
-            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "w-full flex-grow", children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsx("h4", { className: "font-headlin text-gray-900", children: skill.name }),
-              /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "h-2.5 w-full rounded-full bg-white", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
-                "div",
-                {
-                  className: `h-2.5 rounded-full bg-blue-600`,
-                  style: { width: `${skill.level}%` }
-                }
-              ) })
-            ] })
-          ]
-        },
-        `skill-${index2}`
-      )) })
+            ) })
+          ] })
+        ] }, `skill-${index2}`)) })
+      ] })
     ] })
   ] }) });
 }
@@ -8831,6 +8927,7 @@ function App() {
     /* @__PURE__ */ jsxRuntimeExports.jsx(Hero, {}),
     /* @__PURE__ */ jsxRuntimeExports.jsx(About, {}),
     /* @__PURE__ */ jsxRuntimeExports.jsx(Services, {}),
+    /* @__PURE__ */ jsxRuntimeExports.jsx(Process, {}),
     /* @__PURE__ */ jsxRuntimeExports.jsx(ProjectsAcademics, {}),
     /* @__PURE__ */ jsxRuntimeExports.jsx(ProjectsDeveloper, {}),
     /* @__PURE__ */ jsxRuntimeExports.jsx(ProjectsProfessor, {}),
