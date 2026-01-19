@@ -1,4 +1,4 @@
-import { HiArrowTopRightOnSquare, HiArrowDownTray } from "react-icons/hi2";
+import { HiArrowDownTray } from "react-icons/hi2";
 import { useTheme } from "../context/ThemeContext";
 
 export default function Hero() {
