@@ -114,7 +114,7 @@ export default function Hero() {
                 <p>🎓 Engenharia da Computação</p>
                 <p>📐 Licenciatura em Matemática</p>
                 <p>🏆 Mestre Modelagem Computacional</p>
-                <p className="text-cyan-200">📊 Doutorando Modelagem Computacional</p>
+                <p>📊 Doutorando Modelagem Computacional</p>
               </div>
             </div>
           </div>
