@@ -151,4 +151,23 @@ h1, h2, h3, h4 {
     background-color: rgba(255, 255, 255, 0.95) !important;
     border-color: rgba(8, 145, 178, 0.2) !important;
   }
+
+  /* Light mode text overrides for readability */
+  :root.light .text-white {
+    color: #0f172a !important;
+  }
+  :root.light .text-slate-50,
+  :root.light .text-slate-100,
+  :root.light .text-slate-200 {
+    color: #111827 !important;
+  }
+  :root.light .text-slate-300 {
+    color: #1f2937 !important;
+  }
+  :root.light .text-slate-400 {
+    color: #374151 !important;
+  }
+  :root.light .text-slate-500 {
+    color: #475569 !important;
+  }
 }
