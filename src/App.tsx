@@ -11,7 +11,6 @@ import Services from "./components/Services";
 import Process from "./components/Process";
 import Skills from "./components/Skills";
 import Experience from "./components/Experience";
-import Languages from "./components/Languages";
 import About from "./components/About";
 import AboutSimple from "./components/AboutSimple";
 import { ThemeProvider } from "./context/ThemeContext";
