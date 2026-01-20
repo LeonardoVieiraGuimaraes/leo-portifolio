@@ -6,34 +6,100 @@ import { useTheme } from "../context/ThemeContext";
 export default function ProjectsDeveloper() {
   const { theme } = useTheme();
   const isLight = theme === "light";
-
   const background = isLight
     ? "linear-gradient(180deg, #f9fafb 0%, #eef2f7 55%, #f9fafb 100%)"
     : "linear-gradient(135deg, #0b1220 0%, #0f172a 60%, #0b1220 100%)";
-
   const projects = [
+    {
+      title: "Portfólio Online",
+      description: "Portfólio publicado no GitHub Pages com projetos e informações profissionais.",
+      image: "/images/projects/developer/portifolioV3.png",
+      link: "https://leonardovieiraguimaraes.github.io/leo-portifolio/",
+      github: "https://github.com/LeonardoVieiraGuimaraes/leo-portifolio",
+      tags: ["Web", "Portfólio", "GitHub Pages"],
+      colSpan: "col-span-1",
+    },
     {
       title: "Sistema SAE",
       description: "Projeto Mestrado de Enfermagem Atendimento Gestantes",
       image: "/images/projects/developer/projetoEnfermagem01.png",
       link: "https://sae.leoproti.com.br/",
+      github: "https://github.com/LeonardoVieiraGuimaraes/sae-enfermagem-django",
       tags: ["React", "Django", "PostgreSQL"],
       colSpan: "col-span-1",
     },
-    // {
-    //   title: "Sistema Atendimento ao Paciente",
-    //   description: "Projeto Desenvolvido em Dajngo",
-    //   image: "/images/projects/developer/projetoEnfermagem02.png",
-    //   link: "https://enfermagem.leoproti.com.br/",
-    //   colSpan: "col-span-1",
-    // },
-    // {
-    //   title: "Primeiro Portfólio",
-    //   description: "Portfólio desenvolvido em HTML, CSS e JavaScript",
-    //   image: "/images/projects/developer/portifoliov1.png",
-    //   link: "https://portifoliov1.leoproti.com.br/",
-    //   colSpan: "col-span-1",
-    // },
+    {
+      title: "AEG",
+      description: "Sistema de Gestão Acadêmica (redireciona para arquivo)",
+      image: "/images/projects/developer/aeg.jpeg",
+      link: "http://aeg.leoproti.com.br",
+      github: null,
+      tags: ["Web", "Acadêmico"],
+      colSpan: "col-span-1",
+    },
+    {
+      title: "CasaOS",
+      description: "Gerenciamento de dispositivos domésticos",
+      image: "/images/projects/developer/casaos.png",
+      link: "http://casaos.leoproti.com.br",
+      github: null,
+      tags: ["Web", "IoT"],
+      colSpan: "col-span-1",
+    },
+    {
+      title: "Nextcloud",
+      description: "Armazenamento e colaboração em nuvem",
+      image: "/images/projects/developer/nextcloud.png",
+      link: "https://nextcloud.leoproti.com.br",
+      github: null,
+      tags: ["Web", "Cloud"],
+      colSpan: "col-span-1",
+    },
+    {
+      title: "Recepção",
+      description: "Sistema de recepção de visitantes",
+      image: "/images/projects/developer/recepcao.png",
+      link: "http://recepcao.leoproti.com.br",
+      github: null,
+      tags: ["Web", "Administração"],
+      colSpan: "col-span-1",
+    },
+    {
+      title: "Grafana",
+      description: "Monitoramento e visualização de dados",
+      image: "/images/projects/developer/developer03.jpg",
+      link: "http://grafana.leoproti.com.br",
+      github: null,
+      tags: ["Web", "Monitoramento"],
+      colSpan: "col-span-1",
+    },
+    {
+      title: "Prometheus",
+      description: "Coleta e consulta de métricas",
+      image: "/images/projects/developer/developer04.jpg",
+      link: "http://prometheus.leoproti.com.br",
+      github: null,
+      tags: ["Web", "Monitoramento"],
+      colSpan: "col-span-1",
+    },
+    {
+      title: "ArqWeb V01",
+      description: "Sistema de arquivos web versão 1",
+      image: "/images/projects/developer/developer05.jpg",
+      link: "http://arqwebv01.leoproti.com.br",
+      github: "https://github.com/LeonardoVieiraGuimaraes/ArquiteturaAplicacaoWeb",
+      tags: ["Web", "Arquivos"],
+      colSpan: "col-span-1",
+    },
+    {
+      title: "ProWeb",
+      description: "Sistema profissional web",
+      image: "/images/projects/developer/developer06.jpg",
+      link: "http://proweb.leoproti.com.br",
+      github: "https://github.com/LeonardoVieiraGuimaraes/ProdutosWeb",
+      tags: ["Web", "Profissional"],
+      colSpan: "col-span-1",
+    },
   ];
 
   return (
@@ -95,13 +161,26 @@ export default function ProjectsDeveloper() {
                 <h4 className="text-xl font-semibold">{project.title}</h4>
                 <p className="text-sm text-slate-300">{project.description}</p>
 
-                <button
-                  onClick={() => window.open(project.link, "_blank")}
-                  className="button-secondary mt-2 inline-flex items-center gap-2 border border-white/20 hover:border-white/40"
-                >
-                  <HiArrowTopRightOnSquare className="h-5 w-5" />
-                  Ver projeto
-                </button>
+                <div className="flex gap-2 mt-2">
+                  <button
+                    onClick={() => window.open(project.link, "_blank")}
+                    className="button-secondary inline-flex items-center gap-2 border border-white/20 hover:border-white/40"
+                  >
+                    <HiArrowTopRightOnSquare className="h-5 w-5" />
+                    Ver projeto
+                  </button>
+                  {project.github && (
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="button-secondary inline-flex items-center gap-2 border border-white/20 hover:border-white/40"
+                    >
+                      <FaGithub className="h-5 w-5" />
+                      GitHub
+                    </a>
+                  )}
+                </div>
               </div>
             </div>
           ))}
