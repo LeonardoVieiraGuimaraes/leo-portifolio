@@ -31,7 +31,7 @@ export default function Header() {
     <header>
       <nav className="fixed z-50 w-full border-b border-white/5 dark:border-white/5 light:border-blue-500/20 bg-slate-900/80 dark:bg-slate-900/80 light:bg-white/90 backdrop-blur-md transition-colors duration-300">
         <div className="max-w-6xl mx-auto px-4">
-          <div className="relative flex items-center justify-between h-14">
+          <div className="relative flex items-center justify-between h-16">
             <div className="absolute inset-y-0 right-0 flex items-center gap-2 md:hidden">
               <button
                 onClick={toggleTheme}
@@ -64,7 +64,7 @@ export default function Header() {
                     alt="Logo"
                   />
                   <img
-                    className="hidden md:block h-14 w-auto"
+                    className="hidden md:block h-12 w-auto"
                     src={getImagePath("images/logo.svg")}
                     alt="Logo"
                   />
@@ -86,7 +86,7 @@ export default function Header() {
                   ))}
                   <button
                     onClick={toggleTheme}
-                    className="text-slate-200 hover:text-white hover:bg-white/5 px-3 py-3 rounded-md flex items-center font-headline text-lg font-semibold transition ml-2"
+                    className="text-slate-200 hover:text-white hover:bg-white/5 px-3 py-5 rounded-md flex items-center font-headline text-lg font-semibold transition ml-2"
                     title={`Mudar para ${theme === "dark" ? "light" : "dark"} mode`}
                   >
                     {theme === "dark" ? <FaSun /> : <FaMoon />}
