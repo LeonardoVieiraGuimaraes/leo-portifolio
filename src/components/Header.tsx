@@ -100,12 +100,12 @@ export default function Header() {
           className={`${isOpen ? "block" : "hidden"} md:hidden`}
           id="mobile-menu"
         >
-          <div className="px-4 py-3 space-y-2">
+          <div className="px-4 py-3 flex flex-col gap-1 items-start">
             {navLinks.map((link, index) => (
               <NavLink
                 key={index}
                 to={link.to}
-                className={({ isActive }) => navItemClass(isActive)}
+                className={({ isActive }) => navItemClass(isActive) + " w-full text-left"}
                 title={link.name}
                 onClick={() => setIsOpen(false)}
               >
