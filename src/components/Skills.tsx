@@ -108,11 +108,11 @@ export default function Skills() {
 
   return (
     <section
-      className="relative"
+      className="relative pt-20 pb-16"
       id="skills"
       style={{ background }}
     >
-      <div className="container mx-auto max-w-6xl px-4 py-16">
+      <div className="container mx-auto max-w-6xl px-4">
         <div className="text-center space-y-3 mb-8">
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200">
             Formação & stack

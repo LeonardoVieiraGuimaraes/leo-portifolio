@@ -71,11 +71,11 @@ export default function Contact() {
 
   return (
     <section
-      className="relative text-white"
+      className="relative text-white pt-20 pb-16"
       id="contact"
       style={{ background }}
     >
-      <div className="container mx-auto max-w-6xl px-4 py-16">
+      <div className="container mx-auto max-w-6xl px-4">
         <div className="mb-8 text-center space-y-3">
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200">
             Contato

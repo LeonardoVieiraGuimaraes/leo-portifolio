@@ -1,5 +1,6 @@
 import { differenceInYears } from "date-fns";
 import { FaGithub } from "react-icons/fa";
+import { getImagePath } from "../utils/paths";
 
 export default function About() {
   const birthDate = new Date(1984, 10 - 1, 2);
@@ -7,7 +8,7 @@ export default function About() {
   const age = differenceInYears(today, birthDate);
 
   return (
-    <section className="container mx-auto my-12 px-4" id="about">
+    <section className="container mx-auto px-4 pt-20 pb-16" id="about">
       <div className="relative mx-auto mt-8 max-w-6xl">
         <div className="card relative w-full overflow-hidden rounded-2xl border border-white/10 bg-slate-900/80 p-6 md:p-10">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(34,211,238,0.12),transparent_35%),radial-gradient(circle_at_80%_0%,rgba(167,139,250,0.12),transparent_30%)]" />
@@ -15,7 +16,11 @@ export default function About() {
           <div className="relative grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
             {/* Foto - lado direito em desktop */}
             <div className="order-first md:order-last flex justify-center md:col-span-1">
-              <div className="h-56 w-44 md:h-72 md:w-56 rounded-lg bg-gray-600 bg-profile bg-cover bg-center flex-shrink-0" />
+              <img
+                src={getImagePath("images/fotoSobre.jpg")}
+                alt="Leonardo Vieira Guimarães"
+                className="h-56 w-44 md:h-72 md:w-56 rounded-lg object-cover flex-shrink-0 shadow-lg"
+              />
             </div>
             
             {/* Conteúdo - lado esquerdo em desktop */}

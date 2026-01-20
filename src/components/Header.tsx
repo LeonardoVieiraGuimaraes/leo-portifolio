@@ -1,24 +1,13 @@
 import { useState } from "react";
-import {
-  FaHome,
-  FaInfoCircle,
-  FaEnvelope,
-  FaLaptopCode,
-  FaArrowUp,
-  FaTools,
-  FaBook,
-  FaVideo,
-  FaSun,
-  FaMoon,
-} from "react-icons/fa";
+import { FaHome, FaEnvelope, FaFolderOpen, FaTools, FaSun, FaMoon, FaInfoCircle } from "react-icons/fa";
 
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { NavLink } from "react-router-dom";
 import { useTheme } from "../context/ThemeContext";
 import { getImagePath } from "../utils/paths";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState(false);
   const { theme, toggleTheme } = useTheme();
 
   const toggleMenu = () => {
@@ -26,37 +15,23 @@ export default function Header() {
   };
 
   const navLinks = [
-    { name: "Home", icon: <FaHome />, href: "#" },
-    { name: "Sobre", icon: <FaInfoCircle />, href: "#about" },
-    { name: "Serviços", icon: <FaLaptopCode />, href: "#services" },
-    {
-      name: "Projetos",
-      icon: dropdownOpen ? (
-        <FaArrowUp className="transform transition-transform duration-500 rotate-180" />
-      ) : (
-        <FaArrowUp className="transform transition-transform duration-500" />
-      ),
-      href: "#projects",
-    },
-    { name: "Skills", icon: <FaTools />, href: "#skills" },
-    { name: "Fale Comigo", icon: <FaEnvelope />, href: "#contact" },
+    { name: "Início", icon: <FaHome className="text-base" />, to: "/inicio" },
+    { name: "Projetos", icon: <FaFolderOpen className="text-base" />, to: "/projects" },
+    { name: "Skills", icon: <FaTools className="text-base" />, to: "/skills" },
+    { name: "Sobre", icon: <FaInfoCircle className="text-base" />, to: "/sobre" },
+    { name: "Fale Conosco", icon: <FaEnvelope className="text-base" />, to: "/contact" },
   ];
 
-  const projects = [
-    { name: "Academicos", icon: <FaBook />, href: "#projectsAcademics" },
-    {
-      name: "Desenlvolvedor",
-      icon: <FaLaptopCode />,
-      href: "#projectsDeveloper",
-    },
-    { name: "Video Aulas", icon: <FaVideo />, href: "#projectsProfessor" },
-  ];
+  const navItemClass = (isActive: boolean) =>
+    `px-3 py-5 rounded-md flex items-center font-headline text-lg font-semibold transition ${
+      isActive ? "text-white bg-white/10 border-b-2 border-cyan-400" : "text-slate-200 hover:text-white hover:bg-white/5"
+    }`;
 
   return (
     <header>
       <nav className="fixed z-50 w-full border-b border-white/5 dark:border-white/5 light:border-blue-500/20 bg-slate-900/80 dark:bg-slate-900/80 light:bg-white/90 backdrop-blur-md transition-colors duration-300">
         <div className="max-w-6xl mx-auto px-4">
-          <div className="relative flex items-center justify-between h-16">
+          <div className="relative flex items-center justify-between h-14">
             <div className="absolute inset-y-0 right-0 flex items-center gap-2 md:hidden">
               <button
                 onClick={toggleTheme}
@@ -82,7 +57,7 @@ export default function Header() {
             </div>
             <div className="flex-1 md:justify-between flex items-center  md:items-stretch">
               <div className="flex-shrink-0">
-                <a href="">
+                <NavLink to="/" className={({ isActive }) => navItemClass(isActive)} onClick={() => setIsOpen(false)}>
                   <img
                     className="block md:hidden h-14 w-auto"
                     src={getImagePath("images/logo.svg")}
@@ -93,54 +68,25 @@ export default function Header() {
                     src={getImagePath("images/logo.svg")}
                     alt="Logo"
                   />
-                </a>
+                </NavLink>
               </div>
               <div className="hidden md:block md:ml-6 ">
                 <div className="flex space-x-4 items-center">
-                  {navLinks.map((link, index) =>
-                    link.name === "Projetos" ? (
-                      <div
-                        className="relative"
-                        key={index}
-                        onMouseLeave={() => setDropdownOpen(false)}
-                      >
-                        <button
-                          onClick={() => setDropdownOpen(!dropdownOpen)}
-                          onMouseOver={() => setDropdownOpen(true)}
-                              className="text-slate-200 hover:bg-white/5 hover:text-white px-3 py-2 rounded-md flex items-center font-headline text-lg font-semibold transition"
-                          key={index}
-                        >
-                          {link.icon} {link.name}
-                        </button>
-                        {dropdownOpen && (
-                              <div className="absolute left-0 w-auto pt-2 pb-2 bg-slate-900/95 border border-white/5 rounded-lg shadow-xl">
-                            {projects.map((projects, index) => (
-                              <a
-                                key={index}
-                                href={projects.href}
-                                    className="text-slate-200 hover:bg-white/5 hover:text-white px-3 py-2 rounded-md text-base font-medium flex items-center"
-                              >
-                                {projects.icon}
-                                <span className="ml-2">{projects.name}</span>
-                              </a>
-                            ))}
-                          </div>
-                        )}
-                      </div>
-                    ) : (
-                      <a
-                        key={index}
-                        href={link.href}
-                        className="text-slate-200 hover:text-white hover:bg-white/5 px-3 py-2 rounded-md flex items-center font-headline text-lg font-semibold transition"
-                      >
-                        {link.icon}
-                        <span className="ml-2">{link.name}</span>
-                      </a>
-                    )
-                  )}
+                  {navLinks.map((link, index) => (
+                    <NavLink
+                      key={index}
+                      to={link.to}
+                      className={({ isActive }) => navItemClass(isActive)}
+                      title={link.name}
+                      onClick={() => setIsOpen(false)}
+                    >
+                      {link.icon}
+                      <span className="ml-2">{link.name}</span>
+                    </NavLink>
+                  ))}
                   <button
                     onClick={toggleTheme}
-                    className="text-slate-200 hover:text-white hover:bg-white/5 px-3 py-2 rounded-md flex items-center font-headline text-lg font-semibold transition ml-2"
+                    className="text-slate-200 hover:text-white hover:bg-white/5 px-3 py-3 rounded-md flex items-center font-headline text-lg font-semibold transition ml-2"
                     title={`Mudar para ${theme === "dark" ? "light" : "dark"} mode`}
                   >
                     {theme === "dark" ? <FaSun /> : <FaMoon />}
@@ -155,47 +101,18 @@ export default function Header() {
           id="mobile-menu"
         >
           <div className="px-2 pt-2 pb-3 space-y-1">
-            {navLinks.map((link, index) =>
-              link.name === "Projetos" ? (
-                <div
-                  className="relative"
-                  key={index}
-                  onMouseLeave={() => setDropdownOpen(false)}
-                >
-                  <button
-                    onClick={() => setDropdownOpen(!dropdownOpen)}
-                    onMouseOver={() => setDropdownOpen(true)}
-                    className="text-slate-200 hover:bg-white/5 hover:text-white px-3 py-2 rounded-md text-base font-medium flex items-center"
-                  >
-                    {link.icon}
-                    <span className="ml-2">{link.name}</span>
-                  </button>
-                  {dropdownOpen && (
-                    <div className="px-2 pt-2 pb-3 space-y-1">
-                      {projects.map((projects, index) => (
-                        <a
-                          key={index}
-                          href={projects.href}
-                          className="text-slate-200 hover:bg-white/5 hover:text-white px-3 py-2 rounded-md text-base font-medium flex items-center"
-                        >
-                          {projects.icon}
-                          <span className="ml-2">{projects.name}</span>
-                        </a>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              ) : (
-                <a
-                  key={index}
-                  href={link.href}
-                  className="text-slate-200 hover:bg-white/5 hover:text-white px-3 py-2 rounded-md text-base font-medium flex items-center"
-                >
-                  {link.icon}
-                  <span className="ml-2">{link.name}</span>
-                </a>
-              )
-            )}
+            {navLinks.map((link, index) => (
+              <NavLink
+                key={index}
+                to={link.to}
+                className={({ isActive }) => navItemClass(isActive)}
+                title={link.name}
+                onClick={() => setIsOpen(false)}
+              >
+                {link.icon}
+                <span className="ml-2">{link.name}</span>
+              </NavLink>
+            ))}
           </div>
         </div>
       </nav>

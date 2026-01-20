@@ -40,11 +40,11 @@ export default function ProjectsProfessor() {
 
   return (
     <section
-      className="relative text-white"
+      className="relative text-white pt-20 pb-16"
       id="projectsProfessor"
       style={{ background }}
     >
-      <div className="relative container mx-auto max-w-6xl px-4 py-16">
+      <div className="relative container mx-auto max-w-6xl px-4">
         <div className="text-center space-y-3">
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200">
             Educação

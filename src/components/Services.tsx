@@ -33,7 +33,7 @@ export default function Services() {
   ];
 
   return (
-    <section className="container mx-auto max-w-6xl px-4 py-16" id="services">
+    <section className="container mx-auto max-w-6xl px-4 pt-20 pb-16" id="services">
       <div className="text-center space-y-3">
         <p className="text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200">
           O que faço

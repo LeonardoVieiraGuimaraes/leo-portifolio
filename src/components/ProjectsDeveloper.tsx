@@ -1,4 +1,5 @@
 import { HiArrowTopRightOnSquare } from "react-icons/hi2";
+import { FaGithub } from "react-icons/fa";
 import { getImagePath } from "../utils/paths";
 import { useTheme } from "../context/ThemeContext";
 
@@ -37,14 +38,14 @@ export default function ProjectsDeveloper() {
 
   return (
     <section
-      className="relative text-white"
+      className="relative text-white pt-20 pb-16"
       id="projectsDeveloper"
       style={{ background }}
     >
-      <div className="relative container mx-auto max-w-6xl px-4 py-16">
+      <div className="relative container mx-auto max-w-6xl px-4">
         <div className="text-center space-y-3">
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200">
-            Portfólio
+            Sistemas web
           </p>
           <h2 className="text-3xl md:text-4xl font-semibold">
             Desenvolvimento de sistemas
@@ -52,6 +53,17 @@ export default function ProjectsDeveloper() {
           <p className="text-slate-300">
             Projetos web e APIs com foco em produto, dados e entrega contínua.
           </p>
+          <div className="pt-4">
+            <a
+              href="https://github.com/LeonardoVieiraGuimaraes?tab=repositories"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="button-secondary border border-white/20 hover:border-white/40 inline-flex items-center gap-2"
+            >
+              <FaGithub className="h-5 w-5" />
+              Ver repositórios no GitHub
+            </a>
+          </div>
         </div>
 
         <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
