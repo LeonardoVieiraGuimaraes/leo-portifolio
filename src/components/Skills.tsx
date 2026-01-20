@@ -235,28 +235,6 @@ export default function Skills() {
           </div>
         </div>
 
-        {/* Idiomas */}
-        <div className="mt-12">
-          <div className="text-center space-y-3">
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200">
-              Idiomas
-            </p>
-            <h2 className="text-3xl md:text-4xl font-semibold">
-              Competências linguísticas
-            </h2>
-            <p className="text-slate-300">
-              Competências linguísticas para atuação nacional e internacional.
-            </p>
-          </div>
-          <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {languages.map((lang, idx) => (
-              <div key={idx} className="card bg-white/5 dark:bg-gray-800/80 rounded-xl p-4 border border-white/10 flex flex-col items-center">
-                <span className="text-base font-medium text-white mb-1">{lang.language}</span>
-                <span className="text-sm text-cyan-100">{lang.level}</span>
-              </div>
-            ))}
-          </div>
-        </div>
       </div>
     </section>
   );
