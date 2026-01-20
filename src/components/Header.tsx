@@ -64,14 +64,14 @@ export default function Header() {
                     alt="Logo"
                   />
                   <img
-                    className="hidden md:block h-12 w-auto"
+                    className="hidden md:block h-10 w-auto"
                     src={getImagePath("images/logo.svg")}
                     alt="Logo"
                   />
                 </NavLink>
               </div>
-              <div className="hidden md:block md:ml-6 ">
-                <div className="flex space-x-4 items-center">
+              <div className="hidden md:block md:ml-4 ">
+                <div className="flex space-x-2 items-center">
                   {navLinks.map((link, index) => (
                     <NavLink
                       key={index}
@@ -100,7 +100,7 @@ export default function Header() {
           className={`${isOpen ? "block" : "hidden"} md:hidden`}
           id="mobile-menu"
         >
-          <div className="px-2 pt-2 pb-3 space-y-1">
+          <div className="px-4 py-3 space-y-2">
             {navLinks.map((link, index) => (
               <NavLink
                 key={index}
