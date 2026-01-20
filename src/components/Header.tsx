@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FaHome, FaEnvelope, FaFolderOpen, FaTools, FaSun, FaMoon, FaInfoCircle } from "react-icons/fa";
+import { FaSun, FaMoon } from "react-icons/fa";
 
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { NavLink } from "react-router-dom";
