@@ -23,7 +23,7 @@ export default function Header() {
   ];
 
   const navItemClass = (isActive: boolean) =>
-    `px-3 py-5 rounded-md flex items-center font-headline text-lg font-semibold transition ${
+    `px-3 py-5 rounded-md flex items-center justify-center gap-2 font-headline text-lg font-semibold transition leading-none ${
       isActive ? "text-white bg-white/10 border-b-2 border-cyan-400" : "text-slate-200 hover:text-white hover:bg-white/5"
     }`;
 
@@ -81,12 +81,12 @@ export default function Header() {
                       onClick={() => setIsOpen(false)}
                     >
                       {link.icon}
-                      <span className="ml-2">{link.name}</span>
+                      <span>{link.name}</span>
                     </NavLink>
                   ))}
                   <button
                     onClick={toggleTheme}
-                    className="text-slate-200 hover:text-white hover:bg-white/5 px-3 py-5 rounded-md flex items-center font-headline text-lg font-semibold transition ml-2"
+                    className="text-slate-200 hover:text-white hover:bg-white/5 px-3 py-5 rounded-md flex items-center justify-center font-headline text-lg font-semibold transition ml-2 leading-none"
                     title={`Mudar para ${theme === "dark" ? "light" : "dark"} mode`}
                   >
                     {theme === "dark" ? <FaSun /> : <FaMoon />}
@@ -110,7 +110,7 @@ export default function Header() {
                 onClick={() => setIsOpen(false)}
               >
                 {link.icon}
-                <span className="ml-2">{link.name}</span>
+                <span>{link.name}</span>
               </NavLink>
             ))}
           </div>
