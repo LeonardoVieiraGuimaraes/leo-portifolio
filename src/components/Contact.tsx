@@ -80,7 +80,7 @@ export default function Contact() {
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200">
             Contato
           </p>
-          <h2 className="text-3xl md:text-4xl font-semibold">Vamos conversar</h2>
+          <h2 className="text-3xl md:text-4xl font-semibold">Contato</h2>
           <p className="text-slate-300">
             Me envie uma mensagem ou chame no WhatsApp. Retorno rápido para falar sobre projetos e oportunidades.
           </p>

@@ -11,26 +11,47 @@ export default function Skills() {
 
   const educations = [
     {
-      name: "Doutorando em Modelagem Computacional | CEFET/MG",
+      degree: "Doutorado (em andamento)",
+      institution: "CEFET/MG",
+      course: "Modelagem Matemática e Computacional",
+      period: "2025 - atual",
+      description: "Linha de pesquisa em sistemas inteligentes. Orientador: Alisson Marques da Silva."
     },
     {
-      name: "Aluno em Disciplina Isolada | UFMG (Doutorado)",
+      degree: "Mestrado Profissional",
+      institution: "UNIMONTES",
+      course: "Modelagem Computacional e Sistemas",
+      period: "2016 - 2019",
+      description: "Título: Monitoramento no Processo de Desidratação de Uvas Baseado em Imagens Digitais e Sistemas Inteligentes. Orientador: Dr. Maurílio José Inácio. Coorientador: Dr. Rodolpho Cézar dos Reis Tinini."
     },
     {
-      name: "Mestre em Modelagem Computacional e Sistemas | UNIMONTES",
+      degree: "Especialização",
+      institution: "UFLA",
+      course: "Matemática e Estatística",
+      period: "2008 - 2009",
+      description: "Trabalho de Qualificação. Orientador: Paulo César Lima."
     },
     {
-      name: "Graduação Bacharelado em Ciência da Computação | FACIT",
+      degree: "Especialização",
+      institution: "FINOM",
+      course: "Matemática",
+      period: "2008",
+      description: "Título: A matemática Financeira Aplicada em Empréstimos e Financiamentos Bancários. Orientador: Maria Marlene Rodrigues Souza."
     },
     {
-      name: "Especialização em Matemática | Finon",
+      degree: "Graduação",
+      institution: "FEMC",
+      course: "Engenharia de Computação",
+      period: "2010 - 2014",
+      description: "Título: Sistema de Identificação de Bovídeos Usando Radiofrequência por Identificação (RFID). Orientador: Alexandre Dantas Dias."
     },
     {
-      name: "Especialização em Matemática e Estatística | UFLA",
-    },
-    {
-      name: "Graduação Licenciatura em Matemática | UNIMONTES",
-    },
+      degree: "Graduação",
+      institution: "UNIMONTES",
+      course: "Matemática",
+      period: "2004 - 2007",
+      description: "Formação em Matemática."
+    }
   ];
 
   const skills = [
@@ -106,6 +127,21 @@ export default function Skills() {
     },
   ];
 
+  const languages = [
+    {
+      language: "Português",
+      level: "Nativo"
+    },
+    {
+      language: "Espanhol",
+      level: "Básico (leitura e comunicação simples)"
+    },
+    {
+      language: "Inglês",
+      level: "Intermediário (leitura técnica e documentação)"
+    }
+  ];
+
   return (
     <section
       className="relative pt-20 pb-16"
@@ -117,41 +153,27 @@ export default function Skills() {
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200">
             Formação & stack
           </p>
-          <h2 className="text-3xl md:text-4xl font-semibold text-white">Educação e skills</h2>
+          <h2 className="text-3xl md:text-4xl font-semibold text-white">Educação e habilidades</h2>
           <p className="text-slate-300">
             Base sólida em modelagem, dados e engenharia para construir e ensinar tecnologia.
           </p>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-2">
+        <div className="flex flex-col gap-8">
+          {/* Habilidades */}
           <div className="card rounded-2xl p-6">
-            <h3 className="mb-4 flex items-center gap-2 text-lg font-semibold text-white">
-              <HiAcademicCap className="h-7 w-7 text-cyan-300 [.light_&]:text-cyan-700" />
-              Educação
-            </h3>
-            <div className="space-y-3 text-slate-200">
-              {educations.map((education, index) => (
-                <div
-                  key={`education-${index}`}
-                  className="flex items-center gap-3 rounded-lg border border-white/5 bg-white/5 px-4 py-3"
-                >
-                  <span className="h-2 w-2 rounded-full bg-cyan-300" />
-                  <span className="text-sm font-semibold">{education.name}</span>
-                </div>
-              ))}
+            <div className="mb-6 text-center">
+              <h2 className="text-2xl md:text-3xl font-bold text-cyan-300 tracking-tight flex items-center justify-center gap-2">
+                <HiCodeBracketSquare className="h-7 w-7 text-cyan-300 [.light_&]:text-cyan-700" />
+                Habilidades Técnicas
+              </h2>
+              <p className="text-slate-400 mt-2 text-base">Principais tecnologias e stacks que domino para desenvolvimento de soluções.</p>
             </div>
-          </div>
-
-          <div className="card rounded-2xl p-6">
-            <h3 className="mb-4 flex items-center gap-2 text-lg font-semibold text-white">
-              <HiCodeBracketSquare className="h-7 w-7 text-cyan-300 [.light_&]:text-cyan-700" />
-              Skills
-            </h3>
-            <div className="grid grid-cols-2 gap-4 md:grid-cols-3">
+            <div className="flex flex-col gap-4">
               {skills
                 .sort((a, b) => b.level - a.level)
                 .map((skill, index) => (
-                  <div key={`skill-${index}`} className="space-y-2">
+                  <div key={`skill-${index}`} className="flex items-center gap-4">
                     <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-white/10">
                       <img
                         src={skill.icon}
@@ -159,7 +181,7 @@ export default function Skills() {
                         className="h-8 w-8 rounded"
                       />
                     </div>
-                    <div>
+                    <div className="flex-1">
                       <p className="text-sm font-semibold text-white">{skill.name}</p>
                       <div className="h-2 w-full rounded-full bg-white/10">
                         <div
@@ -171,6 +193,68 @@ export default function Skills() {
                   </div>
                 ))}
             </div>
+          </div>
+
+          {/* Formação */}
+          <div className="card rounded-2xl p-6">
+            <div className="mb-6 text-center">
+              <h2 className="text-2xl md:text-3xl font-bold text-cyan-300 tracking-tight flex items-center justify-center gap-2">
+                <HiAcademicCap className="h-7 w-7 text-cyan-300 [.light_&]:text-cyan-700" />
+                Formação Acadêmica
+              </h2>
+              <p className="text-slate-400 mt-2 text-base">Trajetória educacional e principais títulos obtidos.</p>
+            </div>
+            <div className="flex flex-col gap-4 text-slate-200">
+              {educations.map((education, index) => (
+                <div
+                  key={`education-${index}`}
+                  className="rounded-lg border border-white/10 bg-white/5 px-4 py-4 flex flex-col gap-1 shadow-sm"
+                >
+                  <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-1">
+                    <span className="text-base font-bold text-white">{education.course}</span>
+                    <span className="text-xs text-cyan-200">{education.period}</span>
+                  </div>
+                  <span className="text-sm text-cyan-100 font-semibold">{education.degree} <span className="mx-1">|</span> {education.institution}</span>
+                  <p className="text-slate-300 text-sm mt-1">{education.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Idiomas */}
+          <div className="card rounded-2xl p-6">
+            <h2 className="text-2xl md:text-3xl font-bold text-cyan-300 tracking-tight mb-6 text-center">Idiomas</h2>
+            <div className="flex flex-col gap-4">
+              {languages.map((lang, idx) => (
+                <div key={idx} className="flex flex-col items-center bg-white/5 dark:bg-gray-800/80 rounded-xl p-4 border border-white/10">
+                  <span className="text-base font-medium text-white mb-1">{lang.language}</span>
+                  <span className="text-sm text-cyan-100">{lang.level}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Idiomas */}
+        <div className="mt-12">
+          <div className="text-center space-y-3">
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200">
+              Idiomas
+            </p>
+            <h2 className="text-3xl md:text-4xl font-semibold">
+              Competências linguísticas
+            </h2>
+            <p className="text-slate-300">
+              Competências linguísticas para atuação nacional e internacional.
+            </p>
+          </div>
+          <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {languages.map((lang, idx) => (
+              <div key={idx} className="card bg-white/5 dark:bg-gray-800/80 rounded-xl p-4 border border-white/10 flex flex-col items-center">
+                <span className="text-base font-medium text-white mb-1">{lang.language}</span>
+                <span className="text-sm text-cyan-100">{lang.level}</span>
+              </div>
+            ))}
           </div>
         </div>
       </div>

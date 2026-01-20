@@ -10,6 +10,8 @@ import ProjectsProfessor from "./components/ProjectsProfessor";
 import Services from "./components/Services";
 import Process from "./components/Process";
 import Skills from "./components/Skills";
+import Experience from "./components/Experience";
+import Languages from "./components/Languages";
 import About from "./components/About";
 import AboutSimple from "./components/AboutSimple";
 import { ThemeProvider } from "./context/ThemeContext";
@@ -56,6 +58,7 @@ function App() {
     </>
   );
 
+
   const SkillsPage = () => (
     <>
       <Header />
@@ -63,6 +66,16 @@ function App() {
       <Footer />
     </>
   );
+
+  const ExperiencePage = () => (
+    <>
+      <Header />
+      <Experience />
+      <Footer />
+    </>
+  );
+
+
 
   const ContactPage = () => (
     <>
@@ -82,6 +95,8 @@ function App() {
           <Route path="/sobre" element={<><Header /><About /><Footer /></>} />
           <Route path="/projects" element={<ProjectsPage />} />
           <Route path="/skills" element={<SkillsPage />} />
+          <Route path="/experience" element={<ExperiencePage />} />
+
           <Route path="/contact" element={<ContactPage />} />
           <Route path="*" element={<HomePage />} />
         </Routes>

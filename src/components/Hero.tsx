@@ -19,7 +19,7 @@ export default function Hero() {
       <div className={`absolute -left-20 -top-32 h-80 w-80 rounded-full ${glowCyan} blur-3xl`} />
       <div className={`absolute right-0 top-10 h-72 w-72 rounded-full ${glowViolet} blur-3xl`} />
 
-      <div className="relative container mx-auto flex max-w-6xl flex-col gap-8 p-6 pb-24 pt-24 md:flex-row md:items-center md:justify-between">
+      <div className="relative container mx-auto flex max-w-6xl flex-col gap-8 p-4 pb-12 pt-16 md:flex-row md:items-center md:justify-between">
         <div className="max-w-2xl space-y-6">
           <div className="flex items-center gap-3 text-sm text-cyan-200 [.light_&]:text-cyan-700">
             <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 font-semibold uppercase tracking-wide [.light_&]:border-cyan-200 [.light_&]:bg-cyan-50">
@@ -100,28 +100,26 @@ export default function Hero() {
         <div className="relative hidden md:block">
           <div className="card relative w-80 min-h-[18rem] overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 p-6">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(34,211,238,0.18),transparent_30%),radial-gradient(circle_at_80%_0%,rgba(167,139,250,0.2),transparent_35%)]" />
-            <div className="relative flex h-full flex-col justify-start gap-3">
+            <div className="relative flex h-full flex-col justify-start gap-4">
               <div>
-                <p className="text-sm uppercase tracking-wide text-cyan-200">Perfil</p>
-                <h3 className="text-2xl font-semibold text-white">Leonardo V. Guimarães</h3>
-                <p className="text-slate-300">Belo Horizonte • Remoto Brasil</p>
+                <p className="text-xs uppercase tracking-[0.2em] text-cyan-200 font-semibold">Perfil</p>
+                <h3 className="text-xl md:text-2xl font-bold text-white mt-1">Leonardo V. Guimarães</h3>
+                <p className="text-xs text-slate-400 mt-0.5">Belo Horizonte • Remoto Brasil</p>
               </div>
-              <div className="space-y-3 text-sm text-slate-200">
-                <p className="text-cyan-300 font-semibold">👨‍💼 Professor Universitário</p>
-                
-                <div className="space-y-1.5 text-xs">
-                  <p className="text-cyan-200 font-semibold">💻 Full Stack</p>
-                  <p>🔹 Frontend: React, TypeScript, Tailwind</p>
-                  <p>🔹 Backend: Node.js, Python, Django, Spring Boot</p>
-                  <p>🔹 Mobile: React Native</p>
+              <div className="space-y-4 text-base text-slate-200">
+                <p className="text-cyan-300 font-bold text-lg leading-tight">👨‍💼 Professor Universitário</p>
+                <div className="space-y-2 text-base">
+                  <p className="text-cyan-200 font-bold text-base mt-2">💻 Full Stack</p>
+                  <p className="pl-2"><span className="text-cyan-100">🔹 Frontend:</span> <span className="font-semibold text-white">React, TypeScript, Tailwind</span></p>
+                  <p className="pl-2"><span className="text-cyan-100">🔹 Backend:</span> <span className="font-semibold text-white">Node.js, Python, Django, Spring Boot</span></p>
+                  <p className="pl-2"><span className="text-cyan-100">🔹 Mobile:</span> <span className="font-semibold text-white">React Native</span></p>
                 </div>
-                
-                <div className="space-y-1.5 border-t border-white/10 pt-2.5">
-                  <p className="text-cyan-200 font-semibold">🎓 Formação Acadêmica</p>
-                  <p>📚 Engenharia da Computação</p>
-                  <p>📐 Licenciatura em Matemática</p>
-                  <p>🏆 Mestre Modelagem Computacional</p>
-                  <p>📊 Doutorando Modelagem Computacional</p>
+                <div className="space-y-2 border-t border-white/10 pt-3 text-base">
+                  <p className="text-cyan-200 font-bold text-base">🎓 Formação Acadêmica</p>
+                  <p className="pl-2"><span className="text-cyan-100">📚</span> <span className="font-semibold text-white">Engenharia da Computação</span></p>
+                  <p className="pl-2"><span className="text-cyan-100">📐</span> <span className="font-semibold text-white">Licenciatura em Matemática</span></p>
+                  <p className="pl-2"><span className="text-cyan-100">🏆</span> <span className="font-semibold text-white">Mestre Modelagem Computacional</span></p>
+                  <p className="pl-2"><span className="text-cyan-100">📊</span> <span className="font-semibold text-white">Doutorando Modelagem Computacional</span></p>
                 </div>
               </div>
             </div>

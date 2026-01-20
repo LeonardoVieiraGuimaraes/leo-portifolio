@@ -15,15 +15,16 @@ export default function Header() {
   };
 
   const navLinks = [
-    { name: "Início", icon: <FaHome className="text-base" />, to: "/inicio" },
-    { name: "Projetos", icon: <FaFolderOpen className="text-base" />, to: "/projects" },
-    { name: "Skills", icon: <FaTools className="text-base" />, to: "/skills" },
-    { name: "Sobre", icon: <FaInfoCircle className="text-base" />, to: "/sobre" },
-    { name: "Fale Conosco", icon: <FaEnvelope className="text-base" />, to: "/contact" },
+    { name: "Início", to: "/inicio" },
+    { name: "Projetos", to: "/projects" },
+    { name: "Habilidades", to: "/skills" },
+    { name: "Experiência", to: "/experience" },
+    { name: "Sobre", to: "/sobre" },
+    { name: "Contato", to: "/contact" },
   ];
 
   const navItemClass = (isActive: boolean) =>
-    `px-3 py-5 rounded-md flex items-center justify-center gap-2 font-headline text-lg font-semibold transition leading-none ${
+    `px-2 py-3 rounded-md font-headline text-base font-medium transition leading-none ${
       isActive ? "text-white bg-white/10 border-b-2 border-cyan-400" : "text-slate-200 hover:text-white hover:bg-white/5"
     }`;
 
@@ -80,8 +81,7 @@ export default function Header() {
                       title={link.name}
                       onClick={() => setIsOpen(false)}
                     >
-                      {link.icon}
-                      <span>{link.name}</span>
+                      {link.name}
                     </NavLink>
                   ))}
                   <button
@@ -109,8 +109,7 @@ export default function Header() {
                 title={link.name}
                 onClick={() => setIsOpen(false)}
               >
-                {link.icon}
-                <span>{link.name}</span>
+                {link.name}
               </NavLink>
             ))}
           </div>
