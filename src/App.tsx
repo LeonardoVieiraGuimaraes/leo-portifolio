@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
@@ -16,80 +16,53 @@ import { ThemeProvider } from "./context/ThemeContext";
 // import Textimonials from "./components/Textimonials";
 
 function App() {
-  const tabs = [
-    { id: "hero", label: "Início" },
-    { id: "about", label: "Sobre" },
-    { id: "services", label: "Serviços" },
-    { id: "process", label: "Processo" },
-    { id: "projectsAcademics", label: "Proj. Acadêmicos" },
-    { id: "projectsDeveloper", label: "Proj. Dev" },
-    { id: "projectsProfessor", label: "Proj. Prof" },
-    { id: "skills", label: "Skills" },
-    { id: "contact", label: "Contato" },
-  ];
+  const HomePage = () => (
+    <>
+      <Header />
+      {/* <Header2 /> */}
+      <Hero />
+      <About />
+      <Services />
+      <Process />
+      <ProjectsAcademics />
+      <ProjectsDeveloper />
+      <ProjectsProfessor />
+      <Skills />
+      {/* <Textimonials /> */}
+      <Contact />
+      <Footer />
+    </>
+  );
 
-  const [activeTab, setActiveTab] = useState(tabs[0].id);
+  const ProjectsPage = () => (
+    <>
+      <Header />
+      <ProjectsAcademics />
+      <ProjectsDeveloper />
+      <ProjectsProfessor />
+      <Skills />
+      <Footer />
+    </>
+  );
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveTab(entry.target.id);
-          }
-        });
-      },
-      { rootMargin: "-20% 0px -60% 0px", threshold: [0.2, 0.4, 0.6] }
-    );
-
-    tabs.forEach((tab) => {
-      const el = document.getElementById(tab.id);
-      if (el) observer.observe(el);
-    });
-
-    return () => observer.disconnect();
-  }, []);
-
-  const handleTabClick = (id: string) => {
-    setActiveTab(id);
-    const el = document.getElementById(id);
-    if (el) {
-      el.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-  };
+  const ContactPage = () => (
+    <>
+      <Header />
+      <Contact />
+      <Footer />
+    </>
+  );
 
   return (
     <ThemeProvider>
-      <main>
-        <Header />
-        {/* <Header2 /> */}
-
-        <div className="sticky top-16 z-40 bg-slate-900/80 backdrop-blur border-b border-white/5 shadow-[0_12px_30px_rgba(0,0,0,0.25)]">
-          <div className="container mx-auto flex max-w-6xl items-center gap-2 overflow-x-auto px-4 py-3">
-            {tabs.map((tab) => (
-              <button
-                key={tab.id}
-                className={`tab-chip ${activeTab === tab.id ? "tab-chip-active" : ""}`}
-                onClick={() => handleTabClick(tab.id)}
-              >
-                {tab.label}
-              </button>
-            ))}
-          </div>
-        </div>
-
-        <Hero />
-        <About />
-        <Services />
-        <Process />
-        <ProjectsAcademics />
-        <ProjectsDeveloper />
-        <ProjectsProfessor />
-        <Skills />
-        {/* <Textimonials /> */}
-        <Contact />
-        <Footer />
-      </main>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/projects" element={<ProjectsPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="*" element={<HomePage />} />
+        </Routes>
+      </BrowserRouter>
     </ThemeProvider>
   );
 }
