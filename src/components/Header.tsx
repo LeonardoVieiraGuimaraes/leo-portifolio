@@ -45,7 +45,7 @@ export default function Header() {
               alt="Logo"
               style={{ maxHeight: '48px', maxWidth: '140px' }}
             />
-            <span className="ml-2 text-xl md:text-2xl font-bold text-cyan-900 dark:text-cyan-200 tracking-tight select-none">Leonardo Vieira Guimarães</span>
+            <span className="ml-2 text-xl md:text-2xl font-bold text-cyan-900 dark:text-cyan-200 tracking-tight select-none hidden md:inline">Leonardo Vieira Guimarães</span>
           </NavLink>
         </div>
         <div className="hidden md:block md:ml-4 ">
