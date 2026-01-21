@@ -104,19 +104,19 @@ export default function ProjectsDeveloper() {
 
   return (
     <section
-      className="relative text-white pt-20 pb-16"
+      className="relative text-cyan-900 dark:text-cyan-100 pt-20 pb-16"
       id="projectsDeveloper"
       style={{ background }}
     >
       <div className="relative container mx-auto max-w-6xl px-4">
         <div className="text-center space-y-3">
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200">
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200 dark:text-cyan-200">
             Sistemas web
           </p>
-          <h2 className="text-3xl md:text-4xl font-semibold">
+          <h2 className="text-3xl md:text-4xl font-semibold text-cyan-700 dark:text-cyan-200">
             Desenvolvimento de sistemas
           </h2>
-          <p className="text-slate-300">
+          <p className="text-slate-500 dark:text-slate-200">
             Projetos web e APIs com foco em produto, dados e entrega contínua.
           </p>
           <div className="pt-4">
@@ -148,7 +148,7 @@ export default function ProjectsDeveloper() {
               </div>
 
               <div className="relative space-y-3 p-4">
-                <div className="flex flex-wrap gap-2 text-xs text-cyan-200">
+                <div className="flex flex-wrap gap-2 text-xs text-cyan-200 dark:text-cyan-200">
                   {(project as { tags?: string[] }).tags?.map((tag) => (
                     <span
                       key={tag}
@@ -159,7 +159,7 @@ export default function ProjectsDeveloper() {
                   ))}
                 </div>
                 <h4 className="text-xl font-semibold">{project.title}</h4>
-                <p className="text-sm text-slate-300">{project.description}</p>
+                <p className="text-sm text-slate-500 dark:text-slate-200">{project.description}</p>
 
                 <div className="flex gap-2 mt-2">
                   <button

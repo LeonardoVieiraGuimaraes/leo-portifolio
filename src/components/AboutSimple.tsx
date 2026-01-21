@@ -8,8 +8,8 @@ export default function AboutSimple() {
         <div className="card relative w-full overflow-hidden rounded-2xl border border-white/10 bg-slate-900/80 p-6 md:p-8">
           <div className="relative grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
             <div className="space-y-4">
-              <h2 className="text-2xl md:text-3xl font-semibold text-white">Sobre mim</h2>
-              <p className="text-slate-300">
+              <h2 className="text-2xl md:text-3xl font-semibold text-cyan-700 dark:text-cyan-200">Sobre mim</h2>
+              <p className="text-slate-500 dark:text-slate-200">
                 Professor universitário e desenvolvedor full stack. Busco unir engenharia e
                 educação para criar produtos digitais claros e eficientes.
               </p>

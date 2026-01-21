@@ -71,17 +71,17 @@ export default function Contact() {
 
   return (
     <section
-      className="relative text-white pt-20 pb-16"
+      className="relative text-cyan-900 dark:text-cyan-100 pt-20 pb-16"
       id="contact"
       style={{ background }}
     >
       <div className="container mx-auto max-w-6xl px-4">
         <div className="mb-8 text-center space-y-3">
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200">
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200 dark:text-cyan-200">
             Contato
           </p>
           <h2 className="text-3xl md:text-4xl font-semibold">Contato</h2>
-          <p className="text-slate-300">
+          <p className="text-slate-500 dark:text-slate-200">
             Me envie uma mensagem ou chame no WhatsApp. Retorno rápido para falar sobre projetos e oportunidades.
           </p>
         </div>
@@ -139,7 +139,7 @@ export default function Contact() {
                 </button>
 
                 {error && (
-                  <p className="text-sm text-rose-200">
+                  <p className="text-sm text-rose-200 dark:text-rose-200">
                     Ocorreu um erro ao enviar. Tente novamente mais tarde.
                   </p>
                 )}
@@ -153,15 +153,15 @@ export default function Contact() {
                 key={`contact-${index}`}
                 className="card flex items-center gap-4 rounded-2xl border border-white/10 bg-white/5 p-4"
               >
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-cyan-500/10 text-cyan-300 [.light_&]:bg-cyan-100 [.light_&]:text-cyan-700">
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-cyan-500/10 text-cyan-300 dark:text-cyan-200 [.light_&]:bg-cyan-100 [.light_&]:text-cyan-700">
                   {contact.icon}
                 </div>
                 <div>
-                  <p className="font-semibold text-white">{contact.name}</p>
+                  <p className="font-semibold text-cyan-900 dark:text-cyan-100">{contact.name}</p>
                   <a
                     href={contact.link}
                     target="_blank"
-                    className="text-sm text-cyan-200 underline underline-offset-2"
+                    className="text-sm text-cyan-200 dark:text-cyan-200 underline underline-offset-2"
                     rel="noreferrer"
                   >
                     {contact.description}

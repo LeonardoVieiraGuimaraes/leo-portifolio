@@ -27,13 +27,13 @@ export default function Process() {
   return (
     <section className="container mx-auto max-w-6xl px-4 pt-20 pb-16" id="process">
       <div className="text-center space-y-3">
-        <p className="text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200">
+        <p className="text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200 dark:text-cyan-200">
           Metodologia
         </p>
-        <h2 className="text-3xl md:text-4xl font-semibold text-white">
+        <h2 className="text-3xl md:text-4xl font-semibold text-cyan-300 dark:text-cyan-200">
           Processo estruturado para entregar com qualidade
         </h2>
-        <p className="text-slate-300">
+        <p className="text-slate-400 dark:text-slate-200">
           Passos claros para reduzir risco, alinhar expectativas e garantir valor em produção.
         </p>
       </div>
@@ -43,15 +43,15 @@ export default function Process() {
           <div key={step.title} className="card relative h-full overflow-hidden rounded-xl p-6">
             <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-white/0 to-white/5" />
             <div className="relative flex items-start gap-4">
-              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-cyan-500/10 text-cyan-300 [.light_&]:bg-cyan-100 [.light_&]:text-cyan-700">
+              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-cyan-500/10 text-cyan-300 dark:text-cyan-200 [.light_&]:bg-cyan-100 [.light_&]:text-cyan-700">
                 {step.icon}
               </div>
               <div className="space-y-2">
                 <div className="flex items-center gap-3">
-                  <span className="text-xs font-semibold uppercase tracking-wide text-cyan-200">0{index + 1}</span>
-                  <h3 className="text-xl font-semibold text-white">{step.title}</h3>
+                  <span className="text-xs font-semibold uppercase tracking-wide text-cyan-200 dark:text-cyan-200">0{index + 1}</span>
+                  <h3 className="text-xl font-semibold text-cyan-300 dark:text-cyan-200">{step.title}</h3>
                 </div>
-                <p className="text-sm leading-relaxed text-slate-300">{step.description}</p>
+                <p className="text-sm leading-relaxed text-slate-400 dark:text-slate-200">{step.description}</p>
               </div>
             </div>
           </div>

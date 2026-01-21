@@ -21,22 +21,22 @@ export default function Hero() {
 
       <div className="relative container mx-auto flex max-w-6xl flex-col gap-8 p-4 pb-12 pt-16 md:flex-row md:items-center md:justify-between">
         <div className="max-w-2xl space-y-6">
-          <div className="flex items-center gap-3 text-sm text-cyan-200 [.light_&]:text-cyan-700">
-            <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 font-semibold uppercase tracking-wide [.light_&]:border-cyan-200 [.light_&]:bg-cyan-50">
+          <div className="flex items-center gap-3 text-sm text-cyan-900 dark:text-cyan-200">
+            <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 font-semibold uppercase tracking-wide text-cyan-900 dark:text-cyan-200 [.light_&]:border-cyan-200 [.light_&]:bg-cyan-50">
               <span className="relative flex h-2 w-2">
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75 [.light_&]:bg-emerald-600" />
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400 [.light_&]:bg-emerald-600" />
               </span>
               Disponível para novos projetos
             </span>
-            <span className="text-slate-300">Professor | Dev Full Stack</span>
+            <span className="text-slate-300 dark:text-slate-200">Professor | Dev Full Stack</span>
           </div>
 
-          <h1 className="text-4xl font-semibold leading-tight text-white sm:text-5xl md:text-6xl">
+          <h1 className="text-4xl font-semibold leading-tight text-cyan-900 dark:text-cyan-100 sm:text-5xl md:text-6xl">
             Transformando dados e código em produtos digitais que entregam impacto real.
           </h1>
 
-          <p className="text-lg text-slate-300">
+          <p className="text-lg text-slate-300 dark:text-slate-200">
             Sou Leonardo Vieira Guimarães, desenvolvedor full stack e professor. Construo produtos
             web/mobile e plataformas de dados que alinham tecnologia, educação e resultado de
             negócio.
@@ -88,7 +88,7 @@ export default function Hero() {
             ].map((item) => (
               <div
                 key={item.label}
-                className="card rounded-lg px-4 py-3 text-xs text-slate-200 sm:text-sm flex items-center gap-3"
+                className="card rounded-lg px-4 py-3 text-xs text-slate-200 dark:text-slate-200 sm:text-sm flex items-center gap-3"
               >
                 <span className="text-lg">{item.icon}</span>
                 <span>{item.label}</span>
@@ -102,29 +102,29 @@ export default function Hero() {
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(34,211,238,0.18),transparent_30%),radial-gradient(circle_at_80%_0%,rgba(167,139,250,0.2),transparent_35%)]" />
             <div className="relative flex h-full flex-col justify-start gap-4">
               <div>
-                <p className="text-xs uppercase tracking-[0.2em] text-cyan-200 font-semibold">Perfil</p>
-                <h3 className="text-xl md:text-2xl font-bold text-white mt-1">Leonardo V. Guimarães</h3>
-                <p className="text-xs text-slate-400 mt-0.5">Belo Horizonte • Remoto Brasil</p>
+                <p className="text-xs uppercase tracking-[0.2em] text-cyan-900 dark:text-cyan-200 font-semibold">Perfil</p>
+                <h3 className="text-xl md:text-2xl font-bold text-white dark:text-cyan-100 mt-1">Leonardo V. Guimarães</h3>
+                <p className="text-xs text-slate-400 dark:text-slate-300 mt-0.5">Belo Horizonte • Remoto Brasil</p>
               </div>
-              <div className="space-y-4 text-base text-slate-200">
-                <p className="text-cyan-300 font-bold text-lg leading-tight">Professor Universitário</p>
+              <div className="space-y-4 text-base text-slate-200 dark:text-slate-200">
+                <p className="text-cyan-900 dark:text-cyan-200 font-bold text-lg leading-tight">Professor Universitário</p>
                 <div className="space-y-2 text-base">
-                  <p className="text-cyan-200 font-bold text-base mt-2">Full Stack</p>
+                  <p className="text-cyan-900 dark:text-cyan-200 font-bold text-base mt-2">Full Stack</p>
                   <p className="pl-2">
-                    <span className="font-semibold text-cyan-700 dark:text-cyan-100">Frontend:</span>
-                    <span className="font-semibold text-slate-800 dark:text-white"> React, TypeScript, Tailwind</span>
+                    <span className="font-semibold text-cyan-900 dark:text-cyan-100">Frontend:</span>
+                    <span className="font-semibold text-cyan-900 dark:text-cyan-100"> React, TypeScript, Tailwind</span>
                   </p>
                   <p className="pl-2">
-                    <span className="font-semibold text-cyan-700 dark:text-cyan-100">Backend:</span>
-                    <span className="font-semibold text-slate-800 dark:text-white"> Node.js, Python, Django, Spring Boot</span>
+                    <span className="font-semibold text-cyan-900 dark:text-cyan-100">Backend:</span>
+                    <span className="font-semibold text-cyan-900 dark:text-cyan-100"> Node.js, Python, Django, Spring Boot</span>
                   </p>
                   <p className="pl-2">
-                    <span className="font-semibold text-cyan-700 dark:text-cyan-100">Mobile:</span>
+                    <span className="font-semibold text-cyan-900 dark:text-cyan-100">Mobile:</span>
                     <span className="font-semibold text-slate-800 dark:text-white"> React Native</span>
                   </p>
                 </div>
                 <div className="space-y-2 border-t border-white/10 pt-3 text-base">
-                  <p className="text-cyan-200 font-bold text-base">Formação Acadêmica</p>
+                  <p className="text-cyan-900 font-bold text-base">Formação Acadêmica</p>
                   <p className="pl-2"><span className="font-semibold text-white">Engenharia da Computação</span></p>
                   <p className="pl-2"><span className="font-semibold text-white">Licenciatura em Matemática</span></p>
                   <p className="pl-2"><span className="font-semibold text-white">Mestre Modelagem Computacional</span></p>

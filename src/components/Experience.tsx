@@ -67,31 +67,31 @@ const Experience = () => {
 
   return (
     <section
-      className="relative text-white pt-20 pb-16"
+      className="relative text-cyan-900 dark:text-cyan-100 pt-20 pb-16"
       id="experience"
       style={{ background }}
     >
       <div className="relative container mx-auto max-w-6xl px-4">
         <div className="text-center space-y-3">
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200">
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200 dark:text-cyan-200">
             Experiência
           </p>
-          <h2 className="text-3xl md:text-4xl font-semibold">
+          <h2 className="text-3xl md:text-4xl font-semibold text-cyan-700 dark:text-cyan-200">
             Experiência Profissional
           </h2>
-          <p className="text-slate-300">
+          <p className="text-slate-500 dark:text-slate-200">
             Histórico de atuação em tecnologia, educação e projetos de transformação digital.
           </p>
         </div>
         <div className="mt-8 flex flex-col gap-6">
           {experiences.map((exp, idx) => (
-            <div key={idx} className="card bg-white/5 dark:bg-gray-800/80 rounded-xl p-4 border border-white/10 flex flex-col h-full">
+            <div key={idx} className="card bg-white/90 dark:bg-slate-800 rounded-xl p-4 border border-slate-200 dark:border-white/10 shadow-sm flex flex-col h-full">
               <div className="flex flex-col gap-1 mb-2">
-                <span className="text-base font-semibold text-white">{exp.role}</span>
-                <span className="text-xs text-cyan-200">{exp.period}</span>
+                <span className="text-base font-semibold text-cyan-900 dark:text-cyan-100">{exp.role}</span>
+                <span className="text-xs text-cyan-800 dark:text-cyan-200">{exp.period}</span>
               </div>
-              <span className="text-sm text-cyan-100 mb-1">{exp.company}</span>
-              <p className="text-gray-300 text-sm mt-1 flex-1">{exp.description}</p>
+              <span className="text-sm text-cyan-800 dark:text-cyan-200 mb-1">{exp.company}</span>
+              <p className="text-slate-700 dark:text-slate-200 text-sm mt-1 flex-1">{exp.description}</p>
             </div>
           ))}
         </div>

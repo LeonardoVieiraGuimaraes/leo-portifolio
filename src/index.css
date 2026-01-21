@@ -1,4 +1,14 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@500;600;700&display=swap');
+
+/* Light mode cyan-800 override para About e destaques */
+:root.light .text-cyan-800 {
+  color: #155e75 !important;
+}
+/* Light mode cyan-900 override para About */
+:root.light .text-cyan-900 {
+  color: #164e63 !important;
+}
 
 @tailwind base;
 @tailwind components;

@@ -89,17 +89,17 @@ export default function ProjectsAcademics() {
 
   return (
     <section
-      className="relative text-white pt-20 pb-16"
+      className="relative text-white dark:text-cyan-100 pt-20 pb-16"
       id="projectsAcademics"
       style={{ background }}
     >
       <div className="relative container mx-auto max-w-6xl px-4">
         <div className="text-center space-y-3">
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200">
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200 dark:text-cyan-200">
             Pesquisa
           </p>
-          <h2 className="text-3xl md:text-4xl font-semibold">Projetos acadêmicos</h2>
-          <p className="text-slate-300">
+          <h2 className="text-3xl md:text-4xl font-semibold text-cyan-700 dark:text-cyan-200">Projetos acadêmicos</h2>
+          <p className="text-slate-500 dark:text-slate-200">
             Dissertações, artigos e projetos que conectam ciência, tecnologia e dados.
           </p>
         </div>
@@ -120,7 +120,7 @@ export default function ProjectsAcademics() {
               </div>
 
               <div className="relative space-y-3 p-4">
-                <div className="flex flex-wrap gap-2 text-xs text-cyan-200">
+                <div className="flex flex-wrap gap-2 text-xs text-cyan-200 dark:text-cyan-200">
                   {(project as { tags?: string[] }).tags?.map((tag) => (
                     <span
                       key={tag}
@@ -131,7 +131,7 @@ export default function ProjectsAcademics() {
                   ))}
                 </div>
                 <h4 className="text-xl font-semibold">{project.title}</h4>
-                <p className="text-sm text-slate-300">{project.description}</p>
+                <p className="text-sm text-slate-500 dark:text-slate-200">{project.description}</p>
 
                 <button
                   onClick={() => window.open(project.link, "_blank")}
