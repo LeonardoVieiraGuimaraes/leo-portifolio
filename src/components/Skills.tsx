@@ -20,9 +20,9 @@ export default function Skills() {
     {
       degree: "Aluno especial (Doutorado)",
       institution: "UFMG",
-      course: "Modelagem Matemática e Computacional",
+      course: "Ciências da Computação",
       period: "2024 - 2025",
-      description: "Aluno especial em disciplinas de doutorado na UFMG."
+      description: "Disciplinas: Modelagem de Dados, Visão Computacional e Visualização de Dados."
     },
     {
       degree: "Mestrado Profissional",
