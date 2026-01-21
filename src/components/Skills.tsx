@@ -152,7 +152,7 @@ export default function Skills() {
                   className="card rounded-lg border border-slate-200 dark:border-white/10 px-4 py-4 flex flex-col gap-1 shadow-sm"
                 >
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-1">
-                    <span className="text-base font-bold text-cyan-900 dark:text-cyan-100">{education.course}</span>
+                    <span className="text-base font-bold text-cyan-900 dark:text-cyan-100">{education.degree} em {education.course}</span>
                     <span className="text-xs text-cyan-700 dark:text-cyan-200">{education.period}</span>
                   </div>
                   <span className="text-sm text-cyan-700 dark:text-cyan-200 font-semibold">{education.degree} <span className="mx-1">|</span> {education.institution}</span>
