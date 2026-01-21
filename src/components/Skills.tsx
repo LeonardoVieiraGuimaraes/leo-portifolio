@@ -18,6 +18,13 @@ export default function Skills() {
       description: "Linha de pesquisa em sistemas inteligentes. Orientador: Alisson Marques da Silva."
     },
     {
+      degree: "Aluno especial (Doutorado)",
+      institution: "UFMG",
+      course: "Modelagem Matemática e Computacional",
+      period: "2024 - 2025",
+      description: "Aluno especial em disciplinas de doutorado na UFMG."
+    },
+    {
       degree: "Mestrado Profissional",
       institution: "UNIMONTES",
       course: "Modelagem Computacional e Sistemas",
