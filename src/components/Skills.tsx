@@ -100,7 +100,6 @@ export default function Skills() {
     { name: "Scikit-learn", icon: "https://simpleicons.org/icons/scikitlearn.svg", level: 65 },
     { name: "OpenAI API", icon: "https://cdn.worldvectorlogo.com/logos/openai-2.svg", level: 60 },
     { name: "Gemini API", icon: "https://www.svgrepo.com/show/499962/artificial-intelligence-ai.svg", level: 55 },
-    { name: "Gestão de Projetos (PMI, PMBOK, Scrum, Kanban, métodos ágeis)", icon: "https://www.svgrepo.com/show/354202/project-management.svg", level: 70 },
   ];
 
   const languages = [
@@ -180,7 +179,7 @@ export default function Skills() {
                   .sort((a, b) => b.level - a.level)
                   .map((skill, index) => (
                   <div key={`skill-${index}`} className="card flex items-center gap-4 rounded-lg border border-slate-200 dark:border-white/10 px-4 py-4 shadow-sm">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-white/5 px-3 py-1">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white border border-slate-200 dark:border-slate-700 text-xs text-cyan-200 dark:text-cyan-200">
                       <img
                         src={skill.icon}
                         alt={skill.name}
