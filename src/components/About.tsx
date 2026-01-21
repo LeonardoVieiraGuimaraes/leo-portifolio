@@ -10,10 +10,6 @@ export default function About() {
     ? "linear-gradient(180deg, #f9fafb 0%, #eef2f7 55%, #f9fafb 100%)"
     : "linear-gradient(135deg, #0b1220 0%, #0f172a 60%, #0b1220 100%)";
 
-  const birthDate = new Date(1984, 10 - 1, 2);
-  const today = new Date();
-  const age = differenceInYears(today, birthDate);
-
   return (
     <section
       className="relative text-cyan-900 dark:text-cyan-100 pt-10 pb-10"
