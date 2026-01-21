@@ -110,9 +110,18 @@ export default function Hero() {
                 <p className="text-cyan-300 font-bold text-lg leading-tight">Professor Universitário</p>
                 <div className="space-y-2 text-base">
                   <p className="text-cyan-200 font-bold text-base mt-2">Full Stack</p>
-                  <p className="pl-2"><span className="text-cyan-100">Frontend:</span> <span className="font-semibold text-white">React, TypeScript, Tailwind</span></p>
-                  <p className="pl-2"><span className="text-cyan-100">Backend:</span> <span className="font-semibold text-white">Node.js, Python, Django, Spring Boot</span></p>
-                  <p className="pl-2"><span className="text-cyan-100">Mobile:</span> <span className="font-semibold text-white">React Native</span></p>
+                  <p className="pl-2">
+                    <span className="font-semibold text-cyan-700 dark:text-cyan-100">Frontend:</span>
+                    <span className="font-semibold text-slate-800 dark:text-white"> React, TypeScript, Tailwind</span>
+                  </p>
+                  <p className="pl-2">
+                    <span className="font-semibold text-cyan-700 dark:text-cyan-100">Backend:</span>
+                    <span className="font-semibold text-slate-800 dark:text-white"> Node.js, Python, Django, Spring Boot</span>
+                  </p>
+                  <p className="pl-2">
+                    <span className="font-semibold text-cyan-700 dark:text-cyan-100">Mobile:</span>
+                    <span className="font-semibold text-slate-800 dark:text-white"> React Native</span>
+                  </p>
                 </div>
                 <div className="space-y-2 border-t border-white/10 pt-3 text-base">
                   <p className="text-cyan-200 font-bold text-base">Formação Acadêmica</p>

@@ -42,7 +42,7 @@ export default function Services() {
           Soluções ponta a ponta para produtos digitais e educação
         </h2>
         <p className="text-slate-300">
-          Do discovery à entrega: front-end, back-end, dados, mobile e trilhas educacionais.
+          Do discovery à entrega: <span className="font-semibold text-cyan-700 dark:text-cyan-100">front-end</span>, <span className="font-semibold text-cyan-700 dark:text-cyan-100">back-end</span>, dados, <span className="font-semibold text-cyan-700 dark:text-cyan-100">mobile</span> e trilhas educacionais.
         </p>
       </div>
 

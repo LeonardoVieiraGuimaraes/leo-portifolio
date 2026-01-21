@@ -46,7 +46,7 @@ export default function About() {
                 Mestre em Modelagem Computacional e Sistemas (UNIMONTES) e doutorando em Modelagem Computacional (CEFET/MG). Atuo em APIs, front-ends e automações, leciono Arquitetura Web, Programação e Banco de Dados, e apoio projetos de TI no NIM (Cidade Administrativa).
               </p>
               <p>
-                No GitHub compartilho projetos variados: dashboards e automações em Python/Node, APIs em Django/Django Ninja e Spring Boot, front-ends em React/TypeScript e protótipos mobile com React Native. Foco em código limpo, documentação e entregas reprodutíveis.
+                No GitHub compartilho projetos variados: dashboards e automações em Python/Node, APIs em Django/Django Ninja e Spring Boot, <span className="font-semibold text-cyan-700 dark:text-cyan-100">front-ends</span> em <span className="font-semibold text-slate-800 dark:text-white">React/TypeScript</span> e protótipos <span className="font-semibold text-cyan-700 dark:text-cyan-100">mobile</span> com <span className="font-semibold text-slate-800 dark:text-white">React Native</span>. Foco em código limpo, documentação e entregas reprodutíveis.
               </p>
             </div>
             <div className="flex flex-wrap gap-3">

@@ -161,7 +161,7 @@ export default function Skills() {
 
         <div className="flex flex-col gap-8">
           {/* Habilidades */}
-          <div className="card rounded-2xl p-6">
+          <div className="card rounded-2xl p-6 bg-white dark:bg-slate-800 border border-slate-200 dark:border-white/10 shadow-sm">
             <div className="mb-6 text-center">
               <h2 className="text-2xl md:text-3xl font-bold text-cyan-300 tracking-tight flex items-center justify-center gap-2">
                 <HiCodeBracketSquare className="h-7 w-7 text-cyan-300 [.light_&]:text-cyan-700" />
@@ -174,7 +174,7 @@ export default function Skills() {
                 .sort((a, b) => b.level - a.level)
                 .map((skill, index) => (
                   <div key={`skill-${index}`} className="flex items-center gap-4">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-white/10">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-slate-100 dark:bg-white/10">
                       <img
                         src={skill.icon}
                         alt={skill.name}
@@ -182,8 +182,8 @@ export default function Skills() {
                       />
                     </div>
                     <div className="flex-1">
-                      <p className="text-sm font-semibold text-white">{skill.name}</p>
-                      <div className="h-2 w-full rounded-full bg-white/10">
+                      <p className="text-sm font-semibold text-slate-800 dark:text-white">{skill.name}</p>
+                      <div className="h-2 w-full rounded-full bg-slate-200 dark:bg-white/10">
                         <div
                           className="h-2 rounded-full bg-gradient-to-r from-cyan-400 to-violet-400"
                           style={{ width: `${skill.level}%` }}
@@ -208,14 +208,14 @@ export default function Skills() {
               {educations.map((education, index) => (
                 <div
                   key={`education-${index}`}
-                  className="rounded-lg border border-white/10 bg-white/5 px-4 py-4 flex flex-col gap-1 shadow-sm"
+                  className="rounded-lg border border-slate-200 dark:border-white/10 bg-white dark:bg-slate-900 px-4 py-4 flex flex-col gap-1 shadow-sm"
                 >
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-1">
-                    <span className="text-base font-bold text-white">{education.course}</span>
-                    <span className="text-xs text-cyan-200">{education.period}</span>
+                    <span className="text-base font-bold text-slate-800 dark:text-white">{education.course}</span>
+                    <span className="text-xs text-cyan-700 dark:text-cyan-200">{education.period}</span>
                   </div>
-                  <span className="text-sm text-cyan-100 font-semibold">{education.degree} <span className="mx-1">|</span> {education.institution}</span>
-                  <p className="text-slate-300 text-sm mt-1">{education.description}</p>
+                  <span className="text-sm text-cyan-700 dark:text-cyan-100 font-semibold">{education.degree} <span className="mx-1">|</span> {education.institution}</span>
+                  <p className="text-slate-600 dark:text-slate-300 text-sm mt-1">{education.description}</p>
                 </div>
               ))}
             </div>
@@ -226,9 +226,12 @@ export default function Skills() {
             <h2 className="text-2xl md:text-3xl font-bold text-cyan-300 tracking-tight mb-6 text-center">Idiomas</h2>
             <div className="flex flex-col gap-4">
               {languages.map((lang, idx) => (
-                <div key={idx} className="flex flex-col items-center bg-white/5 dark:bg-gray-800/80 rounded-xl p-4 border border-white/10">
-                  <span className="text-base font-medium text-white mb-1">{lang.language}</span>
-                  <span className="text-sm text-cyan-100">{lang.level}</span>
+                <div
+                  key={idx}
+                  className="rounded-lg border border-slate-200 dark:border-white/10 bg-white dark:bg-slate-900 px-4 py-4 flex flex-col gap-1 shadow-sm items-center"
+                >
+                  <span className="text-base font-bold text-slate-800 dark:text-white mb-1">{lang.language}</span>
+                  <span className="text-sm text-cyan-700 dark:text-cyan-100 font-semibold">{lang.level}</span>
                 </div>
               ))}
             </div>
