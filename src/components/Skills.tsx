@@ -100,6 +100,7 @@ export default function Skills() {
     { name: "Scikit-learn", icon: "https://simpleicons.org/icons/scikitlearn.svg", level: 65 },
     { name: "OpenAI API", icon: "https://cdn.worldvectorlogo.com/logos/openai-2.svg", level: 60 },
     { name: "Gemini API", icon: "https://www.svgrepo.com/show/499962/artificial-intelligence-ai.svg", level: 55 },
+    { name: "Gestão de Projetos (PMI, PMBOK, Scrum, Kanban, métodos ágeis)", icon: "https://www.svgrepo.com/show/354202/project-management.svg", level: 70 },
   ];
 
   const languages = [
