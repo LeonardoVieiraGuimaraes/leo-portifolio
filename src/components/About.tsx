@@ -1,4 +1,3 @@
-import { differenceInYears } from "date-fns";
 import { FaGithub } from "react-icons/fa";
 import { getImagePath } from "../utils/paths";
 import { useTheme } from "../context/ThemeContext";
