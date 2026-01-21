@@ -10,22 +10,43 @@ const Experience = () => {
 
   const experiences = [
     {
-      role: "Assistente em Gestão de Defesa Agropecuária",
-      company: "Instituto Mineiro de Agropecuária (IMA)",
-      period: "Nov/2005 – Atual",
-      description: "Atuação no Núcleo de Inovação e Modernização (NIM/IMA) com foco em projetos, suporte, gestão e modernização de processos institucionais."
-    },
-    {
       role: "Professor de Ensino Superior (Prática)",
       company: "Centro Universitário Newton Paiva",
       period: "2024 – Atual",
       description: "Disciplinas de Banco de Dados e Arquitetura Web."
     },
     {
+      role: "Desenvolvedor de Aplicativos Android (Freelancer)",
+      company: "Projetos Diversos",
+      period: "Jan/2024 – Fev/2024",
+      description: (
+        <ul className="list-disc ml-5 space-y-1">
+          <li>Desenvolveu aplicativo Android para gestão de serviços na área da saúde, desde a concepção até a publicação.</li>
+          <li>Implementou funcionalidades integradas a banco de dados, priorizando performance, segurança e experiência do usuário.</li>
+          <li>Realizou testes, validação e documentação, assegurando estabilidade e qualidade técnica do produto final.</li>
+        </ul>
+      )
+    },
+    {
       role: "Professor Autor (Backend II com Banco de Dados)",
       company: "Vitru Brasil Empreendimentos",
       period: "2023 – 2024",
       description: "Docência e autoria de material didático para programação backend."
+    },
+    {
+      role: "Desenvolvedor de Sistemas Web (Freelancer)",
+      company: "Projetos Diversos",
+      period: "Jan/2023 – Dez/2023",
+      description: (
+        <ul className="list-disc ml-5 space-y-1">
+          <li>Projetou, desenvolveu e implantou sistemas web completos para clientes de diversos segmentos, atuando em todas as etapas do ciclo de vida do software.</li>
+          <li>Utilizou Python, Java, SQL e arquitetura web moderna para criar soluções escaláveis, seguras e de alta performance.</li>
+          <li>Realizou integrações robustas entre APIs, sistemas legados e bancos de dados, garantindo automação de processos e integridade das informações.</li>
+          <li>Automatizou fluxos operacionais, reduzindo atividades manuais e aumentando a produtividade dos clientes.</li>
+          <li>Aplicou metodologias ágeis, versionamento com Git e boas práticas de engenharia de software, entregando projetos dentro do prazo e alinhados às necessidades do negócio.</li>
+          <li>Recebeu feedback positivo dos clientes pela qualidade técnica, clareza na comunicação e suporte pós-implantação.</li>
+        </ul>
+      )
     },
     {
       role: "Professor / Tutor em TI",
@@ -50,6 +71,12 @@ const Experience = () => {
       company: "IFNMG",
       period: "2020",
       description: "Mediação a distância no curso FIC Programador de Dispositivos Móveis (EAD)."
+    },
+    {
+      role: "Assistente em Gestão de Defesa Agropecuária",
+      company: "Instituto Mineiro de Agropecuária (IMA)",
+      period: "Nov/2005 – Atual",
+      description: "Atuação no Núcleo de Inovação e Modernização (NIM/IMA) com foco em projetos, suporte, gestão e modernização de processos institucionais."
     },
     {
       role: "Professor de Matemática",
@@ -91,7 +118,11 @@ const Experience = () => {
                 <span className="text-xs text-cyan-800 dark:text-cyan-200">{exp.period}</span>
               </div>
               <span className="text-sm text-cyan-800 dark:text-cyan-200 mb-1">{exp.company}</span>
-              <p className="text-slate-700 dark:text-slate-200 text-sm mt-1 flex-1">{exp.description}</p>
+              {typeof exp.description === 'string' ? (
+                <p className="text-slate-700 dark:text-slate-200 text-sm mt-1 flex-1">{exp.description}</p>
+              ) : (
+                <div className="text-slate-700 dark:text-slate-200 text-sm mt-1 flex-1">{exp.description}</div>
+              )}
             </div>
           ))}
         </div>
