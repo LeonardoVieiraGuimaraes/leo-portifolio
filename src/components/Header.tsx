@@ -100,6 +100,13 @@ export default function Header() {
               {link.name}
             </NavLink>
           ))}
+          <button
+            onClick={toggleTheme}
+            className="mt-2 text-slate-500 dark:text-slate-300 hover:text-cyan-300 hover:bg-white/5 px-3 py-2 rounded-md flex items-center justify-center font-headline text-lg font-semibold transition leading-none"
+            title={`Mudar para ${theme === "dark" ? "light" : "dark"} mode`}
+          >
+            {theme === "dark" ? <FaSun /> : <FaMoon />}
+          </button>
         </div>
       </div>
     </header>
