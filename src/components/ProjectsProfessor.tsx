@@ -46,11 +46,11 @@ export default function ProjectsProfessor() {
     >
       <div className="relative container mx-auto max-w-6xl px-4">
         <div className="text-center space-y-3">
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-700 dark:text-slate-200">
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200 dark:text-cyan-200">
             Educação
           </p>
-          <h2 className="text-3xl md:text-4xl font-semibold text-cyan-900 dark:text-cyan-100">Projetos e videoaulas</h2>
-          <p className="text-slate-700 dark:text-slate-200">
+          <h2 className="text-3xl md:text-4xl font-semibold text-cyan-700 dark:text-cyan-200">Projetos e videoaulas</h2>
+          <p className="text-slate-500 dark:text-slate-200">
             Conteúdo prático de estatística, finanças e tecnologia para sala de aula e online.
           </p>
         </div>
@@ -67,22 +67,22 @@ export default function ProjectsProfessor() {
                   src={getImagePath(project.image)}
                   alt={project.title}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-800/90 via-slate-800/30 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-900/30 to-transparent" />
               </div>
 
               <div className="relative space-y-3 p-4">
-                <div className="flex flex-wrap gap-2 text-xs text-slate-700 dark:text-slate-200">
+                <div className="flex flex-wrap gap-2 text-xs text-cyan-200 dark:text-cyan-200">
                   {(project as { tags?: string[] }).tags?.map((tag) => (
                     <span
                       key={tag}
-                      className="rounded-full border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 px-3 py-1"
+                      className="rounded-full border border-white/10 bg-white/5 px-3 py-1"
                     >
                       {tag}
                     </span>
                   ))}
                 </div>
-                <h4 className="text-xl font-semibold text-cyan-900 dark:text-cyan-100">{project.title}</h4>
-                <p className="text-sm text-slate-700 dark:text-slate-200">{project.description}</p>
+                <h4 className="text-xl font-semibold">{project.title}</h4>
+                <p className="text-sm text-slate-500 dark:text-slate-200">{project.description}</p>
 
                 <button
                   onClick={() => window.open(project.link, "_blank")}
