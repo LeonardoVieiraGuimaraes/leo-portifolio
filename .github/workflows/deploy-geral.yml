@@ -1,0 +1,81 @@
+name: Deploy Geral
+
+on:
+    push:
+        branches:
+            - main
+
+jobs:
+    deploy-server:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Install cloudflared
+              run: |
+                  wget -O cloudflared https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64
+                  sudo mv cloudflared /usr/local/bin/
+                  sudo chmod +x /usr/local/bin/cloudflared
+
+            - name: Checkout code
+              uses: actions/checkout@v3
+
+            - name: Setup SSH key
+              uses: webfactory/ssh-agent@v0.7.0
+              with:
+                  ssh-private-key: ${{ secrets.HOME_SERVER_SSH_KEY }}
+
+            - name: Configure SSH
+              run: |
+                  mkdir -p ~/.ssh
+                  echo "Host ssh.leoproti.com.br" >> ~/.ssh/config
+                  echo "  StrictHostKeyChecking no" >> ~/.ssh/config
+                  echo "  UserKnownHostsFile /dev/null" >> ~/.ssh/config
+                  chmod 600 ~/.ssh/config
+
+            - name: Build project
+              run: |
+                  npm ci
+                  npm run build:geral
+
+            - name: Prepare deploy folder
+              run: |
+                  mkdir -p temp-deploy
+                  cp docker-compose.yml temp-deploy/
+                  cp Dockerfile temp-deploy/
+                  cp nginx.conf temp-deploy/
+                  cp -r dist temp-deploy/
+
+            - name: Clean and prepare server
+              run: |
+                  DEPLOY_PATH="/home/leonardovieiraxy/projetos/leo-portifolio/geral"
+                  ssh -o ProxyCommand="cloudflared access ssh --hostname %h" leonardovieiraxy@ssh.leoproti.com.br << EOF
+                    mkdir -p /home/leonardovieiraxy/projetos/leo-portifolio/
+                    if [ -d "$DEPLOY_PATH" ]; then
+                      cd "$DEPLOY_PATH"
+                      docker compose down || true
+                      cd ..
+                      rm -rf "$DEPLOY_PATH"
+                    fi
+                    mkdir -p "$DEPLOY_PATH"
+                    chmod 755 "$DEPLOY_PATH"
+                  EOF
+
+            - name: Transfer project files
+              run: |
+                  DEPLOY_PATH="/home/leonardovieiraxy/projetos/leo-portifolio/geral"
+                  rsync -avz --delete \
+                    -e "ssh -o ProxyCommand='cloudflared access ssh --hostname %h'" \
+                    temp-deploy/ \
+                    leonardovieiraxy@ssh.leoproti.com.br:$DEPLOY_PATH/
+
+            - name: Deploy on server
+              run: |
+                  DEPLOY_PATH="/home/leonardovieiraxy/projetos/leo-portifolio/geral"
+                  ssh -o ProxyCommand="cloudflared access ssh --hostname %h" leonardovieiraxy@ssh.leoproti.com.br << EOF
+                    cd "$DEPLOY_PATH"
+                    docker compose build --no-cache
+                    docker compose up -d
+                    docker compose ps
+                    sleep 5
+                    curl -I http://localhost:80 || echo "Site não respondeu"
+                    docker system prune -f
+                  EOF
