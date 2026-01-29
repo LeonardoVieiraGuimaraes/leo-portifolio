@@ -97,28 +97,21 @@ export default function Hero() {
                 <p className="text-xs text-slate-400 dark:text-slate-300 mt-0.5">Belo Horizonte • Remoto Brasil</p>
               </div>
               <div className="space-y-4 text-base text-slate-200 dark:text-slate-200">
-                <p className="text-cyan-900 dark:text-cyan-200 font-bold text-lg leading-tight">Professor Universitário</p>
+                <p className="text-cyan-900 dark:text-cyan-200 font-bold text-lg leading-tight">Cientista de Dados | Professor Universitário | Engenheiro de Software</p>
                 <div className="space-y-2 text-base">
-                  <p className="text-cyan-900 dark:text-cyan-200 font-bold text-base mt-2">Full Stack</p>
-                  <p className="pl-2">
-                    <span className="font-semibold text-cyan-900 dark:text-cyan-100">Frontend:</span>
-                    <span className="font-semibold text-cyan-900 dark:text-cyan-100"> React, TypeScript, Tailwind</span>
-                  </p>
-                  <p className="pl-2">
-                    <span className="font-semibold text-cyan-900 dark:text-cyan-100">Backend:</span>
-                    <span className="font-semibold text-cyan-900 dark:text-cyan-100"> Node.js, Python, Django, Spring Boot</span>
-                  </p>
-                  <p className="pl-2">
-                    <span className="font-semibold text-cyan-900 dark:text-cyan-100">Mobile:</span>
-                    <span className="font-semibold text-slate-800 dark:text-white"> React Native</span>
-                  </p>
+                  <p className="pl-2 flex items-center gap-2"><span className="text-lg">👨‍🏫</span>+12 anos de docência em tecnologia</p>
+                  <p className="pl-2 flex items-center gap-2"><span className="text-lg">💻</span>+8 anos em desenvolvimento de sistemas e dados</p>
+                  <p className="pl-2"><span className="font-semibold text-cyan-900 dark:text-cyan-100">Ciência de Dados:</span> <span className="font-semibold text-cyan-900 dark:text-cyan-100">Python, Pandas, Numpy, Scikit-learn, Power BI, Machine Learning, Visualização</span></p>
+                  <p className="pl-2"><span className="font-semibold text-cyan-900 dark:text-cyan-100">Backend:</span> <span className="font-semibold text-cyan-900 dark:text-cyan-100">Node.js, Django, Spring Boot</span></p>
+                  <p className="pl-2"><span className="font-semibold text-cyan-900 dark:text-cyan-100">Frontend:</span> <span className="font-semibold text-cyan-900 dark:text-cyan-100">React, TypeScript, Tailwind CSS</span></p>
+                  <p className="pl-2"><span className="font-semibold text-cyan-900 dark:text-cyan-100">Mobile:</span> <span className="font-semibold text-slate-800 dark:text-white">React Native</span></p>
                 </div>
                 <div className="space-y-2 border-t border-white/10 pt-3 text-base">
                   <p className="text-cyan-900 font-bold text-base">Formação Acadêmica</p>
+                  <p className="pl-2"><span className="font-semibold text-white">Doutorando em Modelagem Computacional (ênfase em Ciência de Dados)</span></p>
+                  <p className="pl-2"><span className="font-semibold text-white">Mestre em Modelagem Computacional</span></p>
                   <p className="pl-2"><span className="font-semibold text-white">Engenharia da Computação</span></p>
                   <p className="pl-2"><span className="font-semibold text-white">Licenciatura em Matemática</span></p>
-                  <p className="pl-2"><span className="font-semibold text-white">Mestre Modelagem Computacional</span></p>
-                  <p className="pl-2"><span className="font-semibold text-white">Doutorando Modelagem Computacional</span></p>
                 </div>
               </div>
             </div>
