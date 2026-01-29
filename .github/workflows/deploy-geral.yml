@@ -46,7 +46,7 @@ jobs:
 
             - name: Clean and prepare server
               run: |
-                  DEPLOY_PATH="/home/leonardovieiraxy/projetos/leo-portifolio/geral"
+                  DEPLOY_PATH="/home/leonardovieiraxy/projetos/leo-portifolio"
                   ssh -o ProxyCommand="cloudflared access ssh --hostname %h" leonardovieiraxy@ssh.leoproti.com.br << EOF
                     mkdir -p /home/leonardovieiraxy/projetos/leo-portifolio/
                     if [ -d "$DEPLOY_PATH" ]; then
