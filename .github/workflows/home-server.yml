@@ -3,17 +3,17 @@ name: Deploy to Home Server
 on:
   push:
     branches:
-      - main
+      - portifolio-geral
     paths-ignore:
-      - 'README.md'
-      - 'comandos.txt'
+      - "README.md"
+      - "comandos.txt"
   workflow_dispatch:
 
 jobs:
   deploy:
     name: 🏠 Deploy to Home Server
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: 🚚 Checkout code
         uses: actions/checkout@v3
@@ -48,42 +48,28 @@ jobs:
           echo "  UserKnownHostsFile /dev/null" >> ~/.ssh/config
           chmod 600 ~/.ssh/config
 
-      # - name: 🔧 Configure Cloudflare credentials
-      #   run: |
-      #     mkdir -p ~/.cloudflared
-      #     echo "${{ secrets.CLOUDFLARE_TUNNEL_TOKEN }}" > ~/.cloudflared/cert.pem
-      #     chmod 600 ~/.cloudflared/cert.pem
-
       - name: 🧹 Clean and prepare server
         run: |
           ssh -o ProxyCommand="cloudflared access ssh --hostname %h" \
               leonardovieiraxy@ssh.leoproti.com.br << 'EOF'
-            # Criar pasta projetos se não existir
             mkdir -p /home/leonardovieiraxy/projetos
-            
-            # Parar e remover containers/pasta existentes
             if [ -d "/home/leonardovieiraxy/projetos/leo-portifolio" ]; then
               cd /home/leonardovieiraxy/projetos/leo-portifolio
               docker compose down || true
               cd ..
               rm -rf leo-portifolio
             fi
-            
-            # Criar nova pasta com permissões corretas
             mkdir -p /home/leonardovieiraxy/projetos/leo-portifolio
             chmod 755 /home/leonardovieiraxy/projetos/leo-portifolio
           EOF
 
       - name: 📤 Transfer project files
         run: |
-          # Criar pasta temporária com arquivos necessários
           mkdir -p temp-deploy
           cp docker-compose.yml temp-deploy/
           cp Dockerfile temp-deploy/
           cp nginx.conf temp-deploy/
           cp -r dist temp-deploy/
-          
-          # Transferir arquivos usando rsync (mais robusto que scp)
           rsync -avz --delete \
                 -e "ssh -o ProxyCommand='cloudflared access ssh --hostname %h'" \
                 temp-deploy/ \
@@ -94,29 +80,18 @@ jobs:
           ssh -o ProxyCommand="cloudflared access ssh --hostname %h" \
               leonardovieiraxy@ssh.leoproti.com.br << 'EOF'
             cd /home/leonardovieiraxy/projetos/leo-portifolio
-            
-            # Debug: verificar arquivos transferidos
             echo "=== Arquivos na pasta ==="
             ls -la
             echo "=== Arquivos dist ==="
             ls -la dist/ | head -5
-            
-            # Build e start do container
             echo "=== Building container ==="
             docker compose build --no-cache
-            
             echo "=== Starting container ==="
             docker compose up -d
-            
-            # Verificar status
             echo "=== Container status ==="
             docker compose ps
-            
-            # Teste básico
             echo "=== Testing site ==="
             sleep 5
             curl -I http://localhost:8080 || echo "Site não respondeu"
-            
-            # Limpeza
             docker system prune -f
           EOF
