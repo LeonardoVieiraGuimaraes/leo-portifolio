@@ -9,7 +9,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: leo-portfolio-cientista-dados
+    container_name: portfolio-cientista-dados
     restart: unless-stopped
     ports:
       - "8086:80"  # cientistadados.leoproti.com.br
