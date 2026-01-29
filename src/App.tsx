@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { HashRouter, Routes, Route, useLocation } from "react-router-dom";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
@@ -86,7 +86,7 @@ function App() {
 
   return (
     <ThemeProvider>
-      <BrowserRouter>
+      <HashRouter>
         <ScrollToSection />
         <Routes>
           <Route path="/" element={<HomePage />} />
@@ -99,7 +99,7 @@ function App() {
           <Route path="/contact" element={<ContactPage />} />
           <Route path="*" element={<HomePage />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </ThemeProvider>
   );
 }
