@@ -89,5 +89,4 @@ jobs:
             sleep 5
             curl -I http://localhost:8080 || echo "Site não respondeu"
             docker system prune -f
-          EOF
-              cd /home/leonardovieiraxy/projetos/leo-portifolio/portifolio-geral/
+            EOF
