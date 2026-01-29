@@ -5,14 +5,14 @@ networks:
     driver: bridge
 
 services:
-  portfolio:
+  portfolio-geral:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: leo-portifolio-geral
+    container_name: leo-portfolio-geral
     restart: unless-stopped
     ports:
-      - "8080:80"  # Mapeia porta local 8080 para porta 80 do container
+      - "8080:80"  # leoproti.com.br
     volumes:
       - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
     networks:
@@ -21,9 +21,113 @@ services:
       - TZ=America/Sao_Paulo
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.portfolio.rule=Host(`leoproti.com.br`)"
-      - "traefik.http.routers.portfolio.tls=true"
-      - "traefik.http.services.portfolio.loadbalancer.server.port=80"
+      - "traefik.http.routers.portfolio-geral.rule=Host(`leoproti.com.br`)"
+      - "traefik.http.routers.portfolio-geral.tls=true"
+      - "traefik.http.services.portfolio-geral.loadbalancer.server.port=80"
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:80/health"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+      start_period: 5s
+
+  portfolio-fullstack:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: leo-portfolio-fullstack
+    restart: unless-stopped
+    ports:
+      - "8081:80"  # fullstack.leoproti.com.br
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    networks:
+      - portfolio-network
+    environment:
+      - TZ=America/Sao_Paulo
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.portfolio-fullstack.rule=Host(`fullstack.leoproti.com.br`)"
+      - "traefik.http.routers.portfolio-fullstack.tls=true"
+      - "traefik.http.services.portfolio-fullstack.loadbalancer.server.port=80"
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:80/health"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+      start_period: 5s
+
+  portfolio-analista-dados:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: leo-portfolio-analista-dados
+    restart: unless-stopped
+    ports:
+      - "8082:80"  # analista-dados.leoproti.com.br
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    networks:
+      - portfolio-network
+    environment:
+      - TZ=America/Sao_Paulo
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.portfolio-analista-dados.rule=Host(`analista-dados.leoproti.com.br`)"
+      - "traefik.http.routers.portfolio-analista-dados.tls=true"
+      - "traefik.http.services.portfolio-analista-dados.loadbalancer.server.port=80"
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:80/health"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+      start_period: 5s
+
+  portfolio-ciencia-dados:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: leo-portfolio-ciencia-dados
+    restart: unless-stopped
+    ports:
+      - "8083:80"  # ciencia-dados.leoproti.com.br
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    networks:
+      - portfolio-network
+    environment:
+      - TZ=America/Sao_Paulo
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.portfolio-ciencia-dados.rule=Host(`ciencia-dados.leoproti.com.br`)"
+      - "traefik.http.routers.portfolio-ciencia-dados.tls=true"
+      - "traefik.http.services.portfolio-ciencia-dados.loadbalancer.server.port=80"
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:80/health"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+      start_period: 5s
+
+  portfolio-ensino:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: leo-portfolio-ensino
+    restart: unless-stopped
+    ports:
+      - "8084:80"  # ensino.leoproti.com.br
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    networks:
+      - portfolio-network
+    environment:
+      - TZ=America/Sao_Paulo
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.portfolio-ensino.rule=Host(`ensino.leoproti.com.br`)"
+      - "traefik.http.routers.portfolio-ensino.tls=true"
+      - "traefik.http.services.portfolio-ensino.loadbalancer.server.port=80"
     healthcheck:
       test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:80/health"]
       interval: 30s
