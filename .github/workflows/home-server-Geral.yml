@@ -1,4 +1,4 @@
-name: Deploy to Home Server
+name: Deploy to Home Server (Geral)
 
 on:
   push:
@@ -11,7 +11,7 @@ on:
 
 jobs:
   deploy:
-    name: 🏠 Deploy to Home Server
+    name: 🏠 Deploy to Home Server (Geral)
     runs-on: ubuntu-latest
 
     steps:
