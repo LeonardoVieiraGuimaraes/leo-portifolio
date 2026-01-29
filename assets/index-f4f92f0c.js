@@ -7586,7 +7586,7 @@ var m = reactDomExports;
 }
 const scriptRel = "modulepreload";
 const assetsURL = function(dep) {
-  return "/leo-portifolio/" + dep;
+  return "/" + dep;
 };
 const seen = {};
 const __vitePreload = function preload(baseModule, deps, importerUrl) {
@@ -10349,7 +10349,7 @@ function Contact() {
   );
 }
 const getImagePath = (path) => {
-  const basePath = "/leo-portifolio/";
+  const basePath = "/";
   const cleanPath = path.startsWith("/") ? path.slice(1) : path;
   return `${basePath}${cleanPath}`;
 };
