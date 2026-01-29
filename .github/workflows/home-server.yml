@@ -61,26 +61,48 @@ jobs:
 
       - name: 🧹 Clean and prepare server
         run: |
+          # Detectar nome da pasta pelo tipo de deploy/tag
+          if [[ "$GITHUB_REF_NAME" == "v-fullstack" ]]; then
+            DEPLOY_DIR=fullstack
+          elif [[ "$GITHUB_REF_NAME" == "v-analista-dados" ]]; then
+            DEPLOY_DIR=analista-dados
+          elif [[ "$GITHUB_REF_NAME" == "v-ciencia-dados" ]]; then
+            DEPLOY_DIR=ciencia-dados
+          elif [[ "$GITHUB_REF_NAME" == "v-professor" ]]; then
+            DEPLOY_DIR=ensino
+          else
+            DEPLOY_DIR=geral
+          fi
           ssh -o ProxyCommand="cloudflared access ssh --hostname %h" \
-              leonardovieiraxy@ssh.leoproti.com.br << 'EOF'
-            # Criar pasta projetos se não existir
-            mkdir -p /home/leonardovieiraxy/projetos
-            
+              leonardovieiraxy@ssh.leoproti.com.br << EOF
+            # Criar pasta projetos/portifolio se não existir
+            mkdir -p /home/leonardovieiraxy/projetos/portifolio/
             # Parar e remover containers/pasta existentes
-            if [ -d "/home/leonardovieiraxy/projetos/leo-portifolio" ]; then
-              cd /home/leonardovieiraxy/projetos/leo-portifolio
+            if [ -d "/home/leonardovieiraxy/projetos/portifolio/$DEPLOY_DIR" ]; then
+              cd /home/leonardovieiraxy/projetos/portifolio/$DEPLOY_DIR
               docker compose down || true
               cd ..
-              rm -rf leo-portifolio
+              rm -rf $DEPLOY_DIR
             fi
-            
             # Criar nova pasta com permissões corretas
-            mkdir -p /home/leonardovieiraxy/projetos/leo-portifolio
-            chmod 755 /home/leonardovieiraxy/projetos/leo-portifolio
+            mkdir -p /home/leonardovieiraxy/projetos/portifolio/$DEPLOY_DIR
+            chmod 755 /home/leonardovieiraxy/projetos/portifolio/$DEPLOY_DIR
           EOF
 
       - name: 📤 Transfer project files
         run: |
+          # Detectar nome da pasta pelo tipo de deploy/tag
+          if [[ "$GITHUB_REF_NAME" == "v-fullstack" ]]; then
+            DEPLOY_DIR=fullstack
+          elif [[ "$GITHUB_REF_NAME" == "v-analista-dados" ]]; then
+            DEPLOY_DIR=analista-dados
+          elif [[ "$GITHUB_REF_NAME" == "v-ciencia-dados" ]]; then
+            DEPLOY_DIR=ciencia-dados
+          elif [[ "$GITHUB_REF_NAME" == "v-professor" ]]; then
+            DEPLOY_DIR=ensino
+          else
+            DEPLOY_DIR=geral
+          fi
           # Criar pasta temporária com arquivos necessários
           mkdir -p temp-deploy
           cp docker-compose.yml temp-deploy/
@@ -92,36 +114,43 @@ jobs:
           rsync -avz --delete \
                 -e "ssh -o ProxyCommand='cloudflared access ssh --hostname %h'" \
                 temp-deploy/ \
-                leonardovieiraxy@ssh.leoproti.com.br:/home/leonardovieiraxy/projetos/leo-portifolio/
+                leonardovieiraxy@ssh.leoproti.com.br:/home/leonardovieiraxy/projetos/portifolio/$DEPLOY_DIR/
 
       - name: 🚀 Deploy on server
         run: |
+          # Detectar nome da pasta pelo tipo de deploy/tag
+          if [[ "$GITHUB_REF_NAME" == "v-fullstack" ]]; then
+            DEPLOY_DIR=fullstack
+          elif [[ "$GITHUB_REF_NAME" == "v-analista-dados" ]]; then
+            DEPLOY_DIR=analista-dados
+          elif [[ "$GITHUB_REF_NAME" == "v-ciencia-dados" ]]; then
+            DEPLOY_DIR=ciencia-dados
+          elif [[ "$GITHUB_REF_NAME" == "v-professor" ]]; then
+            DEPLOY_DIR=ensino
+          else
+            DEPLOY_DIR=geral
+          fi
           ssh -o ProxyCommand="cloudflared access ssh --hostname %h" \
-              leonardovieiraxy@ssh.leoproti.com.br << 'EOF'
-            cd /home/leonardovieiraxy/projetos/leo-portifolio
-            
+              leonardovieiraxy@ssh.leoproti.com.br << EOF
+            cd /home/leonardovieiraxy/projetos/portifolio/
+            cd $DEPLOY_DIR
             # Debug: verificar arquivos transferidos
             echo "=== Arquivos na pasta ==="
             ls -la
             echo "=== Arquivos dist ==="
             ls -la dist/ | head -5
-            
             # Build e start do container
             echo "=== Building container ==="
             docker compose build --no-cache
-            
             echo "=== Starting container ==="
             docker compose up -d
-            
             # Verificar status
             echo "=== Container status ==="
             docker compose ps
-            
             # Teste básico
             echo "=== Testing site ==="
             sleep 5
-            curl -I http://localhost:8080 || echo "Site não respondeu"
-            
+            curl -I http://localhost:80 || echo "Site não respondeu"
             # Limpeza
             docker system prune -f
           EOF
