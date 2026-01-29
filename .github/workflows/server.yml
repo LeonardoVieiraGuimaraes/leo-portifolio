@@ -30,7 +30,7 @@ jobs:
             - name: Build project
               run: |
                   npm ci
-                  npm run build
+                  npm run build:geral
             - name: Prepare deploy folder
               run: |
                   mkdir -p temp-deploy
@@ -91,7 +91,7 @@ jobs:
             - name: Install dependencies
               run: npm ci
             - name: Build for GitHub Pages
-              run: npm run build:github:linux
+              run: npm run build:github:geral
             - name: Upload artifact
               uses: actions/upload-pages-artifact@v3
               with:
