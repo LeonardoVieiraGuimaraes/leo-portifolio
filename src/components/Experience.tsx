@@ -10,85 +10,48 @@ const Experience = () => {
 
   const experiences = [
     {
-      role: "Professor de Ensino Superior (Prática)",
-      company: "Centro Universitário Newton Paiva",
-      period: "2024 – Atual",
-      description: "Disciplinas de Banco de Dados e Arquitetura Web."
-    },
-    {
-      role: "Desenvolvedor de Aplicativos Android (Freelancer)",
-      company: "Projetos Diversos",
-      period: "Jan/2024 – Fev/2024",
-      description: (
-        <ul className="list-disc ml-5 space-y-1">
-          <li>Desenvolveu aplicativo Android para gestão de serviços na área da saúde, desde a concepção até a publicação.</li>
-          <li>Implementou funcionalidades integradas a banco de dados, priorizando performance, segurança e experiência do usuário.</li>
-          <li>Realizou testes, validação e documentação, assegurando estabilidade e qualidade técnica do produto final.</li>
-        </ul>
-      )
-    },
-    {
-      role: "Professor Autor (Backend II com Banco de Dados)",
-      company: "Vitru Brasil Empreendimentos",
-      period: "2023 – 2024",
-      description: "Docência e autoria de material didático para programação backend."
-    },
-    {
-      role: "Desenvolvedor de Sistemas Web (Freelancer)",
-      company: "Projetos Diversos",
-      period: "Jan/2023 – Dez/2023",
-      description: (
-        <ul className="list-disc ml-5 space-y-1">
-          <li>Projetou, desenvolveu e implantou sistemas web completos para clientes de diversos segmentos, atuando em todas as etapas do ciclo de vida do software.</li>
-          <li>Utilizou Python, Java, SQL e arquitetura web moderna para criar soluções escaláveis, seguras e de alta performance.</li>
-          <li>Realizou integrações robustas entre APIs, sistemas legados e bancos de dados, garantindo automação de processos e integridade das informações.</li>
-          <li>Automatizou fluxos operacionais, reduzindo atividades manuais e aumentando a produtividade dos clientes.</li>
-          <li>Aplicou metodologias ágeis, versionamento com Git e boas práticas de engenharia de software, entregando projetos dentro do prazo e alinhados às necessidades do negócio.</li>
-          <li>Recebeu feedback positivo dos clientes pela qualidade técnica, clareza na comunicação e suporte pós-implantação.</li>
-        </ul>
-      )
-    },
-    {
-      role: "Professor / Tutor em TI",
-      company: "UNIASSELVI",
+      role: "Cientista de Dados / Analista de BI",
+      company: "Projetos Diversos (Consultoria e Freelance)",
       period: "2022 – Atual",
-      description: "Cursos de Sistemas para Internet, Gestão de Finanças, Matemática, Análise e Desenvolvimento de Sistemas."
+      description: (
+        <ul className="list-disc ml-5 space-y-1">
+          <li>Desenvolvimento de soluções de análise de dados, dashboards interativos e automações para empresas de diferentes setores.</li>
+          <li>Implementação de pipelines de dados (ETL), integração de múltiplas fontes e modelagem de dados para BI.</li>
+          <li>Construção de modelos de machine learning para predição, classificação e segmentação de clientes.</li>
+          <li>Consultoria em projetos de dados: levantamento de requisitos, definição de KPIs, storytelling analítico e apoio à tomada de decisão.</li>
+          <li>Resultados: aumento de eficiência operacional, insights estratégicos e suporte a decisões de negócio baseadas em dados.</li>
+        </ul>
+      )
     },
     {
-      role: "Professor de Estatística, Matemática Financeira e Inovação",
-      company: "FADENORTE",
-      period: "2019 – 2020",
-      description: "Disciplinas: Estatística, Matemática Financeira, Projeto Integrador II, IV e V, Inovação e Gestão Tecnológica, Gestão Financeira e Produção de Custos."
+      role: "Desenvolvedor de Dashboards e Automação de Dados",
+      company: "Projetos Pessoais e Open Source",
+      period: "2021 – Atual",
+      description: (
+        <ul className="list-disc ml-5 space-y-1">
+          <li>Criação de dashboards em Power BI, Streamlit e Plotly Dash para visualização de indicadores e acompanhamento de métricas.</li>
+          <li>Automação de relatórios, coleta e limpeza de dados utilizando Python (Pandas, SQLAlchemy, Requests).</li>
+          <li>Publicação de projetos open source e tutoriais sobre análise de dados, machine learning e BI.</li>
+        </ul>
+      )
     },
     {
-      role: "Professor Mediador Presencial",
-      company: "IFNMG",
-      period: "2017 – 2019",
-      description: "Mediação presencial em cursos técnicos e superiores."
-    },
-    {
-      role: "Professor Mediador a Distância",
-      company: "IFNMG",
-      period: "2020",
-      description: "Mediação a distância no curso FIC Programador de Dispositivos Móveis (EAD)."
+      role: "Consultor em Ciência de Dados",
+      company: "Empresas de Serviços e Educação",
+      period: "2020 – 2022",
+      description: (
+        <ul className="list-disc ml-5 space-y-1">
+          <li>Mentoria e treinamento em análise de dados, visualização e machine learning para equipes técnicas e gestores.</li>
+          <li>Implantação de soluções de BI e automação de processos para pequenas e médias empresas.</li>
+          <li>Elaboração de estudos de caso, provas de conceito e apresentações de resultados para stakeholders.</li>
+        </ul>
+      )
     },
     {
       role: "Assistente em Gestão de Defesa Agropecuária",
       company: "Instituto Mineiro de Agropecuária (IMA)",
       period: "Nov/2005 – Atual",
-      description: "Atuação no Núcleo de Inovação e Modernização (NIM/IMA) com foco em projetos, suporte, gestão e modernização de processos institucionais."
-    },
-    {
-      role: "Professor de Matemática",
-      company: "Escola Municipal D. Vila Pinto",
-      period: "2010",
-      description: "Ensino de Matemática para o ensino fundamental."
-    },
-    {
-      role: "Técnico de Manutenção Eletrônica",
-      company: "Prefeitura Municipal de São Francisco/MG",
-      period: "2005",
-      description: "Manutenção eletrônica em equipamentos municipais."
+      description: "Atuação no Núcleo de Inovação e Modernização (NIM/IMA) com foco em projetos de dados, automação de relatórios, suporte à gestão e modernização de processos institucionais."
     }
   ];
 
@@ -107,7 +70,7 @@ const Experience = () => {
             Experiência Profissional
           </h2>
           <p className="text-slate-500 dark:text-slate-200">
-            Histórico de atuação em tecnologia, educação e projetos de transformação digital.
+            Experiência em ciência de dados, BI, machine learning, automação, consultoria e projetos de dados para negócios.
           </p>
         </div>
         <div className="mt-8 flex flex-col gap-6">

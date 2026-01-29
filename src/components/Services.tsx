@@ -24,12 +24,29 @@ export default function Services() {
         "Desenvolvimento de aplicativos Android com React Native, Kivy e Kodular.",
       icon: <HiDevicePhoneMobile className="h-12 w-12" />,
     },
-    {
-      title: "Professor",
-      description:
-        "Professor das diversas áread da Matemática e Tecnologia da Informação.",
-      icon: <HiOutlineAcademicCap className="h-12 w-12" />,
-    },
+      {
+        title: "Análise de Dados",
+        description:
+          "Exploração, limpeza, análise estatística e geração de insights acionáveis a partir de grandes volumes de dados.",
+        icon: <HiChartBar className="h-12 w-12" />,
+      },
+      {
+        title: "Dashboards e Visualização",
+        description: "Criação de dashboards interativos e relatórios visuais com Power BI, Matplotlib, Seaborn e Plotly.",
+        icon: <HiGlobeAlt className="h-12 w-12" />,
+      },
+      {
+        title: "Machine Learning",
+        description:
+          "Modelagem preditiva, classificação, clustering e automação de processos com scikit-learn e Python.",
+        icon: <HiDevicePhoneMobile className="h-12 w-12" />,
+      },
+      {
+        title: "Consultoria em Dados",
+        description:
+          "Mentoria, treinamento e implantação de soluções de dados para empresas e profissionais.",
+        icon: <HiDevicePhoneMobile className="h-12 w-12" />,
+      },
   ];
 
   return (

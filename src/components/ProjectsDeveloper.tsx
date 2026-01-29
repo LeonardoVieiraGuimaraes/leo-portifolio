@@ -11,93 +11,57 @@ export default function ProjectsDeveloper() {
     : "linear-gradient(135deg, #0b1220 0%, #0f172a 60%, #0b1220 100%)";
   const projects = [
     {
-      title: "Portfólio Online",
-      description: "Portfólio publicado no GitHub Pages com projetos e informações profissionais.",
-      image: "/images/projects/developer/portifolioV3.png",
-      link: "https://leonardovieiraguimaraes.github.io/leo-portifolio/",
-      github: "https://github.com/LeonardoVieiraGuimaraes/leo-portifolio",
-      tags: ["Web", "Portfólio", "GitHub Pages"],
+      title: "Dashboard de Vendas e BI",
+      description: "Dashboard interativo em Power BI para análise de vendas, KPIs e acompanhamento de metas. Integração de múltiplas fontes de dados e automação de relatórios.",
+      image: "/images/projects/developer/dashboard-vendas-bi.png",
+      link: "https://github.com/LeonardoVieiraGuimaraes/dashboard-vendas-bi",
+      github: "https://github.com/LeonardoVieiraGuimaraes/dashboard-vendas-bi",
+      tags: ["Power BI", "BI", "Automação"],
       colSpan: "col-span-1",
     },
     {
-      title: "Sistema SAE",
-      description: "Projeto Mestrado de Enfermagem Atendimento Gestantes",
-      image: "/images/projects/developer/projetoEnfermagem01.png",
-      link: "https://sae.leoproti.com.br/",
-      github: "https://github.com/LeonardoVieiraGuimaraes/sae-enfermagem-django",
-      tags: ["React", "Django", "PostgreSQL"],
+      title: "Predição de Churn com Machine Learning",
+      description: "Modelo de machine learning para predição de churn de clientes utilizando Python, Pandas, Scikit-learn e visualização de resultados.",
+      image: "/images/projects/developer/churn-ml.png",
+      link: "https://github.com/LeonardoVieiraGuimaraes/churn-prediction-ml",
+      github: "https://github.com/LeonardoVieiraGuimaraes/churn-prediction-ml",
+      tags: ["Python", "Machine Learning", "Churn"],
       colSpan: "col-span-1",
     },
     {
-      title: "AEG",
-      description: "Sistema de Gestão Acadêmica (redireciona para arquivo)",
-      image: "/images/projects/developer/aeg.jpeg",
-      link: "http://aeg.leoproti.com.br",
-      github: null,
-      tags: ["Web", "Acadêmico"],
+      title: "Automação de Coleta de Dados Públicos",
+      description: "Script Python para coleta, limpeza e análise de dados públicos (dados.gov.br), com geração de relatórios automatizados.",
+      image: "/images/projects/developer/automacao-dados-publicos.png",
+      link: "https://github.com/LeonardoVieiraGuimaraes/automacao-dados-publicos",
+      github: "https://github.com/LeonardoVieiraGuimaraes/automacao-dados-publicos",
+      tags: ["Python", "ETL", "Dados Públicos"],
       colSpan: "col-span-1",
     },
     {
-      title: "CasaOS",
-      description: "Gerenciamento de dispositivos domésticos",
-      image: "/images/projects/developer/casaos.png",
-      link: "http://casaos.leoproti.com.br",
-      github: null,
-      tags: ["Web", "IoT"],
+      title: "Análise Exploratória de Dados de Saúde",
+      description: "Projeto de análise exploratória de dados de saúde pública, com visualizações em Matplotlib e Plotly, e insights para tomada de decisão.",
+      image: "/images/projects/developer/analise-saude.png",
+      link: "https://github.com/LeonardoVieiraGuimaraes/analise-dados-saude",
+      github: "https://github.com/LeonardoVieiraGuimaraes/analise-dados-saude",
+      tags: ["Python", "Saúde", "Visualização"],
       colSpan: "col-span-1",
     },
     {
-      title: "Nextcloud",
-      description: "Armazenamento e colaboração em nuvem",
-      image: "/images/projects/developer/nextcloud.png",
-      link: "https://nextcloud.leoproti.com.br",
-      github: null,
-      tags: ["Web", "Cloud"],
+      title: "Classificação de Imagens com CNN",
+      description: "Rede neural convolucional (CNN) para classificação de imagens, com aplicação em visão computacional e dataset customizado.",
+      image: "/images/projects/developer/classificacao-cnn.png",
+      link: "https://github.com/LeonardoVieiraGuimaraes/classificacao-cnn",
+      github: "https://github.com/LeonardoVieiraGuimaraes/classificacao-cnn",
+      tags: ["Python", "CNN", "Visão Computacional"],
       colSpan: "col-span-1",
     },
     {
-      title: "Recepção",
-      description: "Sistema de recepção de visitantes",
-      image: "/images/projects/developer/recepcao.png",
-      link: "http://recepcao.leoproti.com.br",
-      github: null,
-      tags: ["Web", "Administração"],
-      colSpan: "col-span-1",
-    },
-    {
-      title: "Grafana",
-      description: "Monitoramento e visualização de dados",
-      image: "/images/projects/developer/developer03.jpg",
-      link: "http://grafana.leoproti.com.br",
-      github: null,
-      tags: ["Web", "Monitoramento"],
-      colSpan: "col-span-1",
-    },
-    {
-      title: "Prometheus",
-      description: "Coleta e consulta de métricas",
-      image: "/images/projects/developer/developer04.jpg",
-      link: "http://prometheus.leoproti.com.br",
-      github: null,
-      tags: ["Web", "Monitoramento"],
-      colSpan: "col-span-1",
-    },
-    {
-      title: "ArqWeb V01",
-      description: "Sistema de arquivos web versão 1",
-      image: "/images/projects/developer/developer05.jpg",
-      link: "http://arqwebv01.leoproti.com.br",
-      github: "https://github.com/LeonardoVieiraGuimaraes/ArquiteturaAplicacaoWeb",
-      tags: ["Web", "Arquivos"],
-      colSpan: "col-span-1",
-    },
-    {
-      title: "ProWeb",
-      description: "Sistema profissional web",
-      image: "/images/projects/developer/developer06.jpg",
-      link: "http://proweb.leoproti.com.br",
-      github: "https://github.com/LeonardoVieiraGuimaraes/ProdutosWeb",
-      tags: ["Web", "Profissional"],
+      title: "Consultoria em BI e Dados",
+      description: "Projetos de consultoria em BI, definição de KPIs, implantação de dashboards e treinamento de equipes para cultura data-driven.",
+      image: "/images/projects/developer/consultoria-bi.png",
+      link: "https://github.com/LeonardoVieiraGuimaraes/consultoria-bi",
+      github: "https://github.com/LeonardoVieiraGuimaraes/consultoria-bi",
+      tags: ["Consultoria", "BI", "Treinamento"],
       colSpan: "col-span-1",
     },
   ];
@@ -111,13 +75,13 @@ export default function ProjectsDeveloper() {
       <div className="relative container mx-auto max-w-6xl px-4">
         <div className="text-center space-y-3">
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200 dark:text-cyan-200">
-            Sistemas web
+            Projetos em Dados
           </p>
           <h2 className="text-3xl md:text-4xl font-semibold text-cyan-700 dark:text-cyan-200">
-            Desenvolvimento de sistemas
+            Ciência de Dados & BI
           </h2>
           <p className="text-slate-500 dark:text-slate-200">
-            Projetos web e APIs com foco em produto, dados e entrega contínua.
+            Projetos de ciência de dados, BI, machine learning, automação e consultoria para negócios orientados a dados.
           </p>
           <div className="pt-4">
             <a

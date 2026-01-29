@@ -21,11 +21,11 @@ export default function About() {
             Sobre
           </p>
           <h2 className="text-3xl md:text-4xl font-semibold text-cyan-900 dark:text-cyan-200">
-            Sobre mim
+            Cientista de Dados & Analista
           </h2>
-            <p className="text-cyan-900 dark:text-cyan-200">
-              Professor universitário e desenvolvedor full stack. Uso engenharia e matemática para transformar produtos digitais e experiências de aprendizagem.
-            </p>
+          <p className="text-cyan-900 dark:text-cyan-200">
+            Apaixonado por transformar dados em valor para negócios. Atuo em projetos de ciência de dados, análise preditiva, BI, automação de processos e storytelling analítico, sempre focando em resultados práticos e insights acionáveis.
+          </p>
         </div>
         <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-3 items-start">
           <div className="order-first md:order-last flex justify-center md:col-span-1">
@@ -38,10 +38,10 @@ export default function About() {
           <div className="space-y-6 md:col-span-2">
             <div className="space-y-4 text-slate-700 dark:text-slate-200 leading-relaxed text-justify">
               <p className="text-cyan-900 dark:text-cyan-100">
-                Mestre em Modelagem Computacional e Sistemas (UNIMONTES) e doutorando em Modelagem Computacional (CEFET/MG). Atuo em APIs, front-ends e automações, leciono Arquitetura Web, Programação e Banco de Dados, e apoio projetos de TI no NIM (Cidade Administrativa).
+                Mestre em Modelagem Computacional e Sistemas (UNIMONTES) e doutorando em Modelagem Computacional (CEFET/MG). Especialista em análise de dados, machine learning, BI e automação de processos. Experiência em projetos de predição, classificação, dashboards interativos, ETL e consultoria para empresas de diversos setores.
               </p>
               <p className="text-cyan-900 dark:text-cyan-100">
-                No GitHub compartilho projetos variados: dashboards e automações em Python/Node, APIs em Django/Django Ninja e Spring Boot, <span className="font-semibold text-cyan-900 dark:text-cyan-200">front-ends</span> em <span className="font-semibold text-cyan-900 dark:text-cyan-100">React/TypeScript</span>, <span className="font-semibold text-cyan-900 dark:text-cyan-200">back-end</span> com <span className="font-semibold text-cyan-900 dark:text-cyan-100">Node.js, Django, Spring Boot</span> e protótipos <span className="font-semibold text-cyan-900 dark:text-cyan-200">mobile</span> com <span className="font-semibold text-cyan-900 dark:text-cyan-100">React Native</span>. Foco em código limpo, documentação e entregas reprodutíveis.
+                No GitHub compartilho projetos de ciência de dados, dashboards em Power BI, automações em Python, análises estatísticas, modelos de machine learning e soluções de BI. Foco em transformar dados em decisões estratégicas, com código limpo, documentação clara e entregas reprodutíveis.
               </p>
             </div>
             <div className="flex flex-wrap gap-3">

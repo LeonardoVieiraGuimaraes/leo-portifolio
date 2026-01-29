@@ -12,50 +12,44 @@ export default function ProjectsAcademics() {
 
   const projects = [
     {
-      title: "Dissertaçao Graduação Engenharia da Computação",
-      description: "Sistema de Identificação de Bovinos Usando RFID",
-      image: "/images/projects/academics/dissertacaoEngenhariaComputacao.png",
-      link: "https://drive.google.com/file/d/1jj_w4hFihZVSzSOlFSGCwHkuno2t5WGT/view?usp=sharing",
-      tags: ["RFID", "Engenharia"],
-      colSpan: "col-span-1",
-    },
-    {
-      title: "Dissertação Mestrado",
-      description:
-        "Monitoramento no processo de desidratação de unvas basedo em imagens",
-      image: "/images/projects/academics/dissetacaoMestrado.png",
-      link: "https://drive.google.com/file/d/1-l2qG_lpE9hZyoBhIYU7o79xSEl6815P/view",
-      tags: ["Processamento de imagens", "Pesquisa"],
-      colSpan: "col-span-1",
-    },
-    {
-      title: "Analise das notas do Enade e Enem",
-      description:
-        "Mineração de dados analisando a Influência das notas obtidas pelos anunos do Enem e Enade",
+      title: "Mineração de Dados Educacionais (Enem/Enade)",
+      description: "Análise e mineração de dados educacionais para identificar padrões e fatores de desempenho em avaliações nacionais. Técnicas de estatística, clustering e visualização de dados.",
       image: "/images/projects/academics/doutoradoMineracaoDadosProjeto.png",
       link: "https://drive.google.com/file/d/1MdopkYDRjYKNr92dlhYR50HfK0z3nIFI/view?usp=drive_link",
-      tags: ["Mineração de dados", "Educação"],
+      tags: ["Mineração de Dados", "Educação", "Analytics"],
       colSpan: "col-span-1",
     },
     {
-      title: "Ocorrências de Acidentes no Trânsito Brasileiro",
-      description:
-        "Mineração de ados analisando as ocorrências de acidentes no trânsito brasileiro",
-      image:
-        "/images/projects/academics/doutoradoMineracaoDadosTrabalhoIII.png",
+      title: "Análise de Acidentes de Trânsito com Dados Públicos",
+      description: "Exploração e modelagem de dados públicos para análise de acidentes de trânsito no Brasil. Aplicação de técnicas de BI, estatística e storytelling para insights de segurança.",
+      image: "/images/projects/academics/doutoradoMineracaoDadosTrabalhoIII.png",
       link: "https://drive.google.com/file/d/1OXEAMs3jHTyWvv7OtsPg8gESEDdbbtxO/view?usp=drive_link",
-      tags: ["Dados públicos", "Segurança"],
+      tags: ["Dados Públicos", "BI", "Segurança"],
       colSpan: "col-span-1",
     },
     {
-      title:
-        "Improving CNN Based Feature Point Detection Through Matching Information",
-      description:
-        "Melhorando a detecção de pontos de recursos baseados em CNN por meio de informações correspondentes",
+      title: "Visão Computacional em Processos Industriais",
+      description: "Monitoramento automatizado de processos industriais usando processamento de imagens e machine learning. Projeto de mestrado com análise de imagens e predição de resultados.",
+      image: "/images/projects/academics/dissetacaoMestrado.png",
+      link: "https://drive.google.com/file/d/1-l2qG_lpE9hZyoBhIYU7o79xSEl6815P/view",
+      tags: ["Visão Computacional", "Machine Learning", "Indústria"],
+      colSpan: "col-span-1",
+    },
+    {
+      title: "CNN para Detecção de Pontos de Interesse",
+      description: "Pesquisa de doutorado em visão computacional: uso de redes neurais convolucionais (CNN) para detecção de pontos de interesse em imagens, com avaliação de métricas e matching.",
       image: "/images/projects/academics/DoutaradoVisaoComputacional.png",
       link: "https://drive.google.com/file/d/1EAIF3-2NhG-A2O-y7W1S8Q1ASOn2Krfi/view?usp=sharing",
-      tags: ["Visão computacional", "CNN"],
+      tags: ["CNN", "Visão Computacional", "Pesquisa"],
       colSpan: "col-span-1 md:col-span-2",
+    },
+    {
+      title: "RFID e Analytics em Agroindústria",
+      description: "Sistema de identificação de bovinos com RFID e análise de dados para rastreabilidade e otimização de processos agroindustriais.",
+      image: "/images/projects/academics/dissertacaoEngenhariaComputacao.png",
+      link: "https://drive.google.com/file/d/1jj_w4hFihZVSzSOlFSGCwHkuno2t5WGT/view?usp=sharing",
+      tags: ["RFID", "Analytics", "Agroindústria"],
+      colSpan: "col-span-1",
     },
     {
       title: "Sistema de Identificação de Bovinos Usando RFID",

@@ -12,28 +12,27 @@ export default function ProjectsProfessor() {
 
   const projects = [
     {
-      title: "Estátitica e Probabilidade",
-      description: "Video aulas de Estátitica e Probabilidade",
+      title: "Estatística Aplicada e Analytics",
+      description: "Série de videoaulas sobre estatística aplicada, análise de dados e fundamentos de analytics para negócios e ciência de dados.",
       image: "/images/projects/professor/aulaEstatisticaProbabilidade.png",
       link: "https://www.youtube.com/playlist?list=PLbLoehbSIAYUFCykmhDHcOhAIv7er7rou",
-      tags: ["YouTube", "Estatística"],
+      tags: ["Estatística", "Analytics", "YouTube"],
       colSpan: "col-span-1",
     },
-
     {
-      title: "Matemática Financeira",
-      description: "Video aulas de Matemática Financeira",
+      title: "Matemática Financeira para Dados",
+      description: "Conteúdo didático sobre matemática financeira aplicada à análise de dados, BI e tomada de decisão baseada em indicadores.",
       image: "/images/projects/professor/aulaMatematicaFinanceira.png",
       link: "https://www.youtube.com/playlist?list=PLbLoehbSIAYXHvrPFdzPvz2StCvwDVNym",
-      tags: ["Finanças", "Educação"],
+      tags: ["Finanças", "BI", "Educação"],
       colSpan: "col-span-1",
     },
     {
-      title: "Projeto Integrador",
-      description: "Video aulas Projeto Integrador",
+      title: "Projetos Integradores em Dados",
+      description: "Projetos práticos e integradores com foco em análise de dados, dashboards, indicadores e soluções para problemas reais.",
       image: "/images/projects/professor/aulaProjetoIntegrador.png",
       link: "https://www.youtube.com/playlist?list=PLbLoehbSIAYVKOSuhf2p27tRaFlXAFG1T",
-      tags: ["Projetos", "Tecnologia"],
+      tags: ["Projetos", "Dashboards", "Dados"],
       colSpan: "col-span-1",
     },
   ];
@@ -47,11 +46,11 @@ export default function ProjectsProfessor() {
       <div className="relative container mx-auto max-w-6xl px-4">
         <div className="text-center space-y-3">
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200 dark:text-cyan-200">
-            Educação
+            Ensino em Dados
           </p>
-          <h2 className="text-3xl md:text-4xl font-semibold text-cyan-700 dark:text-cyan-200">Projetos e videoaulas</h2>
+          <h2 className="text-3xl md:text-4xl font-semibold text-cyan-700 dark:text-cyan-200">Conteúdo e projetos de dados</h2>
           <p className="text-slate-500 dark:text-slate-200">
-            Conteúdo prático de estatística, finanças e tecnologia para sala de aula e online.
+            Videoaulas, projetos e conteúdos didáticos sobre estatística, analytics, BI, dashboards e aplicações práticas de dados.
           </p>
         </div>
 

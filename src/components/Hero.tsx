@@ -37,9 +37,7 @@ export default function Hero() {
           </h1>
 
           <p className="text-lg text-slate-300 dark:text-slate-200">
-            Sou Leonardo Vieira Guimarães, desenvolvedor full stack e professor. Construo produtos
-            web/mobile e plataformas de dados que alinham tecnologia, educação e resultado de
-            negócio.
+            Cientista de Dados apaixonado por transformar dados em decisões estratégicas. Experiência em análise de dados, machine learning, visualização e automação de insights para negócios. Especialista em Python, SQL, dashboards e storytelling com dados.
           </p>
 
           <div className="flex flex-wrap gap-2 sm:gap-3 sm:flex-nowrap sm:overflow-visible">
