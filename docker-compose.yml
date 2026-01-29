@@ -12,7 +12,7 @@ services:
     container_name: portifolio-analista-dados
     restart: unless-stopped
     ports:
-      - "8086:80"  # analistadados.leoproti.com.br
+      - "8085:80"  # analistadados.leoproti.com.br
     volumes:
       - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
     networks:
