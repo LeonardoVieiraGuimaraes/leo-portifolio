@@ -5,7 +5,14 @@ on:
         branches:
             - main
         paths:
-            - "**"
+            - "src/components/ProjectsProfessor.tsx"
+            - "src/components/ProjectsProfessor/**"
+            - "src/components/Professor*"
+            - "public/images/projects/professor/**"
+            - "Dockerfile"
+            - "docker-compose.yml"
+            - "nginx.conf"
+            - ".github/workflows/deploy-professor.yml"
 
 jobs:
     deploy:
