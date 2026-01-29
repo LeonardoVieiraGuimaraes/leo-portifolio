@@ -1,0 +1,156 @@
+name: Deploy to Home Server
+
+on:
+  push:
+    branches:
+      - main
+    tags:
+      - "v-fullstack"
+      - "v-analista-dados"
+      - "v-ciencia-dados"
+      - "v-professor"
+    paths-ignore:
+      - "README.md"
+      - "comandos.txt"
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    name: 🏠 Deploy to Home Server
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🚚 Checkout code
+        uses: actions/checkout@v3
+
+      - name: ⚙️ Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+          cache: "npm"
+
+      - name: 📦 Install dependencies
+        run: npm ci
+
+      - name: 🔨 Build for Home Server
+        run: npm run build:homeserver:linux
+
+      - name: ☁️ Setup Cloudflare
+        run: |
+          wget -q https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb
+          sudo dpkg -i cloudflared-linux-amd64.deb
+
+      - name: 🔑 Setup SSH key
+        uses: webfactory/ssh-agent@v0.7.0
+        with:
+          ssh-private-key: ${{ secrets.HOME_SERVER_SSH_KEY }}
+
+      - name: 🔐 Configure SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "Host ssh.leoproti.com.br" >> ~/.ssh/config
+          echo "  StrictHostKeyChecking no" >> ~/.ssh/config
+          echo "  UserKnownHostsFile /dev/null" >> ~/.ssh/config
+          chmod 600 ~/.ssh/config
+
+      # - name: 🔧 Configure Cloudflare credentials
+      #   run: |
+      #     mkdir -p ~/.cloudflared
+      #     echo "${{ secrets.CLOUDFLARE_TUNNEL_TOKEN }}" > ~/.cloudflared/cert.pem
+      #     chmod 600 ~/.cloudflared/cert.pem
+
+      - name: 🧹 Clean and prepare server
+        run: |
+          # Detectar nome da pasta pelo tipo de deploy/tag
+          if [[ "$GITHUB_REF_NAME" == "v-fullstack" ]]; then
+            DEPLOY_DIR=fullstack
+          elif [[ "$GITHUB_REF_NAME" == "v-analista-dados" ]]; then
+            DEPLOY_DIR=analista-dados
+          elif [[ "$GITHUB_REF_NAME" == "v-ciencia-dados" ]]; then
+            DEPLOY_DIR=ciencia-dados
+          elif [[ "$GITHUB_REF_NAME" == "v-professor" ]]; then
+            DEPLOY_DIR=ensino
+          else
+            DEPLOY_DIR=geral
+          fi
+          ssh -o ProxyCommand="cloudflared access ssh --hostname %h" \
+              leonardovieiraxy@ssh.leoproti.com.br << EOF
+            # Criar pasta projetos/portifolio se não existir
+            mkdir -p /home/leonardovieiraxy/projetos/portifolio/
+            # Parar e remover containers/pasta existentes
+            if [ -d "/home/leonardovieiraxy/projetos/portifolio/$DEPLOY_DIR" ]; then
+              cd /home/leonardovieiraxy/projetos/portifolio/$DEPLOY_DIR
+              docker compose down || true
+              cd ..
+              rm -rf $DEPLOY_DIR
+            fi
+            # Criar nova pasta com permissões corretas
+            mkdir -p /home/leonardovieiraxy/projetos/portifolio/$DEPLOY_DIR
+            chmod 755 /home/leonardovieiraxy/projetos/portifolio/$DEPLOY_DIR
+          EOF
+
+      - name: 📤 Transfer project files
+        run: |
+          # Detectar nome da pasta pelo tipo de deploy/tag
+          if [[ "$GITHUB_REF_NAME" == "v-fullstack" ]]; then
+            DEPLOY_DIR=fullstack
+          elif [[ "$GITHUB_REF_NAME" == "v-analista-dados" ]]; then
+            DEPLOY_DIR=analista-dados
+          elif [[ "$GITHUB_REF_NAME" == "v-ciencia-dados" ]]; then
+            DEPLOY_DIR=ciencia-dados
+          elif [[ "$GITHUB_REF_NAME" == "v-professor" ]]; then
+            DEPLOY_DIR=ensino
+          else
+            DEPLOY_DIR=geral
+          fi
+          # Criar pasta temporária com arquivos necessários
+          mkdir -p temp-deploy
+          cp docker-compose.yml temp-deploy/
+          cp Dockerfile temp-deploy/
+          cp nginx.conf temp-deploy/
+          cp -r dist temp-deploy/
+
+          # Transferir arquivos usando rsync (mais robusto que scp)
+          rsync -avz --delete \
+                -e "ssh -o ProxyCommand='cloudflared access ssh --hostname %h'" \
+                temp-deploy/ \
+                leonardovieiraxy@ssh.leoproti.com.br:/home/leonardovieiraxy/projetos/portifolio/$DEPLOY_DIR/
+
+      - name: 🚀 Deploy on server
+        run: |
+          # Detectar nome da pasta pelo tipo de deploy/tag
+          if [[ "$GITHUB_REF_NAME" == "v-fullstack" ]]; then
+            DEPLOY_DIR=fullstack
+          elif [[ "$GITHUB_REF_NAME" == "v-analista-dados" ]]; then
+            DEPLOY_DIR=analista-dados
+          elif [[ "$GITHUB_REF_NAME" == "v-ciencia-dados" ]]; then
+            DEPLOY_DIR=ciencia-dados
+          elif [[ "$GITHUB_REF_NAME" == "v-professor" ]]; then
+            DEPLOY_DIR=ensino
+          else
+            DEPLOY_DIR=geral
+          fi
+          ssh -o ProxyCommand="cloudflared access ssh --hostname %h" \
+              leonardovieiraxy@ssh.leoproti.com.br << EOF
+            cd /home/leonardovieiraxy/projetos/portifolio/
+            cd $DEPLOY_DIR
+            # Debug: verificar arquivos transferidos
+            echo "=== Arquivos na pasta ==="
+            ls -la
+            echo "=== Arquivos dist ==="
+            ls -la dist/ | head -5
+            # Build e start do container
+            echo "=== Building container ==="
+            docker compose build --no-cache
+            echo "=== Starting container ==="
+            docker compose up -d
+            # Verificar status
+            echo "=== Container status ==="
+            docker compose ps
+            # Teste básico
+            echo "=== Testing site ==="
+            sleep 5
+            curl -I http://localhost:80 || echo "Site não respondeu"
+            # Limpeza
+            docker system prune -f
+          EOF

@@ -1,4 +1,4 @@
-name: Deploy Geral
+name: Deploy
 
 on:
     push:
