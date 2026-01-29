@@ -44,7 +44,7 @@ export default function Hero() {
 
           <div className="flex flex-wrap gap-2 sm:gap-3 sm:flex-nowrap sm:overflow-visible">
             <a
-              href="https://docs.google.com/document/d/1hLeOBX7zAz-BtYLxXKWK6RtYEWqWnCo4Z5IA5Kvwzsk/edit?usp=drive_link"
+              href="https://docs.google.com/document/d/1GWsHVJVPulWk9DFtXx7nZcezgwMWZHx0_TKMVygEy-4/edit?usp=sharing"
               target="_blank"
               rel="noopener"
               className="button-hero"
@@ -70,15 +70,7 @@ export default function Hero() {
               <FaGithub className="h-5 w-5" />
               GitHub
             </a>
-            <a
-              href="https://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K4869231A0&tokenCaptchar=03AFcWeA5Xz3lD3vn5HMS9GhkTKnLTFNnn8jIdHmV_gGRxrMmhMj41i_6Lu2oqfAtLP5wyFXdVZJpjXvvBdtYwHXjTs7bE8nxmxjvutCykBoUD2ABe3QL8PkNAaHKTtLibwnOmDCBThU6EIF0OCwoUk3e6_hV4UtOLpidaeAc6fBZ14zZG19qOnFiRwAKpKlyL0jk1LNgurGjYKluX58WYGzMccWrP14UUtkFZSYCZDIBW4iSf0xGtUqMQwkZc_ESopuXY1_gWxABMsK8llBEOZIvkifBmUADeP1rEEQbejucQ03IqK8ZGZfN99DsnBlHuL9GVfkhai8JypHpWhybU2GuFky2xySYJMSxkDwiepFsyOuYY07WsmkoTjvMSawClnvm06zTG6_6WgBXjejxcFD3D3Vfa-Ay7FpMvh3pMXn5k0bNz2U374mFAC7Iv4HXSjcDgNAulCcPKNOtn2P_E8qru4Ryhl1nhWmctHNrd0mMifRWb9T1DzKINX51NK7NmU6ZOFE-LO4MpwNgG6xl-ncQYWWolaYe7BTRm1rPxdHJWH_GeLHQnRFeaOLWrtvZMO6tbdUw1hmo4"
-              target="_blank"
-              rel="noopener"
-              className="button-hero"
-            >
-              <HiArrowDownTray className="h-5 w-5" />
-              Currículo Lattes
-            </a>
+
           </div>
 
           <div className="grid grid-cols-1 gap-4 pt-6 sm:grid-cols-2">
