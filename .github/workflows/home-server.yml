@@ -4,16 +4,21 @@ on:
   push:
     branches:
       - main
+    tags:
+      - "v-fullstack"
+      - "v-analista-dados"
+      - "v-ciencia-dados"
+      - "v-professor"
     paths-ignore:
-      - 'README.md'
-      - 'comandos.txt'
+      - "README.md"
+      - "comandos.txt"
   workflow_dispatch:
 
 jobs:
   deploy:
     name: 🏠 Deploy to Home Server
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: 🚚 Checkout code
         uses: actions/checkout@v3
@@ -82,7 +87,7 @@ jobs:
           cp Dockerfile temp-deploy/
           cp nginx.conf temp-deploy/
           cp -r dist temp-deploy/
-          
+
           # Transferir arquivos usando rsync (mais robusto que scp)
           rsync -avz --delete \
                 -e "ssh -o ProxyCommand='cloudflared access ssh --hostname %h'" \
