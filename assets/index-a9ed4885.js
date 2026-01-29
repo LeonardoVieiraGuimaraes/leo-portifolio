@@ -10097,18 +10097,6 @@ function FaLinkedin(props) {
 function FaWhatsapp(props) {
   return GenIcon({ "tag": "svg", "attr": { "viewBox": "0 0 448 512" }, "child": [{ "tag": "path", "attr": { "d": "M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z" } }] })(props);
 }
-function FaEnvelope(props) {
-  return GenIcon({ "tag": "svg", "attr": { "viewBox": "0 0 512 512" }, "child": [{ "tag": "path", "attr": { "d": "M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z" } }] })(props);
-}
-function FaFolderOpen(props) {
-  return GenIcon({ "tag": "svg", "attr": { "viewBox": "0 0 576 512" }, "child": [{ "tag": "path", "attr": { "d": "M572.694 292.093L500.27 416.248A63.997 63.997 0 0 1 444.989 448H45.025c-18.523 0-30.064-20.093-20.731-36.093l72.424-124.155A64 64 0 0 1 152 256h399.964c18.523 0 30.064 20.093 20.73 36.093zM152 224h328v-48c0-26.51-21.49-48-48-48H272l-64-64H48C21.49 64 0 85.49 0 112v278.046l69.077-118.418C86.214 242.25 117.989 224 152 224z" } }] })(props);
-}
-function FaHome(props) {
-  return GenIcon({ "tag": "svg", "attr": { "viewBox": "0 0 576 512" }, "child": [{ "tag": "path", "attr": { "d": "M280.37 148.26L96 300.11V464a16 16 0 0 0 16 16l112.06-.29a16 16 0 0 0 15.92-16V368a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16v95.64a16 16 0 0 0 16 16.05L464 480a16 16 0 0 0 16-16V300L295.67 148.26a12.19 12.19 0 0 0-15.3 0zM571.6 251.47L488 182.56V44.05a12 12 0 0 0-12-12h-56a12 12 0 0 0-12 12v72.61L318.47 43a48 48 0 0 0-61 0L4.34 251.47a12 12 0 0 0-1.6 16.9l25.5 31A12 12 0 0 0 45.15 301l235.22-193.74a12.19 12.19 0 0 1 15.3 0L530.9 301a12 12 0 0 0 16.9-1.6l25.5-31a12 12 0 0 0-1.7-16.93z" } }] })(props);
-}
-function FaInfoCircle(props) {
-  return GenIcon({ "tag": "svg", "attr": { "viewBox": "0 0 512 512" }, "child": [{ "tag": "path", "attr": { "d": "M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z" } }] })(props);
-}
 function FaMoon(props) {
   return GenIcon({ "tag": "svg", "attr": { "viewBox": "0 0 512 512" }, "child": [{ "tag": "path", "attr": { "d": "M283.211 512c78.962 0 151.079-35.925 198.857-94.792 7.068-8.708-.639-21.43-11.562-19.35-124.203 23.654-238.262-71.576-238.262-196.954 0-72.222 38.662-138.635 101.498-174.394 9.686-5.512 7.25-20.197-3.756-22.23A258.156 258.156 0 0 0 283.211 0c-141.309 0-256 114.511-256 256 0 141.309 114.511 256 256 256z" } }] })(props);
 }
@@ -10117,9 +10105,6 @@ function FaSpinner(props) {
 }
 function FaSun(props) {
   return GenIcon({ "tag": "svg", "attr": { "viewBox": "0 0 512 512" }, "child": [{ "tag": "path", "attr": { "d": "M256 160c-52.9 0-96 43.1-96 96s43.1 96 96 96 96-43.1 96-96-43.1-96-96-96zm246.4 80.5l-94.7-47.3 33.5-100.4c4.5-13.6-8.4-26.5-21.9-21.9l-100.4 33.5-47.4-94.8c-6.4-12.8-24.6-12.8-31 0l-47.3 94.7L92.7 70.8c-13.6-4.5-26.5 8.4-21.9 21.9l33.5 100.4-94.7 47.4c-12.8 6.4-12.8 24.6 0 31l94.7 47.3-33.5 100.5c-4.5 13.6 8.4 26.5 21.9 21.9l100.4-33.5 47.3 94.7c6.4 12.8 24.6 12.8 31 0l47.3-94.7 100.4 33.5c13.6 4.5 26.5-8.4 21.9-21.9l-33.5-100.4 94.7-47.3c13-6.5 13-24.7.2-31.1zm-155.9 106c-49.9 49.9-131.1 49.9-181 0-49.9-49.9-49.9-131.1 0-181 49.9-49.9 131.1-49.9 181 0 49.9 49.9 49.9 131.1 0 181z" } }] })(props);
-}
-function FaTools(props) {
-  return GenIcon({ "tag": "svg", "attr": { "viewBox": "0 0 512 512" }, "child": [{ "tag": "path", "attr": { "d": "M501.1 395.7L384 278.6c-23.1-23.1-57.6-27.6-85.4-13.9L192 158.1V96L64 0 0 64l96 128h62.1l106.6 106.6c-13.6 27.8-9.2 62.3 13.9 85.4l117.1 117.1c14.6 14.6 38.2 14.6 52.7 0l52.7-52.7c14.5-14.6 14.5-38.2 0-52.7zM331.7 225c28.3 0 54.9 11 74.9 31l19.4 19.4c15.8-6.9 30.8-16.5 43.8-29.5 37.1-37.1 49.7-89.3 37.9-136.7-2.2-9-13.5-12.1-20.1-5.5l-74.4 74.4-67.9-11.3L334 98.9l74.4-74.4c6.6-6.6 3.4-17.9-5.7-20.2-47.4-11.7-99.6.9-136.6 37.9-28.5 28.5-41.9 66.1-41.2 103.6l82.1 82.1c8.1-1.9 16.5-2.9 24.7-2.9zm-103.9 82l-56.7-56.7L18.7 402.8c-25 25-25 65.5 0 90.5s65.5 25 90.5 0l123.6-123.6c-7.6-19.9-9.9-41.6-5-62.7zM64 472c-13.2 0-24-10.8-24-24 0-13.3 10.7-24 24-24s24 10.7 24 24c0 13.2-10.7 24-24 24z" } }] })(props);
 }
 function HiAcademicCap(props) {
   return GenIcon({ "tag": "svg", "attr": { "viewBox": "0 0 24 24", "fill": "currentColor", "aria-hidden": "true" }, "child": [{ "tag": "path", "attr": { "d": "M11.7 2.805a.75.75 0 01.6 0A60.65 60.65 0 0122.83 8.72a.75.75 0 01-.231 1.337 49.949 49.949 0 00-9.902 3.912l-.003.002-.34.18a.75.75 0 01-.707 0A50.009 50.009 0 007.5 12.174v-.224c0-.131.067-.248.172-.311a54.614 54.614 0 014.653-2.52.75.75 0 00-.65-1.352 56.129 56.129 0 00-4.78 2.589 1.858 1.858 0 00-.859 1.228 49.803 49.803 0 00-4.634-1.527.75.75 0 01-.231-1.337A60.653 60.653 0 0111.7 2.805z" } }, { "tag": "path", "attr": { "d": "M13.06 15.473a48.45 48.45 0 017.666-3.282c.134 1.414.22 2.843.255 4.285a.75.75 0 01-.46.71 47.878 47.878 0 00-8.105 4.342.75.75 0 01-.832 0 47.877 47.877 0 00-8.104-4.342.75.75 0 01-.461-.71c.035-1.442.121-2.87.255-4.286A48.4 48.4 0 016 13.18v1.27a1.5 1.5 0 00-.14 2.508c-.09.38-.222.753-.397 1.11.452.213.901.434 1.346.661a6.729 6.729 0 00.551-1.608 1.5 1.5 0 00.14-2.67v-.645a48.549 48.549 0 013.44 1.668 2.25 2.25 0 002.12 0z" } }, { "tag": "path", "attr": { "d": "M4.462 19.462c.42-.419.753-.89 1-1.394.453.213.902.434 1.347.661a6.743 6.743 0 01-1.286 1.794.75.75 0 11-1.06-1.06z" } }] })(props);
@@ -10267,14 +10252,14 @@ function Contact() {
   return /* @__PURE__ */ jsxRuntimeExports.jsx(
     "section",
     {
-      className: "relative text-white pt-20 pb-16",
+      className: "relative text-cyan-900 dark:text-cyan-100 pt-20 pb-16",
       id: "contact",
       style: { background },
       children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container mx-auto max-w-6xl px-4", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mb-8 text-center space-y-3", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200", children: "Contato" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-3xl md:text-4xl font-semibold", children: "Vamos conversar" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-slate-300", children: "Me envie uma mensagem ou chame no WhatsApp. Retorno rápido para falar sobre projetos e oportunidades." })
+          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200 dark:text-cyan-200", children: "Contato" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-3xl md:text-4xl font-semibold", children: "Contato" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-slate-500 dark:text-slate-200", children: "Me envie uma mensagem ou chame no WhatsApp. Retorno rápido para falar sobre projetos e oportunidades." })
         ] }),
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid gap-6 md:grid-cols-3", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "card md:col-span-2 rounded-2xl p-6", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("form", { ref: form, onSubmit: sendEmail, className: "space-y-4", children: [
@@ -10332,7 +10317,7 @@ function Contact() {
                   ]
                 }
               ),
-              error && /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm text-rose-200", children: "Ocorreu um erro ao enviar. Tente novamente mais tarde." })
+              error && /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm text-rose-200 dark:text-rose-200", children: "Ocorreu um erro ao enviar. Tente novamente mais tarde." })
             ] })
           ] }) }),
           /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "space-y-4", children: contacts.map((contact, index2) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
@@ -10340,15 +10325,15 @@ function Contact() {
             {
               className: "card flex items-center gap-4 rounded-2xl border border-white/10 bg-white/5 p-4",
               children: [
-                /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex h-12 w-12 items-center justify-center rounded-xl bg-cyan-500/10 text-cyan-300 [.light_&]:bg-cyan-100 [.light_&]:text-cyan-700", children: contact.icon }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex h-12 w-12 items-center justify-center rounded-xl bg-cyan-500/10 text-cyan-300 dark:text-cyan-200 [.light_&]:bg-cyan-100 [.light_&]:text-cyan-700", children: contact.icon }),
                 /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "font-semibold text-white", children: contact.name }),
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "font-semibold text-cyan-900 dark:text-cyan-100", children: contact.name }),
                   /* @__PURE__ */ jsxRuntimeExports.jsx(
                     "a",
                     {
                       href: contact.link,
                       target: "_blank",
-                      className: "text-sm text-cyan-200 underline underline-offset-2",
+                      className: "text-sm text-cyan-200 dark:text-cyan-200 underline underline-offset-2",
                       rel: "noreferrer",
                       children: contact.description
                     }
@@ -10374,30 +10359,23 @@ const socialLinks = [
     url: "https://github.com/LeonardoVieiraGuimaraes/",
     icon: FaGithub
   },
-  // {
-  //   name: "Discord",
-  //   url: "https://discord.gg/zDyXDFC8",
-  //   icon: FaDiscord,
-  // },
-  // {
-  //   name: "Instagram",
-  //   url: "https://instagram.com/yourusername",
-  //   icon: FaInstagram,
-  // },
-  // {
-  //   name: "Facebook",
-  //   url: "https://facebook.com/yourusername",
-  //   icon: FaFacebook,
-  // },
-  // {
-  //   name: "Twitter",
-  //   url: "https://twitter.com/Leonard24081612",
-  //   icon: FaXTwitter,
-  // },
   {
     name: "Linkedin",
     url: "https://linkedin.com/in/leonardo-vieira-guimaraes",
     icon: FaLinkedin
+  },
+  {
+    name: "Instagram",
+    url: "https://www.instagram.com/leonardo.vieira.guimaraes",
+    icon: (props) => /* @__PURE__ */ jsxRuntimeExports.jsx("svg", { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 448 512", fill: "currentColor", ...props, children: /* @__PURE__ */ jsxRuntimeExports.jsx("path", { d: "M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9 114.9-51.3 114.9-114.9S287.7 141 224.1 141zm0 186c-39.5 0-71.5-32-71.5-71.5s32-71.5 71.5-71.5 71.5 32 71.5 71.5-32 71.5-71.5 71.5zm146.4-194.3c0 14.9-12 26.9-26.9 26.9s-26.9-12-26.9-26.9 12-26.9 26.9-26.9 26.9 12 26.9 26.9zm76.1 27.2c-1.7-35.3-9.9-66.7-36.2-92.1C385.7 9.9 354.3 1.7 319 0 283.3-1.7 164.7-1.7 129 0 93.7 1.7 62.3 9.9 36.9 36.2 9.9 62.3 1.7 93.7 0 129c-1.7 35.3-1.7 153.9 0 189.6 1.7 35.3 9.9 66.7 36.2 92.1 26.1 26.1 57.5 34.3 92.1 36.2 35.3 1.7 153.9 1.7 189.6 0 35.3-1.7 66.7-9.9 92.1-36.2 26.1-26.1 34.3-57.5 36.2-92.1 1.7-35.3 1.7-153.9 0-189.6zM398.8 388c-7.8 19.6-22.9 34.7-42.5 42.5-29.4 11.7-99.2 9-132.3 9s-102.9 2.6-132.3-9c-19.6-7.8-34.7-22.9-42.5-42.5-11.7-29.4-9-99.2-9-132.3s-2.6-102.9 9-132.3c7.8-19.6 22.9-34.7 42.5-42.5C121.1 9 190.9 11.7 224 11.7s102.9-2.6 132.3 9c19.6 7.8 34.7 22.9 42.5 42.5 11.7 29.4 9 99.2 9 132.3s2.6 102.9-9 132.3z" }) })
+  },
+  {
+    name: "ORCID",
+    url: "https://orcid.org/0009-0000-3118-4664",
+    icon: (props) => /* @__PURE__ */ jsxRuntimeExports.jsxs("svg", { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 256 256", fill: "currentColor", ...props, children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx("circle", { cx: "128", cy: "128", r: "128", fill: "#A6CE39" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("path", { d: "M86.3 186.2H69.7V69.8h16.6v116.4zm-8.3-132.2c-6.1 0-11.1-5-11.1-11.1s5-11.1 11.1-11.1 11.1 5 11.1 11.1-5 11.1-11.1 11.1zm53.2 132.2h-16.6V69.8h16.6v116.4zm44.2-58.2c0 16.2-4.7 28.7-14.1 37.2-8.2 7.3-19.5 11-33.7 11h-7.2V69.8h7.2c14.2 0 25.5 3.7 33.7 11 9.4 8.5 14.1 21 14.1 37.2zm-16.6 0c0-11.2-2.6-19.5-7.8-24.7-4.2-4.2-10.7-6.3-19.5-6.3h-2.2v62.1h2.2c8.8 0 15.3-2.1 19.5-6.3 5.2-5.2 7.8-13.5 7.8-24.8z", fill: "#fff" })
+    ] })
   }
 ];
 function Footer() {
@@ -10411,22 +10389,22 @@ function Footer() {
       id: "footer",
       className: "border-t",
       style: { backgroundColor: background, borderColor },
-      children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container mx-auto flex max-w-6xl flex-col gap-4 px-4 py-6 text-sm text-slate-300 md:flex-row md:items-center md:justify-between", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-3", children: [
+      children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container mx-auto flex max-w-6xl flex-col gap-6 px-4 py-8 text-sm text-slate-300 md:flex-row md:items-center md:justify-between", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-4 md:gap-6", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: getImagePath("images/logo.svg"), alt: "Logo", className: "h-12 w-auto" }),
           /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
             /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-white font-semibold", children: "Leonardo Vieira Guimarães" }),
             /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xs text-slate-400", children: "Portfólio • Produtos digitais, dados e educação" })
           ] })
         ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("ul", { className: "flex flex-nowrap items-center gap-3", children: socialLinks.map((link) => /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+        /* @__PURE__ */ jsxRuntimeExports.jsx("ul", { className: "flex flex-nowrap items-center gap-5 md:gap-6", children: socialLinks.map((link) => /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: /* @__PURE__ */ jsxRuntimeExports.jsx(
           "a",
           {
             href: link.url,
             target: "_blank",
             rel: "noopener noreferrer",
             className: "text-slate-200 hover:text-cyan-300",
-            children: /* @__PURE__ */ jsxRuntimeExports.jsx(link.icon, { size: 22 })
+            children: typeof link.icon === "function" ? link.icon.name === "FaGithub" || link.icon.name === "FaLinkedin" ? /* @__PURE__ */ jsxRuntimeExports.jsx(link.icon, { size: 22 }) : link.icon({ width: 22, height: 22 }) : null
           }
         ) }, link.name)) })
       ] })
@@ -10488,32 +10466,76 @@ function Header() {
     setIsOpen(!isOpen);
   };
   const navLinks = [
-    { name: "Início", icon: /* @__PURE__ */ jsxRuntimeExports.jsx(FaHome, { className: "text-base" }), to: "/inicio" },
-    { name: "Projetos", icon: /* @__PURE__ */ jsxRuntimeExports.jsx(FaFolderOpen, { className: "text-base" }), to: "/projects" },
-    { name: "Skills", icon: /* @__PURE__ */ jsxRuntimeExports.jsx(FaTools, { className: "text-base" }), to: "/skills" },
-    { name: "Sobre", icon: /* @__PURE__ */ jsxRuntimeExports.jsx(FaInfoCircle, { className: "text-base" }), to: "/sobre" },
-    { name: "Fale Conosco", icon: /* @__PURE__ */ jsxRuntimeExports.jsx(FaEnvelope, { className: "text-base" }), to: "/contact" }
+    { name: "Início", to: "/inicio" },
+    { name: "Projetos", to: "/projects" },
+    { name: "Habilidades", to: "/skills" },
+    { name: "Experiência", to: "/experience" },
+    { name: "Sobre", to: "/sobre" },
+    { name: "Contato", to: "/contact" }
   ];
-  const navItemClass = (isActive) => `px-3 py-5 rounded-md flex items-center justify-center gap-2 font-headline text-lg font-semibold transition leading-none ${isActive ? "text-white bg-white/10 border-b-2 border-cyan-400" : "text-slate-200 hover:text-white hover:bg-white/5"}`;
-  return /* @__PURE__ */ jsxRuntimeExports.jsx("header", { children: /* @__PURE__ */ jsxRuntimeExports.jsxs("nav", { className: "fixed z-50 w-full border-b border-white/5 dark:border-white/5 light:border-blue-500/20 bg-slate-900/80 dark:bg-slate-900/80 light:bg-white/90 backdrop-blur-md transition-colors duration-300", children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "max-w-6xl mx-auto px-4", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative flex items-center justify-between h-16", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "absolute inset-y-0 right-0 flex items-center gap-2 md:hidden", children: [
+  const navItemClass = (isActive) => `px-2 py-3 rounded-md font-headline text-base font-medium transition leading-none ${isActive ? "text-cyan-300 dark:text-cyan-200 bg-white/10 border-b-2 border-cyan-400" : "text-slate-500 dark:text-slate-300 hover:text-cyan-300 hover:bg-white/5"}`;
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs("header", { children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("nav", { className: "w-full px-4 py-2 flex items-center justify-between", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex-shrink-0 flex items-center", children: /* @__PURE__ */ jsxRuntimeExports.jsxs(NavLink, { to: "/", className: ({ isActive }) => navItemClass(isActive) + " flex items-center gap-2", onClick: () => setIsOpen(false), style: { maxHeight: "56px", overflow: "hidden" }, children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx(
+          "img",
+          {
+            className: "block md:hidden h-12 w-auto max-h-16",
+            src: getImagePath("images/logo.svg"),
+            alt: "Logo",
+            style: { maxHeight: "48px", maxWidth: "140px" }
+          }
+        ),
+        /* @__PURE__ */ jsxRuntimeExports.jsx(
+          "img",
+          {
+            className: "hidden md:block h-12 w-auto max-h-16",
+            src: getImagePath("images/logo.svg"),
+            alt: "Logo",
+            style: { maxHeight: "48px", maxWidth: "140px" }
+          }
+        ),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "ml-2 text-xl md:text-2xl font-bold text-cyan-900 dark:text-cyan-200 tracking-tight select-none hidden md:inline", children: "Leonardo Vieira Guimarães" })
+      ] }) }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "hidden md:block md:ml-4 ", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex space-x-2 items-center", children: [
+        navLinks.map((link, index2) => /* @__PURE__ */ jsxRuntimeExports.jsx(
+          NavLink,
+          {
+            to: link.to,
+            className: ({ isActive }) => navItemClass(isActive),
+            title: link.name,
+            onClick: () => setIsOpen(false),
+            children: link.name
+          },
+          index2
+        )),
         /* @__PURE__ */ jsxRuntimeExports.jsx(
           "button",
           {
             onClick: toggleTheme,
-            className: "inline-flex items-center justify-center p-2 rounded-md text-gray-200 hover:text-white hover:bg-white/5 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white",
+            className: "text-slate-500 dark:text-slate-300 hover:text-cyan-300 hover:bg-white/5 px-3 py-5 rounded-md flex items-center justify-center font-headline text-lg font-semibold transition ml-2 leading-none",
             title: `Mudar para ${theme === "dark" ? "light" : "dark"} mode`,
-            children: theme === "dark" ? /* @__PURE__ */ jsxRuntimeExports.jsx(FaSun, { className: "h-5 w-5" }) : /* @__PURE__ */ jsxRuntimeExports.jsx(FaMoon, { className: "h-5 w-5" })
+            children: theme === "dark" ? /* @__PURE__ */ jsxRuntimeExports.jsx(FaSun, {}) : /* @__PURE__ */ jsxRuntimeExports.jsx(FaMoon, {})
+          }
+        )
+      ] }) }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "md:hidden flex items-center gap-2", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx(
+          "button",
+          {
+            onClick: toggleTheme,
+            className: "text-slate-500 dark:text-slate-300 hover:text-cyan-300 hover:bg-white/5 px-3 py-2 rounded-md flex items-center justify-center font-headline text-lg font-semibold transition leading-none",
+            title: `Mudar para ${theme === "dark" ? "light" : "dark"} mode`,
+            children: theme === "dark" ? /* @__PURE__ */ jsxRuntimeExports.jsx(FaSun, {}) : /* @__PURE__ */ jsxRuntimeExports.jsx(FaMoon, {})
           }
         ),
         /* @__PURE__ */ jsxRuntimeExports.jsxs(
           "button",
           {
             type: "button",
-            className: "inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white",
+            className: "inline-flex items-center justify-center p-2 rounded-md text-slate-400 dark:text-slate-300 hover:text-cyan-300 hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-cyan-300",
             "aria-controls": "mobile-menu",
-            "aria-expanded": "false",
+            "aria-expanded": isOpen,
             onClick: toggleMenu,
             children: [
               /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "sr-only", children: "Open main menu" }),
@@ -10521,75 +10543,20 @@ function Header() {
             ]
           }
         )
-      ] }),
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex-1 md:justify-between flex items-center  md:items-stretch", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex-shrink-0", children: /* @__PURE__ */ jsxRuntimeExports.jsxs(NavLink, { to: "/", className: ({ isActive }) => navItemClass(isActive), onClick: () => setIsOpen(false), children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx(
-            "img",
-            {
-              className: "block md:hidden h-14 w-auto",
-              src: getImagePath("images/logo.svg"),
-              alt: "Logo"
-            }
-          ),
-          /* @__PURE__ */ jsxRuntimeExports.jsx(
-            "img",
-            {
-              className: "hidden md:block h-10 w-auto",
-              src: getImagePath("images/logo.svg"),
-              alt: "Logo"
-            }
-          )
-        ] }) }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "hidden md:block md:ml-4 ", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex space-x-2 items-center", children: [
-          navLinks.map((link, index2) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
-            NavLink,
-            {
-              to: link.to,
-              className: ({ isActive }) => navItemClass(isActive),
-              title: link.name,
-              onClick: () => setIsOpen(false),
-              children: [
-                link.icon,
-                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { children: link.name })
-              ]
-            },
-            index2
-          )),
-          /* @__PURE__ */ jsxRuntimeExports.jsx(
-            "button",
-            {
-              onClick: toggleTheme,
-              className: "text-slate-200 hover:text-white hover:bg-white/5 px-3 py-5 rounded-md flex items-center justify-center font-headline text-lg font-semibold transition ml-2 leading-none",
-              title: `Mudar para ${theme === "dark" ? "light" : "dark"} mode`,
-              children: theme === "dark" ? /* @__PURE__ */ jsxRuntimeExports.jsx(FaSun, {}) : /* @__PURE__ */ jsxRuntimeExports.jsx(FaMoon, {})
-            }
-          )
-        ] }) })
       ] })
-    ] }) }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx(
-      "div",
+    ] }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: `${isOpen ? "block" : "hidden"} md:hidden`, id: "mobile-menu", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "px-4 py-3 flex flex-col gap-1 items-start", children: navLinks.map((link, index2) => /* @__PURE__ */ jsxRuntimeExports.jsx(
+      NavLink,
       {
-        className: `${isOpen ? "block" : "hidden"} md:hidden`,
-        id: "mobile-menu",
-        children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "px-4 py-3 space-y-2", children: navLinks.map((link, index2) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
-          NavLink,
-          {
-            to: link.to,
-            className: ({ isActive }) => navItemClass(isActive),
-            title: link.name,
-            onClick: () => setIsOpen(false),
-            children: [
-              link.icon,
-              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { children: link.name })
-            ]
-          },
-          index2
-        )) })
-      }
-    )
-  ] }) });
+        to: link.to,
+        className: ({ isActive }) => navItemClass(isActive) + " w-full text-left",
+        title: link.name,
+        onClick: () => setIsOpen(false),
+        children: link.name
+      },
+      index2
+    )) }) })
+  ] });
 }
 function Hero() {
   const { theme } = useTheme();
@@ -10601,20 +10568,20 @@ function Hero() {
     /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0", style: { background } }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: `absolute -left-20 -top-32 h-80 w-80 rounded-full ${glowCyan} blur-3xl` }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: `absolute right-0 top-10 h-72 w-72 rounded-full ${glowViolet} blur-3xl` }),
-    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative container mx-auto flex max-w-6xl flex-col gap-8 p-6 pb-24 pt-24 md:flex-row md:items-center md:justify-between", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative container mx-auto flex max-w-6xl flex-col gap-8 p-4 pb-12 pt-16 md:flex-row md:items-center md:justify-between", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "max-w-2xl space-y-6", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-3 text-sm text-cyan-200 [.light_&]:text-cyan-700", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 font-semibold uppercase tracking-wide [.light_&]:border-cyan-200 [.light_&]:bg-cyan-50", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-3 text-sm text-cyan-900 dark:text-cyan-200", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 font-semibold uppercase tracking-wide text-cyan-900 dark:text-cyan-200 [.light_&]:border-cyan-200 [.light_&]:bg-cyan-50", children: [
             /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "relative flex h-2 w-2", children: [
               /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75 [.light_&]:bg-emerald-600" }),
               /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "relative inline-flex h-2 w-2 rounded-full bg-emerald-400 [.light_&]:bg-emerald-600" })
             ] }),
             "Disponível para novos projetos"
           ] }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-slate-300", children: "Professor | Dev Full Stack" })
+          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-slate-300 dark:text-slate-200", children: "Professor | Dev Full Stack" })
         ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("h1", { className: "text-4xl font-semibold leading-tight text-white sm:text-5xl md:text-6xl", children: "Transformando dados e código em produtos digitais que entregam impacto real." }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-lg text-slate-300", children: "Sou Leonardo Vieira Guimarães, desenvolvedor full stack e professor. Construo produtos web/mobile e plataformas de dados que alinham tecnologia, educação e resultado de negócio." }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("h1", { className: "text-4xl font-semibold leading-tight text-cyan-900 dark:text-cyan-100 sm:text-5xl md:text-6xl", children: "Transformando dados e código em produtos digitais que entregam impacto real." }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-lg text-slate-300 dark:text-slate-200", children: "Sou Leonardo Vieira Guimarães, desenvolvedor full stack e professor. Construo produtos web/mobile e plataformas de dados que alinham tecnologia, educação e resultado de negócio." }),
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-wrap gap-2 sm:gap-3 sm:flex-nowrap sm:overflow-visible", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsxs(
             "a",
@@ -10675,7 +10642,7 @@ function Hero() {
         ].map((item) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
           "div",
           {
-            className: "card rounded-lg px-4 py-3 text-xs text-slate-200 sm:text-sm flex items-center gap-3",
+            className: "card rounded-lg px-4 py-3 text-xs text-slate-200 dark:text-slate-200 sm:text-sm flex items-center gap-3",
             children: [
               /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-lg", children: item.icon }),
               /* @__PURE__ */ jsxRuntimeExports.jsx("span", { children: item.label })
@@ -10686,26 +10653,35 @@ function Hero() {
       ] }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "relative hidden md:block", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "card relative w-80 min-h-[18rem] overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 p-6", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(34,211,238,0.18),transparent_30%),radial-gradient(circle_at_80%_0%,rgba(167,139,250,0.2),transparent_35%)]" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative flex h-full flex-col justify-start gap-3", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative flex h-full flex-col justify-start gap-4", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm uppercase tracking-wide text-cyan-200", children: "Perfil" }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "text-2xl font-semibold text-white", children: "Leonardo V. Guimarães" }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-slate-300", children: "Belo Horizonte • Remoto Brasil" })
+            /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xs uppercase tracking-[0.2em] text-cyan-900 dark:text-cyan-200 font-semibold", children: "Perfil" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "text-xl md:text-2xl font-bold text-white dark:text-cyan-100 mt-1", children: "Leonardo V. Guimarães" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xs text-slate-400 dark:text-slate-300 mt-0.5", children: "Belo Horizonte • Remoto Brasil" })
           ] }),
-          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "space-y-3 text-sm text-slate-200", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-cyan-300 font-semibold", children: "👨‍💼 Professor Universitário" }),
-            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "space-y-1.5 text-xs", children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-cyan-200 font-semibold", children: "💻 Full Stack" }),
-              /* @__PURE__ */ jsxRuntimeExports.jsx("p", { children: "🔹 Frontend: React, TypeScript, Tailwind" }),
-              /* @__PURE__ */ jsxRuntimeExports.jsx("p", { children: "🔹 Backend: Node.js, Python, Django, Spring Boot" }),
-              /* @__PURE__ */ jsxRuntimeExports.jsx("p", { children: "🔹 Mobile: React Native" })
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "space-y-4 text-base text-slate-200 dark:text-slate-200", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-cyan-900 dark:text-cyan-200 font-bold text-lg leading-tight", children: "Professor Universitário" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "space-y-2 text-base", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-cyan-900 dark:text-cyan-200 font-bold text-base mt-2", children: "Full Stack" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "pl-2", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-semibold text-cyan-900 dark:text-cyan-100", children: "Frontend:" }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-semibold text-cyan-900 dark:text-cyan-100", children: " React, TypeScript, Tailwind" })
+              ] }),
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "pl-2", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-semibold text-cyan-900 dark:text-cyan-100", children: "Backend:" }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-semibold text-cyan-900 dark:text-cyan-100", children: " Node.js, Python, Django, Spring Boot" })
+              ] }),
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "pl-2", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-semibold text-cyan-900 dark:text-cyan-100", children: "Mobile:" }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-semibold text-slate-800 dark:text-white", children: " React Native" })
+              ] })
             ] }),
-            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "space-y-1.5 border-t border-white/10 pt-2.5", children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-cyan-200 font-semibold", children: "🎓 Formação Acadêmica" }),
-              /* @__PURE__ */ jsxRuntimeExports.jsx("p", { children: "📚 Engenharia da Computação" }),
-              /* @__PURE__ */ jsxRuntimeExports.jsx("p", { children: "📐 Licenciatura em Matemática" }),
-              /* @__PURE__ */ jsxRuntimeExports.jsx("p", { children: "🏆 Mestre Modelagem Computacional" }),
-              /* @__PURE__ */ jsxRuntimeExports.jsx("p", { children: "📊 Doutorando Modelagem Computacional" })
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "space-y-2 border-t border-white/10 pt-3 text-base", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-cyan-900 font-bold text-base", children: "Formação Acadêmica" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "pl-2", children: /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-semibold text-white", children: "Engenharia da Computação" }) }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "pl-2", children: /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-semibold text-white", children: "Licenciatura em Matemática" }) }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "pl-2", children: /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-semibold text-white", children: "Mestre Modelagem Computacional" }) }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "pl-2", children: /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-semibold text-white", children: "Doutorando Modelagem Computacional" }) })
             ] })
           ] })
         ] })
@@ -10812,14 +10788,14 @@ function ProjectsDeveloper() {
   return /* @__PURE__ */ jsxRuntimeExports.jsx(
     "section",
     {
-      className: "relative text-white pt-20 pb-16",
+      className: "relative text-cyan-900 dark:text-cyan-100 pt-20 pb-16",
       id: "projectsDeveloper",
       style: { background },
       children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative container mx-auto max-w-6xl px-4", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center space-y-3", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200", children: "Sistemas web" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-3xl md:text-4xl font-semibold", children: "Desenvolvimento de sistemas" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-slate-300", children: "Projetos web e APIs com foco em produto, dados e entrega contínua." }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200 dark:text-cyan-200", children: "Sistemas web" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-3xl md:text-4xl font-semibold text-cyan-700 dark:text-cyan-200", children: "Desenvolvimento de sistemas" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-slate-500 dark:text-slate-200", children: "Projetos web e APIs com foco em produto, dados e entrega contínua." }),
           /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "pt-4", children: /* @__PURE__ */ jsxRuntimeExports.jsxs(
             "a",
             {
@@ -10853,7 +10829,7 @@ function ProjectsDeveloper() {
                   /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-900/30 to-transparent" })
                 ] }),
                 /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative space-y-3 p-4", children: [
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex flex-wrap gap-2 text-xs text-cyan-200", children: (_a = project.tags) == null ? void 0 : _a.map((tag) => /* @__PURE__ */ jsxRuntimeExports.jsx(
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex flex-wrap gap-2 text-xs text-cyan-200 dark:text-cyan-200", children: (_a = project.tags) == null ? void 0 : _a.map((tag) => /* @__PURE__ */ jsxRuntimeExports.jsx(
                     "span",
                     {
                       className: "rounded-full border border-white/10 bg-white/5 px-3 py-1",
@@ -10862,7 +10838,7 @@ function ProjectsDeveloper() {
                     tag
                   )) }),
                   /* @__PURE__ */ jsxRuntimeExports.jsx("h4", { className: "text-xl font-semibold", children: project.title }),
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm text-slate-300", children: project.description }),
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm text-slate-500 dark:text-slate-200", children: project.description }),
                   /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex gap-2 mt-2", children: [
                     /* @__PURE__ */ jsxRuntimeExports.jsxs(
                       "button",
@@ -10972,14 +10948,14 @@ function ProjectsAcademics() {
   return /* @__PURE__ */ jsxRuntimeExports.jsx(
     "section",
     {
-      className: "relative text-white pt-20 pb-16",
+      className: "relative text-white dark:text-cyan-100 pt-20 pb-16",
       id: "projectsAcademics",
       style: { background },
       children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative container mx-auto max-w-6xl px-4", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center space-y-3", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200", children: "Pesquisa" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-3xl md:text-4xl font-semibold", children: "Projetos acadêmicos" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-slate-300", children: "Dissertações, artigos e projetos que conectam ciência, tecnologia e dados." })
+          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200 dark:text-cyan-200", children: "Pesquisa" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-3xl md:text-4xl font-semibold text-cyan-700 dark:text-cyan-200", children: "Projetos acadêmicos" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-slate-500 dark:text-slate-200", children: "Dissertações, artigos e projetos que conectam ciência, tecnologia e dados." })
         ] }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3", children: projects.map((project, index2) => {
           var _a;
@@ -11000,7 +10976,7 @@ function ProjectsAcademics() {
                   /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-900/30 to-transparent" })
                 ] }),
                 /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative space-y-3 p-4", children: [
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex flex-wrap gap-2 text-xs text-cyan-200", children: (_a = project.tags) == null ? void 0 : _a.map((tag) => /* @__PURE__ */ jsxRuntimeExports.jsx(
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex flex-wrap gap-2 text-xs text-cyan-200 dark:text-cyan-200", children: (_a = project.tags) == null ? void 0 : _a.map((tag) => /* @__PURE__ */ jsxRuntimeExports.jsx(
                     "span",
                     {
                       className: "rounded-full border border-white/10 bg-white/5 px-3 py-1",
@@ -11009,7 +10985,7 @@ function ProjectsAcademics() {
                     tag
                   )) }),
                   /* @__PURE__ */ jsxRuntimeExports.jsx("h4", { className: "text-xl font-semibold", children: project.title }),
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm text-slate-300", children: project.description }),
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm text-slate-500 dark:text-slate-200", children: project.description }),
                   /* @__PURE__ */ jsxRuntimeExports.jsxs(
                     "button",
                     {
@@ -11064,14 +11040,14 @@ function ProjectsProfessor() {
   return /* @__PURE__ */ jsxRuntimeExports.jsx(
     "section",
     {
-      className: "relative text-white pt-20 pb-16",
+      className: "relative text-cyan-900 dark:text-cyan-100 pt-20 pb-16",
       id: "projectsProfessor",
       style: { background },
       children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative container mx-auto max-w-6xl px-4", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center space-y-3", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200", children: "Educação" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-3xl md:text-4xl font-semibold", children: "Projetos e videoaulas" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-slate-300", children: "Conteúdo prático de estatística, finanças e tecnologia para sala de aula e online." })
+          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200 dark:text-cyan-200", children: "Educação" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-3xl md:text-4xl font-semibold text-cyan-700 dark:text-cyan-200", children: "Projetos e videoaulas" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-slate-500 dark:text-slate-200", children: "Conteúdo prático de estatística, finanças e tecnologia para sala de aula e online." })
         ] }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3", children: projects.map((project, index2) => {
           var _a;
@@ -11092,7 +11068,7 @@ function ProjectsProfessor() {
                   /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-900/30 to-transparent" })
                 ] }),
                 /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative space-y-3 p-4", children: [
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex flex-wrap gap-2 text-xs text-cyan-200", children: (_a = project.tags) == null ? void 0 : _a.map((tag) => /* @__PURE__ */ jsxRuntimeExports.jsx(
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex flex-wrap gap-2 text-xs text-cyan-200 dark:text-cyan-200", children: (_a = project.tags) == null ? void 0 : _a.map((tag) => /* @__PURE__ */ jsxRuntimeExports.jsx(
                     "span",
                     {
                       className: "rounded-full border border-white/10 bg-white/5 px-3 py-1",
@@ -11101,7 +11077,7 @@ function ProjectsProfessor() {
                     tag
                   )) }),
                   /* @__PURE__ */ jsxRuntimeExports.jsx("h4", { className: "text-xl font-semibold", children: project.title }),
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm text-slate-300", children: project.description }),
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm text-slate-500 dark:text-slate-200", children: project.description }),
                   /* @__PURE__ */ jsxRuntimeExports.jsxs(
                     "button",
                     {
@@ -11148,9 +11124,17 @@ function Services() {
   ];
   return /* @__PURE__ */ jsxRuntimeExports.jsxs("section", { className: "container mx-auto max-w-6xl px-4 pt-20 pb-16", id: "services", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center space-y-3", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200", children: "O que faço" }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-3xl md:text-4xl font-semibold text-white", children: "Soluções ponta a ponta para produtos digitais e educação" }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-slate-300", children: "Do discovery à entrega: front-end, back-end, dados, mobile e trilhas educacionais." })
+      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200 dark:text-cyan-200", children: "O que faço" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-3xl md:text-4xl font-semibold text-cyan-300 dark:text-cyan-200", children: "Soluções ponta a ponta para produtos digitais e educação" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "text-slate-400 dark:text-slate-200", children: [
+        "Do discovery à entrega: ",
+        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-semibold text-cyan-700 dark:text-cyan-200", children: "front-end" }),
+        ", ",
+        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-semibold text-cyan-700 dark:text-cyan-200", children: "back-end" }),
+        ", dados, ",
+        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-semibold text-cyan-700 dark:text-cyan-200", children: "mobile" }),
+        " e trilhas educacionais."
+      ] })
     ] }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-10 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4", children: services.map((service, index2) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
       "div",
@@ -11159,9 +11143,9 @@ function Services() {
         children: [
           /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 bg-gradient-to-br from-white/5 via-white/0 to-white/5" }),
           /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative space-y-3", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "inline-flex h-14 w-14 items-center justify-center rounded-xl bg-cyan-500/15 text-cyan-300 [.light_&]:bg-cyan-100 [.light_&]:text-cyan-700", children: service.icon }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "text-xl font-semibold text-white", children: service.title }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm text-slate-300 leading-relaxed", children: service.description })
+            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "inline-flex h-14 w-14 items-center justify-center rounded-xl bg-cyan-500/15 text-cyan-300 dark:text-cyan-200 [.light_&]:bg-cyan-100 [.light_&]:text-cyan-700", children: service.icon }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "text-xl font-semibold text-white dark:text-cyan-100", children: service.title }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm text-slate-300 dark:text-slate-200 leading-relaxed", children: service.description })
           ] })
         ]
       },
@@ -11194,23 +11178,23 @@ function Process() {
   ];
   return /* @__PURE__ */ jsxRuntimeExports.jsxs("section", { className: "container mx-auto max-w-6xl px-4 pt-20 pb-16", id: "process", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center space-y-3", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200", children: "Metodologia" }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-3xl md:text-4xl font-semibold text-white", children: "Processo estruturado para entregar com qualidade" }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-slate-300", children: "Passos claros para reduzir risco, alinhar expectativas e garantir valor em produção." })
+      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200 dark:text-cyan-200", children: "Metodologia" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-3xl md:text-4xl font-semibold text-cyan-300 dark:text-cyan-200", children: "Processo estruturado para entregar com qualidade" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-slate-400 dark:text-slate-200", children: "Passos claros para reduzir risco, alinhar expectativas e garantir valor em produção." })
     ] }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-10 grid grid-cols-1 gap-4 md:grid-cols-2", children: steps.map((step, index2) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "card relative h-full overflow-hidden rounded-xl p-6", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 bg-gradient-to-br from-white/5 via-white/0 to-white/5" }),
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative flex items-start gap-4", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex h-12 w-12 items-center justify-center rounded-full bg-cyan-500/10 text-cyan-300 [.light_&]:bg-cyan-100 [.light_&]:text-cyan-700", children: step.icon }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex h-12 w-12 items-center justify-center rounded-full bg-cyan-500/10 text-cyan-300 dark:text-cyan-200 [.light_&]:bg-cyan-100 [.light_&]:text-cyan-700", children: step.icon }),
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "space-y-2", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-3", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "text-xs font-semibold uppercase tracking-wide text-cyan-200", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "text-xs font-semibold uppercase tracking-wide text-cyan-200 dark:text-cyan-200", children: [
               "0",
               index2 + 1
             ] }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "text-xl font-semibold text-white", children: step.title })
+            /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "text-xl font-semibold text-cyan-300 dark:text-cyan-200", children: step.title })
           ] }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm leading-relaxed text-slate-300", children: step.description })
+          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm leading-relaxed text-slate-400 dark:text-slate-200", children: step.description })
         ] })
       ] })
     ] }, step.title)) })
@@ -11222,97 +11206,114 @@ function Skills() {
   const background = isLight ? "linear-gradient(180deg, #f9fafb 0%, #eef2f7 55%, #f9fafb 100%)" : "rgba(15, 23, 42, 0.4)";
   const educations = [
     {
-      name: "Doutorando em Modelagem Computacional | CEFET/MG"
+      degree: "Doutorado (em andamento)",
+      institution: "CEFET/MG",
+      course: "Modelagem Matemática e Computacional",
+      period: "2025 - atual",
+      description: "Linha de pesquisa em sistemas inteligentes. Orientador: Alisson Marques da Silva."
     },
     {
-      name: "Aluno em Disciplina Isolada | UFMG (Doutorado)"
+      degree: "Aluno especial (Doutorado)",
+      institution: "UFMG",
+      course: "Ciências da Computação",
+      period: "2024 - 2025",
+      description: "Disciplinas: Modelagem de Dados, Visão Computacional e Visualização de Dados."
     },
     {
-      name: "Mestre em Modelagem Computacional e Sistemas | UNIMONTES"
+      degree: "Mestrado Profissional",
+      institution: "UNIMONTES",
+      course: "Modelagem Computacional e Sistemas",
+      period: "2016 - 2019",
+      description: "Título: Monitoramento no Processo de Desidratação de Uvas Baseado em Imagens Digitais e Sistemas Inteligentes. Orientador: Dr. Maurílio José Inácio. Coorientador: Dr. Rodolpho Cézar dos Reis Tinini."
     },
     {
-      name: "Graduação Bacharelado em Ciência da Computação | FACIT"
+      degree: "Especialização",
+      institution: "UFLA",
+      course: "Matemática e Estatística",
+      period: "2008 - 2009",
+      description: "Trabalho de Qualificação. Orientador: Paulo César Lima."
     },
     {
-      name: "Especialização em Matemática | Finon"
+      degree: "Especialização",
+      institution: "FINOM",
+      course: "Matemática",
+      period: "2008",
+      description: "Título: A matemática Financeira Aplicada em Empréstimos e Financiamentos Bancários. Orientador: Maria Marlene Rodrigues Souza."
     },
     {
-      name: "Especialização em Matemática e Estatística | UFLA"
+      degree: "Graduação",
+      institution: "FEMC",
+      course: "Engenharia de Computação",
+      period: "2010 - 2014",
+      description: "Título: Sistema de Identificação de Bovídeos Usando Radiofrequência por Identificação (RFID). Orientador: Alexandre Dantas Dias."
     },
     {
-      name: "Graduação Licenciatura em Matemática | UNIMONTES"
+      degree: "Graduação",
+      institution: "UNIMONTES",
+      course: "Matemática",
+      period: "2004 - 2007",
+      description: "Formação em Matemática."
     }
   ];
   const skills = [
+    { name: "HTML5/CSS3", icon: "https://simpleicons.org/icons/html5.svg", level: 95 },
+    { name: "JavaScript", icon: "https://simpleicons.org/icons/javascript.svg", level: 90 },
+    { name: "TypeScript", icon: "https://simpleicons.org/icons/typescript.svg", level: 85 },
+    { name: "React.js", icon: "https://simpleicons.org/icons/react.svg", level: 90 },
+    { name: "Next.js", icon: "https://simpleicons.org/icons/nextdotjs.svg", level: 80 },
+    { name: "Node.js", icon: "https://simpleicons.org/icons/nodedotjs.svg", level: 85 },
+    { name: "Express.js", icon: "https://simpleicons.org/icons/express.svg", level: 80 },
+    { name: "Python", icon: "https://simpleicons.org/icons/python.svg", level: 90 },
+    { name: "Django", icon: "https://simpleicons.org/icons/django.svg", level: 80 },
+    { name: "Spring Boot", icon: "https://simpleicons.org/icons/springboot.svg", level: 70 },
+    { name: "Java", icon: "https://simpleicons.org/icons/java.svg", level: 75 },
+    { name: "C#", icon: "https://simpleicons.org/icons/csharp.svg", level: 60 },
+    { name: "PostgreSQL", icon: "https://simpleicons.org/icons/postgresql.svg", level: 85 },
+    { name: "MySQL", icon: "https://simpleicons.org/icons/mysql.svg", level: 80 },
+    { name: "MongoDB", icon: "https://simpleicons.org/icons/mongodb.svg", level: 70 },
+    { name: "Docker", icon: "https://simpleicons.org/icons/docker.svg", level: 75 },
+    { name: "Git", icon: "https://simpleicons.org/icons/git.svg", level: 90 },
+    { name: "Linux", icon: "https://simpleicons.org/icons/linux.svg", level: 80 },
+    { name: "Figma", icon: "https://simpleicons.org/icons/figma.svg", level: 60 },
+    { name: "Power BI", icon: "https://cdn.worldvectorlogo.com/logos/power-bi.svg", level: 60 },
+    { name: "Pandas", icon: "https://simpleicons.org/icons/pandas.svg", level: 70 },
+    { name: "Numpy", icon: "https://simpleicons.org/icons/numpy.svg", level: 65 },
+    { name: "Bootstrap", icon: "https://simpleicons.org/icons/bootstrap.svg", level: 60 },
+    { name: "Tailwind CSS", icon: "https://simpleicons.org/icons/tailwindcss.svg", level: 80 },
+    { name: "Jest", icon: "https://simpleicons.org/icons/jest.svg", level: 50 },
+    { name: "Cypress", icon: "https://simpleicons.org/icons/cypress.svg", level: 40 },
+    { name: "APIs REST", icon: "https://www.svgrepo.com/show/353478/api.svg", level: 90 },
+    { name: "GraphQL", icon: "https://simpleicons.org/icons/graphql.svg", level: 40 },
+    { name: "Matplotlib", icon: "https://simpleicons.org/icons/matplotlib.svg", level: 50 },
+    { name: "Seaborn", icon: "https://seaborn.pydata.org/_static/logo-wide-lightbg.svg", level: 40 },
+    { name: "FastAPI", icon: "https://simpleicons.org/icons/fastapi.svg", level: 40 },
+    { name: "Flask", icon: "https://simpleicons.org/icons/flask.svg", level: 40 },
+    { name: "SASS", icon: "https://simpleicons.org/icons/sass.svg", level: 60 },
+    { name: "Redux", icon: "https://simpleicons.org/icons/redux.svg", level: 60 },
+    { name: "Vite", icon: "https://seeklogo.com/images/V/vite-logo-BFD4283991-seeklogo.com.svg", level: 70 },
+    { name: "Yarn", icon: "https://simpleicons.org/icons/yarn.svg", level: 70 },
+    { name: "NPM", icon: "https://simpleicons.org/icons/npm.svg", level: 70 },
+    { name: "Jupyter", icon: "https://simpleicons.org/icons/jupyter.svg", level: 60 },
+    // IA e Machine Learning
+    { name: "TensorFlow", icon: "https://simpleicons.org/icons/tensorflow.svg", level: 60 },
+    { name: "Keras", icon: "https://simpleicons.org/icons/keras.svg", level: 60 },
+    { name: "PyTorch", icon: "https://simpleicons.org/icons/pytorch.svg", level: 50 },
+    { name: "Scikit-learn", icon: "https://simpleicons.org/icons/scikitlearn.svg", level: 65 },
+    { name: "OpenAI API", icon: "https://cdn.worldvectorlogo.com/logos/openai-2.svg", level: 60 },
+    { name: "Gemini API", icon: "https://www.svgrepo.com/show/499962/artificial-intelligence-ai.svg", level: 55 }
+  ];
+  const languages = [
     {
-      name: "HTML5/CSS3",
-      icon: "images/skills//html.svg",
-      level: 95
+      language: "Português",
+      level: "Nativo"
     },
     {
-      name: "JavaScript",
-      icon: "images/skills/javascript.svg",
-      level: 85
+      language: "Espanhol",
+      level: "Básico (leitura e comunicação simples)"
     },
     {
-      name: "React.js",
-      icon: "images/skills/react.svg",
-      level: 70
-    },
-    {
-      name: "Node.js",
-      icon: "images/skills/nodejs.svg",
-      level: 65
-    },
-    {
-      name: "Django",
-      icon: "images/skills/django.svg",
-      level: 80
-    },
-    {
-      name: "Django Ninja",
-      icon: "images/skills/djangoNinja.png",
-      level: 70
-    },
-    {
-      name: "Python",
-      icon: "images/skills/python.svg",
-      level: 80
-    },
-    {
-      name: "Spring Boot",
-      icon: "images/skills/Spring_Boot.svg",
-      level: 60
-    },
-    {
-      name: "Docker",
-      icon: "images/skills/docker.svg",
-      level: 50
-    },
-    {
-      name: "Nginx",
-      icon: "images/skills/nginx.svg",
-      level: 50
-    },
-    {
-      name: "PHP",
-      icon: "images/skills/php.svg",
-      level: 40
-    },
-    {
-      name: "Vue.js",
-      icon: "images/skills/vue.svg",
-      level: 20
-    },
-    {
-      name: "Angular.js",
-      icon: "images/skills/angular.svg",
-      level: 20
-    },
-    {
-      name: "typescript.js",
-      icon: "images/skills/typescript.svg",
-      level: 40
+      language: "Inglês",
+      level: "Intermediário (leitura técnica e documentação)"
     }
   ];
   return /* @__PURE__ */ jsxRuntimeExports.jsx(
@@ -11323,176 +11324,402 @@ function Skills() {
       style: { background },
       children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container mx-auto max-w-6xl px-4", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center space-y-3 mb-8", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200", children: "Formação & stack" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-3xl md:text-4xl font-semibold text-white", children: "Educação e skills" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-slate-300", children: "Base sólida em modelagem, dados e engenharia para construir e ensinar tecnologia." })
+          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xs font-semibold uppercase tracking-[0.3em] text-cyan-900 dark:text-cyan-200", children: "Formação & stack" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-3xl md:text-4xl font-semibold text-cyan-900 dark:text-cyan-200", children: "Educação e habilidades" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-cyan-700 dark:text-cyan-200", children: "Base sólida em modelagem, dados e engenharia para construir e ensinar tecnologia." })
         ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid gap-6 md:grid-cols-2", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "card rounded-2xl p-6", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsxs("h3", { className: "mb-4 flex items-center gap-2 text-lg font-semibold text-white", children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsx(HiAcademicCap, { className: "h-7 w-7 text-cyan-300 [.light_&]:text-cyan-700" }),
-              "Educação"
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col gap-8", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "card rounded-2xl p-6 border border-slate-200 dark:border-white/10 shadow-sm", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mb-6 text-center", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("h2", { className: "text-2xl md:text-3xl font-bold text-cyan-900 dark:text-cyan-200 tracking-tight flex items-center justify-center gap-2", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx(HiAcademicCap, { className: "h-7 w-7 text-cyan-900 dark:text-cyan-200" }),
+                "Formação Acadêmica"
+              ] }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-cyan-700 dark:text-cyan-200 mt-2 text-base", children: "Trajetória educacional e principais títulos obtidos." })
             ] }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "space-y-3 text-slate-200", children: educations.map((education, index2) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
+            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex flex-col gap-4 text-cyan-900 dark:text-cyan-200", children: educations.map((education, index2) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
               "div",
               {
-                className: "flex items-center gap-3 rounded-lg border border-white/5 bg-white/5 px-4 py-3",
+                className: "card rounded-lg border border-slate-200 dark:border-white/10 px-4 py-4 flex flex-col gap-1 shadow-sm",
                 children: [
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "h-2 w-2 rounded-full bg-cyan-300" }),
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-sm font-semibold", children: education.name })
+                  /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col md:flex-row md:items-center md:justify-between gap-1", children: [
+                    /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "text-base font-bold text-cyan-900 dark:text-cyan-100", children: [
+                      education.degree,
+                      " em ",
+                      education.course
+                    ] }),
+                    /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-xs text-cyan-700 dark:text-cyan-200", children: education.period })
+                  ] }),
+                  /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "text-sm text-cyan-700 dark:text-cyan-200 font-semibold", children: [
+                    education.degree,
+                    " ",
+                    /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "mx-1", children: "|" }),
+                    " ",
+                    education.institution
+                  ] }),
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-cyan-700 dark:text-cyan-200 text-sm mt-1", children: education.description })
                 ]
               },
               `education-${index2}`
             )) })
           ] }),
-          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "card rounded-2xl p-6", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsxs("h3", { className: "mb-4 flex items-center gap-2 text-lg font-semibold text-white", children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsx(HiCodeBracketSquare, { className: "h-7 w-7 text-cyan-300 [.light_&]:text-cyan-700" }),
-              "Skills"
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "card rounded-2xl p-6 border border-slate-200 dark:border-white/10 shadow-sm", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mb-6 text-center", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("h2", { className: "text-2xl md:text-3xl font-bold text-cyan-900 dark:text-cyan-200 tracking-tight flex items-center justify-center gap-2", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx(HiCodeBracketSquare, { className: "h-7 w-7 text-cyan-900 dark:text-cyan-200" }),
+                "Habilidades Técnicas"
+              ] }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-cyan-700 dark:text-cyan-200 mt-2 text-base", children: "Principais tecnologias e stacks que domino para desenvolvimento de soluções." })
             ] }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid grid-cols-2 gap-4 md:grid-cols-3", children: skills.sort((a, b) => b.level - a.level).map((skill, index2) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "space-y-2", children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex h-12 w-12 items-center justify-center rounded-lg bg-white/10", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
-                "img",
-                {
-                  src: skill.icon,
-                  alt: skill.name,
-                  className: "h-8 w-8 rounded"
-                }
-              ) }),
-              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
-                /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm font-semibold text-white", children: skill.name }),
-                /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "h-2 w-full rounded-full bg-white/10", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
-                  "div",
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mb-8", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "text-lg font-semibold text-cyan-900 dark:text-cyan-300 mb-2", children: "Competências Técnicas" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4", children: skills.filter((skill) => !["Ensino", "Matemática", "Estatística"].includes(skill.name)).sort((a, b) => b.level - a.level).map((skill, index2) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "card flex items-center gap-4 rounded-lg border border-slate-200 dark:border-white/10 px-4 py-4 shadow-sm", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex h-12 w-12 items-center justify-center rounded-full bg-white border border-slate-200 dark:border-slate-700 text-xs text-cyan-200 dark:text-cyan-200", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+                  "img",
                   {
-                    className: "h-2 rounded-full bg-gradient-to-r from-cyan-400 to-violet-400",
-                    style: { width: `${skill.level}%` }
+                    src: skill.icon,
+                    alt: skill.name,
+                    className: "h-8 w-8 rounded drop-shadow-sm",
+                    onError: (e) => {
+                      const target = e.currentTarget;
+                      target.onerror = null;
+                      target.style.display = "none";
+                      target.insertAdjacentHTML("afterend", `
+                            <svg viewBox='0 0 24 24' fill='none' class='h-8 w-8 text-cyan-700 dark:text-cyan-200' xmlns='http://www.w3.org/2000/svg'>
+                              <circle cx='12' cy='12' r='11' fill='currentColor' fill-opacity='0.10' />
+                              <rect x='3' y='7' width='18' height='10' rx='2' fill='currentColor' fill-opacity='0.2' />
+                              <rect x='7' y='3' width='10' height='18' rx='2' fill='currentColor' fill-opacity='0.4' />
+                            </svg>
+                          `);
+                    }
                   }
-                ) })
-              ] })
-            ] }, `skill-${index2}`)) })
+                ) }),
+                /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex-1", children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm font-semibold text-cyan-900 dark:text-cyan-100", children: skill.name }),
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "h-2 w-full rounded-full bg-cyan-100 dark:bg-cyan-500/10", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+                    "div",
+                    {
+                      className: "h-2 rounded-full bg-gradient-to-r from-cyan-400 to-violet-400",
+                      style: { width: `${skill.level}%` }
+                    }
+                  ) })
+                ] })
+              ] }, `skill-${index2}`)) })
+            ] }),
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "text-lg font-semibold text-cyan-900 dark:text-cyan-300 mb-2", children: "Competências Comportamentais" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4", children: [
+                {
+                  name: "Comunicação Clara e Didática",
+                  icon: "https://www.svgrepo.com/show/375930/megaphone-announcement.svg",
+                  level: 95,
+                  desc: "Facilidade para explicar conceitos complexos de forma simples, tanto em ambientes acadêmicos quanto corporativos."
+                },
+                {
+                  name: "Trabalho em Equipe Multidisciplinar",
+                  icon: "https://www.svgrepo.com/show/375899/teamwork-group.svg",
+                  level: 90,
+                  desc: "Experiência colaborando com profissionais de diferentes áreas para alcançar objetivos comuns."
+                },
+                {
+                  name: "Resolução de Problemas",
+                  icon: "https://www.svgrepo.com/show/375927/puzzle-solution.svg",
+                  level: 90,
+                  desc: "Capacidade analítica para identificar, investigar e solucionar desafios técnicos e pedagógicos."
+                },
+                {
+                  name: "Pensamento Crítico e Analítico",
+                  icon: "https://www.svgrepo.com/show/375925/brainstorm-idea.svg",
+                  level: 90,
+                  desc: "Avaliação criteriosa de informações e tomada de decisões fundamentadas."
+                },
+                {
+                  name: "Gestão do Tempo e Organização",
+                  icon: "https://www.svgrepo.com/show/375911/time-management.svg",
+                  level: 85,
+                  desc: "Priorização de tarefas e cumprimento de prazos em múltiplos projetos simultâneos."
+                },
+                {
+                  name: "Aprendizado Contínuo",
+                  icon: "https://www.svgrepo.com/show/375900/learning-education.svg",
+                  level: 95,
+                  desc: "Busca constante por atualização e novas competências em tecnologia e educação."
+                },
+                {
+                  name: "Empatia e Escuta Ativa",
+                  icon: "https://www.svgrepo.com/show/375915/heart-empathy.svg",
+                  level: 90,
+                  desc: "Compreensão das necessidades de alunos, colegas e clientes, promovendo um ambiente colaborativo."
+                },
+                {
+                  name: "Liderança e Mentoria",
+                  icon: "https://www.svgrepo.com/show/375908/leader-mentoring.svg",
+                  level: 85,
+                  desc: "Orientação de equipes e desenvolvimento de talentos em ambientes educacionais e de TI."
+                },
+                {
+                  name: "Adaptabilidade",
+                  icon: "https://www.svgrepo.com/show/375903/adaptability.svg",
+                  level: 90,
+                  desc: "Facilidade para lidar com mudanças e novos desafios em contextos diversos."
+                }
+              ].map((skill, index2) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "card flex flex-col gap-2 rounded-lg border border-slate-200 dark:border-white/10 px-4 py-4 shadow-sm", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-3 mb-1", children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex h-12 w-12 items-center justify-center rounded-full bg-white border border-slate-200 dark:border-slate-700", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+                    "img",
+                    {
+                      src: skill.icon,
+                      alt: skill.name,
+                      className: "h-8 w-8 rounded drop-shadow-sm",
+                      onError: (e) => {
+                        const target = e.currentTarget;
+                        target.onerror = null;
+                        target.style.display = "none";
+                        target.insertAdjacentHTML("afterend", `
+                              <svg viewBox='0 0 24 24' fill='none' class='h-8 w-8 text-cyan-700 dark:text-cyan-200' xmlns='http://www.w3.org/2000/svg'>
+                                <circle cx='12' cy='12' r='11' fill='currentColor' fill-opacity='0.10' />
+                                <rect x='3' y='7' width='18' height='10' rx='2' fill='currentColor' fill-opacity='0.2' />
+                                <rect x='7' y='3' width='10' height='18' rx='2' fill='currentColor' fill-opacity='0.4' />
+                              </svg>
+                            `);
+                      }
+                    }
+                  ) }),
+                  /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex-1", children: [
+                    /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm font-semibold text-cyan-900 dark:text-cyan-100", children: skill.name }),
+                    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "h-2 w-full rounded-full bg-cyan-100 dark:bg-cyan-500/10", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+                      "div",
+                      {
+                        className: "h-2 rounded-full bg-gradient-to-r from-cyan-400 to-violet-400",
+                        style: { width: `${skill.level}%` }
+                      }
+                    ) })
+                  ] })
+                ] }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xs text-cyan-700 dark:text-cyan-200 mt-1", children: skill.desc })
+              ] }, `soft-skill-${index2}`)) })
+            ] })
+          ] }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "card rounded-2xl p-6 border border-slate-200 dark:border-white/10 shadow-sm", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-2xl md:text-3xl font-bold text-cyan-900 dark:text-cyan-200 tracking-tight mb-6 text-center", children: "Idiomas" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex flex-col gap-4", children: languages.map((lang, idx) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
+              "div",
+              {
+                className: "card rounded-lg border border-slate-200 dark:border-white/10 px-4 py-4 flex flex-col gap-1 shadow-sm items-center",
+                children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-base font-bold text-cyan-900 dark:text-cyan-100 mb-1", children: lang.language }),
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-sm text-cyan-700 dark:text-cyan-200 font-semibold", children: lang.level })
+                ]
+              },
+              idx
+            )) })
           ] })
         ] })
       ] })
     }
   );
 }
-function _typeof(o) {
-  "@babel/helpers - typeof";
-  return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(o2) {
-    return typeof o2;
-  } : function(o2) {
-    return o2 && "function" == typeof Symbol && o2.constructor === Symbol && o2 !== Symbol.prototype ? "symbol" : typeof o2;
-  }, _typeof(o);
-}
-function requiredArgs(required, args) {
-  if (args.length < required) {
-    throw new TypeError(required + " argument" + (required > 1 ? "s" : "") + " required, but only " + args.length + " present");
-  }
-}
-function toDate(argument) {
-  requiredArgs(1, arguments);
-  var argStr = Object.prototype.toString.call(argument);
-  if (argument instanceof Date || _typeof(argument) === "object" && argStr === "[object Date]") {
-    return new Date(argument.getTime());
-  } else if (typeof argument === "number" || argStr === "[object Number]") {
-    return new Date(argument);
-  } else {
-    if ((typeof argument === "string" || argStr === "[object String]") && typeof console !== "undefined") {
-      console.warn("Starting with v2.0.0-beta.1 date-fns doesn't accept strings as date arguments. Please use `parseISO` to parse strings. See: https://github.com/date-fns/date-fns/blob/master/docs/upgradeGuide.md#string-arguments");
-      console.warn(new Error().stack);
+const Experience = () => {
+  const { theme } = useTheme ? useTheme() : { theme: "dark" };
+  const isLight = theme === "light";
+  const background = isLight ? "linear-gradient(180deg, #f9fafb 0%, #eef2f7 55%, #f9fafb 100%)" : "linear-gradient(135deg, #0b1220 0%, #0f172a 60%, #0b1220 100%)";
+  const experiences = [
+    {
+      role: "Professor de Ensino Superior (Prática)",
+      company: "Centro Universitário Newton Paiva",
+      period: "2024 – Atual",
+      description: "Disciplinas de Banco de Dados e Arquitetura Web."
+    },
+    {
+      role: "Desenvolvedor de Aplicativos Android (Freelancer)",
+      company: "Projetos Diversos",
+      period: "Jan/2024 – Fev/2024",
+      description: /* @__PURE__ */ jsxRuntimeExports.jsxs("ul", { className: "list-disc ml-5 space-y-1", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: "Desenvolveu aplicativo Android para gestão de serviços na área da saúde, desde a concepção até a publicação." }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: "Implementou funcionalidades integradas a banco de dados, priorizando performance, segurança e experiência do usuário." }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: "Realizou testes, validação e documentação, assegurando estabilidade e qualidade técnica do produto final." })
+      ] })
+    },
+    {
+      role: "Professor Autor (Backend II com Banco de Dados)",
+      company: "Vitru Brasil Empreendimentos",
+      period: "2023 – 2024",
+      description: "Docência e autoria de material didático para programação backend."
+    },
+    {
+      role: "Desenvolvedor de Sistemas Web (Freelancer)",
+      company: "Projetos Diversos",
+      period: "Jan/2023 – Dez/2023",
+      description: /* @__PURE__ */ jsxRuntimeExports.jsxs("ul", { className: "list-disc ml-5 space-y-1", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: "Projetou, desenvolveu e implantou sistemas web completos para clientes de diversos segmentos, atuando em todas as etapas do ciclo de vida do software." }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: "Utilizou Python, Java, SQL e arquitetura web moderna para criar soluções escaláveis, seguras e de alta performance." }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: "Realizou integrações robustas entre APIs, sistemas legados e bancos de dados, garantindo automação de processos e integridade das informações." }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: "Automatizou fluxos operacionais, reduzindo atividades manuais e aumentando a produtividade dos clientes." }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: "Aplicou metodologias ágeis, versionamento com Git e boas práticas de engenharia de software, entregando projetos dentro do prazo e alinhados às necessidades do negócio." }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: "Recebeu feedback positivo dos clientes pela qualidade técnica, clareza na comunicação e suporte pós-implantação." })
+      ] })
+    },
+    {
+      role: "Professor / Tutor em TI",
+      company: "UNIASSELVI",
+      period: "2022 – Atual",
+      description: "Cursos de Sistemas para Internet, Gestão de Finanças, Matemática, Análise e Desenvolvimento de Sistemas."
+    },
+    {
+      role: "Professor de Estatística, Matemática Financeira e Inovação",
+      company: "FADENORTE",
+      period: "2019 – 2020",
+      description: "Disciplinas: Estatística, Matemática Financeira, Projeto Integrador II, IV e V, Inovação e Gestão Tecnológica, Gestão Financeira e Produção de Custos."
+    },
+    {
+      role: "Professor Mediador Presencial",
+      company: "IFNMG",
+      period: "2017 – 2019",
+      description: "Mediação presencial em cursos técnicos e superiores."
+    },
+    {
+      role: "Professor Mediador a Distância",
+      company: "IFNMG",
+      period: "2020",
+      description: "Mediação a distância no curso FIC Programador de Dispositivos Móveis (EAD)."
+    },
+    {
+      role: "Assistente em Gestão de Defesa Agropecuária",
+      company: "Instituto Mineiro de Agropecuária (IMA)",
+      period: "Nov/2005 – Atual",
+      description: "Atuação no Núcleo de Inovação e Modernização (NIM/IMA) com foco em projetos, suporte, gestão e modernização de processos institucionais."
+    },
+    {
+      role: "Professor de Matemática",
+      company: "Escola Municipal D. Vila Pinto",
+      period: "2010",
+      description: "Ensino de Matemática para o ensino fundamental."
+    },
+    {
+      role: "Técnico de Manutenção Eletrônica",
+      company: "Prefeitura Municipal de São Francisco/MG",
+      period: "2005",
+      description: "Manutenção eletrônica em equipamentos municipais."
     }
-    return /* @__PURE__ */ new Date(NaN);
-  }
-}
-function compareAsc(dirtyDateLeft, dirtyDateRight) {
-  requiredArgs(2, arguments);
-  var dateLeft = toDate(dirtyDateLeft);
-  var dateRight = toDate(dirtyDateRight);
-  var diff = dateLeft.getTime() - dateRight.getTime();
-  if (diff < 0) {
-    return -1;
-  } else if (diff > 0) {
-    return 1;
-  } else {
-    return diff;
-  }
-}
-function differenceInCalendarYears(dirtyDateLeft, dirtyDateRight) {
-  requiredArgs(2, arguments);
-  var dateLeft = toDate(dirtyDateLeft);
-  var dateRight = toDate(dirtyDateRight);
-  return dateLeft.getFullYear() - dateRight.getFullYear();
-}
-function differenceInYears(dirtyDateLeft, dirtyDateRight) {
-  requiredArgs(2, arguments);
-  var dateLeft = toDate(dirtyDateLeft);
-  var dateRight = toDate(dirtyDateRight);
-  var sign = compareAsc(dateLeft, dateRight);
-  var difference = Math.abs(differenceInCalendarYears(dateLeft, dateRight));
-  dateLeft.setFullYear(1584);
-  dateRight.setFullYear(1584);
-  var isLastYearNotFull = compareAsc(dateLeft, dateRight) === -sign;
-  var result = sign * (difference - Number(isLastYearNotFull));
-  return result === 0 ? 0 : result;
-}
-function About() {
-  const birthDate = new Date(1984, 10 - 1, 2);
-  const today = /* @__PURE__ */ new Date();
-  const age = differenceInYears(today, birthDate);
-  return /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "container mx-auto px-4 pt-20 pb-16", id: "about", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "relative mx-auto mt-8 max-w-6xl", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "card relative w-full overflow-hidden rounded-2xl border border-white/10 bg-slate-900/80 p-6 md:p-10", children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(34,211,238,0.12),transparent_35%),radial-gradient(circle_at_80%_0%,rgba(167,139,250,0.12),transparent_30%)]" }),
-    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative grid grid-cols-1 md:grid-cols-3 gap-8 items-start", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "order-first md:order-last flex justify-center md:col-span-1", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
-        "img",
-        {
-          src: getImagePath("images/fotoSobre.jpg"),
-          alt: "Leonardo Vieira Guimarães",
-          className: "h-56 w-44 md:h-72 md:w-56 rounded-lg object-cover flex-shrink-0 shadow-lg"
-        }
-      ) }),
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "space-y-6 md:col-span-2", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-left space-y-3", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-3xl md:text-4xl font-semibold text-white", children: "Sobre mim" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "text-slate-300", children: [
-            age,
-            " anos, professor universitário e desenvolvedor full stack. Uso engenharia e matemática para transformar produtos digitais e experiências de aprendizagem."
-          ] })
+  ];
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(
+    "section",
+    {
+      className: "relative text-cyan-900 dark:text-cyan-100 pt-20 pb-16",
+      id: "experience",
+      style: { background },
+      children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative container mx-auto max-w-6xl px-4", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center space-y-3", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200 dark:text-cyan-200", children: "Experiência" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-3xl md:text-4xl font-semibold text-cyan-700 dark:text-cyan-200", children: "Experiência Profissional" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-slate-500 dark:text-slate-200", children: "Histórico de atuação em tecnologia, educação e projetos de transformação digital." })
         ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "space-y-4 text-slate-200 leading-relaxed text-justify", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { children: "Mestre em Modelagem Computacional e Sistemas (UNIMONTES) e doutorando em Modelagem Computacional (CEFET/MG). Atuo em APIs, front-ends e automações, leciono Arquitetura Web, Programação e Banco de Dados, e apoio projetos de TI no NIM (Cidade Administrativa)." }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { children: "No GitHub compartilho projetos variados: dashboards e automações em Python/Node, APIs em Django/Django Ninja e Spring Boot, front-ends em React/TypeScript e protótipos mobile com React Native. Foco em código limpo, documentação e entregas reprodutíveis." })
-        ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-wrap gap-3", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-cyan-200", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "relative flex h-3 w-3", children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" }),
-              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "relative inline-flex h-3 w-3 rounded-full bg-emerald-400" })
-            ] }),
-            "Disponível para projetos e oportunidades"
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-8 flex flex-col gap-6", children: experiences.map((exp, idx) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "card bg-white/90 dark:bg-slate-800 rounded-xl p-4 border border-slate-200 dark:border-white/10 shadow-sm flex flex-col h-full", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col gap-1 mb-2", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-base font-semibold text-cyan-900 dark:text-cyan-100", children: exp.role }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-xs text-cyan-800 dark:text-cyan-200", children: exp.period })
           ] }),
-          /* @__PURE__ */ jsxRuntimeExports.jsxs(
-            "a",
+          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-sm text-cyan-800 dark:text-cyan-200 mb-1", children: exp.company }),
+          typeof exp.description === "string" ? /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-slate-700 dark:text-slate-200 text-sm mt-1 flex-1", children: exp.description }) : /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-slate-700 dark:text-slate-200 text-sm mt-1 flex-1", children: exp.description })
+        ] }, idx)) })
+      ] })
+    }
+  );
+};
+function About() {
+  const { theme } = useTheme ? useTheme() : { theme: "dark" };
+  const isLight = theme === "light";
+  const background = isLight ? "linear-gradient(180deg, #f9fafb 0%, #eef2f7 55%, #f9fafb 100%)" : "linear-gradient(135deg, #0b1220 0%, #0f172a 60%, #0b1220 100%)";
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(
+    "section",
+    {
+      className: "relative text-cyan-900 dark:text-cyan-100 pt-10 pb-10",
+      id: "about",
+      style: { background },
+      children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative container mx-auto max-w-6xl px-4", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center space-y-3", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xs font-semibold uppercase tracking-[0.3em] text-cyan-900 dark:text-cyan-200", children: "Sobre" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-3xl md:text-4xl font-semibold text-cyan-900 dark:text-cyan-200", children: "Sobre mim" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-cyan-900 dark:text-cyan-200", children: "Professor universitário e desenvolvedor full stack. Uso engenharia e matemática para transformar produtos digitais e experiências de aprendizagem." })
+        ] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-8 grid grid-cols-1 gap-6 md:grid-cols-3 items-start", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "order-first md:order-last flex justify-center md:col-span-1", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+            "img",
             {
-              href: "https://github.com/LeonardoVieiraGuimaraes?tab=repositories",
-              target: "_blank",
-              rel: "noopener noreferrer",
-              className: "button-secondary border border-white/20 hover:border-white/40 flex items-center gap-2",
-              children: [
-                /* @__PURE__ */ jsxRuntimeExports.jsx(FaGithub, { className: "h-5 w-5" }),
-                "Ver repositórios no GitHub"
-              ]
+              src: getImagePath("images/fotoSobre.jpg"),
+              alt: "Leonardo Vieira Guimarães",
+              className: "h-56 w-44 md:h-72 md:w-56 rounded-lg object-cover flex-shrink-0 shadow-lg"
             }
-          )
+          ) }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "space-y-6 md:col-span-2", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "space-y-4 text-slate-700 dark:text-slate-200 leading-relaxed text-justify", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-cyan-900 dark:text-cyan-100", children: "Mestre em Modelagem Computacional e Sistemas (UNIMONTES) e doutorando em Modelagem Computacional (CEFET/MG). Atuo em APIs, front-ends e automações, leciono Arquitetura Web, Programação e Banco de Dados, e apoio projetos de TI no NIM (Cidade Administrativa)." }),
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "text-cyan-900 dark:text-cyan-100", children: [
+                "No GitHub compartilho projetos variados: dashboards e automações em Python/Node, APIs em Django/Django Ninja e Spring Boot, ",
+                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-semibold text-cyan-900 dark:text-cyan-200", children: "front-ends" }),
+                " em ",
+                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-semibold text-cyan-900 dark:text-cyan-100", children: "React/TypeScript" }),
+                ", ",
+                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-semibold text-cyan-900 dark:text-cyan-200", children: "back-end" }),
+                " com ",
+                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-semibold text-cyan-900 dark:text-cyan-100", children: "Node.js, Django, Spring Boot" }),
+                " e protótipos ",
+                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-semibold text-cyan-900 dark:text-cyan-200", children: "mobile" }),
+                " com ",
+                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-semibold text-cyan-900 dark:text-cyan-100", children: "React Native" }),
+                ". Foco em código limpo, documentação e entregas reprodutíveis."
+              ] })
+            ] }),
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-wrap gap-3", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                "a",
+                {
+                  href: "https://github.com/LeonardoVieiraGuimaraes",
+                  target: "_blank",
+                  rel: "noopener noreferrer",
+                  className: "button-secondary border border-white/20 hover:border-white/40 flex items-center gap-2",
+                  children: [
+                    /* @__PURE__ */ jsxRuntimeExports.jsx(FaGithub, { className: "h-5 w-5" }),
+                    "GitHub"
+                  ]
+                }
+              ),
+              /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                "a",
+                {
+                  href: "https://orcid.org/0009-0000-3118-4664",
+                  target: "_blank",
+                  rel: "noopener noreferrer",
+                  className: "button-secondary border border-green-400 hover:border-green-500 flex items-center gap-2",
+                  style: { marginLeft: 0 },
+                  children: [
+                    /* @__PURE__ */ jsxRuntimeExports.jsxs("svg", { xmlns: "http://www.w3.org/2000/svg", viewBox: "0 0 256 256", className: "h-5 w-5", "aria-label": "ORCID logo", children: [
+                      /* @__PURE__ */ jsxRuntimeExports.jsx("circle", { cx: "128", cy: "128", r: "128", fill: "#A6CE39" }),
+                      /* @__PURE__ */ jsxRuntimeExports.jsx("path", { d: "M86.3 186.2H69.7V69.8h16.6v116.4zm-8.3-132.2c-6.1 0-11.1-5-11.1-11.1s5-11.1 11.1-11.1 11.1 5 11.1 11.1-5 11.1-11.1 11.1zm53.2 132.2h-16.6V69.8h16.6v116.4zm44.2-58.2c0 16.2-4.7 28.7-14.1 37.2-8.2 7.3-19.5 11-33.7 11h-7.2V69.8h7.2c14.2 0 25.5 3.7 33.7 11 9.4 8.5 14.1 21 14.1 37.2zm-16.6 0c0-11.2-2.6-19.5-7.8-24.7-4.2-4.2-10.7-6.3-19.5-6.3h-2.2v62.1h2.2c8.8 0 15.3-2.1 19.5-6.3 5.2-5.2 7.8-13.5 7.8-24.8z", fill: "#fff" })
+                    ] }),
+                    /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-base", children: "ORCID" })
+                  ]
+                }
+              )
+            ] }),
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-cyan-900 dark:text-cyan-200 mt-4", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "relative flex h-3 w-3", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "relative inline-flex h-3 w-3 rounded-full bg-emerald-400" })
+              ] }),
+              "Disponível para projetos e oportunidades"
+            ] })
+          ] })
         ] })
       ] })
-    ] })
-  ] }) }) });
+    }
+  );
 }
 function AboutSimple() {
   return /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "container mx-auto px-4 pt-24 pb-16", id: "about", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "relative mx-auto max-w-6xl", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "card relative w-full overflow-hidden rounded-2xl border border-white/10 bg-slate-900/80 p-6 md:p-8", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative grid grid-cols-1 md:grid-cols-2 gap-6 items-center", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "space-y-4", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-2xl md:text-3xl font-semibold text-white", children: "Sobre mim" }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-slate-300", children: "Professor universitário e desenvolvedor full stack. Busco unir engenharia e educação para criar produtos digitais claros e eficientes." }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-2xl md:text-3xl font-semibold text-cyan-700 dark:text-cyan-200", children: "Sobre mim" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-slate-500 dark:text-slate-200", children: "Professor universitário e desenvolvedor full stack. Busco unir engenharia e educação para criar produtos digitais claros e eficientes." }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("div", { children: /* @__PURE__ */ jsxRuntimeExports.jsx(
         NavLink,
         {
@@ -11549,6 +11776,11 @@ function App() {
     /* @__PURE__ */ jsxRuntimeExports.jsx(Skills, {}),
     /* @__PURE__ */ jsxRuntimeExports.jsx(Footer, {})
   ] });
+  const ExperiencePage = () => /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsx(Header, {}),
+    /* @__PURE__ */ jsxRuntimeExports.jsx(Experience, {}),
+    /* @__PURE__ */ jsxRuntimeExports.jsx(Footer, {})
+  ] });
   const ContactPage = () => /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx(Header, {}),
     /* @__PURE__ */ jsxRuntimeExports.jsx(Contact, {}),
@@ -11566,6 +11798,7 @@ function App() {
       ] }) }),
       /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "/projects", element: /* @__PURE__ */ jsxRuntimeExports.jsx(ProjectsPage, {}) }),
       /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "/skills", element: /* @__PURE__ */ jsxRuntimeExports.jsx(SkillsPage, {}) }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "/experience", element: /* @__PURE__ */ jsxRuntimeExports.jsx(ExperiencePage, {}) }),
       /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "/contact", element: /* @__PURE__ */ jsxRuntimeExports.jsx(ContactPage, {}) }),
       /* @__PURE__ */ jsxRuntimeExports.jsx(Route, { path: "*", element: /* @__PURE__ */ jsxRuntimeExports.jsx(HomePage, {}) })
     ] })
