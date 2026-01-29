@@ -97,7 +97,7 @@ export default function Hero() {
                 <p className="text-xs text-slate-400 dark:text-slate-300 mt-0.5">Belo Horizonte • Remoto Brasil</p>
               </div>
               <div className="space-y-4 text-base text-slate-200 dark:text-slate-200">
-                <p className="text-cyan-900 dark:text-cyan-200 font-bold text-lg leading-tight">Cientista de Dados | Professor Universitário | Engenheiro da Computação</p>
+                <p className="text-cyan-900 dark:text-cyan-200 font-bold text-lg leading-tight">Cientista de Dados | Professor Universitário | Engenheiro de Software</p>
                 <div className="space-y-2 text-base">
                   <p className="pl-2"><span className="font-semibold text-cyan-900 dark:text-cyan-100">Ciência de Dados:</span> <span className="font-semibold text-cyan-900 dark:text-cyan-100">Python, Pandas, Numpy, Scikit-learn, Power BI, Machine Learning, Visualização</span></p>
                   <p className="pl-2"><span className="font-semibold text-cyan-900 dark:text-cyan-100">Backend:</span> <span className="font-semibold text-cyan-900 dark:text-cyan-100">Node.js, Django, Spring Boot</span></p>

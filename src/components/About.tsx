@@ -38,7 +38,7 @@ export default function About() {
           <div className="space-y-6 md:col-span-2">
             <div className="space-y-4 text-slate-700 dark:text-slate-200 leading-relaxed text-justify">
               <p className="text-cyan-900 dark:text-cyan-100">
-                Doutorando e mestre em Modelagem Computacional, com mais de 8 anos de experiência em análise de dados, machine learning, BI e automação de processos. Atuei em projetos de predição, classificação, ETL, dashboards interativos e consultoria para empresas de diferentes setores, sempre com foco em resultados práticos e insights acionáveis.
+                Doutorando e mestre em Modelagem Computacional, com mais de 8 anos de experiência em análise de dados, machine learning, BI e automação de processos. Atualmente atuo no Núcleo de Inovação do IMA, desenvolvendo projetos de ciência de dados, automação, ETL, dashboards interativos e soluções para transformação digital institucional, sempre com foco em resultados práticos e insights acionáveis.
               </p>
               <p className="text-cyan-900 dark:text-cyan-100">
                 No GitHub compartilho soluções de ciência de dados, dashboards em Power BI, automações em Python, análises estatísticas e modelos de machine learning. Meu objetivo é transformar dados em decisões estratégicas, com entregas reprodutíveis, código limpo e documentação clara.
@@ -53,16 +53,6 @@ export default function About() {
               >
                 <FaGithub className="h-5 w-5" />
                 GitHub
-              </a>
-              <a
-                href="https://orcid.org/0009-0000-3118-4664"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="button-secondary border border-green-400 hover:border-green-500 flex items-center gap-2"
-                style={{ marginLeft: 0 }}
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" className="h-5 w-5" aria-label="ORCID logo"><circle cx="128" cy="128" r="128" fill="#A6CE39"/><path d="M86.3 186.2H69.7V69.8h16.6v116.4zm-8.3-132.2c-6.1 0-11.1-5-11.1-11.1s5-11.1 11.1-11.1 11.1 5 11.1 11.1-5 11.1-11.1 11.1zm53.2 132.2h-16.6V69.8h16.6v116.4zm44.2-58.2c0 16.2-4.7 28.7-14.1 37.2-8.2 7.3-19.5 11-33.7 11h-7.2V69.8h7.2c14.2 0 25.5 3.7 33.7 11 9.4 8.5 14.1 21 14.1 37.2zm-16.6 0c0-11.2-2.6-19.5-7.8-24.7-4.2-4.2-10.7-6.3-19.5-6.3h-2.2v62.1h2.2c8.8 0 15.3-2.1 19.5-6.3 5.2-5.2 7.8-13.5 7.8-24.8z" fill="#fff"/></svg>
-                <span className="text-base">ORCID</span>
               </a>
             </div>
             <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-cyan-900 dark:text-cyan-200 mt-4">
