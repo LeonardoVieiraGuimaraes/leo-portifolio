@@ -81,6 +81,8 @@ jobs:
             ls -la dist/ | head -5
             echo "=== Building container ==="
             docker compose build --no-cache
+            echo "=== Stopping and removing old container (if exists) ==="
+            docker compose down || true
             echo "=== Starting container ==="
             docker compose up -d
             echo "=== Container status ==="
