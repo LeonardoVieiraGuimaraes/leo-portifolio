@@ -5,7 +5,25 @@ on:
         branches:
             - main
         paths:
-            - "**"
+            - "src/components/ProjectsDeveloper.tsx"
+            - "src/components/ProjectsDeveloper/**"
+            - "src/components/About.tsx"
+            - "src/components/AboutSimple.tsx"
+            - "src/components/Contact.tsx"
+            - "src/components/Experience.tsx"
+            - "src/components/Footer.tsx"
+            - "src/components/Header.tsx"
+            - "src/components/Hero.tsx"
+            - "src/components/Process.tsx"
+            - "src/components/Services.tsx"
+            - "src/components/Skills.tsx"
+            - "src/components/Textimonials.tsx"
+            - "public/images/projects/developer/**"
+            - "public/images/skills/**"
+            - "Dockerfile"
+            - "docker-compose.yml"
+            - "nginx.conf"
+            - ".github/workflows/deploy-geral.yml"
 
 jobs:
     deploy-server:
