@@ -3,12 +3,7 @@ name: Deploy to Home Server
 on:
   push:
     branches:
-      - main
-    tags:
-      - "v-fullstack"
-      - "v-analista-dados"
-      - "v-ciencia-dados"
-      - "v-professor"
+      - portifolio-fullstack
     paths-ignore:
       - "README.md"
       - "comandos.txt"
