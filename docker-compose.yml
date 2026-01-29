@@ -5,14 +5,14 @@ networks:
     driver: bridge
 
 services:
-  portfolio-ensino:
+  portfolio-fullstack:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: leo-portfolio-ensino
+    container_name: leo-portfolio-fullstack
     restart: unless-stopped
     ports:
-      - "8084:80"  # ensino.leoproti.com.br
+      - "8081:80"  # fullstack.leoproti.com.br
     volumes:
       - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
     networks:
@@ -21,9 +21,9 @@ services:
       - TZ=America/Sao_Paulo
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.portfolio-ensino.rule=Host(`ensino.leoproti.com.br`)"
-      - "traefik.http.routers.portfolio-ensino.tls=true"
-      - "traefik.http.services.portfolio-ensino.loadbalancer.server.port=80"
+      - "traefik.http.routers.portfolio-fullstack.rule=Host(`fullstack.leoproti.com.br`)"
+      - "traefik.http.routers.portfolio-fullstack.tls=true"
+      - "traefik.http.services.portfolio-fullstack.loadbalancer.server.port=80"
     healthcheck:
       test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:80/health"]
       interval: 30s
