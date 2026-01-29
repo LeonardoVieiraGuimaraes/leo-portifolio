@@ -9,7 +9,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: leo-portfolio-geral
+    container_name: portfolio-fullstack
     restart: unless-stopped
     ports:
       - "8081:80"  # fullstack.leoproti.com.br
@@ -21,9 +21,9 @@ services:
       - TZ=America/Sao_Paulo
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.portfolio-geral.rule=Host(`leoproti.com.br`)"
-      - "traefik.http.routers.portfolio-geral.tls=true"
-      - "traefik.http.services.portfolio-geral.loadbalancer.server.port=80"
+      - "traefik.http.routers.portfolio-fullstack.rule=Host(`leoproti.com.br`)"
+      - "traefik.http.routers.portfolio-fullstack.tls=true"
+      - "traefik.http.services.portfolio-fullstack.loadbalancer.server.port=80"
     healthcheck:
       test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:80/health"]
       interval: 30s
