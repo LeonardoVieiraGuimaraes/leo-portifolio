@@ -61,7 +61,7 @@ jobs:
 
             - name: Transfer project files
               run: |
-                  DEPLOY_PATH="/home/leonardovieiraxy/projetos/leo-portifolio/geral"
+                  DEPLOY_PATH="/home/leonardovieiraxy/projetos/leo-portifolio"
                   rsync -avz --delete \
                     -e "ssh -o ProxyCommand='cloudflared access ssh --hostname %h'" \
                     temp-deploy/ \
