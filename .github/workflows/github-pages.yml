@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - portifolio-geral
+      - main
     paths-ignore:
       - "README.md"
       - "comandos.txt"
