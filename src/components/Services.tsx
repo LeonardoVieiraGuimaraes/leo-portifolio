@@ -2,7 +2,8 @@ import {
   HiCommandLine,
   HiComputerDesktop,
   HiDevicePhoneMobile,
-  HiOutlineAcademicCap,
+  HiChartBar,
+  HiGlobeAlt,
 } from "react-icons/hi2";
 
 export default function Services() {
