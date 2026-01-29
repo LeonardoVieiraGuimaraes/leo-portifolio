@@ -12,7 +12,7 @@ services:
     container_name: portifolio-professor
     restart: unless-stopped
     ports:
-      - "8086:80"  # professor.leoproti.com.br
+      - "8087:80"  # professor.leoproti.com.br
     volumes:
       - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
     networks:
