@@ -14,6 +14,12 @@ jobs:
     if: startsWith(github.ref, 'refs/tags/v-portifolio-v3')
     runs-on: ubuntu-latest
     steps:
+      - name: Install cloudflared
+        run: |
+          wget -O cloudflared https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64
+          sudo mv cloudflared /usr/local/bin/
+          sudo chmod +x /usr/local/bin/cloudflared
+
       - name: Checkout code
         uses: actions/checkout@v3
 
