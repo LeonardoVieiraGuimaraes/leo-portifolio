@@ -24,7 +24,7 @@ export default function About() {
             Cientista de Dados & Analista
           </h2>
           <p className="text-cyan-900 dark:text-cyan-200">
-            Apaixonado por transformar dados em valor para negócios. Atuo em projetos de ciência de dados, análise preditiva, BI, automação de processos e storytelling analítico, sempre focando em resultados práticos e insights acionáveis.
+            Analista e cientista de dados com forte atuação em projetos de análise preditiva, BI, automação de dados e visualização interativa. Experiência prática em Python, SQL, Power BI, machine learning e storytelling analítico, sempre focando em gerar valor real para negócios e decisões baseadas em dados.
           </p>
         </div>
         <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-3 items-start">
@@ -38,10 +38,10 @@ export default function About() {
           <div className="space-y-6 md:col-span-2">
             <div className="space-y-4 text-slate-700 dark:text-slate-200 leading-relaxed text-justify">
               <p className="text-cyan-900 dark:text-cyan-100">
-                Mestre em Modelagem Computacional e Sistemas (UNIMONTES) e doutorando em Modelagem Computacional (CEFET/MG). Especialista em análise de dados, machine learning, BI e automação de processos. Experiência em projetos de predição, classificação, dashboards interativos, ETL e consultoria para empresas de diversos setores.
+                Doutorando e mestre em Modelagem Computacional, com mais de 8 anos de experiência em análise de dados, machine learning, BI e automação de processos. Atuei em projetos de predição, classificação, ETL, dashboards interativos e consultoria para empresas de diferentes setores, sempre com foco em resultados práticos e insights acionáveis.
               </p>
               <p className="text-cyan-900 dark:text-cyan-100">
-                No GitHub compartilho projetos de ciência de dados, dashboards em Power BI, automações em Python, análises estatísticas, modelos de machine learning e soluções de BI. Foco em transformar dados em decisões estratégicas, com código limpo, documentação clara e entregas reprodutíveis.
+                No GitHub compartilho soluções de ciência de dados, dashboards em Power BI, automações em Python, análises estatísticas e modelos de machine learning. Meu objetivo é transformar dados em decisões estratégicas, com entregas reprodutíveis, código limpo e documentação clara.
               </p>
             </div>
             <div className="flex flex-wrap gap-3">

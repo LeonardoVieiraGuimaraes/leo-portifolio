@@ -10,8 +10,10 @@ export default function AboutSimple() {
             <div className="space-y-4">
               <h2 className="text-2xl md:text-3xl font-semibold text-cyan-700 dark:text-cyan-200">Sobre mim</h2>
               <p className="text-slate-500 dark:text-slate-200">
-                Professor universitário e desenvolvedor full stack. Busco unir engenharia e
-                educação para criar produtos digitais claros e eficientes.
+                Cientista de Dados, Engenheiro da Computação e Professor Universitário. Atuo na transformação de dados em soluções inteligentes, combinando análise preditiva, automação e visualização para gerar valor real e decisões estratégicas para pessoas e negócios.
+                <br />
+                <span className="block mt-2 text-cyan-400 dark:text-cyan-200 font-semibold">Ciência de Dados:</span>
+                <span className="block">Python, Pandas, Numpy, Scikit-learn, Power BI, Machine Learning, Dashboards, Visão Computacional (OpenCV)</span>
               </p>
               <div>
                 <NavLink
