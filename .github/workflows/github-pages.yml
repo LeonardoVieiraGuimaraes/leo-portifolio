@@ -32,26 +32,20 @@ jobs:
         run: npm ci
 
       - name: Clean previous build
-        run: rm -rf dist
+        run: rm -rf docs
 
       - name: Build for GitHub Pages
         run: npm run build:github:linux
 
       - name: Check build output
         run: |
-          if [ ! -d "dist" ] || [ -z "$(ls -A dist)" ]; then
-            echo "Build falhou: diretório dist vazio ou inexistente." && exit 1
+          if [ ! -d "docs" ] || [ -z "$(ls -A docs)" ]; then
+            echo "Build falhou: diretório docs vazio ou inexistente." && exit 1
           fi
 
       - name: Upload build artifact (debug)
         if: failure()
         uses: actions/upload-artifact@v4
         with:
-          name: dist-debug
-          path: dist
-
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+          name: docs-debug
+          path: docs

@@ -33,7 +33,7 @@ export default defineConfig(({ command, mode }) => {
     plugins: [react()],
     base: base,
     build: {
-      outDir: "dist",
+      outDir: "docs",
       assetsDir: "assets",
       sourcemap: false,
       minify: false, // Desabilitar minificação para evitar problemas
