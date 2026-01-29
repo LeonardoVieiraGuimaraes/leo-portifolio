@@ -29,7 +29,7 @@ export default function Hero() {
               </span>
               Disponível para novos projetos
             </span>
-            <span className="text-slate-300 dark:text-slate-200">Professor | Dev Full Stack</span>
+            <span className="text-slate-300 dark:text-slate-200">Cientista de Dados | Engenheiro da Computação</span>
           </div>
 
           <h1 className="text-4xl font-semibold leading-tight text-cyan-900 dark:text-cyan-100 sm:text-5xl md:text-6xl">
@@ -99,8 +99,6 @@ export default function Hero() {
               <div className="space-y-4 text-base text-slate-200 dark:text-slate-200">
                 <p className="text-cyan-900 dark:text-cyan-200 font-bold text-lg leading-tight">Cientista de Dados | Professor Universitário | Engenheiro de Software</p>
                 <div className="space-y-2 text-base">
-                  <p className="pl-2 flex items-center gap-2"><span className="text-lg">👨‍🏫</span>+12 anos de docência em tecnologia</p>
-                  <p className="pl-2 flex items-center gap-2"><span className="text-lg">💻</span>+8 anos em desenvolvimento de sistemas e dados</p>
                   <p className="pl-2"><span className="font-semibold text-cyan-900 dark:text-cyan-100">Ciência de Dados:</span> <span className="font-semibold text-cyan-900 dark:text-cyan-100">Python, Pandas, Numpy, Scikit-learn, Power BI, Machine Learning, Visualização</span></p>
                   <p className="pl-2"><span className="font-semibold text-cyan-900 dark:text-cyan-100">Backend:</span> <span className="font-semibold text-cyan-900 dark:text-cyan-100">Node.js, Django, Spring Boot</span></p>
                   <p className="pl-2"><span className="font-semibold text-cyan-900 dark:text-cyan-100">Frontend:</span> <span className="font-semibold text-cyan-900 dark:text-cyan-100">React, TypeScript, Tailwind CSS</span></p>
