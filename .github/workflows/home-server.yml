@@ -68,13 +68,13 @@ jobs:
           rsync -avz --delete \
                 -e "ssh -o ProxyCommand='cloudflared access ssh --hostname %h'" \
                 temp-deploy/ \
-                leonardovieiraxy@ssh.leoproti.com.br:/home/leonardovieiraxy/projetos/leo-portifolio/
+                leonardovieiraxy@ssh.leoproti.com.br:/home/leonardovieiraxy/projetos/leo-portifolio/portifolio-geral/
 
       - name: 🚀 Deploy on server
         run: |
           ssh -o ProxyCommand="cloudflared access ssh --hostname %h" \
               leonardovieiraxy@ssh.leoproti.com.br << 'EOF'
-            cd /home/leonardovieiraxy/projetos/leo-portifolio
+            cd /home/leonardovieiraxy/projetos/leo-portifolio/portifolio-geral
             echo "=== Arquivos na pasta ==="
             ls -la
             echo "=== Arquivos dist ==="
