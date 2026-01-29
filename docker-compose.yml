@@ -9,7 +9,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: leo-portfolio
+    container_name: leo-portifolio-geral
     restart: unless-stopped
     ports:
       - "8080:80"  # Mapeia porta local 8080 para porta 80 do container
