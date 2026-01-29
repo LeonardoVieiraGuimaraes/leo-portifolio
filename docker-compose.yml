@@ -21,9 +21,9 @@ services:
       - TZ=America/Sao_Paulo
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.portifolio.rule=Host(`leoproti.com.br`)"
-      - "traefik.http.routers.portifolio.tls=true"
-      - "traefik.http.services.portifolio.loadbalancer.server.port=80"
+      - "traefik.http.routers.portifolio-geral.rule=Host(`leoproti.com.br`)"
+      - "traefik.http.routers.portifolio-geral.tls=true"
+      - "traefik.http.services.portifolio-geral.loadbalancer.server.port=80"
     healthcheck:
       test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:80/health"]
       interval: 30s
