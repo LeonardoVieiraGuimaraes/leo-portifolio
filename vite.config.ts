@@ -18,16 +18,9 @@ export default defineConfig(({ command, mode }) => {
   // Lógica simplificada e mais clara
   let base = "/";
   
-  // GitHub Pages: sempre que DEPLOY_TARGET=github
-  if (deployTarget === "github") {
-    base = "/leo-portifolio/";
-    console.log("  📍 GitHub Pages mode: base =", base);
-  } 
-  // Home Server: DEPLOY_TARGET=homeserver ou qualquer outro caso
-  else {
-    base = "/";
-    console.log("  📍 Home Server mode: base =", base);
-  }
+  // Sempre usar base "/" para rodar na raiz, tanto no GitHub Pages quanto no Home Server
+  base = "/";
+  console.log("  📍 Base path for all deploys =", base);
   
   return {
     plugins: [react()],
