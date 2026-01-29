@@ -1,5 +1,4 @@
-# Geral
-name: Deploy to Home Server (Geral)
+name: Deploy to Home Server (geral)
 
 on:
   push:
@@ -9,10 +8,9 @@ on:
       - "README.md"
       - "comandos.txt"
   workflow_dispatch:
-
 jobs:
   deploy:
-    name: 🏠 Deploy to Home Server (Geral)
+    name: 🏠 Deploy to Home Server (geral)
     runs-on: ubuntu-latest
 
     steps:
@@ -67,9 +65,9 @@ jobs:
           cp nginx.conf temp-deploy/
           cp -r dist temp-deploy/
           rsync -avz --delete \
-                -e "ssh -o ProxyCommand='cloudflared access ssh --hostname %h'" \
-                temp-deploy/ \
-                leonardovieiraxy@ssh.leoproti.com.br:/home/leonardovieiraxy/projetos/leo-portifolio/portifolio-geral/
+            -e "ssh -o ProxyCommand='cloudflared access ssh --hostname %h'" \
+            temp-deploy/ \
+            leonardovieiraxy@ssh.leoproti.com.br:/home/leonardovieiraxy/projetos/leo-portifolio/portifolio-geral/
 
       - name: 🚀 Deploy on server
         run: |
