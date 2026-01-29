@@ -56,47 +56,17 @@ jobs:
 
       - name: 🧹 Clean and prepare server
         run: |
-          # Detectar nome da pasta pelo tipo de deploy/tag
-          if [[ "$GITHUB_REF_NAME" == "v-fullstack" ]]; then
-            DEPLOY_DIR=fullstack
-          elif [[ "$GITHUB_REF_NAME" == "v-analista-dados" ]]; then
-            DEPLOY_DIR=analista-dados
-          elif [[ "$GITHUB_REF_NAME" == "v-ciencia-dados" ]]; then
-            DEPLOY_DIR=ciencia-dados
-          elif [[ "$GITHUB_REF_NAME" == "v-professor" ]]; then
-            DEPLOY_DIR=ensino
-          else
-            DEPLOY_DIR=fullstack
-          fi
           ssh -o ProxyCommand="cloudflared access ssh --hostname %h" \
               leonardovieiraxy@ssh.leoproti.com.br << EOF
-            # Criar pasta projetos/leo-portifolio/portifolio-fullstack se não existir
+            # Apagar todo o conteúdo da pasta portifolio-fullstack
+            rm -rf /home/leonardovieiraxy/projetos/leo-portifolio/portifolio-fullstack/*
             mkdir -p /home/leonardovieiraxy/projetos/leo-portifolio/portifolio-fullstack/
-            # Parar e remover containers/pasta existentes
-            if [ -d "/home/leonardovieiraxy/projetos/leo-portifolio/portifolio-fullstack/$DEPLOY_DIR" ]; then
-              cd /home/leonardovieiraxy/projetos/leo-portifolio/portifolio-fullstack/$DEPLOY_DIR
-              docker compose down || true
-              cd ..
-              rm -rf $DEPLOY_DIR
-            fi
-            mkdir $DEPLOY_DIR
+            chmod 755 /home/leonardovieiraxy/projetos/leo-portifolio/portifolio-fullstack/
             exit
           EOF
 
       - name: 📤 Transfer project files
         run: |
-          # Detectar nome da pasta pelo tipo de deploy/tag
-          if [[ "$GITHUB_REF_NAME" == "v-fullstack" ]]; then
-            DEPLOY_DIR=fullstack
-          elif [[ "$GITHUB_REF_NAME" == "v-analista-dados" ]]; then
-            DEPLOY_DIR=analista-dados
-          elif [[ "$GITHUB_REF_NAME" == "v-ciencia-dados" ]]; then
-            DEPLOY_DIR=ciencia-dados
-          elif [[ "$GITHUB_REF_NAME" == "v-professor" ]]; then
-            DEPLOY_DIR=ensino
-          else
-            DEPLOY_DIR=fullstack
-          fi
           # Criar pasta temporária com arquivos necessários
           mkdir -p temp-deploy
           cp docker-compose.yml temp-deploy/
@@ -108,26 +78,13 @@ jobs:
           rsync -avz --delete \
                 -e "ssh -o ProxyCommand='cloudflared access ssh --hostname %h'" \
                 temp-deploy/ \
-                leonardovieiraxy@ssh.leoproti.com.br:/home/leonardovieiraxy/projetos/leo-portifolio/portifolio-fullstack/$DEPLOY_DIR/
+                leonardovieiraxy@ssh.leoproti.com.br:/home/leonardovieiraxy/projetos/leo-portifolio/portifolio-fullstack/
 
       - name: 🚀 Deploy on server
         run: |
-          # Detectar nome da pasta pelo tipo de deploy/tag
-          if [[ "$GITHUB_REF_NAME" == "v-fullstack" ]]; then
-            DEPLOY_DIR=fullstack
-          elif [[ "$GITHUB_REF_NAME" == "v-analista-dados" ]]; then
-            DEPLOY_DIR=analista-dados
-          elif [[ "$GITHUB_REF_NAME" == "v-ciencia-dados" ]]; then
-            DEPLOY_DIR=ciencia-dados
-          elif [[ "$GITHUB_REF_NAME" == "v-professor" ]]; then
-            DEPLOY_DIR=ensino
-          else
-            DEPLOY_DIR=fullstack
-          fi
           ssh -o ProxyCommand="cloudflared access ssh --hostname %h" \
               leonardovieiraxy@ssh.leoproti.com.br << EOF
             cd /home/leonardovieiraxy/projetos/leo-portifolio/portifolio-fullstack/
-            cd $DEPLOY_DIR
             # Debug: verificar arquivos transferidos
             echo "=== Arquivos na pasta ==="
             ls -la
