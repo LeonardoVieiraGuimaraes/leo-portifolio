@@ -6,6 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "build:geral": "vite build",
     "build:github": "cross-env DEPLOY_TARGET=github vite build",
     "build:homeserver": "cross-env DEPLOY_TARGET=homeserver vite build",
     "build:github:linux": "DEPLOY_TARGET=github tsc && DEPLOY_TARGET=github vite build",
