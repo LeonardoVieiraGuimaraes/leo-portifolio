@@ -66,22 +66,21 @@ jobs:
           elif [[ "$GITHUB_REF_NAME" == "v-professor" ]]; then
             DEPLOY_DIR=ensino
           else
-            DEPLOY_DIR=geral
+            DEPLOY_DIR=fullstack
           fi
           ssh -o ProxyCommand="cloudflared access ssh --hostname %h" \
               leonardovieiraxy@ssh.leoproti.com.br << EOF
-            # Criar pasta projetos/portifolio se não existir
-            mkdir -p /home/leonardovieiraxy/projetos/portifolio/
+            # Criar pasta projetos/leo-portifolio/portifolio-fullstack se não existir
+            mkdir -p /home/leonardovieiraxy/projetos/leo-portifolio/portifolio-fullstack/
             # Parar e remover containers/pasta existentes
-            if [ -d "/home/leonardovieiraxy/projetos/portifolio/$DEPLOY_DIR" ]; then
-              cd /home/leonardovieiraxy/projetos/portifolio/$DEPLOY_DIR
+            if [ -d "/home/leonardovieiraxy/projetos/leo-portifolio/portifolio-fullstack/$DEPLOY_DIR" ]; then
+              cd /home/leonardovieiraxy/projetos/leo-portifolio/portifolio-fullstack/$DEPLOY_DIR
               docker compose down || true
               cd ..
               rm -rf $DEPLOY_DIR
             fi
-            # Criar nova pasta com permissões corretas
-            mkdir -p /home/leonardovieiraxy/projetos/portifolio/$DEPLOY_DIR
-            chmod 755 /home/leonardovieiraxy/projetos/portifolio/$DEPLOY_DIR
+            mkdir $DEPLOY_DIR
+            exit
           EOF
 
       - name: 📤 Transfer project files
@@ -96,7 +95,7 @@ jobs:
           elif [[ "$GITHUB_REF_NAME" == "v-professor" ]]; then
             DEPLOY_DIR=ensino
           else
-            DEPLOY_DIR=geral
+            DEPLOY_DIR=fullstack
           fi
           # Criar pasta temporária com arquivos necessários
           mkdir -p temp-deploy
@@ -109,7 +108,7 @@ jobs:
           rsync -avz --delete \
                 -e "ssh -o ProxyCommand='cloudflared access ssh --hostname %h'" \
                 temp-deploy/ \
-                leonardovieiraxy@ssh.leoproti.com.br:/home/leonardovieiraxy/projetos/portifolio/$DEPLOY_DIR/
+                leonardovieiraxy@ssh.leoproti.com.br:/home/leonardovieiraxy/projetos/leo-portifolio/portifolio-fullstack/$DEPLOY_DIR/
 
       - name: 🚀 Deploy on server
         run: |
@@ -123,11 +122,11 @@ jobs:
           elif [[ "$GITHUB_REF_NAME" == "v-professor" ]]; then
             DEPLOY_DIR=ensino
           else
-            DEPLOY_DIR=geral
+            DEPLOY_DIR=fullstack
           fi
           ssh -o ProxyCommand="cloudflared access ssh --hostname %h" \
               leonardovieiraxy@ssh.leoproti.com.br << EOF
-            cd /home/leonardovieiraxy/projetos/portifolio/
+            cd /home/leonardovieiraxy/projetos/leo-portifolio/portifolio-fullstack/
             cd $DEPLOY_DIR
             # Debug: verificar arquivos transferidos
             echo "=== Arquivos na pasta ==="
