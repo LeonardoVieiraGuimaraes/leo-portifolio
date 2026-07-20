@@ -1,114 +1,102 @@
 import { useState } from "react";
-import { FaSun, FaMoon } from "react-icons/fa";
-
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { FaMoon, FaSun } from "react-icons/fa";
+import { HiOutlineEnvelope } from "react-icons/hi2";
 import { NavLink } from "react-router-dom";
 import { useTheme } from "../context/ThemeContext";
-import { getImagePath } from "../utils/paths";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const { theme, toggleTheme } = useTheme();
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
-
   const navLinks = [
-    { name: "Início", to: "/inicio" },
     { name: "Projetos", to: "/projects" },
-    { name: "Habilidades", to: "/skills" },
     { name: "Experiência", to: "/experience" },
     { name: "Sobre", to: "/sobre" },
     { name: "Contato", to: "/contact" },
   ];
 
   const navItemClass = (isActive: boolean) =>
-    `px-2 py-3 rounded-md font-headline text-base font-medium transition leading-none ${
-      isActive ? "text-cyan-300 dark:text-cyan-200 bg-white/10 border-b-2 border-cyan-400" : "text-slate-500 dark:text-slate-300 hover:text-cyan-300 hover:bg-white/5"
+    `rounded-lg px-3 py-2 text-sm font-medium transition ${
+      isActive
+        ? "bg-sky-500/10 text-sky-300 [.light_&]:bg-sky-50 [.light_&]:text-sky-700"
+        : "text-slate-300 hover:bg-white/5 hover:text-white [.light_&]:text-slate-600 [.light_&]:hover:bg-slate-100 [.light_&]:hover:text-slate-950"
     }`;
 
   return (
-    <header>
-      <nav className="w-full px-4 py-2 flex items-center justify-between">
-        <div className="flex-shrink-0 flex items-center">
-          <NavLink to="/" className={({ isActive }) => navItemClass(isActive) + " flex items-center gap-2"} onClick={() => setIsOpen(false)} style={{ maxHeight: '56px', overflow: 'hidden' }}>
-            <img
-              className="block md:hidden h-12 w-auto max-h-16"
-              src={getImagePath("images/logo.svg")}
-              alt="Logo"
-              style={{ maxHeight: '48px', maxWidth: '140px' }}
-            />
-            <img
-              className="hidden md:block h-12 w-auto max-h-16"
-              src={getImagePath("images/logo.svg")}
-              alt="Logo"
-              style={{ maxHeight: '48px', maxWidth: '140px' }}
-            />
-            <span className="ml-2 text-xl md:text-2xl font-bold text-cyan-900 dark:text-cyan-200 tracking-tight select-none hidden md:inline">Leonardo Vieira Guimarães</span>
-          </NavLink>
-        </div>
-        <div className="hidden md:block md:ml-4 ">
-          <div className="flex space-x-2 items-center">
-            {navLinks.map((link, index) => (
-              <NavLink
-                key={index}
-                to={link.to}
-                className={({ isActive }) => navItemClass(isActive)}
-                title={link.name}
-                onClick={() => setIsOpen(false)}
-              >
-                {link.name}
-              </NavLink>
-            ))}
-            <button
-              onClick={toggleTheme}
-              className="text-slate-500 dark:text-slate-300 hover:text-cyan-300 hover:bg-white/5 px-3 py-5 rounded-md flex items-center justify-center font-headline text-lg font-semibold transition ml-2 leading-none"
-              title={`Mudar para ${theme === "dark" ? "light" : "dark"} mode`}
-            >
-              {theme === "dark" ? <FaSun /> : <FaMoon />}
-            </button>
-          </div>
-        </div>
-        <div className="md:hidden flex items-center gap-2">
+    <header className="sticky top-0 z-50 border-b border-white/5 bg-slate-950/85 backdrop-blur-xl [.light_&]:border-slate-200 [.light_&]:bg-white/90">
+      <nav className="mx-auto flex h-[72px] max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
+        <NavLink to="/" className="group flex items-center gap-3" onClick={() => setIsOpen(false)}>
+          <span className="grid h-10 w-10 place-items-center rounded-xl bg-gradient-to-br from-sky-400 to-blue-600 text-sm font-bold text-white shadow-lg shadow-sky-950/30">
+            LV
+          </span>
+          <span className="leading-tight">
+            <span className="block text-sm font-semibold text-white [.light_&]:text-slate-950">
+              Leonardo Guimarães
+            </span>
+            <span className="block text-xs text-slate-400 [.light_&]:text-slate-500">
+              Backend & Software Engineering
+            </span>
+          </span>
+        </NavLink>
+
+        <div className="hidden items-center gap-1 md:flex">
+          {navLinks.map((link) => (
+            <NavLink key={link.to} to={link.to} className={({ isActive }) => navItemClass(isActive)}>
+              {link.name}
+            </NavLink>
+          ))}
           <button
             onClick={toggleTheme}
-            className="text-slate-500 dark:text-slate-300 hover:text-cyan-300 hover:bg-white/5 px-3 py-2 rounded-md flex items-center justify-center font-headline text-lg font-semibold transition leading-none"
-            title={`Mudar para ${theme === "dark" ? "light" : "dark"} mode`}
+            className="ml-2 grid h-10 w-10 place-items-center rounded-lg border border-white/10 text-slate-300 transition hover:border-sky-400/40 hover:text-sky-300 [.light_&]:border-slate-200 [.light_&]:text-slate-600"
+            title={`Mudar para o modo ${theme === "dark" ? "claro" : "escuro"}`}
+            aria-label={`Mudar para o modo ${theme === "dark" ? "claro" : "escuro"}`}
+          >
+            {theme === "dark" ? <FaSun /> : <FaMoon />}
+          </button>
+          <a href="mailto:leonardovieiraxy@hotmail.com" className="button ml-2 inline-flex items-center gap-2">
+            <HiOutlineEnvelope className="h-4 w-4" />
+            Fale comigo
+          </a>
+        </div>
+
+        <div className="flex items-center gap-2 md:hidden">
+          <button
+            onClick={toggleTheme}
+            className="grid h-10 w-10 place-items-center rounded-lg border border-white/10 text-slate-300 [.light_&]:border-slate-200 [.light_&]:text-slate-600"
+            aria-label="Alternar tema"
           >
             {theme === "dark" ? <FaSun /> : <FaMoon />}
           </button>
           <button
             type="button"
-            className="inline-flex items-center justify-center p-2 rounded-md text-slate-400 dark:text-slate-300 hover:text-cyan-300 hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-cyan-300"
-            aria-controls="mobile-menu"
+            className="grid h-10 w-10 place-items-center rounded-lg border border-white/10 text-slate-300 [.light_&]:border-slate-200 [.light_&]:text-slate-600"
             aria-expanded={isOpen}
-            onClick={toggleMenu}
+            aria-controls="mobile-menu"
+            onClick={() => setIsOpen((value) => !value)}
           >
-            <span className="sr-only">Open main menu</span>
-            {isOpen ? (
-              <XMarkIcon className="h-8 w-8" aria-hidden="true" />
-            ) : (
-              <Bars3Icon className="h-8 w-8" aria-hidden="true" />
-            )}
+            <span className="sr-only">Abrir menu</span>
+            {isOpen ? <XMarkIcon className="h-6 w-6" /> : <Bars3Icon className="h-6 w-6" />}
           </button>
         </div>
       </nav>
-      <div className={`${isOpen ? "block" : "hidden"} md:hidden`} id="mobile-menu">
-        <div className="px-4 py-3 flex flex-col gap-1 items-start">
-          {navLinks.map((link, index) => (
-            <NavLink
-              key={index}
-              to={link.to}
-              className={({ isActive }) => navItemClass(isActive) + " w-full text-left"}
-              title={link.name}
-              onClick={() => setIsOpen(false)}
-            >
-              {link.name}
-            </NavLink>
-          ))}
+
+      {isOpen && (
+        <div id="mobile-menu" className="border-t border-white/5 px-4 py-4 md:hidden [.light_&]:border-slate-200">
+          <div className="mx-auto flex max-w-7xl flex-col gap-1">
+            {navLinks.map((link) => (
+              <NavLink
+                key={link.to}
+                to={link.to}
+                className={({ isActive }) => `${navItemClass(isActive)} w-full`}
+                onClick={() => setIsOpen(false)}
+              >
+                {link.name}
+              </NavLink>
+            ))}
+          </div>
         </div>
-      </div>
+      )}
     </header>
   );
 }

@@ -1,134 +1,137 @@
-import { HiArrowDownTray } from "react-icons/hi2";
-import { FaLinkedin, FaGithub } from "react-icons/fa";
-import { useTheme } from "../context/ThemeContext";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import {
+  HiArrowDownTray,
+  HiArrowRight,
+  HiCheckBadge,
+  HiOutlineServerStack,
+} from "react-icons/hi2";
+import { NavLink } from "react-router-dom";
+
+const proofPoints = [
+  { value: "Software em produção", label: "Saúde, pesquisa e setor público" },
+  { value: "Backend ao deploy", label: "APIs, dados, Docker e CI/CD" },
+  { value: "Produto publicado", label: "Aplicativo disponível na Play Store" },
+];
 
 export default function Hero() {
-  const { theme } = useTheme();
-  const isLight = theme === "light";
-
-  const background = isLight
-    ? "radial-gradient(circle at 12% 18%, rgba(14,165,233,0.08), transparent 26%), radial-gradient(circle at 82% 0%, rgba(124,58,237,0.08), transparent 32%), linear-gradient(180deg, #f9fafb 0%, #eef2f7 62%, #f9fafb 100%)"
-    : "linear-gradient(135deg, #0b1220 0%, #0f172a 60%, #0b1220 100%)";
-
-  const glowCyan = isLight ? "bg-cyan-400/15" : "bg-cyan-500/10";
-  const glowViolet = isLight ? "bg-violet-400/14" : "bg-violet-500/10";
-
   return (
-    <section className="relative overflow-hidden" id="hero">
-      <div className="absolute inset-0" style={{ background }} />
-      <div className={`absolute -left-20 -top-32 h-80 w-80 rounded-full ${glowCyan} blur-3xl`} />
-      <div className={`absolute right-0 top-10 h-72 w-72 rounded-full ${glowViolet} blur-3xl`} />
+    <section className="relative overflow-hidden border-b border-white/5 [.light_&]:border-slate-200" id="hero">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_12%_18%,rgba(14,165,233,0.13),transparent_30%),radial-gradient(circle_at_88%_8%,rgba(37,99,235,0.12),transparent_28%)]" />
+      <div className="absolute inset-0 surface-grid opacity-40" />
 
-      <div className="relative container mx-auto flex max-w-6xl flex-col gap-8 p-4 pb-12 pt-16 md:flex-row md:items-center md:justify-between">
-        <div className="max-w-2xl space-y-6">
-          <div className="flex items-center gap-3 text-sm text-cyan-900 dark:text-cyan-200">
-            <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 font-semibold uppercase tracking-wide text-cyan-900 dark:text-cyan-200 [.light_&]:border-cyan-200 [.light_&]:bg-cyan-50">
-              <span className="relative flex h-2 w-2">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75 [.light_&]:bg-emerald-600" />
-                <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400 [.light_&]:bg-emerald-600" />
-              </span>
-              Disponível para oportunidades
-            </span>
-            <span className="text-slate-600 dark:text-slate-200">Backend • Python • Java • SQL</span>
+      <div className="relative mx-auto grid max-w-7xl gap-12 px-4 py-20 sm:px-6 md:py-28 lg:grid-cols-[1.15fr_0.85fr] lg:items-center lg:px-8">
+        <div>
+          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-emerald-400/20 bg-emerald-400/10 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-emerald-300 [.light_&]:border-emerald-200 [.light_&]:bg-emerald-50 [.light_&]:text-emerald-700">
+            <span className="h-2 w-2 rounded-full bg-emerald-400" />
+            Disponível para oportunidades de desenvolvimento
           </div>
 
-          <h1 className="text-4xl font-semibold leading-tight text-cyan-900 dark:text-cyan-100 sm:text-5xl md:text-6xl">
-            Desenvolvedor Backend que transforma problemas complexos em sistemas confiáveis.
+          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.22em] text-sky-300 [.light_&]:text-sky-700">
+            Desenvolvedor Backend · Software Engineer
+          </p>
+          <h1 className="max-w-4xl text-4xl font-semibold leading-[1.08] text-white sm:text-5xl lg:text-6xl [.light_&]:text-slate-950">
+            Transformo regras complexas em sistemas claros, confiáveis e prontos para produção.
           </h1>
-
-          <p className="text-lg text-slate-600 dark:text-slate-200">
-            Construo APIs, integrações e automações com Python, Java e SQL. Minha formação em
-            Engenharia da Computação e Modelagem Computacional une engenharia de software, dados e
-            visão analítica para gerar impacto real.
+          <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-300 [.light_&]:text-slate-600">
+            Desenvolvo APIs, integrações e aplicações com Python, Django, Java, Spring Boot e SQL.
+            Minha experiência une engenharia de software, conhecimento de negócio e capacidade de
+            entregar do requisito ao monitoramento.
           </p>
 
-          <div className="flex flex-wrap gap-2 sm:gap-3 sm:flex-nowrap sm:overflow-visible">
+          <div className="mt-8 flex flex-wrap items-center gap-3">
+            <NavLink to="/projects" className="button inline-flex items-center gap-2">
+              Ver projetos
+              <HiArrowRight className="h-4 w-4" />
+            </NavLink>
             <a
-              href="https://docs.google.com/document/d/1hLeOBX7zAz-BtYLxXKWK6RtYEWqWnCo4Z5IA5Kvwzsk/edit?usp=drive_link"
-              target="_blank"
-              rel="noopener"
-              className="button-hero"
+              href="/curriculo-leonardo-backend.pdf"
+              className="button-secondary inline-flex items-center gap-2"
+              download
             >
-              <HiArrowDownTray className="h-5 w-5" />
-              Currículo
-            </a>
-            <a
-              href="https://www.linkedin.com/in/leonardo-vieira-guimaraes/"
-              target="_blank"
-              rel="noopener"
-              className="button-hero"
-            >
-              <FaLinkedin className="h-5 w-5" />
-              LinkedIn
+              <HiArrowDownTray className="h-4 w-4" />
+              Baixar currículo
             </a>
             <a
               href="https://github.com/LeonardoVieiraGuimaraes"
               target="_blank"
-              rel="noopener"
-              className="button-hero"
+              rel="noopener noreferrer"
+              className="social-button"
+              aria-label="GitHub"
             >
               <FaGithub className="h-5 w-5" />
-              GitHub
             </a>
             <a
-              href="https://buscatextual.cnpq.br/buscatextual/visualizacv.do?id=K4869231A0&tokenCaptchar=03AFcWeA5Xz3lD3vn5HMS9GhkTKnLTFNnn8jIdHmV_gGRxrMmhMj41i_6Lu2oqfAtLP5wyFXdVZJpjXvvBdtYwHXjTs7bE8nxmxjvutCykBoUD2ABe3QL8PkNAaHKTtLibwnOmDCBThU6EIF0OCwoUk3e6_hV4UtOLpidaeAc6fBZ14zZG19qOnFiRwAKpKlyL0jk1LNgurGjYKluX58WYGzMccWrP14UUtkFZSYCZDIBW4iSf0xGtUqMQwkZc_ESopuXY1_gWxABMsK8llBEOZIvkifBmUADeP1rEEQbejucQ03IqK8ZGZfN99DsnBlHuL9GVfkhai8JypHpWhybU2GuFky2xySYJMSxkDwiepFsyOuYY07WsmkoTjvMSawClnvm06zTG6_6WgBXjejxcFD3D3Vfa-Ay7FpMvh3pMXn5k0bNz2U374mFAC7Iv4HXSjcDgNAulCcPKNOtn2P_E8qru4Ryhl1nhWmctHNrd0mMifRWb9T1DzKINX51NK7NmU6ZOFE-LO4MpwNgG6xl-ncQYWWolaYe7BTRm1rPxdHJWH_GeLHQnRFeaOLWrtvZMO6tbdUw1hmo4"
+              href="https://www.linkedin.com/in/leonardo-vieira-guimaraes/"
               target="_blank"
-              rel="noopener"
-              className="button-hero"
+              rel="noopener noreferrer"
+              className="social-button"
+              aria-label="LinkedIn"
             >
-              <HiArrowDownTray className="h-5 w-5" />
-              Currículo Lattes
+              <FaLinkedin className="h-5 w-5" />
             </a>
           </div>
 
-          <div className="grid grid-cols-1 gap-4 pt-6 sm:grid-cols-2">
-            {[
-              { label: "Python, Java, APIs e SQL", icon: "💻" },
-              { label: "Mestre e doutorando", icon: "🎓" },
-            ].map((item) => (
-              <div
-                key={item.label}
-                className="card rounded-lg px-4 py-3 text-xs text-slate-200 dark:text-slate-200 sm:text-sm flex items-center gap-3"
-              >
-                <span className="text-lg">{item.icon}</span>
-                <span>{item.label}</span>
+          <div className="mt-12 grid gap-4 border-t border-white/10 pt-6 sm:grid-cols-3 [.light_&]:border-slate-200">
+            {proofPoints.map((item) => (
+              <div key={item.value}>
+                <p className="text-sm font-semibold text-white [.light_&]:text-slate-950">{item.value}</p>
+                <p className="mt-1 text-xs leading-5 text-slate-400 [.light_&]:text-slate-500">{item.label}</p>
               </div>
             ))}
           </div>
         </div>
 
-        <div className="relative hidden md:block">
-          <div className="card relative w-80 min-h-[18rem] overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 p-6">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(34,211,238,0.18),transparent_30%),radial-gradient(circle_at_80%_0%,rgba(167,139,250,0.2),transparent_35%)]" />
-            <div className="relative flex h-full flex-col justify-start gap-4">
-              <div>
-                <p className="text-xs uppercase tracking-[0.2em] text-cyan-900 dark:text-cyan-200 font-semibold">Perfil</p>
-                <h3 className="text-xl md:text-2xl font-bold text-white dark:text-cyan-100 mt-1">Leonardo V. Guimarães</h3>
-                <p className="text-xs text-slate-400 dark:text-slate-300 mt-0.5">Belo Horizonte • Remoto Brasil</p>
-              </div>
-              <div className="space-y-4 text-base text-slate-200 dark:text-slate-200">
-                <p className="text-cyan-900 dark:text-cyan-200 font-bold text-lg leading-tight">Desenvolvedor Backend | Software Engineer</p>
-                <div className="space-y-2 text-base">
-                  <p className="text-cyan-900 dark:text-cyan-200 font-bold text-base mt-2">Stack principal</p>
-                  <p className="pl-2">
-                    <span className="font-semibold text-cyan-900 dark:text-cyan-100">Backend:</span>
-                    <span className="font-semibold text-cyan-900 dark:text-cyan-100"> Python, Django, Java, Spring Boot</span>
+        <div className="relative mx-auto w-full max-w-md">
+          <div className="absolute -inset-6 rounded-[2rem] bg-sky-500/10 blur-3xl" />
+          <div className="card relative overflow-hidden rounded-3xl p-2">
+            <div className="rounded-[1.25rem] border border-white/10 bg-slate-950/85 p-6 [.light_&]:border-slate-200 [.light_&]:bg-white">
+              <div className="flex items-center justify-between border-b border-white/10 pb-5 [.light_&]:border-slate-200">
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-sky-300 [.light_&]:text-sky-700">
+                    Perfil técnico
                   </p>
-                  <p className="pl-2">
-                    <span className="font-semibold text-cyan-900 dark:text-cyan-100">Dados:</span>
-                    <span className="font-semibold text-cyan-900 dark:text-cyan-100"> SQL, modelagem e integrações</span>
-                  </p>
-                  <p className="pl-2">
-                    <span className="font-semibold text-cyan-900 dark:text-cyan-100">Infraestrutura:</span>
-                    <span className="font-semibold text-slate-800 dark:text-white"> Docker, Linux, Nginx e Git</span>
+                  <h2 className="mt-2 text-xl font-semibold text-white [.light_&]:text-slate-950">
+                    Leonardo Vieira Guimarães
+                  </h2>
+                  <p className="mt-1 text-sm text-slate-400 [.light_&]:text-slate-500">
+                    Belo Horizonte · Remoto Brasil
                   </p>
                 </div>
-                <div className="space-y-2 border-t border-white/10 pt-3 text-base">
-                  <p className="text-cyan-900 font-bold text-base">Formação Acadêmica</p>
-                  <p className="pl-2"><span className="font-semibold text-white">Engenharia da Computação</span></p>
-                  <p className="pl-2"><span className="font-semibold text-white">Licenciatura em Matemática</span></p>
-                  <p className="pl-2"><span className="font-semibold text-white">Mestre Modelagem Computacional</span></p>
-                  <p className="pl-2"><span className="font-semibold text-white">Doutorando Modelagem Computacional</span></p>
+                <HiCheckBadge className="h-9 w-9 text-sky-400" />
+              </div>
+
+              <div className="mt-6 space-y-5">
+                <div className="flex gap-4">
+                  <div className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-sky-400/10 text-sky-300 [.light_&]:bg-sky-50 [.light_&]:text-sky-700">
+                    <HiOutlineServerStack className="h-6 w-6" />
+                  </div>
+                  <div>
+                    <p className="font-semibold text-white [.light_&]:text-slate-950">Stack principal</p>
+                    <p className="mt-1 text-sm leading-6 text-slate-400 [.light_&]:text-slate-600">
+                      Python · Django · Java · Spring Boot · SQL · APIs REST
+                    </p>
+                  </div>
+                </div>
+
+                <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4 [.light_&]:border-slate-200 [.light_&]:bg-slate-50">
+                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-400 [.light_&]:text-slate-500">
+                    Entrega completa
+                  </p>
+                  <div className="mt-3 grid grid-cols-2 gap-2 text-sm text-slate-200 [.light_&]:text-slate-700">
+                    {["Modelagem de dados", "Integrações", "Docker e Linux", "CI/CD e observabilidade"].map((skill) => (
+                      <span key={skill} className="flex items-center gap-2">
+                        <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="flex items-center justify-between rounded-2xl bg-gradient-to-r from-sky-500/15 to-blue-600/10 px-4 py-3">
+                  <span className="text-sm font-medium text-slate-200 [.light_&]:text-slate-700">
+                    Engenharia da Computação · Mestre · Doutorando
+                  </span>
+                  <span className="h-2.5 w-2.5 rounded-full bg-emerald-400 shadow-[0_0_18px_rgba(52,211,153,0.9)]" />
                 </div>
               </div>
             </div>

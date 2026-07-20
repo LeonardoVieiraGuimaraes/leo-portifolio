@@ -1,69 +1,56 @@
-import {
-  HiCommandLine,
-  HiComputerDesktop,
-  HiDevicePhoneMobile,
-  HiCircleStack,
-} from "react-icons/hi2";
+import { HiArrowsRightLeft, HiCircleStack, HiCloudArrowUp, HiCodeBracketSquare } from "react-icons/hi2";
+
+const services = [
+  {
+    title: "Backend & APIs",
+    description: "Serviços bem estruturados com Python, Django, FastAPI, Java, Spring Boot e Node.js.",
+    icon: HiCodeBracketSquare,
+  },
+  {
+    title: "Integrações & Dados",
+    description: "Modelagem SQL, autenticação, serviços externos e automação de processos críticos.",
+    icon: HiArrowsRightLeft,
+  },
+  {
+    title: "Web & Mobile",
+    description: "Produtos completos com React, TypeScript e React Native, do fluxo à publicação.",
+    icon: HiCircleStack,
+  },
+  {
+    title: "Cloud & DevOps",
+    description: "Ambientes Docker, Linux, Nginx, CI/CD, monitoramento e operação em produção.",
+    icon: HiCloudArrowUp,
+  },
+];
 
 export default function Services() {
-  const services = [
-    {
-      title: "APIs e Backend",
-      description:
-        "Desenvolvimento de APIs e serviços com Python, Django, Java, Spring Boot e Node.js.",
-      icon: <HiComputerDesktop className="h-12 w-12" />,
-    },
-    {
-      title: "Dados e Automação",
-      description: "Modelagem SQL, integração de sistemas e automação de processos com Python.",
-      icon: <HiCommandLine className="h-12 w-12" />,
-    },
-    {
-      title: "Aplicações Web e Mobile",
-      description:
-        "Interfaces em React e TypeScript e aplicativos multiplataforma com React Native.",
-      icon: <HiDevicePhoneMobile className="h-12 w-12" />,
-    },
-    {
-      title: "Deploy e Infraestrutura",
-      description:
-        "Publicação de aplicações com Docker, Linux, Nginx e integração contínua.",
-      icon: <HiCircleStack className="h-12 w-12" />,
-    },
-  ];
-
   return (
-    <section className="container mx-auto max-w-6xl px-4 pt-20 pb-16" id="services">
-      <div className="text-center space-y-3">
-        <p className="text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200 dark:text-cyan-200">
-          O que faço
-        </p>
-        <h2 className="text-3xl md:text-4xl font-semibold text-cyan-300 dark:text-cyan-200">
-          Soluções backend do requisito ao deploy
-        </h2>
-        <p className="text-slate-400 dark:text-slate-200">
-          APIs, bancos de dados, integrações, automações e infraestrutura para colocar software confiável em produção.
-        </p>
-      </div>
-
-      <div className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
-        {services.map((service, index) => (
-          <div
-            className="card relative h-full overflow-hidden rounded-xl p-5"
-            key={`service-${index}`}
-          >
-            <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-white/0 to-white/5" />
-            <div className="relative space-y-3">
-              <div className="inline-flex h-14 w-14 items-center justify-center rounded-xl bg-cyan-500/15 text-cyan-300 dark:text-cyan-200 [.light_&]:bg-cyan-100 [.light_&]:text-cyan-700">
-                {service.icon}
-              </div>
-              <h3 className="text-xl font-semibold text-white dark:text-cyan-100">{service.title}</h3>
-              <p className="text-sm text-slate-300 dark:text-slate-200 leading-relaxed">
-                {service.description}
-              </p>
-            </div>
+    <section className="border-y border-white/[0.06] bg-slate-950/30 py-24 [.light_&]:border-slate-200 [.light_&]:bg-slate-100/60" id="services">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="grid gap-10 lg:grid-cols-[0.7fr_1.3fr] lg:items-end">
+          <div>
+            <p className="eyebrow">Competências principais</p>
+            <h2 className="section-title">Do requisito à operação.</h2>
           </div>
-        ))}
+          <p className="section-copy lg:max-w-xl lg:justify-self-end">
+            Visão de ponta a ponta para transformar necessidades de negócio em aplicações publicadas, observáveis e simples de manter.
+          </p>
+        </div>
+
+        <div className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+          {services.map(({ title, description, icon: Icon }, index) => (
+            <article key={title} className="card rounded-2xl p-6">
+              <div className="flex items-center justify-between">
+                <span className="grid h-11 w-11 place-items-center rounded-xl bg-sky-400/10 text-sky-300 [.light_&]:bg-sky-100 [.light_&]:text-sky-700">
+                  <Icon className="h-5 w-5" />
+                </span>
+                <span className="text-xs font-semibold text-slate-600 [.light_&]:text-slate-400">0{index + 1}</span>
+              </div>
+              <h3 className="mt-7 text-lg font-semibold text-white [.light_&]:text-slate-950">{title}</h3>
+              <p className="mt-3 text-sm leading-6 text-slate-400 [.light_&]:text-slate-600">{description}</p>
+            </article>
+          ))}
+        </div>
       </div>
     </section>
   );
