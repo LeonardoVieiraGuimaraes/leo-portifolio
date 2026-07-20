@@ -12,77 +12,48 @@ export default function ProjectsAcademics() {
 
   const projects = [
     {
-      title: "Dissertaçao Graduação Engenharia da Computação",
-      description: "Sistema de Identificação de Bovinos Usando RFID",
-      image: "/images/projects/academics/dissertacaoEngenhariaComputacao.png",
-      link: "https://drive.google.com/file/d/1jj_w4hFihZVSzSOlFSGCwHkuno2t5WGT/view?usp=sharing",
-      tags: ["RFID", "Engenharia"],
+      title: "Pesquisa de Doutorado: Detecção de Fraudes em GTA",
+      description:
+        "Desenvolvimento de algoritmos neuro-fuzzy evolutivos para detectar anomalias e fraudes em dados agropecuários, com aprendizado incremental e modelos interpretáveis.",
+      image: "/images/projects/academics/doutoradoMineracaoDadosProjeto.png",
+      link: "https://github.com/LeonardoVieiraGuimaraes/DoutoradoCefet/tree/main/ProjetoDoutorado",
+      tags: ["Neuro-fuzzy", "Detecção de fraudes", "Python"],
       colSpan: "col-span-1",
     },
     {
-      title: "Dissertação Mestrado",
+      title: "Aplicativo Validado para Enfermagem Prisional",
       description:
-        "Monitoramento no processo de desidratação de unvas basedo em imagens",
+        "Pesquisa publicada sobre o desenvolvimento e a validação de um aplicativo móvel voltado à autonomia e à gestão na enfermagem prisional.",
+      image: "/images/projects/developer/aeg.jpeg",
+      link: "https://revistas.udea.edu.co/index.php/iee/article/view/364084",
+      tags: ["Artigo científico", "Saúde digital", "Mobile"],
+      colSpan: "col-span-1",
+    },
+    {
+      title: "Inovação na Enfermagem Prisional",
+      description:
+        "Artigo de divulgação sobre como a tecnologia pode fortalecer a autonomia profissional e qualificar o cuidado no sistema prisional.",
+      image: "/images/projects/developer/projetoEnfermagem02.png",
+      link: "https://www.linkedin.com/pulse/inova%C3%A7%C3%A3o-na-enfermagem-prisional-tecnologia-para-e-o-leonardo-ybvvf/",
+      tags: ["Divulgação científica", "Tecnologia", "Enfermagem"],
+      colSpan: "col-span-1",
+    },
+    {
+      title: "Dissertação de Mestrado em Modelagem Matemática",
+      description:
+        "Monitoramento do processo de desidratação de uvas baseado em processamento e análise de imagens.",
       image: "/images/projects/academics/dissetacaoMestrado.png",
       link: "https://drive.google.com/file/d/1-l2qG_lpE9hZyoBhIYU7o79xSEl6815P/view",
-      tags: ["Processamento de imagens", "Pesquisa"],
+      tags: ["Processamento de imagens", "Pesquisa", "Modelagem"],
       colSpan: "col-span-1",
     },
     {
-      title: "Analise das notas do Enade e Enem",
+      title: "Identificação de Bovinos com RFID",
       description:
-        "Mineração de dados analisando a Influência das notas obtidas pelos anunos do Enem e Enade",
-      image: "/images/projects/academics/doutoradoMineracaoDadosProjeto.png",
-      link: "https://drive.google.com/file/d/1MdopkYDRjYKNr92dlhYR50HfK0z3nIFI/view?usp=drive_link",
-      tags: ["Mineração de dados", "Educação"],
-      colSpan: "col-span-1",
-    },
-    {
-      title: "Ocorrências de Acidentes no Trânsito Brasileiro",
-      description:
-        "Mineração de ados analisando as ocorrências de acidentes no trânsito brasileiro",
-      image:
-        "/images/projects/academics/doutoradoMineracaoDadosTrabalhoIII.png",
-      link: "https://drive.google.com/file/d/1OXEAMs3jHTyWvv7OtsPg8gESEDdbbtxO/view?usp=drive_link",
-      tags: ["Dados públicos", "Segurança"],
-      colSpan: "col-span-1",
-    },
-    {
-      title:
-        "Improving CNN Based Feature Point Detection Through Matching Information",
-      description:
-        "Melhorando a detecção de pontos de recursos baseados em CNN por meio de informações correspondentes",
-      image: "/images/projects/academics/DoutaradoVisaoComputacional.png",
-      link: "https://drive.google.com/file/d/1EAIF3-2NhG-A2O-y7W1S8Q1ASOn2Krfi/view?usp=sharing",
-      tags: ["Visão computacional", "CNN"],
-      colSpan: "col-span-1 md:col-span-2",
-    },
-    {
-      title: "Sistema de Identificação de Bovinos Usando RFID",
-      description: "Artigo publicado ISSN 22367160",
+        "Trabalho de Engenharia da Computação e artigo publicado sobre identificação eletrônica de bovinos usando RFID.",
       image: "/images/projects/academics/artigoRFIDEngenhariaComputacao.png",
       link: "https://drive.google.com/file/d/1WDsuPN1N3Tw-WZdfPAbRMYgtCF8KncLu/view?usp=sharing",
-      tags: ["RFID", "Artigo"],
-      colSpan: "col-span-1/2",
-    },
-
-    {
-      title:
-        "A Matemática Financeira Aplicada em Empréstimos e Financiamentos Bancários",
-      description: "Artigo publicado ISSN 22367160",
-      image:
-        "/images/projects/academics/especializacaoMatematicaFinanceira.png",
-      link: "https://drive.google.com/file/d/1owo7hjjOpRAFNyyYyA6zktvlsPK-P3Eu/view?usp=sharing",
-      tags: ["Finanças", "Artigo"],
-      colSpan: "col-span-1",
-    },
-    {
-      title: "Projeto Visão Computacional",
-      description: "Projetos Doutrado de Ciência da Computação UFMG",
-      image:
-        "/images/projects/academics/doutoradoProjetoVisaoComputacional.png",
-      link: "https://www.youtube.com/playlist?list=PLbLoehbSIAYWV50N_Y2OzrlRRZy0bjGRY",
-      tags: ["Visão computacional", "YouTube"],
+      tags: ["RFID", "Engenharia", "Artigo"],
       colSpan: "col-span-1",
     },
   ];
@@ -100,7 +71,7 @@ export default function ProjectsAcademics() {
           </p>
           <h2 className="text-3xl md:text-4xl font-semibold text-cyan-700 dark:text-cyan-200">Projetos acadêmicos</h2>
           <p className="text-slate-500 dark:text-slate-200">
-            Dissertações, artigos e projetos que conectam ciência, tecnologia e dados.
+            Pesquisa aplicada e publicações que conectam software, dados, saúde e agronegócio.
           </p>
         </div>
 

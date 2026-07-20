@@ -1,5 +1,5 @@
 import { HiArrowTopRightOnSquare } from "react-icons/hi2";
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaGooglePlay } from "react-icons/fa";
 import { getImagePath } from "../utils/paths";
 import { useTheme } from "../context/ThemeContext";
 
@@ -11,39 +11,49 @@ export default function ProjectsDeveloper() {
     : "linear-gradient(135deg, #0b1220 0%, #0f172a 60%, #0b1220 100%)";
   const projects = [
     {
-      title: "Sistema SAE para Enfermagem",
-      description: "Aplicação web para apoiar o atendimento e a sistematização da assistência de enfermagem, com backend Django e persistência em banco de dados.",
+      title: "A&G Enfermagem",
+      description: "Aplicativo publicado na Play Store para enfermagem prisional, com consulta offline de protocolos, CID-10/CID-11, medicamentos e calculadoras de dosagem e gotejamento.",
+      image: "/images/projects/developer/aeg.jpeg",
+      link: "https://aeg.leoproti.com.br/",
+      store: "https://play.google.com/store/apps/details?id=com.leonardovieiraxy.informacaoEnfermagemreactNative",
+      github: "https://github.com/LeonardoVieiraGuimaraes/informacaoEnfermagem-reactNative",
+      tags: ["React Native", "Expo", "Play Store"],
+      colSpan: "col-span-1",
+    },
+    {
+      title: "Sistema Hospitalar de Enfermagem",
+      description: "Sistema web para cadastro de pacientes e apoio a fluxos de cirurgia segura e tratamento quimioterápico, publicado com deploy automatizado no servidor.",
+      image: "/images/projects/developer/recepcao.png",
+      link: "https://recepcao.leoproti.com.br/",
+      github: "https://github.com/LeonardoVieiraGuimaraes/hospital-enfermagem-django",
+      tags: ["Python", "Django", "Docker"],
+      colSpan: "col-span-1",
+    },
+    {
+      title: "Sistema SAE Obstétrico",
+      description: "Aplicação web para cadastro de pacientes, admissão obstétrica, acompanhamento de puérperas e fichas de atendimento de enfermagem.",
       image: "/images/projects/developer/projetoEnfermagem01.png",
       link: "https://sae.leoproti.com.br/",
       github: "https://github.com/LeonardoVieiraGuimaraes/sae-enfermagem-django",
-      tags: ["Python", "Django", "PostgreSQL"],
+      tags: ["Python", "Django", "Saúde"],
       colSpan: "col-span-1",
     },
     {
-      title: "Aplicativo de Enfermagem",
-      description: "Aplicativo móvel desenvolvido em React Native para disponibilizar informações e apoiar profissionais de enfermagem em contexto de saúde.",
-      image: "/images/projects/developer/projetoEnfermagem02.png",
-      link: "https://github.com/LeonardoVieiraGuimaraes/enfermagemInformacao-reactNative",
-      github: "https://github.com/LeonardoVieiraGuimaraes/enfermagemInformacao-reactNative",
-      tags: ["React Native", "Mobile", "Saúde"],
+      title: "Hub de Projetos do Doutorado",
+      description: "Aplicação full stack para experimentos com autômatos celulares, caminhadas aleatórias, lógica fuzzy, FCA e análise de grafos de GTA.",
+      image: "/images/projects/academics/doutoradoMineracaoDadosProjeto.png",
+      link: "https://projetos-doutorado.leoproti.com.br/",
+      github: "https://github.com/LeonardoVieiraGuimaraes/DoutoradoCefet/tree/main/hospedagem/projetos_doutorado",
+      tags: ["FastAPI", "Next.js", "Docker"],
       colSpan: "col-span-1",
     },
     {
-      title: "Arquitetura de Aplicação Web",
-      description: "Projeto de referência para organização de aplicações web, separação de responsabilidades, persistência e boas práticas de desenvolvimento.",
+      title: "API de Produtos com Spring Boot",
+      description: "Aplicação Java publicada para cadastro e consulta de produtos, demonstrando API, regras de negócio, persistência e deploy em produção.",
       image: "/images/projects/developer/proweb.png",
-      link: "https://github.com/LeonardoVieiraGuimaraes/ArquiteturaAplicacaoWeb",
-      github: "https://github.com/LeonardoVieiraGuimaraes/ArquiteturaAplicacaoWeb",
-      tags: ["Web", "Arquitetura", "Banco de dados"],
-      colSpan: "col-span-1",
-    },
-    {
-      title: "Aplicação Web com Spring Boot",
-      description: "Projeto backend em Java e Spring Boot voltado à construção de aplicações web, rotas, regras de negócio e acesso a dados.",
-      image: "/images/projects/developer/developer07.jpg",
-      link: "https://github.com/LeonardoVieiraGuimaraes/ProgramacaoWebSpringBoot",
+      link: "https://proweb.leoproti.com.br/",
       github: "https://github.com/LeonardoVieiraGuimaraes/ProgramacaoWebSpringBoot",
-      tags: ["Java", "Spring Boot", "Backend"],
+      tags: ["Java", "Spring Boot", "API REST"],
       colSpan: "col-span-1",
     },
   ];
@@ -63,7 +73,7 @@ export default function ProjectsDeveloper() {
             Desenvolvimento Backend
           </h2>
           <p className="text-slate-500 dark:text-slate-200">
-            Projetos reais com código acessível, contexto de uso e tecnologias verificáveis.
+            Aplicações publicadas, código acessível e problemas reais resolvidos com tecnologia.
           </p>
           <div className="pt-4">
             <a
@@ -107,7 +117,7 @@ export default function ProjectsDeveloper() {
                 <h4 className="text-xl font-semibold">{project.title}</h4>
                 <p className="text-sm text-slate-500 dark:text-slate-200">{project.description}</p>
 
-                <div className="flex gap-2 mt-2">
+                <div className="mt-2 flex flex-wrap gap-2">
                   <button
                     onClick={() => window.open(project.link, "_blank")}
                     className="button-secondary inline-flex items-center gap-2 border border-white/20 hover:border-white/40"
@@ -115,6 +125,17 @@ export default function ProjectsDeveloper() {
                     <HiArrowTopRightOnSquare className="h-5 w-5" />
                     Ver projeto
                   </button>
+                  {project.store && (
+                    <a
+                      href={project.store}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="button-secondary inline-flex items-center gap-2 border border-white/20 hover:border-white/40"
+                    >
+                      <FaGooglePlay className="h-5 w-5" />
+                      Play Store
+                    </a>
+                  )}
                   {project.github && (
                     <a
                       href={project.github}
