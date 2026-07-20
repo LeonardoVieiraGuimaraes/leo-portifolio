@@ -11,93 +11,39 @@ export default function ProjectsDeveloper() {
     : "linear-gradient(135deg, #0b1220 0%, #0f172a 60%, #0b1220 100%)";
   const projects = [
     {
-      title: "Portfólio Online",
-      description: "Portfólio publicado no GitHub Pages com projetos e informações profissionais.",
-      image: "/images/projects/developer/portifolioV3.png",
-      link: "https://leonardovieiraguimaraes.github.io/leo-portifolio/",
-      github: "https://github.com/LeonardoVieiraGuimaraes/leo-portifolio",
-      tags: ["Web", "Portfólio", "GitHub Pages"],
-      colSpan: "col-span-1",
-    },
-    {
-      title: "Sistema SAE",
-      description: "Projeto Mestrado de Enfermagem Atendimento Gestantes",
+      title: "Sistema SAE para Enfermagem",
+      description: "Aplicação web para apoiar o atendimento e a sistematização da assistência de enfermagem, com backend Django e persistência em banco de dados.",
       image: "/images/projects/developer/projetoEnfermagem01.png",
       link: "https://sae.leoproti.com.br/",
       github: "https://github.com/LeonardoVieiraGuimaraes/sae-enfermagem-django",
-      tags: ["React", "Django", "PostgreSQL"],
+      tags: ["Python", "Django", "PostgreSQL"],
       colSpan: "col-span-1",
     },
     {
-      title: "AEG",
-      description: "Sistema de Gestão Acadêmica (redireciona para arquivo)",
-      image: "/images/projects/developer/aeg.jpeg",
-      link: "http://aeg.leoproti.com.br",
-      github: null,
-      tags: ["Web", "Acadêmico"],
+      title: "Aplicativo de Enfermagem",
+      description: "Aplicativo móvel desenvolvido em React Native para disponibilizar informações e apoiar profissionais de enfermagem em contexto de saúde.",
+      image: "/images/projects/developer/projetoEnfermagem02.png",
+      link: "https://github.com/LeonardoVieiraGuimaraes/enfermagemInformacao-reactNative",
+      github: "https://github.com/LeonardoVieiraGuimaraes/enfermagemInformacao-reactNative",
+      tags: ["React Native", "Mobile", "Saúde"],
       colSpan: "col-span-1",
     },
     {
-      title: "CasaOS",
-      description: "Gerenciamento de dispositivos domésticos",
-      image: "/images/projects/developer/casaos.png",
-      link: "http://casaos.leoproti.com.br",
-      github: null,
-      tags: ["Web", "IoT"],
-      colSpan: "col-span-1",
-    },
-    {
-      title: "Nextcloud",
-      description: "Armazenamento e colaboração em nuvem",
-      image: "/images/projects/developer/nextcloud.png",
-      link: "https://nextcloud.leoproti.com.br",
-      github: null,
-      tags: ["Web", "Cloud"],
-      colSpan: "col-span-1",
-    },
-    {
-      title: "Recepção",
-      description: "Sistema de recepção de visitantes",
-      image: "/images/projects/developer/recepcao.png",
-      link: "http://recepcao.leoproti.com.br",
-      github: null,
-      tags: ["Web", "Administração"],
-      colSpan: "col-span-1",
-    },
-    {
-      title: "Grafana",
-      description: "Monitoramento e visualização de dados",
-      image: "/images/projects/developer/developer03.jpg",
-      link: "http://grafana.leoproti.com.br",
-      github: null,
-      tags: ["Web", "Monitoramento"],
-      colSpan: "col-span-1",
-    },
-    {
-      title: "Prometheus",
-      description: "Coleta e consulta de métricas",
-      image: "/images/projects/developer/developer04.jpg",
-      link: "http://prometheus.leoproti.com.br",
-      github: null,
-      tags: ["Web", "Monitoramento"],
-      colSpan: "col-span-1",
-    },
-    {
-      title: "ArqWeb V01",
-      description: "Sistema de arquivos web versão 1",
-      image: "/images/projects/developer/developer05.jpg",
-      link: "http://arqwebv01.leoproti.com.br",
+      title: "Arquitetura de Aplicação Web",
+      description: "Projeto de referência para organização de aplicações web, separação de responsabilidades, persistência e boas práticas de desenvolvimento.",
+      image: "/images/projects/developer/proweb.png",
+      link: "https://github.com/LeonardoVieiraGuimaraes/ArquiteturaAplicacaoWeb",
       github: "https://github.com/LeonardoVieiraGuimaraes/ArquiteturaAplicacaoWeb",
-      tags: ["Web", "Arquivos"],
+      tags: ["Web", "Arquitetura", "Banco de dados"],
       colSpan: "col-span-1",
     },
     {
-      title: "ProWeb",
-      description: "Sistema profissional web",
-      image: "/images/projects/developer/developer06.jpg",
-      link: "http://proweb.leoproti.com.br",
-      github: "https://github.com/LeonardoVieiraGuimaraes/ProdutosWeb",
-      tags: ["Web", "Profissional"],
+      title: "Aplicação Web com Spring Boot",
+      description: "Projeto backend em Java e Spring Boot voltado à construção de aplicações web, rotas, regras de negócio e acesso a dados.",
+      image: "/images/projects/developer/developer07.jpg",
+      link: "https://github.com/LeonardoVieiraGuimaraes/ProgramacaoWebSpringBoot",
+      github: "https://github.com/LeonardoVieiraGuimaraes/ProgramacaoWebSpringBoot",
+      tags: ["Java", "Spring Boot", "Backend"],
       colSpan: "col-span-1",
     },
   ];
@@ -111,13 +57,13 @@ export default function ProjectsDeveloper() {
       <div className="relative container mx-auto max-w-6xl px-4">
         <div className="text-center space-y-3">
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200 dark:text-cyan-200">
-            Sistemas web
+            Projetos selecionados
           </p>
           <h2 className="text-3xl md:text-4xl font-semibold text-cyan-700 dark:text-cyan-200">
-            Desenvolvimento de sistemas
+            Desenvolvimento Backend
           </h2>
           <p className="text-slate-500 dark:text-slate-200">
-            Projetos web e APIs com foco em produto, dados e entrega contínua.
+            Projetos reais com código acessível, contexto de uso e tecnologias verificáveis.
           </p>
           <div className="pt-4">
             <a

@@ -2,33 +2,33 @@ import {
   HiCommandLine,
   HiComputerDesktop,
   HiDevicePhoneMobile,
-  HiOutlineAcademicCap,
+  HiCircleStack,
 } from "react-icons/hi2";
 
 export default function Services() {
   const services = [
     {
-      title: "Web",
+      title: "APIs e Backend",
       description:
-        "Desenvolvimento de sites e sistemas web estáticos e dinâmicos com React.js, Next.js, HTML5 e CSS3.",
+        "Desenvolvimento de APIs e serviços com Python, Django, Java, Spring Boot e Node.js.",
       icon: <HiComputerDesktop className="h-12 w-12" />,
     },
     {
-      title: "Sistemas",
-      description: "Desenvolvimento de Sistemas e analise de dados com Python.",
+      title: "Dados e Automação",
+      description: "Modelagem SQL, integração de sistemas e automação de processos com Python.",
       icon: <HiCommandLine className="h-12 w-12" />,
     },
     {
-      title: "Mobile",
+      title: "Aplicações Web e Mobile",
       description:
-        "Desenvolvimento de aplicativos Android com React Native, Kivy e Kodular.",
+        "Interfaces em React e TypeScript e aplicativos multiplataforma com React Native.",
       icon: <HiDevicePhoneMobile className="h-12 w-12" />,
     },
     {
-      title: "Professor",
+      title: "Deploy e Infraestrutura",
       description:
-        "Professor das diversas áread da Matemática e Tecnologia da Informação.",
-      icon: <HiOutlineAcademicCap className="h-12 w-12" />,
+        "Publicação de aplicações com Docker, Linux, Nginx e integração contínua.",
+      icon: <HiCircleStack className="h-12 w-12" />,
     },
   ];
 
@@ -39,10 +39,10 @@ export default function Services() {
           O que faço
         </p>
         <h2 className="text-3xl md:text-4xl font-semibold text-cyan-300 dark:text-cyan-200">
-          Soluções ponta a ponta para produtos digitais e educação
+          Soluções backend do requisito ao deploy
         </h2>
         <p className="text-slate-400 dark:text-slate-200">
-          Do discovery à entrega: <span className="font-semibold text-cyan-700 dark:text-cyan-200">front-end</span>, <span className="font-semibold text-cyan-700 dark:text-cyan-200">back-end</span>, dados, <span className="font-semibold text-cyan-700 dark:text-cyan-200">mobile</span> e trilhas educacionais.
+          APIs, bancos de dados, integrações, automações e infraestrutura para colocar software confiável em produção.
         </p>
       </div>
 

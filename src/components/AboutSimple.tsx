@@ -10,8 +10,9 @@ export default function AboutSimple() {
             <div className="space-y-4">
               <h2 className="text-2xl md:text-3xl font-semibold text-cyan-700 dark:text-cyan-200">Sobre mim</h2>
               <p className="text-slate-500 dark:text-slate-200">
-                Professor universitário e desenvolvedor full stack. Busco unir engenharia e
-                educação para criar produtos digitais claros e eficientes.
+                Sou desenvolvedor backend, Engenheiro da Computação, mestre e doutorando em Modelagem Matemática e Computacional. Desenvolvo sistemas, APIs, integrações e automações com foco em confiabilidade e valor para o usuário.
+                <span className="mt-2 block font-semibold text-cyan-700 dark:text-cyan-200">Python, Django, Java, Spring Boot, SQL, Docker e Linux.</span>
+                <span className="mt-1 block">Ciência de Dados, pesquisa e docência complementam minha atuação técnica.</span>
               </p>
               <div>
                 <NavLink

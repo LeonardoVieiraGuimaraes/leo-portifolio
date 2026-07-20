@@ -41,6 +41,7 @@ function App() {
       <Header />
       <Hero />
       <AboutSimple />
+      <ProjectsDeveloper />
       <Services />
       <Process />
       <Footer />
@@ -50,8 +51,8 @@ function App() {
   const ProjectsPage = () => (
     <>
       <Header />
-      <ProjectsAcademics />
       <ProjectsDeveloper />
+      <ProjectsAcademics />
       <ProjectsProfessor />
       <Footer />
     </>

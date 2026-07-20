@@ -27,19 +27,19 @@ export default function Hero() {
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75 [.light_&]:bg-emerald-600" />
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400 [.light_&]:bg-emerald-600" />
               </span>
-              Disponível para novos projetos
+              Disponível para oportunidades
             </span>
-            <span className="text-slate-300 dark:text-slate-200">Professor | Dev Full Stack</span>
+            <span className="text-slate-600 dark:text-slate-200">Backend • Python • Java • SQL</span>
           </div>
 
           <h1 className="text-4xl font-semibold leading-tight text-cyan-900 dark:text-cyan-100 sm:text-5xl md:text-6xl">
-            Transformando dados e código em produtos digitais que entregam impacto real.
+            Desenvolvedor Backend que transforma problemas complexos em sistemas confiáveis.
           </h1>
 
-          <p className="text-lg text-slate-300 dark:text-slate-200">
-            Sou Leonardo Vieira Guimarães, desenvolvedor full stack e professor. Construo produtos
-            web/mobile e plataformas de dados que alinham tecnologia, educação e resultado de
-            negócio.
+          <p className="text-lg text-slate-600 dark:text-slate-200">
+            Construo APIs, integrações e automações com Python, Java e SQL. Minha formação em
+            Engenharia da Computação e Modelagem Computacional une engenharia de software, dados e
+            visão analítica para gerar impacto real.
           </p>
 
           <div className="flex flex-wrap gap-2 sm:gap-3 sm:flex-nowrap sm:overflow-visible">
@@ -83,8 +83,8 @@ export default function Hero() {
 
           <div className="grid grid-cols-1 gap-4 pt-6 sm:grid-cols-2">
             {[
-              { label: "+12 anos docência", icon: "👨‍🏫" },
-              { label: "+8 anos desenvolvimento", icon: "💻" },
+              { label: "Python, Java, APIs e SQL", icon: "💻" },
+              { label: "Mestre e doutorando", icon: "🎓" },
             ].map((item) => (
               <div
                 key={item.label}
@@ -107,20 +107,20 @@ export default function Hero() {
                 <p className="text-xs text-slate-400 dark:text-slate-300 mt-0.5">Belo Horizonte • Remoto Brasil</p>
               </div>
               <div className="space-y-4 text-base text-slate-200 dark:text-slate-200">
-                <p className="text-cyan-900 dark:text-cyan-200 font-bold text-lg leading-tight">Professor Universitário</p>
+                <p className="text-cyan-900 dark:text-cyan-200 font-bold text-lg leading-tight">Desenvolvedor Backend | Software Engineer</p>
                 <div className="space-y-2 text-base">
-                  <p className="text-cyan-900 dark:text-cyan-200 font-bold text-base mt-2">Full Stack</p>
-                  <p className="pl-2">
-                    <span className="font-semibold text-cyan-900 dark:text-cyan-100">Frontend:</span>
-                    <span className="font-semibold text-cyan-900 dark:text-cyan-100"> React, TypeScript, Tailwind</span>
-                  </p>
+                  <p className="text-cyan-900 dark:text-cyan-200 font-bold text-base mt-2">Stack principal</p>
                   <p className="pl-2">
                     <span className="font-semibold text-cyan-900 dark:text-cyan-100">Backend:</span>
-                    <span className="font-semibold text-cyan-900 dark:text-cyan-100"> Node.js, Python, Django, Spring Boot</span>
+                    <span className="font-semibold text-cyan-900 dark:text-cyan-100"> Python, Django, Java, Spring Boot</span>
                   </p>
                   <p className="pl-2">
-                    <span className="font-semibold text-cyan-900 dark:text-cyan-100">Mobile:</span>
-                    <span className="font-semibold text-slate-800 dark:text-white"> React Native</span>
+                    <span className="font-semibold text-cyan-900 dark:text-cyan-100">Dados:</span>
+                    <span className="font-semibold text-cyan-900 dark:text-cyan-100"> SQL, modelagem e integrações</span>
+                  </p>
+                  <p className="pl-2">
+                    <span className="font-semibold text-cyan-900 dark:text-cyan-100">Infraestrutura:</span>
+                    <span className="font-semibold text-slate-800 dark:text-white"> Docker, Linux, Nginx e Git</span>
                   </p>
                 </div>
                 <div className="space-y-2 border-t border-white/10 pt-3 text-base">
