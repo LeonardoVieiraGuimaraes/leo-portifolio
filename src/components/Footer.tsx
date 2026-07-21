@@ -1,33 +1,47 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { HiArrowUpRight, HiEnvelope } from "react-icons/hi2";
+import { HiArrowUpRight } from "react-icons/hi2";
+import { NavLink } from "react-router-dom";
 
 const socialLinks = [
   { name: "GitHub", url: "https://github.com/LeonardoVieiraGuimaraes/", icon: FaGithub },
   { name: "LinkedIn", url: "https://linkedin.com/in/leonardo-vieira-guimaraes", icon: FaLinkedin },
 ];
 
+const footerLinks = [
+  { name: "Projetos", to: "/projects" },
+  { name: "Competências", to: "/skills" },
+  { name: "Experiência", to: "/experience" },
+  { name: "Sobre", to: "/sobre" },
+  { name: "Contato", to: "/contact" },
+];
+
 export default function Footer() {
   return (
     <footer id="footer" className="border-t border-white/[0.07] bg-[#07101f] [.light_&]:border-slate-200 [.light_&]:bg-white">
-      <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
-        <div className="flex flex-col gap-8 border-b border-white/[0.07] pb-12 md:flex-row md:items-end md:justify-between [.light_&]:border-slate-200">
+      <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+        <div className="grid gap-8 md:grid-cols-[1fr_auto] md:items-center">
           <div>
-            <p className="eyebrow">Vamos conversar</p>
-            <h2 className="max-w-2xl text-3xl font-semibold tracking-[-0.03em] text-white sm:text-4xl [.light_&]:text-slate-950">
-              Procurando um desenvolvedor que entende o problema antes de escrever o código?
-            </h2>
+            <p className="font-semibold text-slate-100 [.light_&]:text-slate-900">Leonardo Vieira Guimarães</p>
+            <p className="mt-1 text-sm text-slate-400 [.light_&]:text-slate-600">
+              Backend · Software Engineering · Belo Horizonte
+            </p>
           </div>
-          <a href="mailto:leonardovieiraxy@hotmail.com" className="button inline-flex shrink-0 items-center justify-center gap-2">
-            <HiEnvelope className="h-4 w-4" />
-            Enviar e-mail
-          </a>
+
+          <nav aria-label="Navegação do rodapé" className="flex flex-wrap gap-x-5 gap-y-3 text-sm">
+            {footerLinks.map((link) => (
+              <NavLink
+                key={link.to}
+                to={link.to}
+                className="text-slate-400 transition hover:text-sky-300 [.light_&]:text-slate-600 [.light_&]:hover:text-sky-700"
+              >
+                {link.name}
+              </NavLink>
+            ))}
+          </nav>
         </div>
 
-        <div className="flex flex-col gap-5 pt-8 text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between">
-          <div>
-            <p className="font-semibold text-slate-200 [.light_&]:text-slate-800">Leonardo Vieira Guimarães</p>
-            <p className="mt-1 text-xs">Backend · Software Engineering · Belo Horizonte</p>
-          </div>
+        <div className="mt-8 flex flex-col gap-5 border-t border-white/[0.07] pt-6 text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between [.light_&]:border-slate-200">
+          <p className="text-xs">© {new Date().getFullYear()} Leonardo Vieira Guimarães</p>
           <div className="flex items-center gap-3">
             {socialLinks.map(({ name, url, icon: Icon }) => (
               <a key={name} href={url} target="_blank" rel="noopener noreferrer" className="social-button" aria-label={name}>
