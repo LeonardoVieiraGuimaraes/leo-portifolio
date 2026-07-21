@@ -17,7 +17,7 @@ export default function Footer() {
               Procurando um desenvolvedor que entende o problema antes de escrever o código?
             </h2>
           </div>
-          <a href="mailto:leonardovieiraxy@gmail.com" className="button inline-flex shrink-0 items-center justify-center gap-2">
+          <a href="mailto:leonardovieiraxy@hotmail.com" className="button inline-flex shrink-0 items-center justify-center gap-2">
             <HiEnvelope className="h-4 w-4" />
             Enviar e-mail
           </a>

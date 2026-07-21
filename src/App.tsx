@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { BrowserRouter, Outlet, Route, Routes, useLocation } from "react-router-dom";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
@@ -13,8 +13,6 @@ import Experience from "./components/Experience";
 import About from "./components/About";
 import AboutSimple from "./components/AboutSimple";
 import { ThemeProvider } from "./context/ThemeContext";
-
-// import Textimonials from "./components/Textimonials";
 
 function ScrollToSection() {
   const location = useLocation();
@@ -34,70 +32,56 @@ function ScrollToSection() {
   return null;
 }
 
-function App() {
-  const HomePage = () => (
-    <>
+function SiteLayout() {
+  return (
+    <div className="min-h-screen bg-[color:var(--bg)] text-[var(--text)]">
       <Header />
+      <main>
+        <Outlet />
+      </main>
+      <Footer />
+    </div>
+  );
+}
+
+function HomePage() {
+  return (
+    <>
       <Hero />
       <ProjectsDeveloper />
       <Experience />
       <AboutSimple />
       <Services />
-      <Footer />
     </>
   );
+}
 
-  const ProjectsPage = () => (
+function ProjectsPage() {
+  return (
     <>
-      <Header />
       <ProjectsDeveloper />
       <ProjectsAcademics />
       <ProjectsProfessor />
-      <Footer />
     </>
   );
+}
 
-
-  const SkillsPage = () => (
-    <>
-      <Header />
-      <Skills />
-      <Footer />
-    </>
-  );
-
-  const ExperiencePage = () => (
-    <>
-      <Header />
-      <Experience />
-      <Footer />
-    </>
-  );
-
-
-
-  const ContactPage = () => (
-    <>
-      <Header />
-      <Contact />
-      <Footer />
-    </>
-  );
-
+function App() {
   return (
     <ThemeProvider>
       <BrowserRouter>
         <ScrollToSection />
         <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/inicio" element={<HomePage />} />
-          <Route path="/sobre" element={<><Header /><About /><Footer /></>} />
-          <Route path="/projects" element={<ProjectsPage />} />
-          <Route path="/skills" element={<SkillsPage />} />
-          <Route path="/experience" element={<ExperiencePage />} />
-
-          <Route path="/contact" element={<ContactPage />} />
-          <Route path="*" element={<HomePage />} />
+          <Route element={<SiteLayout />}>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/inicio" element={<HomePage />} />
+            <Route path="/sobre" element={<About />} />
+            <Route path="/projects" element={<ProjectsPage />} />
+            <Route path="/skills" element={<Skills />} />
+            <Route path="/experience" element={<Experience />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="*" element={<HomePage />} />
+          </Route>
         </Routes>
       </BrowserRouter>
     </ThemeProvider>

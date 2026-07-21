@@ -1,101 +1,41 @@
-import { HiArrowTopRightOnSquare } from "react-icons/hi2";
-import { getImagePath } from "../utils/paths";
-import { useTheme } from "../context/ThemeContext";
+import ProjectCollection, { CollectionProject } from "./ProjectCollection";
+
+const projects: CollectionProject[] = [
+  {
+    title: "Estatística e Probabilidade",
+    description:
+      "Videoaulas que apresentam conceitos de estatística e probabilidade com exemplos e resolução de exercícios.",
+    image: "/images/projects/professor/aulaEstatisticaProbabilidade.png",
+    link: "https://www.youtube.com/playlist?list=PLbLoehbSIAYUFCykmhDHcOhAIv7er7rou",
+    tags: ["YouTube", "Estatística", "Probabilidade"],
+  },
+  {
+    title: "Matemática Financeira",
+    description:
+      "Conteúdo didático sobre juros, equivalência de capitais, financiamentos e aplicações práticas.",
+    image: "/images/projects/professor/aulaMatematicaFinanceira.png",
+    link: "https://www.youtube.com/playlist?list=PLbLoehbSIAYXHvrPFdzPvz2StCvwDVNym",
+    tags: ["Matemática", "Finanças", "Educação"],
+  },
+  {
+    title: "Projeto Integrador",
+    description:
+      "Orientações para estruturar projetos, conectar teoria e prática e apresentar resultados com clareza.",
+    image: "/images/projects/professor/aulaProjetoIntegrador.png",
+    link: "https://www.youtube.com/playlist?list=PLbLoehbSIAYVKOSuhf2p27tRaFlXAFG1T",
+    tags: ["Projetos", "Tecnologia", "Docência"],
+  },
+];
 
 export default function ProjectsProfessor() {
-  const { theme } = useTheme();
-  const isLight = theme === "light";
-
-  const background = isLight
-    ? "linear-gradient(180deg, #f9fafb 0%, #eef2f7 55%, #f9fafb 100%)"
-    : "linear-gradient(135deg, #0b1220 0%, #0f172a 60%, #0b1220 100%)";
-
-  const projects = [
-    {
-      title: "Estátitica e Probabilidade",
-      description: "Video aulas de Estátitica e Probabilidade",
-      image: "/images/projects/professor/aulaEstatisticaProbabilidade.png",
-      link: "https://www.youtube.com/playlist?list=PLbLoehbSIAYUFCykmhDHcOhAIv7er7rou",
-      tags: ["YouTube", "Estatística"],
-      colSpan: "col-span-1",
-    },
-
-    {
-      title: "Matemática Financeira",
-      description: "Video aulas de Matemática Financeira",
-      image: "/images/projects/professor/aulaMatematicaFinanceira.png",
-      link: "https://www.youtube.com/playlist?list=PLbLoehbSIAYXHvrPFdzPvz2StCvwDVNym",
-      tags: ["Finanças", "Educação"],
-      colSpan: "col-span-1",
-    },
-    {
-      title: "Projeto Integrador",
-      description: "Video aulas Projeto Integrador",
-      image: "/images/projects/professor/aulaProjetoIntegrador.png",
-      link: "https://www.youtube.com/playlist?list=PLbLoehbSIAYVKOSuhf2p27tRaFlXAFG1T",
-      tags: ["Projetos", "Tecnologia"],
-      colSpan: "col-span-1",
-    },
-  ];
-
   return (
-    <section
-      className="relative text-cyan-900 dark:text-cyan-100 pt-20 pb-16"
+    <ProjectCollection
       id="projectsProfessor"
-      style={{ background }}
-    >
-      <div className="relative container mx-auto max-w-6xl px-4">
-        <div className="text-center space-y-3">
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200 dark:text-cyan-200">
-            Educação
-          </p>
-          <h2 className="text-3xl md:text-4xl font-semibold text-cyan-700 dark:text-cyan-200">Projetos e videoaulas</h2>
-          <p className="text-slate-500 dark:text-slate-200">
-            Conteúdo prático de estatística, finanças e tecnologia para sala de aula e online.
-          </p>
-        </div>
-
-        <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {projects.map((project, index) => (
-            <div
-              className={`card group relative overflow-hidden rounded-xl ${project.colSpan}`}
-              key={index}
-            >
-              <div className="relative h-48 overflow-hidden">
-                <img
-                  className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-                  src={getImagePath(project.image)}
-                  alt={project.title}
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-900/30 to-transparent" />
-              </div>
-
-              <div className="relative space-y-3 p-4">
-                <div className="flex flex-wrap gap-2 text-xs text-cyan-200 dark:text-cyan-200">
-                  {(project as { tags?: string[] }).tags?.map((tag) => (
-                    <span
-                      key={tag}
-                      className="rounded-full border border-white/10 bg-white/5 px-3 py-1"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-                <h4 className="text-xl font-semibold">{project.title}</h4>
-                <p className="text-sm text-slate-500 dark:text-slate-200">{project.description}</p>
-
-                <button
-                  onClick={() => window.open(project.link, "_blank")}
-                  className="button-secondary mt-2 inline-flex items-center gap-2 border border-white/20 hover:border-white/40"
-                >
-                  <HiArrowTopRightOnSquare className="h-5 w-5" />
-                  Ver projeto
-                </button>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
+      eyebrow="Docência"
+      title="Conteúdo técnico com didática."
+      description="Materiais que demonstram comunicação, organização do conhecimento e experiência em educação — competências úteis também em times de engenharia."
+      projects={projects}
+      muted
+    />
   );
 }

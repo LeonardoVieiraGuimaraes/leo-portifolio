@@ -1,78 +1,114 @@
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import {
+  HiAcademicCap,
+  HiArrowUpRight,
+  HiBuildingOffice2,
+  HiCodeBracket,
+} from "react-icons/hi2";
 import { getImagePath } from "../utils/paths";
-import { useTheme } from "../context/ThemeContext";
+
+const pillars = [
+  {
+    title: "Engenharia de software",
+    description: "APIs, integrações, bancos de dados e aplicações orientadas a regras de negócio.",
+    icon: HiCodeBracket,
+  },
+  {
+    title: "Contexto de negócio",
+    description: "Experiência aplicada ao setor público, saúde, agronegócio e transformação digital.",
+    icon: HiBuildingOffice2,
+  },
+  {
+    title: "Pesquisa e comunicação",
+    description: "Mestrado, doutorado e docência fortalecem análise, documentação e clareza técnica.",
+    icon: HiAcademicCap,
+  },
+];
 
 export default function About() {
-  const { theme } = useTheme ? useTheme() : { theme: "dark" };
-  const isLight = theme === "light";
-  const background = isLight
-    ? "linear-gradient(180deg, #f9fafb 0%, #eef2f7 55%, #f9fafb 100%)"
-    : "linear-gradient(135deg, #0b1220 0%, #0f172a 60%, #0b1220 100%)";
-
   return (
-    <section
-      className="relative text-cyan-900 dark:text-cyan-100 pt-10 pb-10"
-      id="about"
-      style={{ background }}
-    >
-      <div className="relative container mx-auto max-w-6xl px-4">
-        <div className="text-center space-y-3">
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-cyan-900 dark:text-cyan-200">
-            Sobre
-          </p>
-          <h2 className="text-3xl md:text-4xl font-semibold text-cyan-900 dark:text-cyan-200">
-            Sobre mim
-          </h2>
-            <p className="text-cyan-900 dark:text-cyan-200">
-              Professor universitário e desenvolvedor full stack. Uso engenharia e matemática para transformar produtos digitais e experiências de aprendizagem.
-            </p>
-        </div>
-        <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-3 items-start">
-          <div className="order-first md:order-last flex justify-center md:col-span-1">
-            <img
-              src={getImagePath("images/fotoSobre.jpg")}
-              alt="Leonardo Vieira Guimarães"
-              className="h-56 w-44 md:h-72 md:w-56 rounded-lg object-cover flex-shrink-0 shadow-lg"
-            />
+    <section className="page-section" id="about">
+      <div className="section-shell">
+        <div className="grid gap-12 lg:grid-cols-[0.82fr_1.18fr] lg:items-center">
+          <div className="card relative mx-auto w-full max-w-md overflow-hidden rounded-3xl p-2">
+            <div className="relative min-h-[460px] overflow-hidden rounded-[1.25rem]">
+              <img
+                src={getImagePath("images/fotoSobre.jpg")}
+                alt="Leonardo Vieira Guimarães"
+                className="absolute inset-0 h-full w-full object-cover object-center"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/10 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                <p className="text-lg font-semibold">Leonardo Vieira Guimarães</p>
+                <p className="mt-1 text-sm text-slate-200">Belo Horizonte, MG · Disponível para oportunidades</p>
+              </div>
+            </div>
           </div>
-          <div className="space-y-6 md:col-span-2">
-            <div className="space-y-4 text-slate-700 dark:text-slate-200 leading-relaxed text-justify">
-              <p className="text-cyan-900 dark:text-cyan-100">
-                Mestre em Modelagem Computacional e Sistemas (UNIMONTES) e doutorando em Modelagem Computacional (CEFET/MG). Atuo em APIs, front-ends e automações, leciono Arquitetura Web, Programação e Banco de Dados, e apoio projetos de TI no NIM (Cidade Administrativa).
+
+          <div>
+            <p className="eyebrow">Sobre mim</p>
+            <h1 className="section-title">
+              Construo software com visão técnica, entendimento do domínio e responsabilidade pela entrega.
+            </h1>
+            <div className="mt-7 space-y-4 text-base leading-7 muted-text">
+              <p>
+                Sou Engenheiro da Computação e desenvolvedor backend. Trabalho com Python, Django,
+                Java, Spring Boot, APIs REST, SQL e ambientes Docker para transformar processos
+                complexos em sistemas claros e sustentáveis.
               </p>
-              <p className="text-cyan-900 dark:text-cyan-100">
-                No GitHub compartilho projetos variados: dashboards e automações em Python/Node, APIs em Django/Django Ninja e Spring Boot, <span className="font-semibold text-cyan-900 dark:text-cyan-200">front-ends</span> em <span className="font-semibold text-cyan-900 dark:text-cyan-100">React/TypeScript</span>, <span className="font-semibold text-cyan-900 dark:text-cyan-200">back-end</span> com <span className="font-semibold text-cyan-900 dark:text-cyan-100">Node.js, Django, Spring Boot</span> e protótipos <span className="font-semibold text-cyan-900 dark:text-cyan-200">mobile</span> com <span className="font-semibold text-cyan-900 dark:text-cyan-100">React Native</span>. Foco em código limpo, documentação e entregas reprodutíveis.
+              <p>
+                Minha experiência no setor público e em projetos de saúde aproximou o código de
+                problemas reais: autenticação, arrecadação, fluxos BPMN, informação clínica e
+                integrações entre serviços.
+              </p>
+              <p>
+                Sou mestre em Modelagem Computacional e doutorando em Modelagem Matemática e
+                Computacional. A docência faz parte da minha trajetória e amplia minha capacidade de
+                investigar, documentar e explicar decisões técnicas.
               </p>
             </div>
-            <div className="flex flex-wrap gap-3">
+
+            <div className="mt-8 grid gap-3 sm:grid-cols-3">
+              {pillars.map(({ title, description, icon: Icon }) => (
+                <article key={title} className="card rounded-2xl p-5">
+                  <Icon className="h-5 w-5 text-sky-300 [.light_&]:text-sky-700" />
+                  <h2 className="mt-4 text-sm font-semibold text-white [.light_&]:text-slate-950">
+                    {title}
+                  </h2>
+                  <p className="mt-2 text-xs leading-5 muted-text">{description}</p>
+                </article>
+              ))}
+            </div>
+
+            <div className="mt-8 flex flex-wrap gap-3">
               <a
                 href="https://github.com/LeonardoVieiraGuimaraes"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="button-secondary border border-white/20 hover:border-white/40 flex items-center gap-2"
+                className="button-secondary inline-flex items-center gap-2"
               >
-                <FaGithub className="h-5 w-5" />
+                <FaGithub className="h-4 w-4" />
                 GitHub
+              </a>
+              <a
+                href="https://www.linkedin.com/in/leonardo-vieira-guimaraes/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="button-secondary inline-flex items-center gap-2"
+              >
+                <FaLinkedin className="h-4 w-4" />
+                LinkedIn
               </a>
               <a
                 href="https://orcid.org/0009-0000-3118-4664"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="button-secondary border border-green-400 hover:border-green-500 flex items-center gap-2"
-                style={{ marginLeft: 0 }}
+                className="project-link px-2 py-3"
               >
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" className="h-5 w-5" aria-label="ORCID logo"><circle cx="128" cy="128" r="128" fill="#A6CE39"/><path d="M86.3 186.2H69.7V69.8h16.6v116.4zm-8.3-132.2c-6.1 0-11.1-5-11.1-11.1s5-11.1 11.1-11.1 11.1 5 11.1 11.1-5 11.1-11.1 11.1zm53.2 132.2h-16.6V69.8h16.6v116.4zm44.2-58.2c0 16.2-4.7 28.7-14.1 37.2-8.2 7.3-19.5 11-33.7 11h-7.2V69.8h7.2c14.2 0 25.5 3.7 33.7 11 9.4 8.5 14.1 21 14.1 37.2zm-16.6 0c0-11.2-2.6-19.5-7.8-24.7-4.2-4.2-10.7-6.3-19.5-6.3h-2.2v62.1h2.2c8.8 0 15.3-2.1 19.5-6.3 5.2-5.2 7.8-13.5 7.8-24.8z" fill="#fff"/></svg>
-                <span className="text-base">ORCID</span>
+                Produção acadêmica
+                <HiArrowUpRight className="h-4 w-4" />
               </a>
             </div>
-            <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-cyan-900 dark:text-cyan-200 mt-4">
-              <span className="relative flex h-3 w-3">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
-                <span className="relative inline-flex h-3 w-3 rounded-full bg-emerald-400" />
-              </span>
-              Disponível para projetos e oportunidades
-            </div>
-
           </div>
         </div>
       </div>

@@ -12,7 +12,6 @@ type Project = {
   tags: string[];
   github?: string;
   store?: string;
-  featured?: boolean;
 };
 
 const projects: Project[] = [
@@ -27,7 +26,6 @@ const projects: Project[] = [
     store: "https://play.google.com/store/apps/details?id=com.leonardovieiraxy.informacaoEnfermagemreactNative",
     github: "https://github.com/LeonardoVieiraGuimaraes/informacaoEnfermagem-reactNative",
     tags: ["React Native", "Expo", "Android"],
-    featured: true,
   },
   {
     title: "Plataforma DAE/PIX",
@@ -38,7 +36,6 @@ const projects: Project[] = [
     image: "/images/projects/developer/developer08.jpg",
     link: "https://dae.leoproti.com.br/",
     tags: ["Frontend + Backend", "PostgreSQL", "Docker"],
-    featured: true,
   },
   {
     title: "Gestão de Processos BPMN",
@@ -112,7 +109,7 @@ export default function ProjectsDeveloper() {
           {projects.map((project) => (
             <article
               key={project.title}
-              className={`card group flex h-full flex-col overflow-hidden rounded-2xl ${project.featured ? "lg:col-span-1" : ""}`}
+              className="card group flex h-full flex-col overflow-hidden rounded-2xl"
             >
               <div className="relative h-44 overflow-hidden border-b border-white/10 [.light_&]:border-slate-200">
                 <img

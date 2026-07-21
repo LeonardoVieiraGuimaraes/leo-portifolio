@@ -8,19 +8,29 @@
 :root.dark {
   --bg: #091220;
   --panel: #0d1929;
+  --panel-soft: #111f31;
   --text: #e7edf6;
   --muted: #8fa0b7;
+  --subtle: #b9c5d4;
   --accent: #38bdf8;
+  --accent-strong: #7dd3fc;
   --border: rgba(148, 163, 184, 0.14);
+  --section-muted: rgba(2, 6, 23, 0.24);
+  --shadow: 0 18px 50px rgba(0, 0, 0, 0.16);
 }
 
 :root.light {
   --bg: #f7f9fc;
   --panel: #ffffff;
+  --panel-soft: #f1f5f9;
   --text: #0f172a;
   --muted: #526176;
+  --subtle: #334155;
   --accent: #0369a1;
+  --accent-strong: #075985;
   --border: rgba(15, 23, 42, 0.1);
+  --section-muted: rgba(226, 232, 240, 0.5);
+  --shadow: 0 14px 36px rgba(15, 23, 42, 0.06);
 }
 
 html {
@@ -33,7 +43,7 @@ body {
   margin: 0;
   background:
     radial-gradient(circle at 78% -5%, rgba(14, 165, 233, 0.1), transparent 28rem),
-    linear-gradient(180deg, #091220 0%, #07101f 100%);
+    linear-gradient(180deg, var(--bg) 0%, #07101f 100%);
   color: var(--text);
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   transition: background-color 0.2s ease, color 0.2s ease;
@@ -42,7 +52,7 @@ body {
 :root.light body {
   background:
     radial-gradient(circle at 78% -5%, rgba(14, 165, 233, 0.08), transparent 28rem),
-    #f7f9fc;
+    var(--bg);
 }
 
 h1, h2, h3, h4 {
@@ -92,12 +102,12 @@ h1, h2, h3, h4 {
   .card {
     background: rgba(13, 25, 41, 0.82);
     border: 1px solid var(--border);
-    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.16);
+    box-shadow: var(--shadow);
   }
 
   :root.light .card {
     background: rgba(255, 255, 255, 0.94);
-    box-shadow: 0 14px 36px rgba(15, 23, 42, 0.06);
+    box-shadow: var(--shadow);
   }
 
   .eyebrow {
@@ -118,6 +128,35 @@ h1, h2, h3, h4 {
   }
 
   :root.light .section-copy { color: #526176; }
+
+  .page-section {
+    @apply relative py-20 sm:py-24;
+  }
+
+  .page-section-muted {
+    @apply relative border-y py-20 sm:py-24;
+    border-color: var(--border);
+    background: var(--section-muted);
+  }
+
+  .section-shell {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .field {
+    @apply w-full rounded-xl border px-4 py-3 text-sm outline-none transition;
+    border-color: var(--border);
+    background: var(--panel-soft);
+    color: var(--text);
+  }
+
+  .field:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.12);
+  }
+
+  .muted-text { color: var(--muted); }
+  .subtle-text { color: var(--subtle); }
 
   .social-button,
   .icon-link {

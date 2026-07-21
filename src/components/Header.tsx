@@ -11,6 +11,7 @@ export default function Header() {
 
   const navLinks = [
     { name: "Projetos", to: "/projects" },
+    { name: "Competências", to: "/skills" },
     { name: "Experiência", to: "/experience" },
     { name: "Sobre", to: "/sobre" },
     { name: "Contato", to: "/contact" },
@@ -26,15 +27,15 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-white/5 bg-slate-950/85 backdrop-blur-xl [.light_&]:border-slate-200 [.light_&]:bg-white/90">
       <nav className="mx-auto flex h-[72px] max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
-        <NavLink to="/" className="group flex items-center gap-3" onClick={() => setIsOpen(false)}>
-          <span className="grid h-10 w-10 place-items-center rounded-xl bg-gradient-to-br from-sky-400 to-blue-600 text-sm font-bold text-white shadow-lg shadow-sky-950/30">
+        <NavLink to="/" className="group flex min-w-0 items-center gap-3" onClick={() => setIsOpen(false)}>
+          <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-gradient-to-br from-sky-400 to-blue-600 text-sm font-bold text-white shadow-lg shadow-sky-950/30">
             LV
           </span>
-          <span className="leading-tight">
-            <span className="block text-sm font-semibold text-white [.light_&]:text-slate-950">
+          <span className="min-w-0 leading-tight">
+            <span className="block truncate text-sm font-semibold text-white [.light_&]:text-slate-950">
               Leonardo Guimarães
             </span>
-            <span className="block text-xs text-slate-400 [.light_&]:text-slate-500">
+            <span className="hidden text-xs text-slate-400 sm:block [.light_&]:text-slate-500">
               Backend & Software Engineering
             </span>
           </span>
@@ -60,7 +61,7 @@ export default function Header() {
           </a>
         </div>
 
-        <div className="flex items-center gap-2 md:hidden">
+        <div className="ml-3 flex shrink-0 items-center gap-2 md:hidden">
           <button
             onClick={toggleTheme}
             className="grid h-10 w-10 place-items-center rounded-lg border border-white/10 text-slate-300 [.light_&]:border-slate-200 [.light_&]:text-slate-600"

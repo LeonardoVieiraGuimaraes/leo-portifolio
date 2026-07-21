@@ -1,338 +1,227 @@
-import { HiAcademicCap, HiCodeBracketSquare } from "react-icons/hi2";
-import { useTheme } from "../context/ThemeContext";
+import {
+  HiAcademicCap,
+  HiCheckCircle,
+  HiCircleStack,
+  HiCodeBracketSquare,
+  HiCommandLine,
+  HiLanguage,
+  HiServerStack,
+} from "react-icons/hi2";
+
+const stackGroups = [
+  {
+    title: "Backend",
+    description: "Tecnologias centrais para APIs, regras de negócio e integrações.",
+    icon: HiServerStack,
+    skills: ["Python", "Django", "Django Ninja", "FastAPI", "Java", "Spring Boot", "Node.js"],
+  },
+  {
+    title: "Frontend e mobile",
+    description: "Interfaces web e aplicativos conectados a serviços reais.",
+    icon: HiCodeBracketSquare,
+    skills: ["React", "TypeScript", "Next.js", "React Native", "HTML", "CSS", "Tailwind CSS"],
+  },
+  {
+    title: "Dados",
+    description: "Persistência, consulta, análise e apoio à tomada de decisão.",
+    icon: HiCircleStack,
+    skills: ["SQL", "PostgreSQL", "MySQL", "MongoDB", "Pandas", "Power BI", "Jupyter"],
+  },
+  {
+    title: "DevOps e operação",
+    description: "Publicação, automação e manutenção de ambientes confiáveis.",
+    icon: HiCommandLine,
+    skills: ["Docker", "Linux", "Nginx", "Git", "GitHub Actions", "CI/CD", "Grafana"],
+  },
+];
+
+const engineeringPractices = [
+  "APIs REST",
+  "DDD",
+  "MVC",
+  "Arquitetura em camadas",
+  "Clean Code",
+  "Modelagem de dados",
+  "Autenticação e autorização",
+  "Testes automatizados",
+  "Observabilidade",
+  "Documentação técnica",
+];
+
+const educations = [
+  {
+    degree: "Doutorado em andamento",
+    course: "Modelagem Matemática e Computacional",
+    institution: "CEFET-MG",
+    period: "2025 — atual",
+    description: "Pesquisa em sistemas inteligentes, modelos neuro-fuzzy e detecção de anomalias.",
+  },
+  {
+    degree: "Aluno especial de doutorado",
+    course: "Ciência da Computação",
+    institution: "UFMG",
+    period: "2024 — 2025",
+    description: "Modelagem de dados, visão computacional e visualização de dados.",
+  },
+  {
+    degree: "Mestrado profissional",
+    course: "Modelagem Computacional e Sistemas",
+    institution: "UNIMONTES",
+    period: "2016 — 2019",
+    description: "Processamento de imagens e sistemas inteligentes aplicados à desidratação de uvas.",
+  },
+  {
+    degree: "Bacharelado",
+    course: "Engenharia de Computação",
+    institution: "FEMC",
+    period: "2010 — 2014",
+    description: "Projeto de identificação eletrônica de bovinos utilizando RFID.",
+  },
+  {
+    degree: "Especializações",
+    course: "Matemática e Estatística",
+    institution: "UFLA e FINOM",
+    period: "2008 — 2009",
+    description: "Formação complementar em estatística, matemática aplicada e matemática financeira.",
+  },
+  {
+    degree: "Licenciatura",
+    course: "Matemática",
+    institution: "UNIMONTES",
+    period: "2004 — 2007",
+    description: "Base em raciocínio lógico, modelagem e educação.",
+  },
+];
+
+const professionalStrengths = [
+  "Comunicação clara e didática",
+  "Análise e resolução de problemas",
+  "Colaboração multidisciplinar",
+  "Organização e aprendizado contínuo",
+];
+
+const languages = [
+  { language: "Português", level: "Nativo" },
+  { language: "Inglês", level: "Intermediário · leitura técnica" },
+  { language: "Espanhol", level: "Básico" },
+];
 
 export default function Skills() {
-  const { theme } = useTheme();
-  const isLight = theme === "light";
-
-  const background = isLight
-    ? "linear-gradient(180deg, #f9fafb 0%, #eef2f7 55%, #f9fafb 100%)"
-    : "rgba(15, 23, 42, 0.4)";
-
-  const educations = [
-    {
-      degree: "Doutorado (em andamento)",
-      institution: "CEFET/MG",
-      course: "Modelagem Matemática e Computacional",
-      period: "2025 - atual",
-      description: "Linha de pesquisa em sistemas inteligentes. Orientador: Alisson Marques da Silva."
-    },
-    {
-      degree: "Aluno especial (Doutorado)",
-      institution: "UFMG",
-      course: "Ciências da Computação",
-      period: "2024 - 2025",
-      description: "Disciplinas: Modelagem de Dados, Visão Computacional e Visualização de Dados."
-    },
-    {
-      degree: "Mestrado Profissional",
-      institution: "UNIMONTES",
-      course: "Modelagem Computacional e Sistemas",
-      period: "2016 - 2019",
-      description: "Título: Monitoramento no Processo de Desidratação de Uvas Baseado em Imagens Digitais e Sistemas Inteligentes. Orientador: Dr. Maurílio José Inácio. Coorientador: Dr. Rodolpho Cézar dos Reis Tinini."
-    },
-    {
-      degree: "Especialização",
-      institution: "UFLA",
-      course: "Matemática e Estatística",
-      period: "2008 - 2009",
-      description: "Trabalho de Qualificação. Orientador: Paulo César Lima."
-    },
-    {
-      degree: "Especialização",
-      institution: "FINOM",
-      course: "Matemática",
-      period: "2008",
-      description: "Título: A matemática Financeira Aplicada em Empréstimos e Financiamentos Bancários. Orientador: Maria Marlene Rodrigues Souza."
-    },
-    {
-      degree: "Graduação",
-      institution: "FEMC",
-      course: "Engenharia de Computação",
-      period: "2010 - 2014",
-      description: "Título: Sistema de Identificação de Bovídeos Usando Radiofrequência por Identificação (RFID). Orientador: Alexandre Dantas Dias."
-    },
-    {
-      degree: "Graduação",
-      institution: "UNIMONTES",
-      course: "Matemática",
-      period: "2004 - 2007",
-      description: "Formação em Matemática."
-    }
-  ];
-
-  const skills = [
-    { name: "HTML5/CSS3", icon: "https://simpleicons.org/icons/html5.svg", level: 95 },
-    { name: "JavaScript", icon: "https://simpleicons.org/icons/javascript.svg", level: 90 },
-    { name: "TypeScript", icon: "https://simpleicons.org/icons/typescript.svg", level: 85 },
-    { name: "React.js", icon: "https://simpleicons.org/icons/react.svg", level: 90 },
-    { name: "Next.js", icon: "https://simpleicons.org/icons/nextdotjs.svg", level: 80 },
-    { name: "Node.js", icon: "https://simpleicons.org/icons/nodedotjs.svg", level: 85 },
-    { name: "Express.js", icon: "https://simpleicons.org/icons/express.svg", level: 80 },
-    { name: "Python", icon: "https://simpleicons.org/icons/python.svg", level: 90 },
-    { name: "Django", icon: "https://simpleicons.org/icons/django.svg", level: 80 },
-    { name: "Spring Boot", icon: "https://simpleicons.org/icons/springboot.svg", level: 70 },
-    { name: "Java", icon: "https://simpleicons.org/icons/java.svg", level: 75 },
-    { name: "C#", icon: "https://simpleicons.org/icons/csharp.svg", level: 60 },
-    { name: "PostgreSQL", icon: "https://simpleicons.org/icons/postgresql.svg", level: 85 },
-    { name: "MySQL", icon: "https://simpleicons.org/icons/mysql.svg", level: 80 },
-    { name: "MongoDB", icon: "https://simpleicons.org/icons/mongodb.svg", level: 70 },
-    { name: "Docker", icon: "https://simpleicons.org/icons/docker.svg", level: 75 },
-    { name: "Git", icon: "https://simpleicons.org/icons/git.svg", level: 90 },
-    { name: "Linux", icon: "https://simpleicons.org/icons/linux.svg", level: 80 },
-    { name: "Figma", icon: "https://simpleicons.org/icons/figma.svg", level: 60 },
-    { name: "Power BI", icon: "https://cdn.worldvectorlogo.com/logos/power-bi.svg", level: 60 },
-    { name: "Pandas", icon: "https://simpleicons.org/icons/pandas.svg", level: 70 },
-    { name: "Numpy", icon: "https://simpleicons.org/icons/numpy.svg", level: 65 },
-    { name: "Bootstrap", icon: "https://simpleicons.org/icons/bootstrap.svg", level: 60 },
-    { name: "Tailwind CSS", icon: "https://simpleicons.org/icons/tailwindcss.svg", level: 80 },
-    { name: "Jest", icon: "https://simpleicons.org/icons/jest.svg", level: 50 },
-    { name: "Cypress", icon: "https://simpleicons.org/icons/cypress.svg", level: 40 },
-    { name: "APIs REST", icon: "https://www.svgrepo.com/show/353478/api.svg", level: 90 },
-    { name: "GraphQL", icon: "https://simpleicons.org/icons/graphql.svg", level: 40 },
-    { name: "Matplotlib", icon: "https://simpleicons.org/icons/matplotlib.svg", level: 50 },
-    { name: "Seaborn", icon: "https://seaborn.pydata.org/_static/logo-wide-lightbg.svg", level: 40 },
-    { name: "FastAPI", icon: "https://simpleicons.org/icons/fastapi.svg", level: 40 },
-    { name: "Flask", icon: "https://simpleicons.org/icons/flask.svg", level: 40 },
-    { name: "SASS", icon: "https://simpleicons.org/icons/sass.svg", level: 60 },
-    { name: "Redux", icon: "https://simpleicons.org/icons/redux.svg", level: 60 },
-    { name: "Vite", icon: "https://seeklogo.com/images/V/vite-logo-BFD4283991-seeklogo.com.svg", level: 70 },
-    { name: "Yarn", icon: "https://simpleicons.org/icons/yarn.svg", level: 70 },
-    { name: "NPM", icon: "https://simpleicons.org/icons/npm.svg", level: 70 },
-    { name: "Jupyter", icon: "https://simpleicons.org/icons/jupyter.svg", level: 60 },
-    // IA e Machine Learning
-    { name: "TensorFlow", icon: "https://simpleicons.org/icons/tensorflow.svg", level: 60 },
-    { name: "Keras", icon: "https://simpleicons.org/icons/keras.svg", level: 60 },
-    { name: "PyTorch", icon: "https://simpleicons.org/icons/pytorch.svg", level: 50 },
-    { name: "Scikit-learn", icon: "https://simpleicons.org/icons/scikitlearn.svg", level: 65 },
-    { name: "OpenAI API", icon: "https://cdn.worldvectorlogo.com/logos/openai-2.svg", level: 60 },
-    { name: "Gemini API", icon: "https://www.svgrepo.com/show/499962/artificial-intelligence-ai.svg", level: 55 },
-  ];
-
-  const languages = [
-    {
-      language: "Português",
-      level: "Nativo"
-    },
-    {
-      language: "Espanhol",
-      level: "Básico (leitura e comunicação simples)"
-    },
-    {
-      language: "Inglês",
-      level: "Intermediário (leitura técnica e documentação)"
-    }
-  ];
-
   return (
-    <section
-      className="relative pt-20 pb-16"
-      id="skills"
-      style={{ background }}
-    >
-      <div className="container mx-auto max-w-6xl px-4">
-        <div className="text-center space-y-3 mb-8">
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-cyan-900 dark:text-cyan-200">
-            Formação & stack
-          </p>
-          <h2 className="text-3xl md:text-4xl font-semibold text-cyan-900 dark:text-cyan-200">Educação e habilidades</h2>
-          <p className="text-cyan-700 dark:text-cyan-200">
-            Base sólida em modelagem, dados e engenharia para construir e ensinar tecnologia.
+    <section className="page-section-muted" id="skills">
+      <div className="section-shell">
+        <div className="max-w-3xl">
+          <p className="eyebrow">Formação e competências</p>
+          <h1 className="section-title">Stack focada em construir, publicar e evoluir software.</h1>
+          <p className="section-copy">
+            Em vez de uma lista extensa de ferramentas e porcentagens subjetivas, estas são as
+            tecnologias e práticas que aparecem de forma consistente nos meus projetos.
           </p>
         </div>
 
-
-        <div className="flex flex-col gap-8">
-          {/* Formação */}
-          <div className="card rounded-2xl p-6 border border-slate-200 dark:border-white/10 shadow-sm">
-            <div className="mb-6 text-center">
-              <h2 className="text-2xl md:text-3xl font-bold text-cyan-900 dark:text-cyan-200 tracking-tight flex items-center justify-center gap-2">
-                <HiAcademicCap className="h-7 w-7 text-cyan-900 dark:text-cyan-200" />
-                Formação Acadêmica
-              </h2>
-              <p className="text-cyan-700 dark:text-cyan-200 mt-2 text-base">Trajetória educacional e principais títulos obtidos.</p>
-            </div>
-            <div className="flex flex-col gap-4 text-cyan-900 dark:text-cyan-200">
-              {educations.map((education, index) => (
-                <div
-                  key={`education-${index}`}
-                  className="card rounded-lg border border-slate-200 dark:border-white/10 px-4 py-4 flex flex-col gap-1 shadow-sm"
-                >
-                  <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-1">
-                    <span className="text-base font-bold text-cyan-900 dark:text-cyan-100">{education.degree} em {education.course}</span>
-                    <span className="text-xs text-cyan-700 dark:text-cyan-200">{education.period}</span>
-                  </div>
-                  <span className="text-sm text-cyan-700 dark:text-cyan-200 font-semibold">{education.degree} <span className="mx-1">|</span> {education.institution}</span>
-                  <p className="text-cyan-700 dark:text-cyan-200 text-sm mt-1">{education.description}</p>
+        <div className="mt-12 grid gap-5 md:grid-cols-2">
+          {stackGroups.map(({ title, description, skills, icon: Icon }) => (
+            <article key={title} className="card rounded-2xl p-6">
+              <div className="flex items-start gap-4">
+                <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-sky-400/10 text-sky-300 [.light_&]:bg-sky-100 [.light_&]:text-sky-700">
+                  <Icon className="h-5 w-5" />
+                </span>
+                <div>
+                  <h2 className="text-lg font-semibold text-white [.light_&]:text-slate-950">{title}</h2>
+                  <p className="mt-1 text-sm leading-6 muted-text">{description}</p>
                 </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Habilidades */}
-          <div className="card rounded-2xl p-6 border border-slate-200 dark:border-white/10 shadow-sm">
-            <div className="mb-6 text-center">
-              <h2 className="text-2xl md:text-3xl font-bold text-cyan-900 dark:text-cyan-200 tracking-tight flex items-center justify-center gap-2">
-                <HiCodeBracketSquare className="h-7 w-7 text-cyan-900 dark:text-cyan-200" />
-                Habilidades Técnicas
-              </h2>
-              <p className="text-cyan-700 dark:text-cyan-200 mt-2 text-base">Principais tecnologias e stacks que domino para desenvolvimento de soluções.</p>
-            </div>
-            <div className="mb-8">
-              <h3 className="text-lg font-semibold text-cyan-900 dark:text-cyan-300 mb-2">Competências Técnicas</h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                {skills
-                  .filter(skill => !["Ensino", "Matemática", "Estatística"].includes(skill.name))
-                  .sort((a, b) => b.level - a.level)
-                  .map((skill, index) => (
-                  <div key={`skill-${index}`} className="card flex items-center gap-4 rounded-lg border border-slate-200 dark:border-white/10 px-4 py-4 shadow-sm">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white border border-slate-200 dark:border-slate-700 text-xs text-cyan-200 dark:text-cyan-200">
-                      <img
-                        src={skill.icon}
-                        alt={skill.name}
-                        className="h-8 w-8 rounded drop-shadow-sm"
-                        onError={(e) => {
-                          const target = e.currentTarget;
-                          target.onerror = null;
-                          target.style.display = 'none';
-                          target.insertAdjacentHTML('afterend', `
-                            <svg viewBox='0 0 24 24' fill='none' class='h-8 w-8 text-cyan-700 dark:text-cyan-200' xmlns='http://www.w3.org/2000/svg'>
-                              <circle cx='12' cy='12' r='11' fill='currentColor' fill-opacity='0.10' />
-                              <rect x='3' y='7' width='18' height='10' rx='2' fill='currentColor' fill-opacity='0.2' />
-                              <rect x='7' y='3' width='10' height='18' rx='2' fill='currentColor' fill-opacity='0.4' />
-                            </svg>
-                          `);
-                        }}
-                      />
-                    </div>
-                    <div className="flex-1">
-                      <p className="text-sm font-semibold text-cyan-900 dark:text-cyan-100">{skill.name}</p>
-                      <div className="h-2 w-full rounded-full bg-cyan-100 dark:bg-cyan-500/10">
-                        <div
-                          className="h-2 rounded-full bg-gradient-to-r from-cyan-400 to-violet-400"
-                          style={{ width: `${skill.level}%` }}
-                        ></div>
-                      </div>
-                    </div>
-                  </div>
+              </div>
+              <div className="mt-5 flex flex-wrap gap-2">
+                {skills.map((skill) => (
+                  <span key={skill} className="tech-chip">{skill}</span>
                 ))}
               </div>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold text-cyan-900 dark:text-cyan-300 mb-2">Competências Comportamentais</h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                {/* Competências comportamentais aprimoradas */}
-                {[
-                  {
-                    name: "Comunicação Clara e Didática",
-                    icon: "https://www.svgrepo.com/show/375930/megaphone-announcement.svg",
-                    level: 95,
-                    desc: "Facilidade para explicar conceitos complexos de forma simples, tanto em ambientes acadêmicos quanto corporativos."
-                  },
-                  {
-                    name: "Trabalho em Equipe Multidisciplinar",
-                    icon: "https://www.svgrepo.com/show/375899/teamwork-group.svg",
-                    level: 90,
-                    desc: "Experiência colaborando com profissionais de diferentes áreas para alcançar objetivos comuns."
-                  },
-                  {
-                    name: "Resolução de Problemas",
-                    icon: "https://www.svgrepo.com/show/375927/puzzle-solution.svg",
-                    level: 90,
-                    desc: "Capacidade analítica para identificar, investigar e solucionar desafios técnicos e pedagógicos."
-                  },
-                  {
-                    name: "Pensamento Crítico e Analítico",
-                    icon: "https://www.svgrepo.com/show/375925/brainstorm-idea.svg",
-                    level: 90,
-                    desc: "Avaliação criteriosa de informações e tomada de decisões fundamentadas."
-                  },
-                  {
-                    name: "Gestão do Tempo e Organização",
-                    icon: "https://www.svgrepo.com/show/375911/time-management.svg",
-                    level: 85,
-                    desc: "Priorização de tarefas e cumprimento de prazos em múltiplos projetos simultâneos."
-                  },
-                  {
-                    name: "Aprendizado Contínuo",
-                    icon: "https://www.svgrepo.com/show/375900/learning-education.svg",
-                    level: 95,
-                    desc: "Busca constante por atualização e novas competências em tecnologia e educação."
-                  },
-                  {
-                    name: "Empatia e Escuta Ativa",
-                    icon: "https://www.svgrepo.com/show/375915/heart-empathy.svg",
-                    level: 90,
-                    desc: "Compreensão das necessidades de alunos, colegas e clientes, promovendo um ambiente colaborativo."
-                  },
-                  {
-                    name: "Liderança e Mentoria",
-                    icon: "https://www.svgrepo.com/show/375908/leader-mentoring.svg",
-                    level: 85,
-                    desc: "Orientação de equipes e desenvolvimento de talentos em ambientes educacionais e de TI."
-                  },
-                  {
-                    name: "Adaptabilidade",
-                    icon: "https://www.svgrepo.com/show/375903/adaptability.svg",
-                    level: 90,
-                    desc: "Facilidade para lidar com mudanças e novos desafios em contextos diversos."
-                  }
-                ].map((skill, index) => (
-                  <div key={`soft-skill-${index}`} className="card flex flex-col gap-2 rounded-lg border border-slate-200 dark:border-white/10 px-4 py-4 shadow-sm">
-                    <div className="flex items-center gap-3 mb-1">
-                      <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white border border-slate-200 dark:border-slate-700">
-                        <img
-                          src={skill.icon}
-                          alt={skill.name}
-                          className="h-8 w-8 rounded drop-shadow-sm"
-                          onError={(e) => {
-                            const target = e.currentTarget;
-                            target.onerror = null;
-                            target.style.display = 'none';
-                            target.insertAdjacentHTML('afterend', `
-                              <svg viewBox='0 0 24 24' fill='none' class='h-8 w-8 text-cyan-700 dark:text-cyan-200' xmlns='http://www.w3.org/2000/svg'>
-                                <circle cx='12' cy='12' r='11' fill='currentColor' fill-opacity='0.10' />
-                                <rect x='3' y='7' width='18' height='10' rx='2' fill='currentColor' fill-opacity='0.2' />
-                                <rect x='7' y='3' width='10' height='18' rx='2' fill='currentColor' fill-opacity='0.4' />
-                              </svg>
-                            `);
-                          }}
-                        />
-                      </div>
-                      <div className="flex-1">
-                        <p className="text-sm font-semibold text-cyan-900 dark:text-cyan-100">{skill.name}</p>
-                        <div className="h-2 w-full rounded-full bg-cyan-100 dark:bg-cyan-500/10">
-                          <div
-                            className="h-2 rounded-full bg-gradient-to-r from-cyan-400 to-violet-400"
-                            style={{ width: `${skill.level}%` }}
-                          ></div>
-                        </div>
-                      </div>
-                    </div>
-                    <p className="text-xs text-cyan-700 dark:text-cyan-200 mt-1">{skill.desc}</p>
+            </article>
+          ))}
+        </div>
+
+        <article className="card mt-5 rounded-2xl p-6 sm:p-8">
+          <p className="eyebrow">Práticas de engenharia</p>
+          <h2 className="text-2xl font-semibold text-white [.light_&]:text-slate-950">
+            Decisões que tornam o código mais sustentável.
+          </h2>
+          <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
+            {engineeringPractices.map((practice) => (
+              <div key={practice} className="flex items-center gap-2 rounded-xl border p-3 text-sm subtle-text" style={{ borderColor: "var(--border)" }}>
+                <HiCheckCircle className="h-4 w-4 shrink-0 text-emerald-400" />
+                {practice}
+              </div>
+            ))}
+          </div>
+        </article>
+
+        <div className="mt-16 grid gap-10 lg:grid-cols-[0.72fr_1.28fr]">
+          <div>
+            <p className="eyebrow">Trajetória acadêmica</p>
+            <h2 className="section-title">Formação conectada à prática.</h2>
+            <p className="section-copy">
+              Engenharia, matemática e modelagem computacional sustentam minha abordagem analítica
+              para software, dados e pesquisa aplicada.
+            </p>
+
+            <div className="card mt-8 rounded-2xl p-6">
+              <div className="flex items-center gap-3">
+                <HiLanguage className="h-5 w-5 text-sky-300 [.light_&]:text-sky-700" />
+                <h3 className="font-semibold text-white [.light_&]:text-slate-950">Idiomas</h3>
+              </div>
+              <div className="mt-4 space-y-3">
+                {languages.map(({ language, level }) => (
+                  <div key={language} className="flex items-center justify-between gap-4 border-t pt-3 text-sm" style={{ borderColor: "var(--border)" }}>
+                    <span className="font-medium subtle-text">{language}</span>
+                    <span className="text-right muted-text">{level}</span>
                   </div>
                 ))}
               </div>
             </div>
           </div>
 
-          {/* Idiomas */}
-          <div className="card rounded-2xl p-6 border border-slate-200 dark:border-white/10 shadow-sm">
-            <h2 className="text-2xl md:text-3xl font-bold text-cyan-900 dark:text-cyan-200 tracking-tight mb-6 text-center">Idiomas</h2>
-            <div className="flex flex-col gap-4">
-              {languages.map((lang, idx) => (
-                <div
-                  key={idx}
-                  className="card rounded-lg border border-slate-200 dark:border-white/10 px-4 py-4 flex flex-col gap-1 shadow-sm items-center"
-                >
-                  <span className="text-base font-bold text-cyan-900 dark:text-cyan-100 mb-1">{lang.language}</span>
-                  <span className="text-sm text-cyan-700 dark:text-cyan-200 font-semibold">{lang.level}</span>
+          <div className="relative space-y-4 before:absolute before:bottom-8 before:left-6 before:top-8 before:w-px before:bg-white/10 [.light_&]:before:bg-slate-200">
+            {educations.map((education, index) => (
+              <article key={`${education.institution}-${education.course}`} className="card relative rounded-2xl p-6 pl-16">
+                <span className="absolute left-[1.1rem] top-7 grid h-7 w-7 place-items-center rounded-full border border-sky-400 bg-sky-500 text-white">
+                  <HiAcademicCap className="h-3.5 w-3.5" />
+                </span>
+                <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+                  <div>
+                    <p className="text-xs font-semibold uppercase tracking-[0.14em] text-sky-300 [.light_&]:text-sky-700">
+                      {education.degree}
+                    </p>
+                    <h3 className="mt-1 text-base font-semibold text-white [.light_&]:text-slate-950">
+                      {education.course}
+                    </h3>
+                    <p className="mt-1 text-sm muted-text">{education.institution}</p>
+                  </div>
+                  <span className="text-xs font-medium muted-text">{education.period}</span>
                 </div>
-              ))}
-            </div>
+                <p className="mt-3 text-sm leading-6 muted-text">{education.description}</p>
+                {index === 0 && (
+                  <span className="mt-4 inline-flex rounded-full bg-emerald-400/10 px-3 py-1 text-xs font-semibold text-emerald-400">
+                    Em andamento
+                  </span>
+                )}
+              </article>
+            ))}
           </div>
         </div>
 
+        <div className="mt-16">
+          <p className="eyebrow">Forma de trabalhar</p>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {professionalStrengths.map((strength) => (
+              <div key={strength} className="card rounded-2xl p-5">
+                <HiCheckCircle className="h-5 w-5 text-emerald-400" />
+                <p className="mt-4 text-sm font-semibold leading-6 text-white [.light_&]:text-slate-900">
+                  {strength}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );

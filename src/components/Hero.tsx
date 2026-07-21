@@ -6,6 +6,7 @@ import {
   HiOutlineServerStack,
 } from "react-icons/hi2";
 import { NavLink } from "react-router-dom";
+import { getImagePath } from "../utils/paths";
 
 const proofPoints = [
   { value: "Software em produção", label: "Saúde, pesquisa e setor público" },
@@ -19,11 +20,11 @@ export default function Hero() {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_12%_18%,rgba(14,165,233,0.13),transparent_30%),radial-gradient(circle_at_88%_8%,rgba(37,99,235,0.12),transparent_28%)]" />
       <div className="absolute inset-0 surface-grid opacity-40" />
 
-      <div className="relative mx-auto grid max-w-7xl gap-12 px-4 py-20 sm:px-6 md:py-28 lg:grid-cols-[1.15fr_0.85fr] lg:items-center lg:px-8">
-        <div>
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-emerald-400/20 bg-emerald-400/10 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-emerald-300 [.light_&]:border-emerald-200 [.light_&]:bg-emerald-50 [.light_&]:text-emerald-700">
-            <span className="h-2 w-2 rounded-full bg-emerald-400" />
-            Disponível para oportunidades de desenvolvimento
+      <div className="relative mx-auto grid max-w-7xl grid-cols-1 gap-12 px-4 py-20 sm:px-6 md:py-28 lg:grid-cols-[1.15fr_0.85fr] lg:items-center lg:px-8">
+        <div className="min-w-0">
+          <div className="mb-6 flex w-full items-start gap-2 rounded-2xl border border-emerald-400/20 bg-emerald-400/10 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-emerald-300 sm:inline-flex sm:w-auto sm:items-center sm:rounded-full [.light_&]:border-emerald-200 [.light_&]:bg-emerald-50 [.light_&]:text-emerald-700">
+            <span className="mt-1 h-2 w-2 shrink-0 rounded-full bg-emerald-400 sm:mt-0" />
+            <span>Disponível para oportunidades de desenvolvimento</span>
           </div>
 
           <p className="mb-4 text-sm font-semibold uppercase tracking-[0.22em] text-sky-300 [.light_&]:text-sky-700">
@@ -44,7 +45,7 @@ export default function Hero() {
               <HiArrowRight className="h-4 w-4" />
             </NavLink>
             <a
-              href="/curriculo-leonardo-backend.pdf"
+              href={getImagePath("curriculo-leonardo-backend.pdf")}
               className="button-secondary inline-flex items-center gap-2"
               download
             >
@@ -81,7 +82,7 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="relative mx-auto w-full max-w-md">
+        <div className="relative mx-auto min-w-0 w-full max-w-md">
           <div className="absolute -inset-6 rounded-[2rem] bg-sky-500/10 blur-3xl" />
           <div className="card relative overflow-hidden rounded-3xl p-2">
             <div className="rounded-[1.25rem] border border-white/10 bg-slate-950/85 p-6 [.light_&]:border-slate-200 [.light_&]:bg-white">
