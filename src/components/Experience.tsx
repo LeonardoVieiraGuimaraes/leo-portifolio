@@ -3,23 +3,56 @@ import { getImagePath } from "../utils/paths";
 
 const experiences = [
   {
-    role: "Desenvolvedor de Sistemas Web",
-    company: "Projetos freelance, acadêmicos e soluções aplicadas",
-    period: "2014 — atual",
+    role: "Desenvolvedor Backend (GLS / Informática)",
+    company: "Instituto Mineiro de Agropecuária (IMA)",
+    period: "jul 2026 — atual",
     highlights: [
-      "Desenvolvimento de sistemas web e APIs desde a formação em Engenharia de Computação.",
-      "Construção de soluções com Python, Django, Java, Spring Boot, React e SQL para projetos freelance e acadêmicos.",
-      "Atuação de ponta a ponta: requisitos, arquitetura, testes, Docker, CI/CD, publicação e manutenção.",
+      "Atuação direta como desenvolvedor backend na Gerência de Logística e Serviços Gerais (GLS), sendo responsável pelo desenvolvimento web, evolução e sustentação contínua do sistema Sidagro (migrado do NIM) e de outros projetos corporativos da instituição.",
+      "Desenvolvimento de APIs RESTful e ferramentas de automação interna para agilizar processos e rotinas operacionais.",
+      "Modelagem e administração de bancos de dados relacionais para suporte a relatórios gerenciais e controle operacional da instituição.",
+      "Utilização de Docker e contêineres para padronizar e isolar ambientes de desenvolvimento, homologação e produção.",
     ],
     primary: true,
   },
   {
-    role: "Assistente em Gestão de Defesa Agropecuária",
-    company: "Instituto Mineiro de Agropecuária · Núcleo de Inovação e Modernização",
-    period: "2005 — atual",
+    role: "Desenvolvedor de Sistemas Web",
+    company: "Projetos freelance, acadêmicos e soluções aplicadas",
+    period: "2014 — atual",
     highlights: [
-      "Atuação em modernização de processos e soluções digitais para o setor público.",
-      "Participação em plataformas corporativas de arrecadação, autenticação e fluxos BPMN.",
+      "Desenvolvimento de sistemas web robustos e APIs seguras desde a graduação em Engenharia de Computação, atendendo a demandas acadêmicas, comerciais e de pesquisa.",
+      "Construção de soluções completas fim a fim com Python (Django, FastAPI), Java (Spring Boot), React, TypeScript e bancos de dados SQL.",
+      "Concepção de arquiteturas baseadas em contêineres (Docker), configuração de servidores Nginx, fluxos de CI/CD e controle de versionamento com Git.",
+    ],
+  },
+  {
+    role: "Desenvolvedor de Aplicativo Android (Freelancer)",
+    company: "Projeto de Tecnologia na Saúde & Pesquisa Científica",
+    period: "jan 2024 — fev 2024",
+    highlights: [
+      "Desenvolvimento e arquitetura de um aplicativo Android nativo para a gestão e sistematização de serviços de saúde prisional.",
+      "Atuação direta no desenvolvimento tecnológico de uma pesquisa científica internacional de enfermagem prisional, publicada em 2026 (Investigación y Educación en Enfermería).",
+      "Modelagem do banco de dados local do app, garantindo armazenamento offline seguro, desempenho otimizado e validação dos dados de saúde.",
+    ],
+  },
+  {
+    role: "Assistente de Gestão (NIM - Inovação e Modernização)",
+    company: "Instituto Mineiro de Agropecuária (IMA)",
+    period: "set 2024 — jul 2026",
+    highlights: [
+      "Liderança técnica e atuação ativa no Núcleo de Inovação e Modernização (NIM), com foco na modernização de processos corporativos no setor público.",
+      "Responsável técnico pelo sistema Sidagro (Sistema de Integração Agropecuária) e pela gestão de projetos de TI estratégicos dentro do NIM.",
+      "Desenvolvimento e sustentação de soluções digitais essenciais, como plataformas de arrecadação (integração DAE/PIX) e sistemas corporativos de autenticação.",
+      "Modelagem e documentação de fluxos de processos institucionais complexos utilizando a notação BPMN para integrar e otimizar diferentes setores.",
+    ],
+  },
+  {
+    role: "Assistente de Gestão (Escritório Seccional de São Francisco)",
+    company: "Instituto Mineiro de Agropecuária (IMA)",
+    period: "nov 2005 — set 2024",
+    highlights: [
+      "Suporte à gestão regional do norte de Minas Gerais, com foco em atendimento ao público, análise processual e controle operacional de defesa agropecuária.",
+      "Desenvolvimento e manutenção de relatórios automatizados, planilhas gerenciais e pequenos scripts locais para otimização do fluxo de trabalho diário.",
+      "Emissão de documentos oficiais, controle de trânsito de animais e vegetais e fiscalização de conformidade regulatória regional.",
     ],
   },
   {
@@ -27,15 +60,17 @@ const experiences = [
     company: "Centro Universitário Newton Paiva",
     period: "2024 — atual",
     highlights: [
-      "Docência prática em Banco de Dados e Arquitetura Web, conectando fundamentos e projetos reais.",
+      "Docência prática de disciplinas de Banco de Dados e Arquitetura Web, conectando a teoria acadêmica às necessidades e padrões práticos do mercado.",
+      "Orientação de estudantes em projetos práticos integradores de desenvolvimento de software, modelagem de dados e design de arquitetura RESTful.",
     ],
   },
   {
-    role: "Professor, tutor e autor em Tecnologia",
+    role: "Professor, Tutor e Autor de Tecnologia",
     company: "UNIASSELVI · Vitru Brasil Empreendimentos",
     period: "2022 — atual",
     highlights: [
-      "Orientação em desenvolvimento de sistemas e autoria de conteúdo de Backend II com Banco de Dados.",
+      "Atuação como tutor e orientador acadêmico nos cursos de Análise e Desenvolvimento de Sistemas e Sistemas para Internet.",
+      "Autoria de conteúdo didático para a disciplina 'Backend II com Banco de Dados', cobrindo programação web com acesso a dados estruturados e melhores práticas backend.",
     ],
   },
 ];
