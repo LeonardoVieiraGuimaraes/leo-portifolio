@@ -16,6 +16,27 @@ type Project = {
 
 const projects: Project[] = [
   {
+    title: "Sistema Sidagro",
+    context: "Sistema de Integração Agropecuária",
+    description:
+      "Portal corporativo integrado de defesa agropecuária de Minas Gerais, controlando o trânsito de animais/vegetais, fiscalização de conformidade e emissão de documentos oficiais.",
+    outcome: "Plataforma oficial do IMA em produção, integrada com autenticação unificada e em evolução contínua.",
+    image: "/images/projects/developer/developer07.jpg",
+    link: "https://www.sidagro.ima.mg.gov.br/sidagro/login.seam",
+    tags: ["Java EE", "Oracle", "Sistemas Corporativos"],
+  },
+  {
+    title: "Portfólio Profissional V3",
+    context: "Website & Portfólio Pessoal",
+    description:
+      "Website moderno e responsivo com design elegante utilizando React, TypeScript e TailwindCSS, apresentando transições suaves, glassmorphism e controle de temas (dark/light).",
+    outcome: "Portfólio de engenharia publicado, integrado com envio de emails em tempo real e entrega automatizada de documentos.",
+    image: "/images/projects/developer/portifolioV3.png",
+    link: "https://leoproti.com.br/",
+    github: "https://github.com/LeonardoVieiraGuimaraes/leo-portifolio",
+    tags: ["React", "TypeScript", "TailwindCSS", "Vite"],
+  },
+  {
     title: "A&G Enfermagem",
     context: "Produto mobile publicado",
     description:
@@ -28,31 +49,41 @@ const projects: Project[] = [
     tags: ["React Native", "Expo", "Android"],
   },
   {
-    title: "Plataforma DAE/PIX",
+    title: "Plataforma DAE/PIX v2",
     context: "Sistema corporativo",
     description:
-      "Solução web integrada para processos de arrecadação, com frontend, backend, autenticação e banco de dados em arquitetura containerizada.",
-    outcome: "Ambientes independentes de produção e homologação, publicados com Docker e automação de deploy.",
+      "Evolução do sistema corporativo do IMA para arrecadação, integrando pagamentos instantâneos via PIX e DAE em arquitetura distribuída.",
+    outcome: "Frontend e API separados rodando em ambientes independentes de homologação e produção.",
     image: "/images/projects/developer/developer08.jpg",
-    link: "https://dae.leoproti.com.br/",
-    tags: ["Frontend + Backend", "PostgreSQL", "Docker"],
+    link: "https://daev2.leoproti.com.br/",
+    tags: ["React", "TypeScript", "PostgreSQL", "Docker"],
   },
   {
-    title: "Gestão de Processos BPMN",
-    context: "Transformação digital",
+    title: "IMA Auth & PDF Server",
+    context: "Microserviços corporativos",
     description:
-      "Aplicação corporativa para modelagem e execução de fluxos, com serviços separados, autenticação e persistência relacional.",
-    outcome: "Arquitetura de homologação com frontend, backend, PostgreSQL e túnel seguro de publicação.",
+      "Serviço unificado de autenticação (OAuth2/JWT) para ecossistema Sidagro e microsserviço dedicado a geração de PDFs oficiais.",
+    outcome: "Integração segura entre sistemas legados e novos microsserviços rodando em containers.",
     image: "/images/projects/developer/developer06.jpg",
-    link: "https://ima-bpmn-homo.leoproti.com.br/",
-    tags: ["BPMN", "PostgreSQL", "CI/CD"],
+    link: "https://ima-auth.leoproti.com.br/",
+    tags: ["OAuth2/JWT", "Node.js", "Docker", "API"],
+  },
+  {
+    title: "Radar Brucelose (Hisbruc)",
+    context: "Engenharia de requisitos",
+    description:
+      "Portal wiki e radar de controle sanitário da Brucelose em Minas Gerais, mapeando regras de negócio e casos de uso integrados ao PNCEBT.",
+    outcome: "Hospedado via Docker/Nginx com documentação interativa baseada em Wiki de engenharia de software.",
+    image: "/images/projects/developer/developer01.jpg",
+    link: "https://hisbruc.leoproti.com.br/",
+    tags: ["Nginx", "Docker", "Requisitos", "Wiki"],
   },
   {
     title: "Hub de Projetos do Doutorado",
     context: "Pesquisa aplicada",
     description:
-      "Ambiente full stack para experimentos com autômatos celulares, random walk, lógica fuzzy, FCA e análise de grafos de GTA.",
-    outcome: "Frontend e API publicados separadamente, com documentação interativa e execução em containers.",
+      "Ambiente full stack para experimentos científicos com autômatos celulares, random walk, lógica fuzzy e grafos de GTA.",
+    outcome: "Frontend Next.js e API FastAPI publicados separadamente, com documentação interativa em containers.",
     image: "/images/projects/academics/doutoradoMineracaoDadosProjeto.png",
     link: "https://projetos-doutorado.leoproti.com.br/",
     github: "https://github.com/LeonardoVieiraGuimaraes/DoutoradoCefet/tree/main/hospedagem/projetos_doutorado",
@@ -62,7 +93,7 @@ const projects: Project[] = [
     title: "Sistema Hospitalar de Enfermagem",
     context: "Software para saúde",
     description:
-      "Sistema web para pacientes e apoio aos fluxos de cirurgia segura e tratamento quimioterápico.",
+      "Sistema web para recepção de pacientes e apoio aos fluxos de cirurgia segura e tratamento quimioterápico.",
     outcome: "Aplicação Django publicada com containerização e deploy automatizado no servidor.",
     image: "/images/projects/developer/recepcao.png",
     link: "https://recepcao.leoproti.com.br/",
@@ -79,6 +110,56 @@ const projects: Project[] = [
     link: "https://sae.leoproti.com.br/",
     github: "https://github.com/LeonardoVieiraGuimaraes/sae-enfermagem-django",
     tags: ["Python", "Django", "Saúde"],
+  },
+  {
+    title: "Arquitetura de Aplicação Web",
+    context: "Didático / Ensino",
+    description:
+      "Plataforma de ensino contendo implementações de referência com Java, Spring Boot, Docker e TypeScript, base das disciplinas ministradas.",
+    outcome: "Ambiente online para demonstração prática de APIs RESTful e padrões arquiteturais complexos.",
+    image: "/images/projects/developer/developer02.jpg",
+    link: "https://arqwebv01.leoproti.com.br/",
+    tags: ["Java", "Spring Boot", "Docker", "REST"],
+  },
+  {
+    title: "Programação Web",
+    context: "Didático / Ensino",
+    description:
+      "Plataforma de apoio pedagógico focada em desenvolvimento backend inicial, com APIs simples e controle de persistência relacional.",
+    outcome: "Sistema online para demonstração prática de controllers, requests e persistência de dados em aula.",
+    image: "/images/projects/developer/proweb.png",
+    link: "https://proweb.leoproti.com.br/",
+    tags: ["Java", "Spring Boot", "Web", "SQL"],
+  },
+  {
+    title: "Observabilidade (Grafana & Prometheus)",
+    context: "Infraestrutura & DevOps",
+    description:
+      "Pilha de monitoramento integrada para coleta de métricas de containers, recursos do sistema e alertas em tempo real.",
+    outcome: "Painéis e alertas em tempo real para controle de saúde e disponibilidade dos serviços do home server.",
+    image: "/images/projects/developer/grafana.png",
+    link: "https://grafana.leoproti.com.br/",
+    tags: ["Grafana", "Prometheus", "DevOps", "Métricas"],
+  },
+  {
+    title: "CasaOS Home Server Portal",
+    context: "Infraestrutura & DevOps",
+    description:
+      "Painel centralizador e orquestrador de contêineres Docker para gerenciamento simplificado da infraestrutura local.",
+    outcome: "Gerenciamento visual e centralizado de todos os serviços e volumes do servidor doméstico.",
+    image: "/images/projects/developer/casaos.png",
+    link: "https://casaos.leoproti.com.br/",
+    tags: ["CasaOS", "Docker", "Homelab", "Orquestração"],
+  },
+  {
+    title: "Nextcloud Privado",
+    context: "Infraestrutura & Nuvem",
+    description:
+      "Servidor de arquivos e colaboração na nuvem própria, garantindo armazenamento soberano e seguro para pesquisas e assets.",
+    outcome: "Hospedagem segura em ambiente HTTPS próprio com verificação de segurança no proxy.",
+    image: "/images/projects/developer/nextcloud.png",
+    link: "https://nextcloud.leoproti.com.br/",
+    tags: ["Nextcloud", "Nuvem", "Docker", "Soberania"],
   },
 ];
 

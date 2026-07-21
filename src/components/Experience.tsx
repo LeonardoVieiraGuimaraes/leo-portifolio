@@ -3,16 +3,27 @@ import { getImagePath } from "../utils/paths";
 
 const experiences = [
   {
-    role: "Desenvolvedor Backend (GLS / Informática)",
+    role: "Desenvolvedor Backend (GLS / TI)",
     company: "Instituto Mineiro de Agropecuária (IMA)",
     period: "jul 2026 — atual",
     highlights: [
-      "Atuação direta como desenvolvedor backend na Gerência de Logística e Serviços Gerais (GLS), sendo responsável pelo desenvolvimento web, evolução e sustentação contínua do sistema Sidagro (migrado do NIM) e de outros projetos corporativos da instituição.",
+      "Atuação direta como desenvolvedor backend na Gerência de Logística e Serviços Gerais (GLS / TI), sendo responsável pelo desenvolvimento web, evolução e sustentação contínua do sistema Sidagro (migrado do NIM) e de outros projetos corporativos da instituição.",
       "Desenvolvimento de APIs RESTful e ferramentas de automação interna para agilizar processos e rotinas operacionais.",
       "Modelagem e administração de bancos de dados relacionais para suporte a relatórios gerenciais e controle operacional da instituição.",
       "Utilização de Docker e contêineres para padronizar e isolar ambientes de desenvolvimento, homologação e produção.",
     ],
     primary: true,
+  },
+  {
+    role: "Assistente de Gestão (NIM - Inovação e Modernização)",
+    company: "Instituto Mineiro de Agropecuária (IMA)",
+    period: "set 2024 — jul 2026",
+    highlights: [
+      "Liderança técnica e atuação ativa no Núcleo de Inovação e Modernização (NIM), com foco na modernização de processos corporativos no setor público.",
+      "Responsável técnico pelo sistema Sidagro (Sistema de Integração Agropecuária) e pela gestão de projetos de TI estratégicos dentro do NIM.",
+      "Desenvolvimento e sustentação de soluções digitais essenciais, como plataformas de arrecadação (integração DAE/PIX) e sistemas corporativos de autenticação.",
+      "Modelagem e documentação de fluxos de processos institucionais complexos utilizando a notação BPMN para integrar e otimizar diferentes setores.",
+    ],
   },
   {
     role: "Desenvolvedor de Sistemas Web",
@@ -32,17 +43,6 @@ const experiences = [
       "Desenvolvimento e arquitetura de um aplicativo Android nativo para a gestão e sistematização de serviços de saúde prisional.",
       "Atuação direta no desenvolvimento tecnológico de uma pesquisa científica internacional de enfermagem prisional, publicada em 2026 (Investigación y Educación en Enfermería).",
       "Modelagem do banco de dados local do app, garantindo armazenamento offline seguro, desempenho otimizado e validação dos dados de saúde.",
-    ],
-  },
-  {
-    role: "Assistente de Gestão (NIM - Inovação e Modernização)",
-    company: "Instituto Mineiro de Agropecuária (IMA)",
-    period: "set 2024 — jul 2026",
-    highlights: [
-      "Liderança técnica e atuação ativa no Núcleo de Inovação e Modernização (NIM), com foco na modernização de processos corporativos no setor público.",
-      "Responsável técnico pelo sistema Sidagro (Sistema de Integração Agropecuária) e pela gestão de projetos de TI estratégicos dentro do NIM.",
-      "Desenvolvimento e sustentação de soluções digitais essenciais, como plataformas de arrecadação (integração DAE/PIX) e sistemas corporativos de autenticação.",
-      "Modelagem e documentação de fluxos de processos institucionais complexos utilizando a notação BPMN para integrar e otimizar diferentes setores.",
     ],
   },
   {
@@ -71,6 +71,33 @@ const experiences = [
     highlights: [
       "Atuação como tutor e orientador acadêmico nos cursos de Análise e Desenvolvimento de Sistemas e Sistemas para Internet.",
       "Autoria de conteúdo didático para a disciplina 'Backend II com Banco de Dados', cobrindo programação web com acesso a dados estruturados e melhores práticas backend.",
+    ],
+  },
+  {
+    role: "Professor Mediador EAD (Desenvolvimento Mobile)",
+    company: "IFNMG — Instituto Federal do Norte de Minas Gerais",
+    period: "2020",
+    highlights: [
+      "Atuação como Professor Mediador a Distância no curso de Formação Inicial e Continuada (FIC) Programador de Dispositivos Móveis na modalidade EAD.",
+      "Apoio, orientação e avaliação dos estudantes em tópicos de lógica de programação para dispositivos móveis.",
+    ],
+  },
+  {
+    role: "Professor Mediador Presencial (Tutor de TI)",
+    company: "IFNMG — Instituto Federal do Norte de Minas Gerais",
+    period: "2017 — 2019",
+    highlights: [
+      "Mediação e tutoria presencial de alunos do curso Técnico em Informática para Internet na modalidade presencial.",
+      "Suporte didático-pedagógico prático em lógica de programação, banco de dados e desenvolvimento de interfaces web básicas.",
+    ],
+  },
+  {
+    role: "Professor de Ensino Superior",
+    company: "FADENORTE — Faculdade de Desenvolvimento do Norte",
+    period: "2019 — 2020",
+    highlights: [
+      "Docência de disciplinas de Estatística, Matemática Financeira, Gestão Financeira e Inovação Tecnológica para cursos superiores de graduação.",
+      "Orientação de Projetos Integradores (II, IV e V) focados em aplicação prática e resolução de problemas gerenciais nas organizações.",
     ],
   },
 ];
