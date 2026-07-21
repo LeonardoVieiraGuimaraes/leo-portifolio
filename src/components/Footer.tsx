@@ -51,6 +51,9 @@ export default function Footer() {
             <a href="https://orcid.org/0009-0000-3118-4664" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-400 hover:text-sky-300 [.light_&]:hover:text-sky-700">
               ORCID <HiArrowUpRight className="h-3.5 w-3.5" />
             </a>
+            <a href="http://lattes.cnpq.br/3600922455238720" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-400 hover:text-sky-300 [.light_&]:hover:text-sky-700">
+              Lattes <HiArrowUpRight className="h-3.5 w-3.5" />
+            </a>
           </div>
         </div>
       </div>
