@@ -4,12 +4,12 @@ import { getImagePath } from "../utils/paths";
 const experiences = [
   {
     role: "Desenvolvedor de Sistemas Web",
-    company: "Projetos independentes e soluções aplicadas",
-    period: "2023 — atual",
+    company: "Projetos freelance, acadêmicos e soluções aplicadas",
+    period: "2014 — atual",
     highlights: [
-      "Desenvolvimento e publicação de aplicações com Python, Django, Java, React e SQL.",
-      "Integração entre APIs, bancos de dados, autenticação e serviços externos.",
-      "Containerização, automação de deploy e acompanhamento dos ambientes em produção.",
+      "Desenvolvimento de sistemas web e APIs desde a formação em Engenharia de Computação.",
+      "Construção de soluções com Python, Django, Java, Spring Boot, React e SQL para projetos freelance e acadêmicos.",
+      "Atuação de ponta a ponta: requisitos, arquitetura, testes, Docker, CI/CD, publicação e manutenção.",
     ],
     primary: true,
   },
