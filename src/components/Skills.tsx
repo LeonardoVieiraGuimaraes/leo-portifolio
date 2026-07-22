@@ -57,11 +57,11 @@ const educations = [
     description: "Pesquisa em sistemas inteligentes, modelos neuro-fuzzy e detecção de anomalias.",
   },
   {
-    degree: "Aluno especial de doutorado",
+    degree: "Disciplinas isoladas de doutorado — aluno especial",
     course: "Ciência da Computação",
-    institution: "UFMG",
-    period: "2024 — 2025",
-    description: "Modelagem de dados, visão computacional e visualização de dados.",
+    institution: "Universidade Federal de Minas Gerais — UFMG",
+    period: "2021 — 2022",
+    description: "Disciplinas: Visão Computacional, Visualização de Dados, Mineração de Dados e Finanças Quantitativas e Gerenciamento de Risco. Os créditos obtidos foram posteriormente aproveitados no Doutorado em Modelagem Matemática e Computacional do CEFET-MG.",
   },
   {
     degree: "Mestrado profissional",
@@ -100,9 +100,25 @@ const professionalStrengths = [
   "Organização e aprendizado contínuo",
 ];
 
-const languages = [
+interface LanguageItem {
+  language: string;
+  level: string;
+  certification?: string;
+  score?: string;
+  verificationUrl?: string;
+  verificationKey?: string;
+}
+
+const languages: LanguageItem[] = [
   { language: "Português", level: "Nativo" },
-  { language: "Inglês", level: "Intermediário · leitura técnica" },
+  {
+    language: "Inglês",
+    level: "Proficiência em Leitura",
+    certification: "Exame de Proficiência (UFSC)",
+    score: "Nota 8,50 (mínimo 7,0)",
+    verificationUrl: "https://www.proficienciadlle.com",
+    verificationKey: "5113208805889763695",
+  },
   { language: "Espanhol", level: "Básico" },
 ];
 
@@ -170,10 +186,33 @@ export default function Skills() {
                 <h3 className="font-semibold text-white [.light_&]:text-slate-950">Idiomas</h3>
               </div>
               <div className="mt-4 space-y-3">
-                {languages.map(({ language, level }) => (
-                  <div key={language} className="flex items-center justify-between gap-4 border-t pt-3 text-sm" style={{ borderColor: "var(--border)" }}>
-                    <span className="font-medium subtle-text">{language}</span>
-                    <span className="text-right muted-text">{level}</span>
+                {languages.map((lang) => (
+                  <div key={lang.language} className="border-t pt-3" style={{ borderColor: "var(--border)" }}>
+                    <div className="flex items-center justify-between gap-4 text-sm">
+                      <span className="font-medium subtle-text">{lang.language}</span>
+                      <span className="text-right muted-text font-semibold">{lang.level}</span>
+                    </div>
+                    {lang.certification && (
+                      <div className="mt-2 flex flex-col gap-1 border-l-2 border-sky-500/30 pl-3 text-xs">
+                        <p className="font-medium text-slate-200 [.light_&]:text-slate-700">
+                          {lang.certification} — {lang.score}
+                        </p>
+                        {lang.verificationUrl && (
+                          <p className="text-[10px] text-slate-400 [.light_&]:text-slate-500">
+                            Autenticidade:{" "}
+                            <a
+                              href={lang.verificationUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-sky-400 hover:text-sky-300 hover:underline"
+                            >
+                              {lang.verificationUrl.replace("https://", "").replace("http://", "")}
+                            </a>{" "}
+                            (Chave: {lang.verificationKey})
+                          </p>
+                        )}
+                      </div>
+                    )}
                   </div>
                 ))}
               </div>
