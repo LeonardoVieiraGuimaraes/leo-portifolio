@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { FaMoon, FaSun } from "react-icons/fa";
-import { HiOutlineEnvelope } from "react-icons/hi2";
 import { NavLink } from "react-router-dom";
 import { useTheme } from "../context/ThemeContext";
 
@@ -55,10 +54,6 @@ export default function Header() {
           >
             {theme === "dark" ? <FaSun /> : <FaMoon />}
           </button>
-          <a href="mailto:leonardovieiraxy@hotmail.com" className="button ml-2 inline-flex items-center gap-2">
-            <HiOutlineEnvelope className="h-4 w-4" />
-            Fale comigo
-          </a>
         </div>
 
         <div className="ml-3 flex shrink-0 items-center gap-2 md:hidden">
