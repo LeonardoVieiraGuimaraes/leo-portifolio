@@ -7,7 +7,8 @@ const experiences = [
     company: "Instituto Mineiro de Agropecuária (IMA)",
     period: "jul 2026 — atual",
     highlights: [
-      "Atuação direta como desenvolvedor backend na Gerência de Logística e Serviços Gerais (GLS / TI), sendo responsável pelo desenvolvimento web, evolução e sustentação contínua do sistema Sidagro (migrado do NIM) e de outros projetos corporativos da instituição.",
+      "Liderança na gestão de suporte técnico do sistema Sidagro e atuação como Product Owner (PO), sendo responsável pela análise de regras de negócio complexas e alinhamento de requisitos.",
+      "Atuação direta como desenvolvedor backend na Gerência de Logística e Serviços Gerais (GLS / TI), com foco em desenvolvimento web, evolução e sustentação contínua do sistema Sidagro (homologado para Firefox).",
       "Desenvolvimento de APIs RESTful e ferramentas de automação interna para agilizar processos e rotinas operacionais.",
       "Modelagem e administração de bancos de dados relacionais para suporte a relatórios gerenciais e controle operacional da instituição.",
       "Utilização de Docker e contêineres para padronizar e isolar ambientes de desenvolvimento, homologação e produção.",
@@ -19,8 +20,8 @@ const experiences = [
     company: "Instituto Mineiro de Agropecuária (IMA)",
     period: "set 2024 — jul 2026",
     highlights: [
+      "Gestão de projetos e de suporte técnico do sistema Sidagro, atuando na análise e documentação de regras de negócio complexas como Product Owner (PO).",
       "Liderança técnica e atuação ativa no Núcleo de Inovação e Modernização (NIM), com foco na modernização de processos corporativos no setor público.",
-      "Responsável técnico pelo sistema Sidagro (Sistema de Integração Agropecuária) e pela gestão de projetos de TI estratégicos dentro do NIM.",
       "Desenvolvimento e sustentação de soluções digitais essenciais, como plataformas de arrecadação (integração DAE/PIX) e sistemas corporativos de autenticação.",
       "Modelagem e documentação de fluxos de processos institucionais complexos utilizando a notação BPMN para integrar e otimizar diferentes setores.",
     ],

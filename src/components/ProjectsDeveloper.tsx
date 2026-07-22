@@ -19,11 +19,11 @@ const projects: Project[] = [
     title: "Sistema Sidagro",
     context: "Sistema de Integração Agropecuária",
     description:
-      "Portal corporativo integrado de defesa agropecuária de Minas Gerais, controlando o trânsito de animais/vegetais, fiscalização de conformidade e emissão de documentos oficiais.",
-    outcome: "Plataforma oficial do IMA em produção, integrada com autenticação unificada e em evolução contínua.",
+      "Portal corporativo de defesa agropecuária de Minas Gerais. Atuação como Product Owner (PO), sendo responsável pela análise de regras de negócio complexas e pela liderança da gestão de suporte técnico do sistema. (Nota: Sistema homologado e compatível exclusivamente com o navegador Mozilla Firefox).",
+    outcome: "Plataforma oficial do IMA em produção, com gestão de regras de negócio estruturadas e suporte de alta disponibilidade.",
     image: "/images/projects/developer/developer07.jpg",
     link: "https://www.sidagro.ima.mg.gov.br/sidagro/login.seam",
-    tags: ["Java EE", "Oracle", "Sistemas Corporativos"],
+    tags: ["Java EE", "Oracle", "Gestão de Produto (PO)", "Suporte Técnico"],
   },
   {
     title: "Portfólio Profissional V3",
