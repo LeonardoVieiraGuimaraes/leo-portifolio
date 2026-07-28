@@ -59,7 +59,7 @@ def desenhar_cabecalho(canvas, doc):
     canvas.setFillColor(colors.HexColor("#93c5fd"))
     canvas.setFont("Helvetica", 10)
     canvas.drawString(MARGIN_H, y_topo - 1.65 * cm,
-                      "Desenvolvedor Full Stack  ·  Product Owner (PO)  ·  Engenheiro de Software")
+                      "Desenvolvedor Full Stack  ·  Product Owner  ·  Professor de TI & Pesquisador")
 
     # ── Localização ───────────────────────────────────────────────────────────
     canvas.setFillColor(colors.HexColor("#cbd5e1"))
@@ -202,13 +202,13 @@ story = []
 # ── RESUMO ─────────────────────────────────────────────────────────────────────
 story += secao("Resumo Profissional")
 story.append(Paragraph(
-    "Desenvolvedor Full Stack, Product Owner (PO) e Engenheiro de Software com sólida experiência no "
-    "desenvolvimento de aplicações web, arquitetura de APIs RESTful, microsserviços e bancos de dados relacionais. "
+    "Desenvolvedor Full Stack, Product Owner (PO), Professor de TI e Pesquisador com sólida experiência em "
+    "engenharia de software, desenvolvimento web, arquitetura de APIs RESTful, microsserviços e bancos de dados. "
     "Atua no Instituto Mineiro de Agropecuária (IMA) desenvolvendo microsserviços e soluções corporativas "
     "(como Plataforma DAE/PIX, IMA Auth e PDF Server) e exercendo o papel de Product Owner (PO) do sistema "
-    "Sidagro (GLS/TI). Em segundo plano, sua vivência inclui docência universitária em TI (Newton Paiva e "
-    "UNIASSELVI) e pesquisa aplicada como Doutorando no CEFET/MG e Mestre em Modelagem Computacional "
-    "(UNIMONTES), agregando forte capacidade analítica, comunicação clara e visão sistêmica.",
+    "Sidagro (GLS/TI). Em paralelo, atua na docência universitária em TI (Newton Paiva e UNIASSELVI) e na "
+    "pesquisa científica como Doutorando em Modelagem Matemática e Computacional (CEFET/MG) e Mestre (UNIMONTES), "
+    "agregando forte capacidade analítica, visão de produto e rigor técnico.",
     st_resumo
 ))
 

@@ -29,7 +29,7 @@ export default function Hero() {
           </div>
 
           <p className="mb-4 text-sm font-semibold uppercase tracking-[0.22em] text-sky-300 [.light_&]:text-sky-700">
-            Desenvolvedor Full Stack · Product Owner · Engenheiro de Software
+            Desenvolvedor Full Stack · Product Owner · Professor de TI & Pesquisador
           </p>
           <h1 className="max-w-4xl text-4xl font-semibold leading-[1.08] text-white sm:text-5xl lg:text-6xl [.light_&]:text-slate-950">
             Desenvolvo sistemas distribuídos, APIs robustas e produtos de alto impacto.
