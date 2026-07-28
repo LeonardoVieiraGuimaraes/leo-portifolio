@@ -12,6 +12,7 @@ const proofPoints = [
   { value: "Software em produção", label: "Saúde, pesquisa e setor público" },
   { value: "Backend ao deploy", label: "APIs, dados, Docker e CI/CD" },
   { value: "Produto publicado", label: "Aplicativo disponível na Play Store" },
+  { value: "Professor universitário", label: "Docência em TI, Newton Paiva e UNIASSELVI" },
 ];
 
 export default function Hero() {
@@ -28,15 +29,15 @@ export default function Hero() {
           </div>
 
           <p className="mb-4 text-sm font-semibold uppercase tracking-[0.22em] text-sky-300 [.light_&]:text-sky-700">
-            Desenvolvedor Backend · Software Engineer
+            Desenvolvedor Full Stack · Professor · Pesquisador
           </p>
           <h1 className="max-w-4xl text-4xl font-semibold leading-[1.08] text-white sm:text-5xl lg:text-6xl [.light_&]:text-slate-950">
-            Transformo regras complexas em sistemas claros, confiáveis e prontos para produção.
+            Uso engenharia e matemática para transformar produtos digitais e experiências de aprendizagem.
           </h1>
           <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-300 [.light_&]:text-slate-600">
-            Desenvolvo APIs, integrações e aplicações com Python, Django, Java, Spring Boot e SQL.
-            Minha experiência une engenharia de software, conhecimento de negócio e capacidade de
-            entregar do requisito ao monitoramento.
+            Atuo em APIs, front-ends e automações; leciono e oriento em TI; e apoio o desenvolvimento de
+            software no IMA. Mestre em Modelagem Computacional e doutorando em Modelagem Matemática e
+            Computacional no CEFET/MG.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-3">
@@ -45,7 +46,7 @@ export default function Hero() {
               <HiArrowRight className="h-4 w-4" />
             </NavLink>
             <a
-              href={getImagePath("curriculo-leonardo-backend.pdf")}
+              href={getImagePath("curriculo-leonardo-fullstack.pdf")}
               className="button-secondary inline-flex items-center gap-2"
               download
             >
@@ -109,8 +110,8 @@ export default function Hero() {
                   <div>
                     <p className="font-semibold text-white [.light_&]:text-slate-950">Stack principal</p>
                     <p className="mt-1 text-sm leading-6 text-slate-400 [.light_&]:text-slate-600">
-                      Python · Django · Java · Spring Boot · SQL · APIs REST
-                    </p>
+                       React · TypeScript · Node.js · Python · Django · Java · Spring Boot · SQL
+                     </p>
                   </div>
                 </div>
 
@@ -118,19 +119,19 @@ export default function Hero() {
                   <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-400 [.light_&]:text-slate-500">
                     Entrega completa
                   </p>
-                  <div className="mt-3 grid grid-cols-2 gap-2 text-sm text-slate-200 [.light_&]:text-slate-700">
-                    {["Modelagem de dados", "Integrações", "Docker e Linux", "CI/CD e observabilidade"].map((skill) => (
-                      <span key={skill} className="flex items-center gap-2">
-                        <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
+                   <div className="mt-3 grid grid-cols-2 gap-2 text-sm text-slate-200 [.light_&]:text-slate-700">
+                     {["Modelagem de dados", "Integrações", "Docker e Linux", "CI/CD e observabilidade", "Docência em TI", "Gestão de Produto (PO)"].map((skill) => (
+                       <span key={skill} className="flex items-center gap-2">
+                         <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
+                         {skill}
+                       </span>
+                     ))}
+                   </div>
                 </div>
 
                 <div className="flex items-center justify-between rounded-2xl bg-gradient-to-r from-sky-500/15 to-blue-600/10 px-4 py-3">
                   <span className="text-sm font-medium text-slate-200 [.light_&]:text-slate-700">
-                    Engenharia da Computação · Mestre · Doutorando
+                     Eng. Computação · Mestre · Doutorando CEFET/MG
                   </span>
                   <span className="h-2.5 w-2.5 rounded-full bg-emerald-400 shadow-[0_0_18px_rgba(52,211,153,0.9)]" />
                 </div>

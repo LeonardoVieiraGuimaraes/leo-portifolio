@@ -23,7 +23,7 @@ export default function Footer() {
           <div>
             <p className="font-semibold text-slate-100 [.light_&]:text-slate-900">Leonardo Vieira Guimarães</p>
             <p className="mt-1 text-sm text-slate-400 [.light_&]:text-slate-600">
-              Backend · Software Engineering · Belo Horizonte
+              Full Stack · Professor · Pesquisador · Belo Horizonte
             </p>
           </div>
 

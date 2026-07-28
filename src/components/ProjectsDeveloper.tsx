@@ -59,14 +59,24 @@ const projects: Project[] = [
     tags: ["React", "TypeScript", "PostgreSQL", "Docker"],
   },
   {
-    title: "IMA Auth & PDF Server",
-    context: "Microserviços corporativos",
+    title: "IMA Auth",
+    context: "Microsserviço de autenticação",
     description:
-      "Serviço unificado de autenticação (OAuth2/JWT) para ecossistema Sidagro e microsserviço dedicado a geração de PDFs oficiais.",
-    outcome: "Integração segura entre sistemas legados e novos microsserviços rodando em containers.",
+      "Serviço corporativo de autenticação única (SSO) baseado em OAuth2/JWT para o ecossistema Sidagro. Gerencia sessões, emissão e validação de tokens para múltiplos sistemas do IMA, integrando serviços legados e novos microsserviços.",
+    outcome: "Autenticação centralizada e segura em produção, integrando sistemas legados e novos serviços do IMA via containers.",
     image: "/images/projects/developer/developer06.jpg",
     link: "https://ima-auth.leoproti.com.br/",
-    tags: ["OAuth2/JWT", "Node.js", "Docker", "API"],
+    tags: ["OAuth2/JWT", "Node.js", "Docker", "SSO", "API"],
+  },
+  {
+    title: "PDF Server",
+    context: "Microsserviço de documentos",
+    description:
+      "Microsserviço dedicado à geração e assinatura de documentos fiscais digitais para o IMA. Responsável pela emissão programática de PDFs oficiais com layout padronizado, assinatura digital e entrega via API REST.",
+    outcome: "Geração automatizada de documentos fiscais em produção, com API independente rodando em container dedicado.",
+    image: "/images/projects/developer/developer06.jpg",
+    link: "https://pdfserver.leoproti.com.br/",
+    tags: ["Node.js", "Docker", "API REST", "PDF", "Documentos Fiscais"],
   },
   {
     title: "Radar Brucelose (Hisbruc)",

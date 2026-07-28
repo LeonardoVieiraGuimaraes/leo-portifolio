@@ -114,7 +114,7 @@ export default function Experience() {
             <p className="section-copy">
               Uma trajetória que combina desenvolvimento de software, transformação digital no setor público e comunicação técnica.
             </p>
-            <a href={getImagePath("curriculo-leonardo-backend.pdf")} download className="mt-7 inline-flex items-center gap-2 text-sm font-semibold text-sky-300 hover:text-sky-200 [.light_&]:text-sky-700">
+            <a href={getImagePath("curriculo-leonardo-fullstack.pdf")} download className="mt-7 inline-flex items-center gap-2 text-sm font-semibold text-sky-300 hover:text-sky-200 [.light_&]:text-sky-700">
               Currículo completo
               <HiArrowUpRight className="h-4 w-4" />
             </a>

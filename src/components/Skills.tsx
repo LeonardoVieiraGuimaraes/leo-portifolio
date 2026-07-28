@@ -78,11 +78,18 @@ const educations = [
     description: "Projeto de identificação eletrônica de bovinos utilizando RFID.",
   },
   {
-    degree: "Especializações",
+    degree: "Especialização",
     course: "Matemática e Estatística",
-    institution: "UFLA e FINOM",
+    institution: "UFLA — Universidade Federal de Lavras",
     period: "2008 — 2009",
-    description: "Formação complementar em estatística, matemática aplicada e matemática financeira.",
+    description: "Formação em estatística aplicada, matemática financeira e métodos quantitativos.",
+  },
+  {
+    degree: "Especialização",
+    course: "Educação Matemática",
+    institution: "FINOM — Faculdade do Norte de Minas",
+    period: "2008 — 2009",
+    description: "Formação pedagógica voltada ao ensino de matemática, didática e metodologias de ensino.",
   },
   {
     degree: "Licenciatura",
@@ -94,8 +101,10 @@ const educations = [
 ];
 
 const professionalStrengths = [
+  "Liderança e Mentoria",
+  "Adaptabilidade",
   "Comunicação clara e didática",
-  "Análise e resolução de problemas",
+  "Resolução de Problemas",
   "Colaboração multidisciplinar",
   "Organização e aprendizado contínuo",
 ];
@@ -128,10 +137,11 @@ export default function Skills() {
       <div className="section-shell">
         <div className="max-w-3xl">
           <p className="eyebrow">Formação e competências</p>
-          <h1 className="section-title">Stack focada em construir, publicar e evoluir software.</h1>
+          <h1 className="section-title">Stack focada em construir, publicar e evoluir software — da produção à sala de aula.</h1>
           <p className="section-copy">
             Em vez de uma lista extensa de ferramentas e porcentagens subjetivas, estas são as
-            tecnologias e práticas que aparecem de forma consistente nos meus projetos.
+            tecnologias e práticas que aparecem de forma consistente nos meus projetos de desenvolvimento
+            e na minha atividade acadêmica e de docência.
           </p>
         </div>
 
@@ -249,8 +259,8 @@ export default function Skills() {
         </div>
 
         <div className="mt-16">
-          <p className="eyebrow">Forma de trabalhar</p>
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <p className="eyebrow">Forma de trabalhar & perfil comportamental</p>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {professionalStrengths.map((strength) => (
               <div key={strength} className="card rounded-2xl p-5">
                 <HiCheckCircle className="h-5 w-5 text-emerald-400" />

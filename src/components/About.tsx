@@ -15,12 +15,12 @@ const pillars = [
   },
   {
     title: "Contexto de negócio",
-    description: "Experiência aplicada ao setor público, saúde, agronegócio e transformação digital.",
+    description: "Experiência aplicada ao setor público, saúde, agropecuária e transformação digital.",
     icon: HiBuildingOffice2,
   },
   {
-    title: "Pesquisa e comunicação",
-    description: "Mestrado, doutorado e docência fortalecem análise, documentação e clareza técnica.",
+    title: "Pesquisa e docência",
+    description: "Mestrado, doutorado e docência em TI fortalecem análise, documentação e orientação técnica.",
     icon: HiAcademicCap,
   },
 ];
@@ -52,19 +52,18 @@ export default function About() {
             </h1>
             <div className="mt-7 space-y-4 text-base leading-7 muted-text">
               <p>
-                Sou Engenheiro da Computação e desenvolvedor backend. Trabalho com Python, Django,
-                Java, Spring Boot, APIs REST, SQL e ambientes Docker para transformar processos
-                complexos em sistemas claros e sustentáveis.
+                Sou professor universitário, tutor e desenvolvedor full stack. Uso engenharia e
+                matemática para transformar produtos digitais e experiências de aprendizagem.
               </p>
               <p>
-                Minha experiência no setor público e em projetos de saúde aproximou o código de
-                problemas reais: autenticação, arrecadação, fluxos BPMN, informação clínica e
-                integrações entre serviços.
+                Atuo em APIs, front-ends e automações; leciono e oriento em TI (Newton Paiva e
+                UNIASSELVI); e apoio o desenvolvimento de software no IMA — atualmente na GLS/TI,
+                com passagem pelo NIM e Escritório de São Francisco.
               </p>
               <p>
                 Sou mestre em Modelagem Computacional e doutorando em Modelagem Matemática e
-                Computacional. A docência faz parte da minha trajetória e amplia minha capacidade de
-                investigar, documentar e explicar decisões técnicas.
+                Computacional no CEFET/MG. A docência e a pesquisa ampliam minha capacidade de
+                investigar, documentar e explicar decisões técnicas com clareza.
               </p>
             </div>
 
