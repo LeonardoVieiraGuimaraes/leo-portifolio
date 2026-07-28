@@ -205,7 +205,7 @@ story.append(Paragraph(
     "Desenvolvedor Full Stack, Product Owner (PO), Professor de TI e Pesquisador com sólida experiência em "
     "engenharia de software, desenvolvimento web, arquitetura de APIs RESTful, microsserviços e bancos de dados. "
     "Atua no Instituto Mineiro de Agropecuária (IMA) desenvolvendo microsserviços e soluções corporativas "
-    "(como Plataforma DAE/PIX, IMA Auth e PDF Server) e exercendo o papel de Product Owner (PO) do sistema "
+    "(como a Plataforma DAE/PIX e o autenticador corporativo IMA Auth) e exercendo o papel de Product Owner (PO) do sistema "
     "Sidagro (GLS/TI). Em paralelo, atua na docência universitária em TI (Newton Paiva e UNIASSELVI) e na "
     "pesquisa científica como Doutorando em Modelagem Matemática e Computacional (CEFET/MG) e Mestre (UNIMONTES), "
     "agregando forte capacidade analítica, visão de produto e rigor técnico.",
@@ -408,11 +408,11 @@ projetos = [
      "Sistema corporativo de arrecadação (React, Node.js, PostgreSQL, Docker) em produção no IMA.",
      "daev2.leoproti.com.br"),
     ("IMA Auth",
-     "Microsserviço de autenticação única SSO/JWT para o ecossistema Sidagro do IMA.",
+     "Microsserviço corporativo de autenticação única SSO/JWT para o ecossistema Sidagro do IMA.",
      "ima-auth.leoproti.com.br"),
-    ("PDF Server",
-     "Microsserviço independente de geração e assinatura de documentos fiscais via API REST.",
-     "pdfserver.leoproti.com.br"),
+    ("Sistema Sidagro (IMA)",
+     "Portal de defesa agropecuária de MG – atuação como Product Owner (PO) e desenvolvedor backend.",
+     "sidagro.ima.mg.gov.br"),
     ("Hub de Projetos do Doutorado",
      "Plataforma full stack para análises científicas e modelagem matemática - Next.js e FastAPI.",
      "projetos-doutorado.leoproti.com.br"),
