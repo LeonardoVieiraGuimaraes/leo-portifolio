@@ -35,10 +35,9 @@ export default function Hero() {
             Desenvolvo sistemas distribuídos, APIs robustas e produtos de alto impacto.
           </h1>
           <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-300 [.light_&]:text-slate-600">
-            Engenheiro de software e desenvolvedor full stack com vasta experiência no desenvolvimento de
-            aplicações web, microsserviços e automações corporativas no IMA (Plataforma DAE/PIX, IMA Auth, PDF Server),
-            além de atuar como Product Owner (PO) do sistema Sidagro. A experiência acadêmica como professor de TI
-            e doutorando em Modelagem Computacional enriquece a capacidade de análise, resolução de problemas e comunicação.
+            Desenvolvedor full stack focado em desenvolvimento web, microsserviços e automações no IMA, atuando
+            também na gestão de suporte técnico e como Product Owner (PO) do sistema Sidagro. Professor universitário de TI
+            e doutorando em Modelagem Matemática e Computacional no CEFET/MG, integrando entrega técnica de software e rigor analítico.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-3">

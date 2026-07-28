@@ -52,18 +52,18 @@ export default function About() {
             </h1>
             <div className="mt-7 space-y-4 text-base leading-7 muted-text">
               <p>
-                Sou desenvolvedor full stack, Product Owner (PO) e engenheiro de software. Minha atuação é focada na
-                construção de aplicações web robustas, APIs RESTful, microsserviços e integração de bancos de dados relacionais.
+                Sou desenvolvedor full stack, Product Owner (PO) e professor de TI. Minha atuação profissional é focada no
+                desenvolvimento de aplicações web, arquitetura de APIs RESTful, microsserviços e governança de dados.
               </p>
               <p>
-                No Instituto Mineiro de Agropecuária (IMA), atuo como desenvolvedor de software de diversos microsserviços
-                e soluções corporativas (como a Plataforma DAE/PIX, IMA Auth e PDF Server) e como Product Owner (PO)
-                do sistema Sidagro (GLS/TI), garantindo alinhamento técnico e regras de negócio de alta complexidade.
+                No Instituto Mineiro de Agropecuária (IMA), atuo no desenvolvimento de software de microsserviços e soluções
+                corporativas, na gestão de suporte técnico avançado e como Product Owner (PO) do sistema corporativo Sidagro,
+                garantindo alinhamento técnico e regras de negócio de alta complexidade.
               </p>
               <p>
-                Em segundo plano, minha trajetória inclui a docência universitária em TI (bancos de dados e arquitetura web no
-                Newton Paiva e tutoria na UNIASSELVI) e a pesquisa aplicada como doutorando no CEFET/MG e mestre pela UNIMONTES,
-                experiências que fortalecem minha comunicação, capacidade analítica e clareza na solução de problemas.
+                Minha trajetória abrange também a docência universitária e tutoria em TI, além da pesquisa científica aplicada
+                como doutorando no CEFET/MG e mestre pela UNIMONTES — experiências que fortalecem minha capacidade analítica,
+                comunicação técnica e clareza na solução de problemas.
               </p>
             </div>
 
