@@ -35,9 +35,10 @@ export default function Hero() {
             Uso engenharia e matemática para transformar produtos digitais e experiências de aprendizagem.
           </h1>
           <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-300 [.light_&]:text-slate-600">
-            Atuo em APIs, front-ends e automações; leciono e oriento em TI; e apoio o desenvolvimento de
-            software no IMA. Mestre em Modelagem Computacional e doutorando em Modelagem Matemática e
-            Computacional no CEFET/MG.
+            Desenvolvo sistemas web, APIs e microsserviços para o IMA (DAE/PIX, IMA Auth, PDF Server)
+            e atuo como Product Owner (PO) do sistema Sidagro. Professor universitário de Banco de Dados
+            e Arquitetura Web no Newton Paiva, tutor de ADS na UNIASSELVI e doutorando em Modelagem
+            Matemática e Computacional no CEFET/MG.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-3">

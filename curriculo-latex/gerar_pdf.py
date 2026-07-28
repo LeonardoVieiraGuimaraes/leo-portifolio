@@ -202,12 +202,13 @@ story = []
 # ── RESUMO ─────────────────────────────────────────────────────────────────────
 story += secao("Resumo Profissional")
 story.append(Paragraph(
-    "Professor universitário, tutor e desenvolvedor full stack com sólida experiência em "
-    "engenharia de software, pesquisa aplicada e transformação digital no setor público. "
-    "Atua no IMA como desenvolvedor backend e Product Owner (PO) do sistema Sidagro (GLS/TI). "
-    "Leciona Banco de Dados e Arquitetura Web no Newton Paiva e tutora cursos de ADS na UNIASSELVI. "
-    "Doutorando em Modelagem Matemática e Computacional (CEFET/MG) e Mestre em Modelagem "
-    "Computacional (UNIMONTES). Licenciado em Matemática com especializações em "
+    "Desenvolvedor Full Stack, Product Owner (PO) e Professor Universitário com ampla experiência "
+    "em engenharia de software, arquitetura de APIs, sistemas corporativos e transformação digital. "
+    "Atua no Instituto Mineiro de Agropecuária (IMA) no desenvolvimento de sistemas web, microsserviços e "
+    "automações (como Plataforma DAE/PIX, IMA Auth e PDF Server) e como Product Owner (PO) do sistema "
+    "Sidagro (GLS/TI). Leciona Banco de Dados e Arquitetura Web no Newton Paiva e tutora cursos de ADS "
+    "na UNIASSELVI. Doutorando em Modelagem Matemática e Computacional (CEFET/MG) e Mestre em "
+    "Modelagem Computacional (UNIMONTES). Licenciado em Matemática com especializações em "
     "Matemática e Estatística (UFLA) e Educação Matemática (FINOM).",
     st_resumo
 ))

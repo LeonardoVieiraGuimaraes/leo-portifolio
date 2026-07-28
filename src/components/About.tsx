@@ -52,18 +52,19 @@ export default function About() {
             </h1>
             <div className="mt-7 space-y-4 text-base leading-7 muted-text">
               <p>
-                Sou professor universitário, tutor e desenvolvedor full stack. Uso engenharia e
-                matemática para transformar produtos digitais e experiências de aprendizagem.
+                Sou desenvolvedor full stack, Product Owner (PO) e professor universitário. Uso
+                engenharia de software e matemática para transformar produtos digitais, construir
+                sistemas robustos e enriquecer experiências de aprendizagem.
               </p>
               <p>
-                Atuo em APIs, front-ends e automações; leciono e oriento em TI (Newton Paiva e
-                UNIASSELVI); e apoio o desenvolvimento de software no IMA — atualmente na GLS/TI,
-                com passagem pelo NIM e Escritório de São Francisco.
+                No Instituto Mineiro de Agropecuária (IMA), atuo como desenvolvedor de sistemas web,
+                microsserviços e automações (como a Plataforma DAE/PIX, IMA Auth e PDF Server) e como
+                Product Owner (PO) do sistema corporativo Sidagro (GLS/TI).
               </p>
               <p>
-                Sou mestre em Modelagem Computacional e doutorando em Modelagem Matemática e
-                Computacional no CEFET/MG. A docência e a pesquisa ampliam minha capacidade de
-                investigar, documentar e explicar decisões técnicas com clareza.
+                Paralelamente, leciono Banco de Dados e Arquitetura Web no Centro Universitário Newton
+                Paiva e tutoro cursos de ADS na UNIASSELVI. Sou doutorando em Modelagem Matemática e
+                Computacional no CEFET/MG e mestre pela UNIMONTES.
               </p>
             </div>
 
