@@ -9,10 +9,10 @@ import { NavLink } from "react-router-dom";
 import { getImagePath } from "../utils/paths";
 
 const proofPoints = [
-  { value: "Software em produção", label: "Saúde, pesquisa e setor público" },
-  { value: "Backend ao deploy", label: "APIs, dados, Docker e CI/CD" },
-  { value: "Produto publicado", label: "Aplicativo disponível na Play Store" },
-  { value: "Professor universitário", label: "Docência em TI, Newton Paiva e UNIASSELVI" },
+  { value: "Desenvolvedor Full Stack", label: "APIs RESTful, microsserviços e front-end" },
+  { value: "Product Owner (PO)", label: "Gestão do Sidagro e regras de negócio" },
+  { value: "Arquitetura ao Deploy", label: "Node.js, Python, Java, Docker e SQL" },
+  { value: "Docência & Pesquisa", label: "Professor de TI, mestre e doutorando CEFET/MG" },
 ];
 
 export default function Hero() {
@@ -29,16 +29,16 @@ export default function Hero() {
           </div>
 
           <p className="mb-4 text-sm font-semibold uppercase tracking-[0.22em] text-sky-300 [.light_&]:text-sky-700">
-            Desenvolvedor Full Stack · Professor · Pesquisador
+            Desenvolvedor Full Stack · Product Owner · Engenheiro de Software
           </p>
           <h1 className="max-w-4xl text-4xl font-semibold leading-[1.08] text-white sm:text-5xl lg:text-6xl [.light_&]:text-slate-950">
-            Uso engenharia e matemática para transformar produtos digitais e experiências de aprendizagem.
+            Desenvolvo sistemas distribuídos, APIs robustas e produtos de alto impacto.
           </h1>
           <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-300 [.light_&]:text-slate-600">
-            Desenvolvo sistemas web, APIs e microsserviços para o IMA (DAE/PIX, IMA Auth, PDF Server)
-            e atuo como Product Owner (PO) do sistema Sidagro. Professor universitário de Banco de Dados
-            e Arquitetura Web no Newton Paiva, tutor de ADS na UNIASSELVI e doutorando em Modelagem
-            Matemática e Computacional no CEFET/MG.
+            Engenheiro de software e desenvolvedor full stack com vasta experiência no desenvolvimento de
+            aplicações web, microsserviços e automações corporativas no IMA (Plataforma DAE/PIX, IMA Auth, PDF Server),
+            além de atuar como Product Owner (PO) do sistema Sidagro. A experiência acadêmica como professor de TI
+            e doutorando em Modelagem Computacional enriquece a capacidade de análise, resolução de problemas e comunicação.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-3">

@@ -52,19 +52,18 @@ export default function About() {
             </h1>
             <div className="mt-7 space-y-4 text-base leading-7 muted-text">
               <p>
-                Sou desenvolvedor full stack, Product Owner (PO) e professor universitário. Uso
-                engenharia de software e matemática para transformar produtos digitais, construir
-                sistemas robustos e enriquecer experiências de aprendizagem.
+                Sou desenvolvedor full stack, Product Owner (PO) e engenheiro de software. Minha atuação é focada na
+                construção de aplicações web robustas, APIs RESTful, microsserviços e integração de bancos de dados relacionais.
               </p>
               <p>
-                No Instituto Mineiro de Agropecuária (IMA), atuo como desenvolvedor de sistemas web,
-                microsserviços e automações (como a Plataforma DAE/PIX, IMA Auth e PDF Server) e como
-                Product Owner (PO) do sistema corporativo Sidagro (GLS/TI).
+                No Instituto Mineiro de Agropecuária (IMA), atuo como desenvolvedor de software de diversos microsserviços
+                e soluções corporativas (como a Plataforma DAE/PIX, IMA Auth e PDF Server) e como Product Owner (PO)
+                do sistema Sidagro (GLS/TI), garantindo alinhamento técnico e regras de negócio de alta complexidade.
               </p>
               <p>
-                Paralelamente, leciono Banco de Dados e Arquitetura Web no Centro Universitário Newton
-                Paiva e tutoro cursos de ADS na UNIASSELVI. Sou doutorando em Modelagem Matemática e
-                Computacional no CEFET/MG e mestre pela UNIMONTES.
+                Em segundo plano, minha trajetória inclui a docência universitária em TI (bancos de dados e arquitetura web no
+                Newton Paiva e tutoria na UNIASSELVI) e a pesquisa aplicada como doutorando no CEFET/MG e mestre pela UNIMONTES,
+                experiências que fortalecem minha comunicação, capacidade analítica e clareza na solução de problemas.
               </p>
             </div>
 

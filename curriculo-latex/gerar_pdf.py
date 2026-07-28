@@ -59,7 +59,7 @@ def desenhar_cabecalho(canvas, doc):
     canvas.setFillColor(colors.HexColor("#93c5fd"))
     canvas.setFont("Helvetica", 10)
     canvas.drawString(MARGIN_H, y_topo - 1.65 * cm,
-                      "Professor Universitário  ·  Desenvolvedor Full Stack  ·  Pesquisador")
+                      "Desenvolvedor Full Stack  ·  Product Owner (PO)  ·  Engenheiro de Software")
 
     # ── Localização ───────────────────────────────────────────────────────────
     canvas.setFillColor(colors.HexColor("#cbd5e1"))
@@ -202,14 +202,13 @@ story = []
 # ── RESUMO ─────────────────────────────────────────────────────────────────────
 story += secao("Resumo Profissional")
 story.append(Paragraph(
-    "Desenvolvedor Full Stack, Product Owner (PO) e Professor Universitário com ampla experiência "
-    "em engenharia de software, arquitetura de APIs, sistemas corporativos e transformação digital. "
-    "Atua no Instituto Mineiro de Agropecuária (IMA) no desenvolvimento de sistemas web, microsserviços e "
-    "automações (como Plataforma DAE/PIX, IMA Auth e PDF Server) e como Product Owner (PO) do sistema "
-    "Sidagro (GLS/TI). Leciona Banco de Dados e Arquitetura Web no Newton Paiva e tutora cursos de ADS "
-    "na UNIASSELVI. Doutorando em Modelagem Matemática e Computacional (CEFET/MG) e Mestre em "
-    "Modelagem Computacional (UNIMONTES). Licenciado em Matemática com especializações em "
-    "Matemática e Estatística (UFLA) e Educação Matemática (FINOM).",
+    "Desenvolvedor Full Stack, Product Owner (PO) e Engenheiro de Software com sólida experiência no "
+    "desenvolvimento de aplicações web, arquitetura de APIs RESTful, microsserviços e bancos de dados relacionais. "
+    "Atua no Instituto Mineiro de Agropecuária (IMA) desenvolvendo microsserviços e soluções corporativas "
+    "(como Plataforma DAE/PIX, IMA Auth e PDF Server) e exercendo o papel de Product Owner (PO) do sistema "
+    "Sidagro (GLS/TI). Em segundo plano, sua vivência inclui docência universitária em TI (Newton Paiva e "
+    "UNIASSELVI) e pesquisa aplicada como Doutorando no CEFET/MG e Mestre em Modelagem Computacional "
+    "(UNIMONTES), agregando forte capacidade analítica, comunicação clara e visão sistêmica.",
     st_resumo
 ))
 
