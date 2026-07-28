@@ -1,7 +1,6 @@
 """
 Gerador de Currículo PDF - Leonardo Vieira Guimarães
-Cabeçalho desenhado via onPage (repete em todas as páginas, sempre colado ao topo).
-Texto justificado. Margens corretas em todas as páginas.
+Cabeçalho perfeito em todas as páginas, sem órfãos, sem artefatos de espaçamento, com acentuação correta.
 """
 import os
 from reportlab.lib.pagesizes import A4
@@ -53,19 +52,19 @@ def desenhar_cabecalho(canvas, doc):
     # ── Nome ──────────────────────────────────────────────────────────────────
     canvas.setFillColor(TEXTO_HEADER)
     canvas.setFont("Helvetica-Bold", 24)
-    canvas.drawString(MARGIN_H, y_topo - 1.0 * cm, "Leonardo Vieira Guimaraes")
+    canvas.drawString(MARGIN_H, y_topo - 1.0 * cm, "Leonardo Vieira Guimarães")
 
     # ── Cargo / títulos ───────────────────────────────────────────────────────
     canvas.setFillColor(colors.HexColor("#93c5fd"))
     canvas.setFont("Helvetica", 10)
     canvas.drawString(MARGIN_H, y_topo - 1.80 * cm,
-                      "Professor Universitario  .  Desenvolvedor Full Stack  .  Pesquisador")
+                      "Professor Universitário  ·  Desenvolvedor Full Stack  ·  Pesquisador")
 
     # ── Localização ───────────────────────────────────────────────────────────
     canvas.setFillColor(colors.HexColor("#cbd5e1"))
     canvas.setFont("Helvetica", 8.5)
     canvas.drawString(MARGIN_H, y_topo - 2.45 * cm,
-                      "Belo Horizonte, MG - Brasil   |   Remoto disponivel")
+                      "Belo Horizonte, MG - Brasil   |   Remoto disponível")
 
     # ── Linha divisória interna ───────────────────────────────────────────────
     canvas.setStrokeColor(colors.HexColor("#2d4a6b"))
@@ -87,7 +86,7 @@ def desenhar_cabecalho(canvas, doc):
     canvas.setFillColor(TEXTO_LEVE)
     canvas.setFont("Helvetica", 7.5)
     canvas.drawRightString(PAGE_W - MARGIN_H, 0.8 * cm,
-                           f"Pag. {doc.page}")
+                           f"Pág. {doc.page}")
 
     canvas.restoreState()
 
@@ -131,8 +130,7 @@ def est(nome, **kw):
 
 st_secao = est("secao",
     fontSize=9.5, fontName="Helvetica-Bold",
-    textColor=AZUL_ACENTO, spaceBefore=14, spaceAfter=3,
-    letterSpacing=0.8)
+    textColor=AZUL_ACENTO, spaceBefore=12, spaceAfter=3)
 
 st_resumo = est("resumo",
     fontSize=9.2, fontName="Helvetica",
@@ -170,11 +168,6 @@ st_rodape = est("rodape",
     fontSize=7.5, fontName="Helvetica",
     textColor=TEXTO_LEVE, alignment=TA_CENTER, leading=12)
 
-st_nota = est("nota",
-    fontSize=7.5, fontName="Helvetica",
-    textColor=TEXTO_LEVE, leading=11,
-    alignment=TA_JUSTIFY, spaceAfter=0)
-
 
 # ─── Helpers ───────────────────────────────────────────────────────────────────
 def linha_secao():
@@ -184,7 +177,7 @@ def linha_secao():
 def linha_div():
     return HRFlowable(width="100%", thickness=0.3,
                       color=colors.HexColor("#e5e7eb"),
-                      spaceBefore=5, spaceAfter=5)
+                      spaceBefore=4, spaceAfter=4)
 
 def secao(txt):
     return [Paragraph(txt.upper(), st_secao), linha_secao()]
@@ -192,7 +185,7 @@ def secao(txt):
 def tc(txt, bold=False, size=9, cor=None):
     fn  = "Helvetica-Bold" if bold else "Helvetica"
     cor = cor or TEXTO_ESCURO
-    st  = ParagraphStyle("_tc", parent=S["Normal"], leading=14, textColor=cor)
+    st  = ParagraphStyle("_tc", parent=S["Normal"], leading=13, textColor=cor)
     return Paragraph(f"<font name='{fn}' size='{size}'>{txt}</font>", st)
 
 
@@ -235,7 +228,7 @@ tab_hab.setStyle(TableStyle([
     ("ROWBACKGROUNDS",(0,0),(-1,-1), [colors.white, colors.HexColor("#f8fafc")]),
 ]))
 story.append(tab_hab)
-story.append(Spacer(1, 5))
+story.append(Spacer(1, 4))
 story.append(Paragraph(
     "<b>Habilidades comportamentais:</b>  Liderança e Mentoria  ·  Adaptabilidade  ·  "
     "Comunicação clara e didática  ·  Resolução de Problemas  ·  Colaboração multidisciplinar",
@@ -248,7 +241,7 @@ story += secao("Experiência Profissional")
 experiencias = [
     {
         "cargo":   "Desenvolvedor Backend & Product Owner (PO) - GLS/TI",
-        "empresa": "Instituto Mineiro de Agropecuaria (IMA)",
+        "empresa": "Instituto Mineiro de Agropecuária (IMA)",
         "periodo": "jul 2026 - atual",
         "itens": [
             "Gestão do suporte técnico e atuação como PO do sistema Sidagro (homologado para Firefox).",
@@ -259,7 +252,7 @@ experiencias = [
     },
     {
         "cargo":   "Assistente de Gestão & Product Owner (PO) - NIM",
-        "empresa": "Instituto Mineiro de Agropecuaria (IMA)",
+        "empresa": "Instituto Mineiro de Agropecuária (IMA)",
         "periodo": "set 2024 - jul 2026",
         "itens": [
             "Liderança no Núcleo de Inovação e Modernização (NIM) e gestão de projetos de TI.",
@@ -270,7 +263,7 @@ experiencias = [
     },
     {
         "cargo":   "Professor de Ensino Superior - Banco de Dados & Arquitetura Web",
-        "empresa": "Centro Universitario Newton Paiva",
+        "empresa": "Centro Universitário Newton Paiva",
         "periodo": "2024 - atual",
         "itens": [
             "Docência prática em Banco de Dados e Arquitetura Web com foco em mercado.",
@@ -288,7 +281,7 @@ experiencias = [
     },
     {
         "cargo":   "Assistente de Gestão - Defesa Agropecuária",
-        "empresa": "IMA - Escritorio Seccional de Sao Francisco",
+        "empresa": "IMA - Escritório Seccional de São Francisco",
         "periodo": "nov 2005 - set 2024",
         "itens": [
             "Gestão regional do norte de MG, controle operacional e emissão de documentos oficiais.",
@@ -296,7 +289,7 @@ experiencias = [
         ]
     },
     {
-        "cargo":   "Professor de Ensino Superior - Matematica e Gestao",
+        "cargo":   "Professor de Ensino Superior - Matemática e Gestão",
         "empresa": "FADENORTE - Faculdade de Desenvolvimento do Norte",
         "periodo": "2019 - 2020",
         "itens": [
@@ -309,13 +302,13 @@ experiencias = [
         "empresa": "Instituto Federal do Norte de Minas Gerais",
         "periodo": "2017 - 2020",
         "itens": [
-            "Mediador EAD (2020): Programador de Dispositivos Moveis (FIC).",
-            "Tutor presencial (2017-2019): Tecnico em Informatica para Internet.",
+            "Mediador EAD (2020): Programador de Dispositivos Móveis (FIC).",
+            "Tutor presencial (2017-2019): Técnico em Informática para Internet.",
         ]
     },
     {
         "cargo":   "Desenvolvedor Full Stack",
-        "empresa": "Projetos proprios e consultoria",
+        "empresa": "Projetos próprios e consultoria",
         "periodo": "2014 - atual",
         "itens": [
             "Sistemas web e APIs com Python, Django, Java, Spring Boot, React, TypeScript e Docker.",
@@ -339,13 +332,13 @@ for i, exp in enumerate(experiencias):
 story += secao("Formação Acadêmica")
 
 formacoes = [
-    ("Doutorando",              "Modelagem Matematica e Computacional",          "CEFET/MG",                               "2025 - atual"),
-    ("Aluno Especial (Dout.)",  "Ciencia da Computacao - Disciplinas isoladas*", "UFMG",                                   "2021 - 2022"),
+    ("Doutorando",              "Modelagem Matemática e Computacional",           "CEFET/MG",                               "2025 - atual"),
+    ("Aluno Especial (Dout.)",  "Ciência da Computação – UFMG",                  "Disciplinas: Visão Computacional, Visualização de Dados, Mineração de Dados e Finanças Quantitativas (créditos aproveitados no Doutorado CEFET-MG).", "2021 - 2022"),
     ("Mestre",                  "Modelagem Computacional e Sistemas",            "UNIMONTES",                              "2016 - 2019"),
-    ("Bacharel",                "Engenharia de Computacao",                      "FEMC",                                   "2010 - 2014"),
-    ("Especializacao",          "Matematica e Estatistica",                      "UFLA - Universidade Federal de Lavras",  "2008 - 2009"),
-    ("Especializacao",          "Educacao Matematica",                           "FINOM - Faculdade do Norte de Minas",    "2008 - 2009"),
-    ("Licenciatura",            "Matematica",                                    "UNIMONTES",                              "2004 - 2007"),
+    ("Bacharel",                "Engenharia de Computação",                      "FEMC",                                   "2010 - 2014"),
+    ("Especialização",          "Matemática e Estatística",                      "UFLA - Universidade Federal de Lavras",  "2008 - 2009"),
+    ("Especialização",          "Educação Matemática",                           "FINOM - Faculdade do Norte de Minas",    "2008 - 2009"),
+    ("Licenciatura",            "Matemática",                                    "UNIMONTES",                              "2004 - 2007"),
 ]
 
 form_rows = []
@@ -354,12 +347,12 @@ for grau, curso, inst, periodo in formacoes:
         Paragraph(
             f"<font name='Helvetica-Bold' size='9'>{grau}</font><br/>"
             f"<font name='Helvetica' size='7.5' color='#9ca3af'>{periodo}</font>",
-            ParagraphStyle("_fc", parent=S["Normal"], leading=14)
+            ParagraphStyle("_fc", parent=S["Normal"], leading=13)
         ),
         Paragraph(
             f"<font name='Helvetica-Bold' size='9'>{curso}</font><br/>"
             f"<font name='Helvetica' size='8' color='#6b7280'>{inst}</font>",
-            ParagraphStyle("_fi", parent=S["Normal"], leading=14)
+            ParagraphStyle("_fi", parent=S["Normal"], leading=13)
         ),
     ])
 
@@ -373,20 +366,14 @@ tab_form.setStyle(TableStyle([
     ("ROWBACKGROUNDS",(0,0),(-1,-1), [colors.white, colors.HexColor("#f8fafc")]),
     ("LINEBELOW",     (0,0),(-1,-2), 0.3, colors.HexColor("#e5e7eb")),
 ]))
-story.append(tab_form)
-story.append(Spacer(1, 4))
-story.append(Paragraph(
-    "* UFMG: Visao Computacional, Visualizacao de Dados, Mineracao de Dados e "
-    "Financas Quantitativas - creditos aproveitados no Doutorado (CEFET/MG).",
-    st_nota
-))
+story.append(KeepTogether([tab_form]))
 
 # ── IDIOMAS ────────────────────────────────────────────────────────────────────
 story += secao("Idiomas")
 idiomas = [
-    ("Portugues", "Nativo",                   ""),
-    ("Ingles",    "Proficiencia em Leitura",  "Exame UFSC 2025 - Nota 8,50 / 10   (Chave: 5113208805889763695)"),
-    ("Espanhol",  "Basico",                   ""),
+    ("Português", "Nativo",                   ""),
+    ("Inglês",    "Proficiência em Leitura",  "Exame UFSC 2025 - Nota 8,50 / 10   (Chave: 5113208805889763695)"),
+    ("Espanhol",  "Básico",                   ""),
 ]
 tab_id = Table(
     [[tc(l, bold=True), tc(n), tc(d, size=8, cor=TEXTO_CINZA)] for l, n, d in idiomas],
@@ -399,28 +386,28 @@ tab_id.setStyle(TableStyle([
     ("BOTTOMPADDING", (0,0),(-1,-1), 2),
     ("ROWBACKGROUNDS",(0,0),(-1,-1), [colors.white, colors.HexColor("#f8fafc")]),
 ]))
-story.append(tab_id)
+story.append(KeepTogether([tab_id]))
 
 # ── PROJETOS ───────────────────────────────────────────────────────────────────
 story += secao("Projetos em Destaque")
 projetos = [
-    ("Portfolio Profissional V3",
+    ("Portfólio Profissional V3",
      "Website pessoal responsivo - React, TypeScript, TailwindCSS, tema dark/light.",
      "leoproti.com.br"),
     ("A&G Enfermagem",
      "App de enfermagem prisional em React Native/Expo - publicado na Google Play Store.",
      "aeg.leoproti.com.br"),
     ("Plataforma DAE/PIX v2",
-     "Sistema corporativo de arrecadacao (React, Node.js, PostgreSQL, Docker) em producao no IMA.",
+     "Sistema corporativo de arrecadação (React, Node.js, PostgreSQL, Docker) em produção no IMA.",
      "daev2.leoproti.com.br"),
     ("IMA Auth",
-     "Microsservico de autenticacao unica SSO/JWT para o ecossistema Sidagro do IMA.",
+     "Microsserviço de autenticação única SSO/JWT para o ecossistema Sidagro do IMA.",
      "ima-auth.leoproti.com.br"),
     ("PDF Server",
-     "Microsservico independente de geracao e assinatura de documentos fiscais via API REST.",
+     "Microsserviço independente de geração e assinatura de documentos fiscais via API REST.",
      "pdfserver.leoproti.com.br"),
     ("Hub de Projetos do Doutorado",
-     "Plataforma full stack para analises cientificas e modelagem matematica - Next.js e FastAPI.",
+     "Plataforma full stack para análises científicas e modelagem matemática - Next.js e FastAPI.",
      "projetos-doutorado.leoproti.com.br"),
 ]
 
@@ -445,7 +432,7 @@ tab_proj.setStyle(TableStyle([
 story.append(tab_proj)
 
 # ── RODAPÉ ─────────────────────────────────────────────────────────────────────
-story.append(Spacer(1, 16))
+story.append(Spacer(1, 12))
 story.append(HRFlowable(width="100%", thickness=0.5,
                          color=colors.HexColor("#e5e7eb")))
 story.append(Spacer(1, 4))
