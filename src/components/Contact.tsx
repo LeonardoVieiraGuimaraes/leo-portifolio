@@ -16,9 +16,9 @@ const contacts = [
     icon: HiOutlineEnvelope,
   },
   {
-    name: "WhatsApp",
-    description: "Conversar diretamente",
-    link: "https://wa.me/5538999352408?text=Olá%2C%20vi%20seu%20portfólio%20e%20gostaria%20de%20conversar.",
+    name: "Telefone / WhatsApp",
+    description: "(38) 99239-1698",
+    link: "https://wa.me/5538992391698?text=Olá%2C%20vi%20seu%20portfólio%20e%20gostaria%20de%20conversar.",
     icon: FaWhatsapp,
   },
   {

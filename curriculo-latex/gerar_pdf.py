@@ -75,7 +75,8 @@ def desenhar_cabecalho(canvas, doc):
     canvas.setFillColor(colors.HexColor("#94a3b8"))
     canvas.setFont("Helvetica", 8.2)
     contato = (
-        "leonardovieiraxy@hotmail.com"
+        "(38) 99239-1698"
+        "   |   leonardovieiraxy@hotmail.com"
         "   |   leoproti.com.br"
         "   |   github.com/LeonardoVieiraGuimaraes"
         "   |   ORCID: 0009-0000-3118-4664"
@@ -437,7 +438,7 @@ story.append(HRFlowable(width="100%", thickness=0.5,
                          color=colors.HexColor("#e5e7eb")))
 story.append(Spacer(1, 4))
 story.append(Paragraph(
-    "leonardovieiraxy@hotmail.com   |   leoproti.com.br   |   "
+    "(38) 99239-1698   |   leonardovieiraxy@hotmail.com   |   leoproti.com.br   |   "
     "github.com/LeonardoVieiraGuimaraes   |   ORCID: 0009-0000-3118-4664",
     st_rodape
 ))
