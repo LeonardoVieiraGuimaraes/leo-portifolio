@@ -72,24 +72,24 @@ def desenhar_cabecalho(canvas, doc):
     canvas.setLineWidth(0.5)
     canvas.line(MARGIN_H, y_topo - 2.55 * cm, PAGE_W - MARGIN_H, y_topo - 2.55 * cm)
 
-    # ── Contatos (Linha 1: Principais) ────────────────────────────────────────
+    # ── Contatos (Linha 1: Telefone, Email, Portfólio, Lattes) ─────────────────
     canvas.setFillColor(colors.HexColor("#94a3b8"))
-    canvas.setFont("Helvetica", 8.0)
+    canvas.setFont("Helvetica", 7.8)
     contato_l1 = (
-        "Tel/WhatsApp: (38) 99239-1698"
-        "   |   Email: leonardovieiraxy@hotmail.com"
-        "   |   Portfólio: leoproti.com.br"
-        "   |   GitHub: github.com/LeonardoVieiraGuimaraes"
+        "(38) 99239-1698"
+        "   ·   leonardovieiraxy@hotmail.com"
+        "   ·   leoproti.com.br"
+        "   ·   Lattes: lattes.cnpq.br/3600922455238720"
     )
     canvas.drawString(MARGIN_H, y_topo - 3.10 * cm, contato_l1)
 
-    # ── Contatos (Linha 2: Acadêmicos e Profissionais) ─────────────────────────
+    # ── Contatos (Linha 2: GitHub, LinkedIn, ORCID) ────────────────────────────
     canvas.setFillColor(colors.HexColor("#94a3b8"))
-    canvas.setFont("Helvetica", 8.0)
+    canvas.setFont("Helvetica", 7.8)
     contato_l2 = (
-        "LinkedIn: linkedin.com/in/leonardo-vieira-guimaraes"
-        "   |   Lattes: lattes.cnpq.br/3600922455238720"
-        "   |   ORCID: 0009-0000-3118-4664"
+        "GitHub: github.com/LeonardoVieiraGuimaraes"
+        "   ·   LinkedIn: linkedin.com/in/leonardo-vieira-guimaraes"
+        "   ·   ORCID: 0009-0000-3118-4664"
     )
     canvas.drawString(MARGIN_H, y_topo - 3.70 * cm, contato_l2)
 
