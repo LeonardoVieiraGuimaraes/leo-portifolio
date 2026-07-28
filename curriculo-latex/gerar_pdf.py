@@ -217,7 +217,7 @@ hab = [
     ("Frontend",  "React, TypeScript, Next.js, Tailwind CSS, HTML5, CSS3"),
     ("Backend",   "Python, Django, FastAPI, Node.js, Java, Spring Boot"),
     ("Mobile",    "React Native, Expo (Android)"),
-    ("Dados",     "SQL, PostgreSQL, MySQL, MongoDB, Pandas, Power BI, Jupyter"),
+    ("Dados",     "SQL, PostgreSQL, MySQL, MongoDB, Pandas, Jupyter, Estatística Aplicada"),
     ("DevOps",    "Docker, Linux, Nginx, Git, GitHub Actions, CI/CD, Grafana"),
     ("Gestão",    "PMI/PMBOK, Scrum, Kanban, BPMN, Product Owner (PO)"),
 ]

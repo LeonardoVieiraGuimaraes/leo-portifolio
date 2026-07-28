@@ -25,7 +25,7 @@ const stackGroups = [
     title: "Dados",
     description: "Persistência, consulta, análise e apoio à tomada de decisão.",
     icon: HiCircleStack,
-    skills: ["SQL", "PostgreSQL", "MySQL", "MongoDB", "Pandas", "Power BI", "Jupyter"],
+    skills: ["SQL", "PostgreSQL", "MySQL", "MongoDB", "Pandas", "Jupyter", "Estatística Aplicada"],
   },
   {
     title: "DevOps e operação",
