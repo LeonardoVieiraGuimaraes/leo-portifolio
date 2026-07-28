@@ -79,7 +79,6 @@ def desenhar_cabecalho(canvas, doc):
         "   |   leonardovieiraxy@hotmail.com"
         "   |   leoproti.com.br"
         "   |   github.com/LeonardoVieiraGuimaraes"
-        "   |   ORCID: 0009-0000-3118-4664"
     )
     canvas.drawString(MARGIN_H, y_topo - 3.35 * cm, contato)
 
@@ -438,8 +437,8 @@ story.append(HRFlowable(width="100%", thickness=0.5,
                          color=colors.HexColor("#e5e7eb")))
 story.append(Spacer(1, 4))
 story.append(Paragraph(
-    "(38) 99239-1698   |   leonardovieiraxy@hotmail.com   |   leoproti.com.br   |   "
-    "github.com/LeonardoVieiraGuimaraes   |   ORCID: 0009-0000-3118-4664",
+    "Tel/WhatsApp: (38) 99239-1698   |   Email: leonardovieiraxy@hotmail.com   |   Portfólio: leoproti.com.br   |   GitHub: github.com/LeonardoVieiraGuimaraes<br/>"
+    "LinkedIn: linkedin.com/in/leonardo-vieira-guimaraes   |   Lattes: lattes.cnpq.br/3600922455238720   |   ORCID: 0009-0000-3118-4664",
     st_rodape
 ))
 

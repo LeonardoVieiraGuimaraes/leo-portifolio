@@ -1,9 +1,10 @@
 import emailjs from "@emailjs/browser";
 import { FormEvent, useRef, useState } from "react";
-import { FaSpinner, FaWhatsapp } from "react-icons/fa";
+import { FaLinkedin, FaSpinner, FaWhatsapp } from "react-icons/fa";
 import {
   HiArrowUpRight,
   HiCheckCircle,
+  HiOutlineAcademicCap,
   HiOutlineEnvelope,
   HiOutlineMapPin,
 } from "react-icons/hi2";
@@ -20,6 +21,18 @@ const contacts = [
     description: "(38) 99239-1698",
     link: "https://wa.me/5538992391698?text=Olá%2C%20vi%20seu%20portfólio%20e%20gostaria%20de%20conversar.",
     icon: FaWhatsapp,
+  },
+  {
+    name: "LinkedIn",
+    description: "in/leonardo-vieira-guimaraes",
+    link: "https://www.linkedin.com/in/leonardo-vieira-guimaraes/",
+    icon: FaLinkedin,
+  },
+  {
+    name: "Currículo Lattes",
+    description: "lattes.cnpq.br/3600922455238720",
+    link: "http://lattes.cnpq.br/3600922455238720",
+    icon: HiOutlineAcademicCap,
   },
   {
     name: "Localização",
