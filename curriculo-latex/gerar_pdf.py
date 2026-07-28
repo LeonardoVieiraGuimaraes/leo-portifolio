@@ -1,6 +1,7 @@
 """
 Gerador de Currículo PDF - Leonardo Vieira Guimarães
-Cabeçalho perfeito em todas as páginas, sem órfãos, sem artefatos de espaçamento, com acentuação correta.
+Cabeçalho com 2 linhas de contato completas (Tel, Email, Portfólio, GitHub, LinkedIn, Lattes, ORCID).
+Rodapé limpo e sem repetições redundantes.
 """
 import os
 from reportlab.lib.pagesizes import A4
@@ -24,9 +25,9 @@ TEXTO_LEVE   = colors.HexColor("#9ca3af")
 
 PAGE_W, PAGE_H = A4
 MARGIN_H   = 1.8 * cm    # margem esquerda/direita
-MARGIN_BOT = 1.5 * cm    # margem inferior
-HEADER_H   = 3.8 * cm    # altura do banner que aparece em TODAS as páginas
-GAP        = 0.5 * cm    # espaço entre o banner e o início do conteúdo
+MARGIN_BOT = 1.2 * cm    # margem inferior
+HEADER_H   = 4.3 * cm    # altura do banner com 2 linhas de contatos completos
+GAP        = 0.4 * cm    # espaço entre o banner e o início do conteúdo
 
 # ─── Arquivo de saída ──────────────────────────────────────────────────────────
 output_path = os.path.abspath(
@@ -35,7 +36,7 @@ output_path = os.path.abspath(
 
 # ─── Função: desenha o banner no canvas (chamada em CADA página) ───────────────
 def desenhar_cabecalho(canvas, doc):
-    """Banner azul colado ao topo — repetido em todas as páginas."""
+    """Banner azul colado ao topo — repetido em todas as páginas com contatos em 2 linhas."""
     canvas.saveState()
 
     y_topo   = PAGE_H              # topo absoluto da página
@@ -51,41 +52,51 @@ def desenhar_cabecalho(canvas, doc):
 
     # ── Nome ──────────────────────────────────────────────────────────────────
     canvas.setFillColor(TEXTO_HEADER)
-    canvas.setFont("Helvetica-Bold", 24)
-    canvas.drawString(MARGIN_H, y_topo - 1.0 * cm, "Leonardo Vieira Guimarães")
+    canvas.setFont("Helvetica-Bold", 23)
+    canvas.drawString(MARGIN_H, y_topo - 0.95 * cm, "Leonardo Vieira Guimarães")
 
     # ── Cargo / títulos ───────────────────────────────────────────────────────
     canvas.setFillColor(colors.HexColor("#93c5fd"))
     canvas.setFont("Helvetica", 10)
-    canvas.drawString(MARGIN_H, y_topo - 1.80 * cm,
+    canvas.drawString(MARGIN_H, y_topo - 1.65 * cm,
                       "Professor Universitário  ·  Desenvolvedor Full Stack  ·  Pesquisador")
 
     # ── Localização ───────────────────────────────────────────────────────────
     canvas.setFillColor(colors.HexColor("#cbd5e1"))
     canvas.setFont("Helvetica", 8.5)
-    canvas.drawString(MARGIN_H, y_topo - 2.45 * cm,
+    canvas.drawString(MARGIN_H, y_topo - 2.25 * cm,
                       "Belo Horizonte, MG - Brasil   |   Remoto disponível")
 
     # ── Linha divisória interna ───────────────────────────────────────────────
     canvas.setStrokeColor(colors.HexColor("#2d4a6b"))
     canvas.setLineWidth(0.5)
-    canvas.line(MARGIN_H, y_topo - 2.78 * cm, PAGE_W - MARGIN_H, y_topo - 2.78 * cm)
+    canvas.line(MARGIN_H, y_topo - 2.55 * cm, PAGE_W - MARGIN_H, y_topo - 2.55 * cm)
 
-    # ── Contatos ──────────────────────────────────────────────────────────────
+    # ── Contatos (Linha 1: Principais) ────────────────────────────────────────
     canvas.setFillColor(colors.HexColor("#94a3b8"))
-    canvas.setFont("Helvetica", 8.2)
-    contato = (
-        "(38) 99239-1698"
-        "   |   leonardovieiraxy@hotmail.com"
-        "   |   leoproti.com.br"
-        "   |   github.com/LeonardoVieiraGuimaraes"
+    canvas.setFont("Helvetica", 8.0)
+    contato_l1 = (
+        "Tel/WhatsApp: (38) 99239-1698"
+        "   |   Email: leonardovieiraxy@hotmail.com"
+        "   |   Portfólio: leoproti.com.br"
+        "   |   GitHub: github.com/LeonardoVieiraGuimaraes"
     )
-    canvas.drawString(MARGIN_H, y_topo - 3.35 * cm, contato)
+    canvas.drawString(MARGIN_H, y_topo - 3.10 * cm, contato_l1)
+
+    # ── Contatos (Linha 2: Acadêmicos e Profissionais) ─────────────────────────
+    canvas.setFillColor(colors.HexColor("#94a3b8"))
+    canvas.setFont("Helvetica", 8.0)
+    contato_l2 = (
+        "LinkedIn: linkedin.com/in/leonardo-vieira-guimaraes"
+        "   |   Lattes: lattes.cnpq.br/3600922455238720"
+        "   |   ORCID: 0009-0000-3118-4664"
+    )
+    canvas.drawString(MARGIN_H, y_topo - 3.70 * cm, contato_l2)
 
     # Número de página (discreto, canto inferior direito)
     canvas.setFillColor(TEXTO_LEVE)
     canvas.setFont("Helvetica", 7.5)
-    canvas.drawRightString(PAGE_W - MARGIN_H, 0.8 * cm,
+    canvas.drawRightString(PAGE_W - MARGIN_H, 0.6 * cm,
                            f"Pág. {doc.page}")
 
     canvas.restoreState()
@@ -163,10 +174,6 @@ st_projeto_desc = est("projeto_desc",
     fontSize=8.5, fontName="Helvetica",
     textColor=TEXTO_CINZA, leading=13,
     alignment=TA_JUSTIFY, spaceAfter=0)
-
-st_rodape = est("rodape",
-    fontSize=7.5, fontName="Helvetica",
-    textColor=TEXTO_LEVE, alignment=TA_CENTER, leading=12)
 
 
 # ─── Helpers ───────────────────────────────────────────────────────────────────
@@ -430,17 +437,6 @@ tab_proj.setStyle(TableStyle([
     ("LINEBELOW",     (0,0),(-1,-2), 0.3, colors.HexColor("#e5e7eb")),
 ]))
 story.append(tab_proj)
-
-# ── RODAPÉ ─────────────────────────────────────────────────────────────────────
-story.append(Spacer(1, 12))
-story.append(HRFlowable(width="100%", thickness=0.5,
-                         color=colors.HexColor("#e5e7eb")))
-story.append(Spacer(1, 4))
-story.append(Paragraph(
-    "Tel/WhatsApp: (38) 99239-1698   |   Email: leonardovieiraxy@hotmail.com   |   Portfólio: leoproti.com.br   |   GitHub: github.com/LeonardoVieiraGuimaraes<br/>"
-    "LinkedIn: linkedin.com/in/leonardo-vieira-guimaraes   |   Lattes: lattes.cnpq.br/3600922455238720   |   ORCID: 0009-0000-3118-4664",
-    st_rodape
-))
 
 # ── Gerar ──────────────────────────────────────────────────────────────────────
 doc.build(story)
