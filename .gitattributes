@@ -1,0 +1,35 @@
+# Normaliza automaticamente arquivos de texto para LF no repositório,
+# independente do sistema operacional/config local de autocrlf.
+* text=auto eol=lf
+
+# Código-fonte
+*.ts text
+*.tsx text
+*.js text
+*.cjs text
+*.jsx text
+*.json text
+*.html text
+*.css text
+*.md text
+*.yml text
+*.yaml text
+*.py text
+*.tex text
+
+# Binários (nunca converter fim de linha nem gerar diff textual)
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pdf binary
+*.docx binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.eot binary
+*.zip binary
+
+# SVG é texto, mas tratamos como LF fixo (evita diffs de ferramentas de exportação)
+*.svg text eol=lf

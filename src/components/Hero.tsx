@@ -25,7 +25,7 @@ export default function Hero() {
         <div className="min-w-0">
           <div className="mb-6 flex w-full items-start gap-2 rounded-2xl border border-emerald-400/20 bg-emerald-400/10 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-emerald-300 sm:inline-flex sm:w-auto sm:items-center sm:rounded-full [.light_&]:border-emerald-200 [.light_&]:bg-emerald-50 [.light_&]:text-emerald-700">
             <span className="mt-1 h-2 w-2 shrink-0 rounded-full bg-emerald-400 sm:mt-0" />
-            <span>Disponível para oportunidades de desenvolvimento</span>
+            <span>Disponível para vagas CLT/PJ, projetos freelance e parcerias acadêmicas</span>
           </div>
 
           <p className="mb-4 text-sm font-semibold uppercase tracking-[0.22em] text-sky-300 [.light_&]:text-sky-700">
@@ -36,8 +36,9 @@ export default function Hero() {
           </h1>
           <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-300 [.light_&]:text-slate-600">
             Desenvolvedor full stack focado em desenvolvimento web, microsserviços e automações no IMA, atuando
-            também na gestão de suporte técnico e como Product Owner (PO) do sistema Sidagro. Professor universitário de TI
-            e doutorando em Modelagem Matemática e Computacional no CEFET/MG, integrando entrega técnica de software e rigor analítico.
+            também na gestão de suporte técnico e como Product Owner (PO) do sistema Sidagro. Atendo também projetos
+            freelance/PJ desde 2014 e sou professor universitário de TI e doutorando em Modelagem Matemática e Computacional
+            no CEFET/MG, integrando entrega técnica de software, prática de mercado e rigor analítico.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-3">

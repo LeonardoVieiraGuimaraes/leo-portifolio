@@ -1,33 +1,29 @@
 import { FaGithub, FaGooglePlay } from "react-icons/fa";
-import { HiArrowTopRightOnSquare, HiCheckCircle } from "react-icons/hi2";
+import { HiArrowRight, HiArrowTopRightOnSquare, HiCheckCircle } from "react-icons/hi2";
+import { NavLink } from "react-router-dom";
 import { getImagePath } from "../utils/paths";
-import { projects } from "../data/projects";
+import { featuredProjects } from "../data/projects";
 
-export default function ProjectsDeveloper() {
+export default function ProjectsFeatured() {
   return (
-    <section className="relative border-y border-white/5 bg-slate-950/35 py-24 [.light_&]:border-slate-200 [.light_&]:bg-slate-50" id="projectsDeveloper">
+    <section className="relative border-y border-white/5 bg-slate-950/35 py-24 [.light_&]:border-slate-200 [.light_&]:bg-slate-50" id="projects">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-3xl">
-            <p className="eyebrow">Projetos selecionados</p>
+            <p className="eyebrow">Projetos em destaque</p>
             <h2 className="section-title">Software que saiu do repositório e chegou à produção.</h2>
             <p className="section-copy">
-              Produtos e sistemas que demonstram desenvolvimento backend, integração, domínio de negócio e operação de ambientes reais.
+              Uma amostra das três frentes em que atuo: gestão de produto em sistema corporativo, marca pessoal e produto publicado para o público final.
             </p>
           </div>
-          <a
-            href="https://github.com/LeonardoVieiraGuimaraes?tab=repositories"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="button-secondary inline-flex w-fit items-center gap-2"
-          >
-            <FaGithub className="h-5 w-5" />
-            Explorar GitHub
-          </a>
+          <NavLink to="/projects" className="button-secondary inline-flex w-fit items-center gap-2">
+            Ver todos os projetos
+            <HiArrowRight className="h-4 w-4" />
+          </NavLink>
         </div>
 
         <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {projects.map((project) => (
+          {featuredProjects.map((project) => (
             <article
               key={project.title}
               className="card group flex h-full flex-col overflow-hidden rounded-2xl"

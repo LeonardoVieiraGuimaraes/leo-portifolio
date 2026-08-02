@@ -1,0 +1,6 @@
+# <tipo>(<escopo>): <descrição curta no imperativo>
+#
+# Corpo (opcional): explique o que mudou e por quê.
+#
+# Tipos: feat | fix | refactor | style | docs | chore | perf | test | ci
+# Veja CONTRIBUTING.md para detalhes e exemplos.

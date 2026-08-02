@@ -5,11 +5,13 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import ProjectsDeveloper from "./components/ProjectsDeveloper";
+import ProjectsFeatured from "./components/ProjectsFeatured";
 import ProjectsAcademics from "./components/ProjectsAcademics";
 import ProjectsProfessor from "./components/ProjectsProfessor";
 import Services from "./components/Services";
 import Skills from "./components/Skills";
 import Experience from "./components/Experience";
+import ExperienceFeatured from "./components/ExperienceFeatured";
 import About from "./components/About";
 import AboutSimple from "./components/AboutSimple";
 import { ThemeProvider } from "./context/ThemeContext";
@@ -48,8 +50,8 @@ function HomePage() {
   return (
     <>
       <Hero />
-      <ProjectsDeveloper />
-      <Experience />
+      <ProjectsFeatured />
+      <ExperienceFeatured />
       <AboutSimple />
       <Services />
     </>

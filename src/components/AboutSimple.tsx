@@ -32,7 +32,7 @@ export default function AboutSimple() {
               <h2 className="section-title">Engenharia, domínio de negócio e comunicação.</h2>
               <div className="mt-6 space-y-4 text-base leading-7 text-slate-400 [.light_&]:text-slate-600">
                 <p>
-                  Sou desenvolvedor backend e Engenheiro da Computação. Construo sistemas, APIs, integrações e automações com atenção à arquitetura, confiabilidade e experiência de quem usa.
+                  Sou desenvolvedor backend e Engenheiro da Computação, com atuação CLT no setor público e projetos freelance/PJ em paralelo. Construo sistemas, APIs, integrações e automações com atenção à arquitetura, confiabilidade e experiência de quem usa.
                 </p>
                 <p>
                   Minha atuação reúne software, setor público, saúde e pesquisa. O mestrado, o doutorado em andamento e a docência ampliam minha capacidade de investigar problemas complexos e explicar decisões técnicas com clareza.
