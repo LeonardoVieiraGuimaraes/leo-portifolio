@@ -65,16 +65,6 @@ export const projects: Project[] = [
     tags: ["OAuth2/JWT", "Node.js", "Docker", "SSO", "API"],
   },
   {
-    title: "PDF Server",
-    context: "Microsserviço de documentos",
-    description:
-      "Microsserviço dedicado à geração e assinatura de documentos fiscais digitais para o IMA. Responsável pela emissão programática de PDFs oficiais com layout padronizado, assinatura digital e entrega via API REST.",
-    outcome: "Geração automatizada de documentos fiscais em produção, com API independente rodando em container dedicado.",
-    image: "/images/projects/developer/developer06.jpg",
-    link: "https://pdfserver.leoproti.com.br/",
-    tags: ["Node.js", "Docker", "API REST", "PDF", "Documentos Fiscais"],
-  },
-  {
     title: "Radar Brucelose (Hisbruc)",
     context: "Engenharia de requisitos",
     description:
