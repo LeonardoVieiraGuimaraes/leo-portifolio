@@ -40,7 +40,7 @@ export default function About() {
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/10 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
                 <p className="text-lg font-semibold">Leonardo Vieira Guimarães</p>
-                <p className="mt-1 text-sm text-slate-200">Belo Horizonte, MG · Disponível para oportunidades</p>
+                <p className="mt-1 text-sm text-slate-200">Belo Horizonte, MG · Aberto a novos desafios e projetos</p>
               </div>
             </div>
           </div>
