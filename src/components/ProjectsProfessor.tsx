@@ -19,7 +19,6 @@ export default function ProjectsProfessor() {
       tags: ["YouTube", "Estatística"],
       colSpan: "col-span-1",
     },
-
     {
       title: "Matemática Financeira",
       description: "Videoaulas de Matemática Financeira",
@@ -34,6 +33,14 @@ export default function ProjectsProfessor() {
       image: "/images/projects/professor/aulaAutoAtividade.png",
       link: "https://www.youtube.com/playlist?list=PLbLoehbSIAYUa4jvkeXZb2Z5ZxVPrysXy",
       tags: ["Educação", "Tecnologia"],
+      colSpan: "col-span-1",
+    },
+    {
+      title: "Projeto Visão Computacional",
+      description: "Projetos e Videoaulas de Visão Computacional",
+      image: "/images/projects/academics/doutoradoProjetoVisaoComputacional.png",
+      link: "https://www.youtube.com/playlist?list=PLbLoehbSIAYWV50N_Y2OzrlRRZy0bjGRY",
+      tags: ["Visão Computacional", "YouTube"],
       colSpan: "col-span-1",
     },
   ];
@@ -55,7 +62,7 @@ export default function ProjectsProfessor() {
           </p>
         </div>
 
-        <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
           {projects.map((project, index) => (
             <div
               className={`card group relative overflow-hidden rounded-xl ${project.colSpan}`}
