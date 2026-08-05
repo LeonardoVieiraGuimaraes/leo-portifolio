@@ -18,12 +18,20 @@ const projects: CollectionProject[] = [
     tags: ["Matemática", "Finanças", "Educação"],
   },
   {
-    title: "Projeto Integrador",
+    title: "Auto Atividade Unidade 01",
     description:
-      "Orientações para estruturar projetos, conectar teoria e prática e apresentar resultados com clareza.",
-    image: "/images/projects/professor/aulaProjetoIntegrador.png",
-    link: "https://www.youtube.com/playlist?list=PLbLoehbSIAYVKOSuhf2p27tRaFlXAFG1T",
-    tags: ["Projetos", "Tecnologia", "Docência"],
+      "Videoaulas de Auto Atividade Unidade 01 com orientações e exercícios práticos.",
+    image: "/images/projects/professor/aulaAutoAtividade.png",
+    link: "https://www.youtube.com/playlist?list=PLbLoehbSIAYUa4jvkeXZb2Z5ZxVPrysXy",
+    tags: ["Educação", "Tecnologia", "Videoaulas"],
+  },
+  {
+    title: "Projeto Visão Computacional",
+    description:
+      "Projetos e videoaulas abordando conceitos e técnicas avançadas de visão computacional.",
+    image: "/images/projects/academics/doutoradoProjetoVisaoComputacional.png",
+    link: "https://www.youtube.com/playlist?list=PLbLoehbSIAYWV50N_Y2OzrlRRZy0bjGRY",
+    tags: ["Visão Computacional", "Doutorado", "YouTube"],
   },
 ];
 
