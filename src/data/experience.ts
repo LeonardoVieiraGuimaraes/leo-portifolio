@@ -71,6 +71,15 @@ export const experiences: ExperienceEntry[] = [
     ],
   },
   {
+    role: "Professor Convidado (Pós-Graduação Stricto Sensu)",
+    company: "Universidade Federal de Alfenas (UNIFAL-MG)",
+    period: "nov 2025",
+    highlights: [
+      "Ministrei a aula temática 'Desenvolvimento de aplicativos No-Code: da ideia à implementação' na disciplina 'Tecnologia em Saúde e Educação' (ENF65) do Programa de Pós-Graduação em Enfermagem (Mestrado e Doutorado).",
+      "Orientei mestrandos e doutorandos na modelagem de problemas e publicação de protótipos funcionais de aplicativos móveis.",
+    ],
+  },
+  {
     role: "Professor, Tutor e Autor de Tecnologia",
     company: "UNIASSELVI · Vitru Brasil Empreendimentos",
     period: "2022 — atual",
