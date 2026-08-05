@@ -64,7 +64,7 @@ export const experiences: ExperienceEntry[] = [
   {
     role: "Professor de Ensino Superior",
     company: "Centro Universitário Newton Paiva",
-    period: "2024 — atual",
+    period: "ago 2024 — dez 2025",
     highlights: [
       "Docência prática de disciplinas de Banco de Dados e Arquitetura Web, conectando a teoria acadêmica às necessidades e padrões práticos do mercado.",
       "Orientação de estudantes em projetos práticos integradores de desenvolvimento de software, modelagem de dados e design de arquitetura RESTful.",
@@ -82,7 +82,7 @@ export const experiences: ExperienceEntry[] = [
   {
     role: "Professor, Tutor e Autor de Tecnologia",
     company: "UNIASSELVI · Vitru Brasil Empreendimentos",
-    period: "2022 — atual",
+    period: "fev 2022 — fev 2025",
     highlights: [
       "Atuação como tutor e orientador acadêmico nos cursos de Análise e Desenvolvimento de Sistemas e Sistemas para Internet.",
       "Autoria de conteúdo didático para a disciplina 'Backend II com Banco de Dados', cobrindo programação web com acesso a dados estruturados e melhores práticas backend.",
@@ -131,7 +131,7 @@ export const featuredExperienceRoles: { role: string; company: string; summary: 
   },
   {
     role: "Professor de Ensino Superior",
-    company: "Newton Paiva & UNIASSELVI · 2022 — atual",
-    summary: "Docência em Banco de Dados e Arquitetura Web, orientação de projetos integradores e produção de conteúdo didático.",
+    company: "Newton Paiva & UNIASSELVI · 2022 — 2025",
+    summary: "Docência em Banco de Dados e Arquitetura Web, orientação de projetos integradores e produção de conteúdo didático. Professor convidado na pós-graduação stricto sensu da UNIFAL-MG.",
   },
 ];
