@@ -86,6 +86,56 @@ export const projects: Project[] = [
     tags: ["FastAPI", "Next.js", "Docker"],
   },
   {
+    title: "Mineração de Dados - Acidentes de Trânsito",
+    context: "Pesquisa & Modelagem Preditiva",
+    description:
+      "Exploração, tratamento e modelagem preditiva utilizando séries temporais e algoritmos de aprendizado supervisionado (regressão e classificação) aplicados a dados de acidentes de trânsito em rodovias federais.",
+    outcome: "Identificação dos principais fatores de risco e construção de modelos preditivos com alta taxa de acerto.",
+    image: "/images/projects/academics/doutoradoMineracaoDadosTrabalhoIII.png",
+    link: "#",
+    tags: ["Python", "Séries Temporais", "Scikit-Learn", "Machine Learning"],
+  },
+  {
+    title: "Mineração de Dados Educacionais (ENEM/ENADE)",
+    context: "Pesquisa & Análise Estatística",
+    description:
+      "Estudo analítico utilizando algoritmos de mineração de dados para correlacionar fatores socioeconômicos ao desempenho de estudantes no ENEM e ENADE.",
+    outcome: "Descoberta de padrões comportamentais e geração de relatórios estatísticos para apoio a políticas públicas de educação.",
+    image: "/images/projects/academics/doutoradoMineracaoDadosProjeto.png",
+    link: "#",
+    tags: ["Python", "Pandas", "Estatística", "Clustering"],
+  },
+  {
+    title: "Visão Computacional - CNN Keypoints",
+    context: "Pesquisa Aplicada / Mestrado (UFMG)",
+    description:
+      "Investigação e otimização de arquiteturas de Redes Neurais Convolucionais (CNNs) voltadas para a detecção robusta de pontos de interesse (keypoints) em imagens com deformações não rígidas.",
+    outcome: "Proposta de dissertação desenvolvida sob orientação do Prof. Erickson Rangel (UFMG) com foco em matching de descritores.",
+    image: "/images/projects/academics/doutoradoProjetoVisaoComputacional.png",
+    link: "#",
+    tags: ["Computer Vision", "CNN", "PyTorch", "Matching"],
+  },
+  {
+    title: "Monitoramento de Desidratação de Uvas",
+    context: "Dissertação de Mestrado (UNIMONTES)",
+    description:
+      "Sistema inteligente para o monitoramento de desidratação de uvas baseado em processamento digital de imagens e modelos estatísticos de regressão para estimar a perda de massa em tempo real.",
+    outcome: "Defesa e publicação da dissertação de Mestrado em Modelagem Computacional e Sistemas, otimizando o controle de qualidade industrial.",
+    image: "/images/projects/academics/dissetacaoMestrado.png",
+    link: "#",
+    tags: ["Processamento de Imagens", "Sistemas Inteligentes", "Regressão", "Matlab"],
+  },
+  {
+    title: "Sistema de Identificação Bovinos RFID",
+    context: "Artigo / Engenharia de Computação",
+    description:
+      "Projeto e implementação de sistema de identificação e rastreamento de bovinos por radiofrequência (RFID), integrando hardware embarcado e sistema de banco de dados.",
+    outcome: "Artigo científico publicado detalhando o circuito receptor, tags ativas e protocolo de comunicação segura.",
+    image: "/images/projects/academics/artigoRFIDEngenhariaComputacao.png",
+    link: "#",
+    tags: ["RFID", "Hardware", "Engenharia de Computação", "SQL"],
+  },
+  {
     title: "Sistema Hospitalar de Enfermagem",
     context: "Software para saúde",
     description:
