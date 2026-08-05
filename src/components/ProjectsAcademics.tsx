@@ -10,6 +10,30 @@ const projects: CollectionProject[] = [
     tags: ["Neuro-fuzzy", "Python", "Detecção de anomalias"],
   },
   {
+    title: "Mineração de Dados: Acidentes de Trânsito",
+    description:
+      "Análise de séries temporais e modelos preditivos supervisionados aplicando machine learning em dados históricos de rodovias federais.",
+    image: "/images/projects/academics/doutoradoMineracaoDadosTrabalhoIII.png",
+    link: "#",
+    tags: ["Python", "Séries Temporais", "Scikit-Learn"],
+  },
+  {
+    title: "Mineração de Dados Educacionais (ENEM/ENADE)",
+    description:
+      "Estudo estatístico e algoritmos de agrupamento (clustering) para correlacionar o rendimento dos estudantes ao perfil socioeconômico.",
+    image: "/images/projects/academics/doutoradoMineracaoDadosProjeto.png",
+    link: "#",
+    tags: ["Python", "Estatística", "Clustering"],
+  },
+  {
+    title: "Visão Computacional - CNN Keypoints",
+    description:
+      "Dissertação proposta e desenvolvida no Mestrado da UFMG focada em redes convolucionais e matching robusto de descritores sob deformações não rígidas.",
+    image: "/images/projects/academics/doutoradoProjetoVisaoComputacional.png",
+    link: "#",
+    tags: ["CNN", "Computer Vision", "PyTorch"],
+  },
+  {
     title: "Aplicativo Validado para Enfermagem Prisional",
     description:
       "Pesquisa publicada sobre desenvolvimento e validação de um aplicativo móvel voltado à autonomia e à gestão na enfermagem prisional.",

@@ -33,6 +33,14 @@ const projects: CollectionProject[] = [
     link: "https://www.youtube.com/playlist?list=PLbLoehbSIAYWV50N_Y2OzrlRRZy0bjGRY",
     tags: ["Visão Computacional", "Doutorado", "YouTube"],
   },
+  {
+    title: "Orientação TCC: Irrigação Inteligente",
+    description:
+      "Orientação de projeto final utilizando Arduino Uno, sensores de umidade/temperatura e interface web para controle e monitoramento remoto de irrigação.",
+    image: "/images/projects/academics/especializacaoMatematicaFinanceira.png",
+    link: "#",
+    tags: ["Arduino", "IoT", "Orientação Acadêmica"],
+  },
 ];
 
 export default function ProjectsProfessor() {
