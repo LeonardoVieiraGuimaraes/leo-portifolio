@@ -12,7 +12,7 @@ const Experience = () => {
     {
       role: "Professor de Ensino Superior (Prática)",
       company: "Centro Universitário Newton Paiva",
-      period: "2024 – Atual",
+      period: "Ago/2024 – Dez/2025",
       description: "Disciplinas de Banco de Dados e Arquitetura Web."
     },
     {
@@ -51,7 +51,7 @@ const Experience = () => {
     {
       role: "Professor / Tutor em TI",
       company: "UNIASSELVI",
-      period: "2022 – Atual",
+      period: "Fev/2022 – Fev/2025",
       description: "Cursos de Sistemas para Internet, Gestão de Finanças, Matemática, Análise e Desenvolvimento de Sistemas."
     },
     {
