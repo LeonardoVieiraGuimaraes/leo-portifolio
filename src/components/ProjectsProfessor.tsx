@@ -12,8 +12,8 @@ export default function ProjectsProfessor() {
 
   const projects = [
     {
-      title: "Estátitica e Probabilidade",
-      description: "Video aulas de Estátitica e Probabilidade",
+      title: "Estatística e Probabilidade",
+      description: "Videoaulas de Estatística e Probabilidade",
       image: "/images/projects/professor/aulaEstatisticaProbabilidade.png",
       link: "https://www.youtube.com/playlist?list=PLbLoehbSIAYUFCykmhDHcOhAIv7er7rou",
       tags: ["YouTube", "Estatística"],
@@ -22,18 +22,18 @@ export default function ProjectsProfessor() {
 
     {
       title: "Matemática Financeira",
-      description: "Video aulas de Matemática Financeira",
+      description: "Videoaulas de Matemática Financeira",
       image: "/images/projects/professor/aulaMatematicaFinanceira.png",
       link: "https://www.youtube.com/playlist?list=PLbLoehbSIAYXHvrPFdzPvz2StCvwDVNym",
       tags: ["Finanças", "Educação"],
       colSpan: "col-span-1",
     },
     {
-      title: "Projeto Integrador",
-      description: "Video aulas Projeto Integrador",
-      image: "/images/projects/professor/aulaProjetoIntegrador.png",
-      link: "https://www.youtube.com/playlist?list=PLbLoehbSIAYVKOSuhf2p27tRaFlXAFG1T",
-      tags: ["Projetos", "Tecnologia"],
+      title: "Auto Atividade Unidade 01",
+      description: "Videoaulas de Auto Atividade Unidade 01",
+      image: "/images/projects/professor/aulaAutoAtividade.png",
+      link: "https://www.youtube.com/playlist?list=PLbLoehbSIAYUa4jvkeXZb2Z5ZxVPrysXy",
+      tags: ["Educação", "Tecnologia"],
       colSpan: "col-span-1",
     },
   ];
