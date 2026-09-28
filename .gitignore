@@ -24,3 +24,10 @@ dist-ssr
 *.sw?
 
 main_gitpage
+
+# LaTeX build artifacts
+curriculo-latex/*.aux
+curriculo-latex/*.fdb_latexmk
+curriculo-latex/*.fls
+curriculo-latex/*.out
+curriculo-latex/*.synctex.gz
