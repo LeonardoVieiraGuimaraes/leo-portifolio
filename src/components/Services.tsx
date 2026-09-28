@@ -1,44 +1,57 @@
 import { HiArrowsRightLeft, HiCircleStack, HiCloudArrowUp, HiCodeBracketSquare } from "react-icons/hi2";
+import { useLanguage } from "../context/LanguageContext";
 
 const services = [
   {
     title: "Backend & APIs",
     description: "Serviços bem estruturados com Python, Django, FastAPI, Java, Spring Boot e Node.js.",
     icon: HiCodeBracketSquare,
+    en: { description: "Well-structured services with Python, Django, FastAPI, Java, Spring Boot and Node.js." },
   },
   {
     title: "Integrações & Dados",
     description: "Modelagem SQL, autenticação, serviços externos e automação de processos críticos.",
     icon: HiArrowsRightLeft,
+    en: {
+      title: "Integrations & Data",
+      description: "SQL modeling, authentication, external services and automation of critical processes.",
+    },
   },
   {
     title: "Web & Mobile",
     description: "Produtos completos com React, TypeScript e React Native, do fluxo à publicação.",
     icon: HiCircleStack,
+    en: { description: "Complete products with React, TypeScript and React Native, from user flow to release." },
   },
   {
     title: "Cloud & DevOps",
     description: "Ambientes Docker, Linux, Nginx, CI/CD, monitoramento e operação em produção.",
     icon: HiCloudArrowUp,
+    en: { description: "Docker, Linux and Nginx environments, CI/CD, monitoring and production operations." },
   },
 ];
 
 export default function Services() {
+  const { t } = useLanguage();
+
   return (
     <section className="border-y border-white/[0.06] bg-slate-950/30 py-24 [.light_&]:border-slate-200 [.light_&]:bg-slate-100/60" id="services">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-10 lg:grid-cols-[0.7fr_1.3fr] lg:items-end">
           <div>
-            <p className="eyebrow">Competências principais</p>
-            <h2 className="section-title">Do requisito à operação.</h2>
+            <p className="eyebrow">{t("Competências principais", "Core skills")}</p>
+            <h2 className="section-title">{t("Do requisito à operação.", "From requirements to operations.")}</h2>
           </div>
           <p className="section-copy lg:max-w-xl lg:justify-self-end">
-            Visão de ponta a ponta para transformar necessidades de negócio em aplicações publicadas, observáveis e simples de manter.
+            {t(
+              "Visão de ponta a ponta para transformar necessidades de negócio em aplicações publicadas, observáveis e simples de manter.",
+              "An end-to-end view that turns business needs into deployed, observable and easy-to-maintain applications."
+            )}
           </p>
         </div>
 
         <div className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-          {services.map(({ title, description, icon: Icon }, index) => (
+          {services.map((entry) => t(entry, { ...entry, ...entry.en })).map(({ title, description, icon: Icon }, index) => (
             <article key={title} className="card rounded-2xl p-6">
               <div className="flex items-center justify-between">
                 <span className="grid h-11 w-11 place-items-center rounded-xl bg-sky-400/10 text-sky-300 [.light_&]:bg-sky-100 [.light_&]:text-sky-700">

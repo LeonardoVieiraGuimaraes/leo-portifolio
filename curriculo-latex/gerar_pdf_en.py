@@ -1,7 +1,7 @@
 """
-Gerador de Currículo PDF - Leonardo Vieira Guimarães
-Cabeçalho com 2 linhas de contato completas (Tel, Email, Portfólio, GitHub, LinkedIn, Lattes, ORCID).
-Rodapé limpo e sem repetições redundantes.
+Gerador de Currículo PDF (Inglês) - Leonardo Vieira Guimarães
+Mesmo layout de gerar_pdf.py, com o conteúdo traduzido para o inglês.
+Saída: public/curriculo-leonardo-fullstack-en.pdf
 """
 import os
 from reportlab.lib.pagesizes import A4
@@ -31,7 +31,7 @@ GAP        = 0.4 * cm    # espaço entre o banner e o início do conteúdo
 
 # ─── Arquivo de saída ──────────────────────────────────────────────────────────
 output_path = os.path.abspath(
-    os.path.join(os.path.dirname(__file__), "..", "public", "curriculo-leonardo-fullstack.pdf")
+    os.path.join(os.path.dirname(__file__), "..", "public", "curriculo-leonardo-fullstack-en.pdf")
 )
 
 # ─── Função: desenha o banner no canvas (chamada em CADA página) ───────────────
@@ -59,13 +59,13 @@ def desenhar_cabecalho(canvas, doc):
     canvas.setFillColor(colors.HexColor("#93c5fd"))
     canvas.setFont("Helvetica", 10)
     canvas.drawString(MARGIN_H, y_topo - 1.65 * cm,
-                      "Desenvolvedor Full Stack  ·  Product Owner  ·  Professor de TI & Pesquisador")
+                      "Full Stack Developer  ·  Product Owner  ·  IT Professor & Researcher")
 
     # ── Localização ───────────────────────────────────────────────────────────
     canvas.setFillColor(colors.HexColor("#cbd5e1"))
     canvas.setFont("Helvetica", 8.5)
     canvas.drawString(MARGIN_H, y_topo - 2.25 * cm,
-                      "Belo Horizonte, MG - Brasil   |   Remoto disponível")
+                      "Belo Horizonte, MG - Brazil   |   Available for remote work")
 
     # ── Linha divisória interna ───────────────────────────────────────────────
     canvas.setStrokeColor(colors.HexColor("#2d4a6b"))
@@ -76,7 +76,7 @@ def desenhar_cabecalho(canvas, doc):
     canvas.setFillColor(colors.HexColor("#94a3b8"))
     canvas.setFont("Helvetica", 7.8)
     contato_l1 = (
-        "(38) 99239-1698"
+        "+55 (38) 99239-1698"
         "   ·   leonardovieiraxy@hotmail.com"
         "   ·   leoproti.com.br"
         "   ·   Lattes: lattes.cnpq.br/3600922455238720"
@@ -97,7 +97,7 @@ def desenhar_cabecalho(canvas, doc):
     canvas.setFillColor(TEXTO_LEVE)
     canvas.setFont("Helvetica", 7.5)
     canvas.drawRightString(PAGE_W - MARGIN_H, 0.6 * cm,
-                           f"Pág. {doc.page}")
+                           f"Page {doc.page}")
 
     canvas.restoreState()
 
@@ -123,6 +123,8 @@ doc = BaseDocTemplate(
     rightMargin=MARGIN_H,
     topMargin=HEADER_H + GAP,   # reserva espaço para o banner em todas as páginas
     bottomMargin=MARGIN_BOT,
+    title="Resume - Leonardo Vieira Guimarães",
+    author="Leonardo Vieira Guimarães",
 )
 doc.addPageTemplates([
     PageTemplate(
@@ -200,26 +202,27 @@ def tc(txt, bold=False, size=9, cor=None):
 story = []
 
 # ── RESUMO ─────────────────────────────────────────────────────────────────────
-story += secao("Resumo Profissional")
+story += secao("Professional Summary")
 story.append(Paragraph(
-    "Desenvolvedor Full Stack, Product Owner (PO) e Professor de TI com sólida experiência em "
-    "engenharia de software, desenvolvimento web, arquitetura de APIs RESTful, microsserviços e bancos de dados. "
-    "Atua no Instituto Mineiro de Agropecuária (IMA) no desenvolvimento de sistemas corporativos, gestão de suporte "
-    "técnico e como Product Owner (PO) do sistema Sidagro. Possui trajetória como professor universitário e tutor "
-    "em TI, além de atuação na pesquisa científica como Doutorando em Modelagem Matemática e Computacional (CEFET/MG) "
-    "e Mestre (UNIMONTES), agregando forte capacidade analítica, visão de produto e rigor técnico.",
+    "Full Stack Developer, Product Owner (PO) and IT Professor with solid experience in "
+    "software engineering, web development, RESTful API architecture, microservices and databases. "
+    "Works at the Instituto Mineiro de Agropecuária (IMA), the agricultural defense agency of the State of "
+    "Minas Gerais, developing enterprise systems, managing technical support and serving as Product Owner (PO) "
+    "of the Sidagro system. Background as a university professor and IT tutor, and active in scientific research "
+    "as a Ph.D. candidate in Mathematical and Computational Modeling (CEFET/MG) with an M.Sc. from UNIMONTES, "
+    "bringing strong analytical skills, product vision and technical rigor.",
     st_resumo
 ))
 
 # ── HABILIDADES ────────────────────────────────────────────────────────────────
-story += secao("Habilidades Técnicas")
+story += secao("Technical Skills")
 hab = [
-    ("Frontend",  "React, TypeScript, Next.js, Tailwind CSS, HTML5, CSS3"),
-    ("Backend",   "Python, Django, FastAPI, Node.js, Java, Spring Boot"),
-    ("Mobile",    "React Native, Expo (Android)"),
-    ("Dados",     "SQL, PostgreSQL, MySQL, MongoDB, Pandas, Jupyter, Estatística Aplicada"),
-    ("DevOps",    "Docker, Linux, Nginx, Git, GitHub Actions, CI/CD, Grafana"),
-    ("Gestão",    "PMI/PMBOK, Scrum, Kanban, BPMN, Product Owner (PO)"),
+    ("Frontend",   "React, TypeScript, Next.js, Tailwind CSS, HTML5, CSS3"),
+    ("Backend",    "Python, Django, FastAPI, Node.js, Java, Spring Boot"),
+    ("Mobile",     "React Native, Expo (Android)"),
+    ("Data",       "SQL, PostgreSQL, MySQL, MongoDB, Pandas, Jupyter, Applied Statistics"),
+    ("DevOps",     "Docker, Linux, Nginx, Git, GitHub Actions, CI/CD, Grafana"),
+    ("Management", "PMI/PMBOK, Scrum, Kanban, BPMN, Product Owner (PO)"),
 ]
 tab_hab = Table(
     [[tc(k, bold=True), tc(v)] for k, v in hab],
@@ -236,88 +239,88 @@ tab_hab.setStyle(TableStyle([
 story.append(tab_hab)
 story.append(Spacer(1, 4))
 story.append(Paragraph(
-    "<b>Habilidades comportamentais:</b>  Liderança e Mentoria  ·  Adaptabilidade  ·  "
-    "Comunicação clara e didática  ·  Resolução de Problemas  ·  Colaboração multidisciplinar",
+    "<b>Soft skills:</b>  Leadership and Mentoring  ·  Adaptability  ·  "
+    "Clear and didactic communication  ·  Problem Solving  ·  Cross-functional collaboration",
     st_corpo
 ))
 
 # ── EXPERIÊNCIA ────────────────────────────────────────────────────────────────
-story += secao("Experiência Profissional")
+story += secao("Professional Experience")
 
 experiencias = [
     {
-        "cargo":   "Desenvolvedor Backend & Product Owner (PO) - GLS/TI",
+        "cargo":   "Backend Developer & Product Owner (PO) - GLS/IT",
         "empresa": "Instituto Mineiro de Agropecuária (IMA)",
-        "periodo": "jul 2026 - atual",
+        "periodo": "Jul 2026 - present",
         "itens": [
-            "Gestão do suporte técnico e atuação como PO do sistema Sidagro (homologado para Firefox).",
-            "Desenvolvimento de APIs RESTful, automações internas e evolução contínua do backend.",
-            "Modelagem e administração de bancos de dados relacionais para relatórios gerenciais.",
-            "Padronização de ambientes com Docker (desenvolvimento, homologação e produção).",
+            "Technical support management and Product Owner of the Sidagro system (validated for Firefox).",
+            "Development of RESTful APIs, internal automations and continuous evolution of the backend.",
+            "Modeling and administration of relational databases for management reporting.",
+            "Standardization of environments with Docker (development, staging and production).",
         ]
     },
     {
-        "cargo":   "Assistente de Gestão & Product Owner (PO) - NIM",
+        "cargo":   "Management Assistant & Product Owner (PO) - NIM",
         "empresa": "Instituto Mineiro de Agropecuária (IMA)",
-        "periodo": "set 2024 - jul 2026",
+        "periodo": "Sep 2024 - Jul 2026",
         "itens": [
-            "Liderança no Núcleo de Inovação e Modernização (NIM) e gestão de projetos de TI.",
-            "Análise e documentação de regras de negócio complexas como PO do sistema Sidagro.",
-            "Desenvolvimento da plataforma DAE/PIX e microsserviços de autenticação corporativa.",
-            "Modelagem de fluxos BPMN para integração e modernização de processos institucionais.",
+            "Leadership at the Innovation and Modernization Unit (NIM) and management of IT projects.",
+            "Analysis and documentation of complex business rules as PO of the Sidagro system.",
+            "Development of the DAE/PIX payment platform and corporate authentication microservices.",
+            "BPMN process modeling for the integration and modernization of institutional processes.",
         ]
     },
     {
-        "cargo":   "Professor de Ensino Superior - Banco de Dados & Arquitetura Web",
+        "cargo":   "University Professor - Databases & Web Architecture",
         "empresa": "Centro Universitário Newton Paiva",
-        "periodo": "ago 2024 - dez 2025",
+        "periodo": "Aug 2024 - Dec 2025",
         "itens": [
-            "Docência prática em Banco de Dados e Arquitetura Web com foco em mercado.",
-            "Orientação de projetos integradores de desenvolvimento de software e APIs RESTful.",
+            "Hands-on teaching of Databases and Web Architecture with an industry focus.",
+            "Supervision of capstone projects in software development and RESTful APIs.",
         ]
     },
     {
-        "cargo":   "Professor, Tutor e Autor de Tecnologia",
+        "cargo":   "Technology Professor, Tutor and Author",
         "empresa": "UNIASSELVI / Vitru Brasil Empreendimentos",
-        "periodo": "fev 2022 - fev 2025",
+        "periodo": "Feb 2022 - Feb 2025",
         "itens": [
-            "Tutoria acadêmica nos cursos de ADS e Sistemas para Internet.",
-            "Autoria da disciplina 'Backend II com Banco de Dados' (conteúdo didático próprio).",
+            "Academic tutoring in the Systems Analysis and Development and Internet Systems programs.",
+            "Author of the course 'Backend II with Databases' (original teaching material).",
         ]
     },
     {
-        "cargo":   "Assistente de Gestão - Defesa Agropecuária",
-        "empresa": "IMA - Escritório Seccional de São Francisco",
-        "periodo": "nov 2005 - set 2024",
+        "cargo":   "Management Assistant - Agricultural Defense",
+        "empresa": "IMA - São Francisco Regional Office",
+        "periodo": "Nov 2005 - Sep 2024",
         "itens": [
-            "Gestão regional do norte de MG, controle operacional e emissão de documentos oficiais.",
-            "Automação de relatórios e planilhas gerenciais para otimização do fluxo diário.",
+            "Regional management in northern Minas Gerais, operational control and issuance of official documents.",
+            "Automation of reports and management spreadsheets to streamline daily operations.",
         ]
     },
     {
-        "cargo":   "Professor de Ensino Superior - Matemática e Gestão",
+        "cargo":   "University Professor - Mathematics and Management",
         "empresa": "FADENORTE - Faculdade de Desenvolvimento do Norte",
         "periodo": "2019 - 2020",
         "itens": [
-            "Docência em Estatística, Matemática Financeira, Gestão Financeira e Inovação Tecnológica.",
-            "Orientação de Projetos Integradores (II, IV e V).",
+            "Taught Statistics, Financial Mathematics, Financial Management and Technological Innovation.",
+            "Supervision of Capstone Projects (II, IV and V).",
         ]
     },
     {
-        "cargo":   "Professor Mediador - IFNMG",
-        "empresa": "Instituto Federal do Norte de Minas Gerais",
+        "cargo":   "Course Mediator - IFNMG",
+        "empresa": "Federal Institute of Northern Minas Gerais",
         "periodo": "2017 - 2020",
         "itens": [
-            "Mediador EAD (2020): Programador de Dispositivos Móveis (FIC).",
-            "Tutor presencial (2017-2019): Técnico em Informática para Internet.",
+            "Distance learning mediator (2020): Mobile Device Programmer (continuing education course).",
+            "On-site tutor (2017-2019): Internet Computing Technician program.",
         ]
     },
     {
-        "cargo":   "Desenvolvedor Full Stack",
-        "empresa": "Projetos próprios e consultoria",
-        "periodo": "2014 - atual",
+        "cargo":   "Full Stack Developer",
+        "empresa": "Personal projects and consulting",
+        "periodo": "2014 - present",
         "itens": [
-            "Sistemas web e APIs com Python, Django, Java, Spring Boot, React, TypeScript e Docker.",
+            "Web systems and APIs with Python, Django, Java, Spring Boot, React, TypeScript and Docker.",
         ]
     },
 ]
@@ -335,16 +338,15 @@ for i, exp in enumerate(experiencias):
     story.append(KeepTogether(bloco))
 
 # ── FORMAÇÃO ───────────────────────────────────────────────────────────────────
-story += secao("Formação Acadêmica")
 
 formacoes = [
-    ("Doutorando",              "Modelagem Matemática e Computacional",           "CEFET/MG",                               "2025 - atual"),
-    ("Aluno Especial (Dout.)",  "Ciência da Computação – UFMG",                  "Disciplinas: Visão Computacional, Visualização de Dados, Mineração de Dados e Finanças Quantitativas (créditos aproveitados no Doutorado CEFET-MG).", "2021 - 2022"),
-    ("Mestre",                  "Modelagem Computacional e Sistemas",            "UNIMONTES",                              "2016 - 2019"),
-    ("Bacharel",                "Engenharia de Computação",                      "FEMC",                                   "2010 - 2014"),
-    ("Especialização",          "Matemática e Estatística",                      "UFLA - Universidade Federal de Lavras",  "2008 - 2009"),
-    ("Especialização",          "Educação Matemática",                           "FINOM - Faculdade do Norte de Minas",    "2008 - 2009"),
-    ("Licenciatura",            "Matemática",                                    "UNIMONTES",                              "2004 - 2007"),
+    ("Ph.D. Candidate",          "Mathematical and Computational Modeling",       "CEFET/MG",                                 "2025 - present"),
+    ("Non-degree Student (Ph.D.)", "Computer Science – UFMG",                     "Courses: Computer Vision, Data Visualization, Data Mining and Quantitative Finance (credits transferred to the CEFET-MG Ph.D.).", "2021 - 2022"),
+    ("M.Sc.",                    "Computational Modeling and Systems",            "UNIMONTES",                                "2016 - 2019"),
+    ("Bachelor's Degree",        "Computer Engineering",                          "FEMC",                                     "2010 - 2014"),
+    ("Specialization",           "Mathematics and Statistics (Postgraduate)",     "UFLA - Federal University of Lavras",      "2008 - 2009"),
+    ("Specialization",           "Mathematics Education (Postgraduate)",          "FINOM - Faculdade do Norte de Minas",      "2008 - 2009"),
+    ("Teaching Degree",          "Mathematics",                                   "UNIMONTES",                                "2004 - 2007"),
 ]
 
 form_rows = []
@@ -372,14 +374,14 @@ tab_form.setStyle(TableStyle([
     ("ROWBACKGROUNDS",(0,0),(-1,-1), [colors.white, colors.HexColor("#f8fafc")]),
     ("LINEBELOW",     (0,0),(-1,-2), 0.3, colors.HexColor("#e5e7eb")),
 ]))
-story.append(KeepTogether([tab_form]))
+story.append(KeepTogether(secao("Education") + [tab_form]))   # título junto da tabela
 
 # ── IDIOMAS ────────────────────────────────────────────────────────────────────
-story += secao("Idiomas")
+story += secao("Languages")
 idiomas = [
-    ("Português", "Nativo",                   ""),
-    ("Inglês",    "Proficiência em Leitura",  "Exame UFSC 2025 - Nota 8,50 / 10   (Chave: 5113208805889763695)"),
-    ("Espanhol",  "Básico",                   ""),
+    ("Portuguese", "Native",               ""),
+    ("English",    "Reading Proficiency",  "UFSC Exam 2025 - Score 8.50 / 10   (Verification key: 5113208805889763695)"),
+    ("Spanish",    "Basic",                ""),
 ]
 tab_id = Table(
     [[tc(l, bold=True), tc(n), tc(d, size=8, cor=TEXTO_CINZA)] for l, n, d in idiomas],
@@ -395,25 +397,25 @@ tab_id.setStyle(TableStyle([
 story.append(KeepTogether([tab_id]))
 
 # ── PROJETOS ───────────────────────────────────────────────────────────────────
-story += secao("Projetos em Destaque")
+story += secao("Featured Projects")
 projetos = [
-    ("Portfólio Profissional V3",
-     "Website pessoal responsivo - React, TypeScript, TailwindCSS, tema dark/light.",
+    ("Professional Portfolio V3",
+     "Responsive personal website - React, TypeScript, TailwindCSS, dark/light theme.",
      "leoproti.com.br"),
     ("A&amp;G Enfermagem",
-     "App de enfermagem prisional em React Native/Expo - publicado na Google Play Store.",
+     "Prison nursing app built with React Native/Expo - published on the Google Play Store.",
      "aeg.leoproti.com.br"),
-    ("Plataforma DAE/PIX v2",
-     "Sistema corporativo de arrecadação (React, Node.js, PostgreSQL, Docker) em produção no IMA.",
+    ("DAE/PIX Platform v2",
+     "Corporate fee-collection system (React, Node.js, PostgreSQL, Docker) in production at IMA.",
      "daev2.leoproti.com.br"),
     ("IMA Auth",
-     "Microsserviço corporativo de autenticação única SSO/JWT para o ecossistema Sidagro do IMA.",
+     "Corporate single sign-on (SSO/JWT) authentication microservice for IMA's Sidagro ecosystem.",
      "ima-auth.leoproti.com.br"),
-    ("Sistema Sidagro (IMA)",
-     "Portal de defesa agropecuária de MG – atuação como Product Owner (PO) e desenvolvedor backend.",
+    ("Sidagro System (IMA)",
+     "Minas Gerais agricultural defense portal – Product Owner (PO) and backend developer.",
      "sidagro.ima.mg.gov.br"),
-    ("Hub de Projetos do Doutorado",
-     "Plataforma full stack para análises científicas e modelagem matemática - Next.js e FastAPI.",
+    ("Ph.D. Projects Hub",
+     "Full stack platform for scientific analysis and mathematical modeling - Next.js and FastAPI.",
      "projetos-doutorado.leoproti.com.br"),
 ]
 

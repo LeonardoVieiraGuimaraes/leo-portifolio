@@ -1,21 +1,24 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiArrowUpRight } from "react-icons/hi2";
 import { NavLink } from "react-router-dom";
+import { useLanguage } from "../context/LanguageContext";
 
 const socialLinks = [
   { name: "GitHub", url: "https://github.com/LeonardoVieiraGuimaraes/", icon: FaGithub },
   { name: "LinkedIn", url: "https://linkedin.com/in/leonardo-vieira-guimaraes", icon: FaLinkedin },
 ];
 
-const footerLinks = [
-  { name: "Projetos", to: "/projects" },
-  { name: "Competências", to: "/skills" },
-  { name: "Experiência", to: "/experience" },
-  { name: "Sobre", to: "/sobre" },
-  { name: "Contato", to: "/contact" },
-];
-
 export default function Footer() {
+  const { t } = useLanguage();
+
+  const footerLinks = [
+    { name: t("Projetos", "Projects"), to: "/projects" },
+    { name: t("Competências", "Skills"), to: "/skills" },
+    { name: t("Experiência", "Experience"), to: "/experience" },
+    { name: t("Sobre", "About"), to: "/sobre" },
+    { name: t("Contato", "Contact"), to: "/contact" },
+  ];
+
   return (
     <footer id="footer" className="border-t border-white/[0.07] bg-[#07101f] [.light_&]:border-slate-200 [.light_&]:bg-white">
       <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
@@ -23,11 +26,14 @@ export default function Footer() {
           <div>
             <p className="font-semibold text-slate-100 [.light_&]:text-slate-900">Leonardo Vieira Guimarães</p>
             <p className="mt-1 text-sm text-slate-400 [.light_&]:text-slate-600">
-              Desenvolvedor Full Stack · Product Owner · Professor de TI & Pesquisador
+              {t(
+                "Desenvolvedor Full Stack · Product Owner · Professor de TI & Pesquisador",
+                "Full Stack Developer · Product Owner · IT Professor & Researcher"
+              )}
             </p>
           </div>
 
-          <nav aria-label="Navegação do rodapé" className="flex flex-wrap gap-x-5 gap-y-3 text-sm">
+          <nav aria-label={t("Navegação do rodapé", "Footer navigation")} className="flex flex-wrap gap-x-5 gap-y-3 text-sm">
             {footerLinks.map((link) => (
               <NavLink
                 key={link.to}
