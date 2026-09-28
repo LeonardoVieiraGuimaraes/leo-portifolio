@@ -15,6 +15,7 @@ import ExperienceFeatured from "./components/ExperienceFeatured";
 import About from "./components/About";
 import AboutSimple from "./components/AboutSimple";
 import { ThemeProvider } from "./context/ThemeContext";
+import { LanguageProvider } from "./context/LanguageContext";
 
 function ScrollToSection() {
   const location = useLocation();
@@ -71,21 +72,23 @@ function ProjectsPage() {
 function App() {
   return (
     <ThemeProvider>
-      <BrowserRouter>
-        <ScrollToSection />
-        <Routes>
-          <Route element={<SiteLayout />}>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/inicio" element={<HomePage />} />
-            <Route path="/sobre" element={<About />} />
-            <Route path="/projects" element={<ProjectsPage />} />
-            <Route path="/skills" element={<Skills />} />
-            <Route path="/experience" element={<Experience />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="*" element={<HomePage />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
+      <LanguageProvider>
+        <BrowserRouter>
+          <ScrollToSection />
+          <Routes>
+            <Route element={<SiteLayout />}>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/inicio" element={<HomePage />} />
+              <Route path="/sobre" element={<About />} />
+              <Route path="/projects" element={<ProjectsPage />} />
+              <Route path="/skills" element={<Skills />} />
+              <Route path="/experience" element={<Experience />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="*" element={<HomePage />} />
+            </Route>
+          </Routes>
+        </BrowserRouter>
+      </LanguageProvider>
     </ThemeProvider>
   );
 }

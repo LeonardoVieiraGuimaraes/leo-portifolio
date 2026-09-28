@@ -9,6 +9,7 @@ import {
   HiOutlineMapPin,
   HiSparkles,
 } from "react-icons/hi2";
+import { useLanguage } from "../context/LanguageContext";
 
 const contacts = [
   {
@@ -18,6 +19,11 @@ const contacts = [
     link: "mailto:leonardovieiraxy@hotmail.com?subject=Contato%20via%20Portfólio",
     icon: HiOutlineEnvelope,
     accentColor: "bg-sky-500/10 text-sky-400 border-sky-500/20",
+    en: {
+      name: "Email",
+      badge: "Reply within 24h",
+      link: "mailto:leonardovieiraxy@hotmail.com?subject=Contact%20via%20Portfolio",
+    },
   },
   {
     name: "Telefone / WhatsApp",
@@ -26,6 +32,12 @@ const contacts = [
     link: "https://wa.me/5538992391698?text=Olá%2C%20vi%20seu%20portfólio%20e%20gostaria%20de%20conversar.",
     icon: FaWhatsapp,
     accentColor: "bg-emerald-500/10 text-emerald-400 border-emerald-500/20",
+    en: {
+      name: "Phone / WhatsApp",
+      description: "+55 (38) 99239-1698",
+      badge: "Quick message",
+      link: "https://wa.me/5538992391698?text=Hi%2C%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20talk.",
+    },
   },
   {
     name: "LinkedIn",
@@ -34,6 +46,7 @@ const contacts = [
     link: "https://www.linkedin.com/in/leonardo-vieira-guimaraes/",
     icon: FaLinkedin,
     accentColor: "bg-blue-500/10 text-blue-400 border-blue-500/20",
+    en: { badge: "Professional network" },
   },
   {
     name: "Currículo Lattes",
@@ -42,6 +55,7 @@ const contacts = [
     link: "http://lattes.cnpq.br/3600922455238720",
     icon: HiOutlineAcademicCap,
     accentColor: "bg-amber-500/10 text-amber-400 border-amber-500/20",
+    en: { name: "Lattes CV", badge: "Academic output" },
   },
   {
     name: "Localização",
@@ -50,17 +64,39 @@ const contacts = [
     link: "https://maps.app.goo.gl/J8GYMwibv7pjR8HE7",
     icon: HiOutlineMapPin,
     accentColor: "bg-purple-500/10 text-purple-400 border-purple-500/20",
+    en: { name: "Location", description: "Belo Horizonte, MG · Brazil", badge: "Remote or on-site" },
   },
 ];
 
 const quickTopics = [
-  { id: "vaga", label: "💼 Vaga / Oportunidade", text: "Gostaria de conversar sobre uma vaga em nossa empresa: " },
-  { id: "freelance", label: "🚀 Projeto / Consultoria", text: "Tenho um projeto/desafio de tecnologia e gostaria de um orçamento/consultoria: " },
-  { id: "parceria", label: "🤝 Parceria Acadêmica/Docência", text: "Gostaria de propor uma parceria acadêmica ou projeto educacional: " },
-  { id: "outro", label: "💬 Outros Assuntos", text: "Olá Leonardo, gostaria de conversar sobre: " },
+  {
+    id: "vaga",
+    label: "💼 Vaga / Oportunidade",
+    text: "Gostaria de conversar sobre uma vaga em nossa empresa: ",
+    en: { label: "💼 Job / Opportunity", text: "I'd like to talk about a position at our company: " },
+  },
+  {
+    id: "freelance",
+    label: "🚀 Projeto / Consultoria",
+    text: "Tenho um projeto/desafio de tecnologia e gostaria de um orçamento/consultoria: ",
+    en: { label: "🚀 Project / Consulting", text: "I have a technology project/challenge and would like a quote or consulting: " },
+  },
+  {
+    id: "parceria",
+    label: "🤝 Parceria Acadêmica/Docência",
+    text: "Gostaria de propor uma parceria acadêmica ou projeto educacional: ",
+    en: { label: "🤝 Academic / Teaching Partnership", text: "I'd like to propose an academic partnership or educational project: " },
+  },
+  {
+    id: "outro",
+    label: "💬 Outros Assuntos",
+    text: "Olá Leonardo, gostaria de conversar sobre: ",
+    en: { label: "💬 Other Topics", text: "Hi Leonardo, I'd like to talk about: " },
+  },
 ];
 
 export default function Contact() {
+  const { t } = useLanguage();
   const form = useRef<HTMLFormElement>(null);
   const [loading, setLoading] = useState(false);
   const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
@@ -69,7 +105,7 @@ export default function Contact() {
 
   const handleTopicSelect = (topicId: string, topicText: string) => {
     setSelectedTopic(topicId);
-    if (!message || quickTopics.some((t) => message.startsWith(t.text))) {
+    if (!message || quickTopics.some((topic) => message.startsWith(topic.text) || message.startsWith(topic.en.text))) {
       setMessage(topicText);
     }
   };
@@ -119,17 +155,19 @@ export default function Contact() {
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
               </span>
-              Disponível para novas propostas
+              {t("Disponível para novas propostas", "Available for new opportunities")}
             </div>
 
-            <h1 className="section-title">Vamos conversar sobre a próxima entrega.</h1>
+            <h1 className="section-title">{t("Vamos conversar sobre a próxima entrega.", "Let's talk about your next delivery.")}</h1>
             <p className="section-copy">
-              Estou disponível para oportunidades em desenvolvimento backend, engenharia de software,
-              arquitetura de sistemas e projetos que unam tecnologia e inteligência de dados.
+              {t(
+                "Estou disponível para oportunidades em desenvolvimento backend, engenharia de software, arquitetura de sistemas e projetos que unam tecnologia e inteligência de dados.",
+                "I'm available for opportunities in backend development, software engineering, systems architecture and projects that combine technology and data intelligence."
+              )}
             </p>
 
             <div className="mt-8 space-y-3.5">
-              {contacts.map(({ name, description, badge, link, icon: Icon, accentColor }) => (
+              {contacts.map((entry) => t(entry, { ...entry, ...entry.en })).map(({ name, description, badge, link, icon: Icon, accentColor }) => (
                 <a
                   key={name}
                   href={link}
@@ -166,19 +204,19 @@ export default function Contact() {
             <div className="mb-6">
               <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-sky-300 [.light_&]:text-sky-700">
                 <HiSparkles className="h-4 w-4" />
-                <span>Mensagem direta</span>
+                <span>{t("Mensagem direta", "Direct message")}</span>
               </div>
               <h2 className="mt-2 text-2xl font-bold text-white [.light_&]:text-slate-950">
-                Conte um pouco sobre a oportunidade.
+                {t("Conte um pouco sobre a oportunidade.", "Tell me a bit about the opportunity.")}
               </h2>
               <p className="mt-1 text-xs muted-text">
-                Escolha o tipo de assunto ou digite sua mensagem diretamente abaixo:
+                {t("Escolha o tipo de assunto ou digite sua mensagem diretamente abaixo:", "Choose a topic or type your message directly below:")}
               </p>
             </div>
 
             {/* Quick Topic Chips */}
             <div className="mb-6 flex flex-wrap gap-2">
-              {quickTopics.map((topic) => (
+              {quickTopics.map((entry) => t(entry, { ...entry, ...entry.en })).map((topic) => (
                 <button
                   key={topic.id}
                   type="button"
@@ -198,7 +236,7 @@ export default function Contact() {
               <div className="grid gap-5 sm:grid-cols-2">
                 <div>
                   <label htmlFor="fullName" className="mb-2 block text-xs font-semibold uppercase tracking-wider subtle-text">
-                    Seu Nome *
+                    {t("Seu Nome *", "Your Name *")}
                   </label>
                   <input
                     className="field focus:ring-2 focus:ring-sky-400/20"
@@ -206,13 +244,13 @@ export default function Contact() {
                     name="fullName"
                     id="fullName"
                     autoComplete="name"
-                    placeholder="Ex: Maria Silva"
+                    placeholder={t("Ex: Maria Silva", "e.g. Jane Smith")}
                     required
                   />
                 </div>
                 <div>
                   <label htmlFor="email" className="mb-2 block text-xs font-semibold uppercase tracking-wider subtle-text">
-                    Seu E-mail *
+                    {t("Seu E-mail *", "Your Email *")}
                   </label>
                   <input
                     className="field focus:ring-2 focus:ring-sky-400/20"
@@ -220,7 +258,7 @@ export default function Contact() {
                     name="email"
                     id="email"
                     autoComplete="email"
-                    placeholder="suaempresa@dominio.com"
+                    placeholder={t("suaempresa@dominio.com", "you@company.com")}
                     required
                   />
                 </div>
@@ -228,7 +266,7 @@ export default function Contact() {
 
               <div>
                 <label htmlFor="message" className="mb-2 block text-xs font-semibold uppercase tracking-wider subtle-text">
-                  Mensagem *
+                  {t("Mensagem *", "Message *")}
                 </label>
                 <textarea
                   id="message"
@@ -236,7 +274,7 @@ export default function Contact() {
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
                   className="field min-h-36 resize-y focus:ring-2 focus:ring-sky-400/20"
-                  placeholder="Descreva a vaga, o projeto, escopo ou desafio..."
+                  placeholder={t("Descreva a vaga, o projeto, escopo ou desafio...", "Describe the position, project, scope or challenge...")}
                   required
                 />
               </div>
@@ -248,18 +286,18 @@ export default function Contact() {
                   disabled={loading}
                 >
                   {loading ? <FaSpinner className="h-4 w-4 animate-spin" /> : <HiOutlineEnvelope className="h-4 w-4" />}
-                  {loading ? "Enviando mensagem..." : "Enviar mensagem"}
+                  {loading ? t("Enviando mensagem...", "Sending message...") : t("Enviar mensagem", "Send message")}
                 </button>
 
                 {status === "success" && (
                   <div className="flex items-center gap-2 rounded-xl border border-emerald-500/20 bg-emerald-500/10 px-4 py-2 text-xs font-medium text-emerald-400" role="status">
                     <HiCheckCircle className="h-4 w-4 shrink-0" />
-                    <span>Mensagem enviada com sucesso! Respondo em breve.</span>
+                    <span>{t("Mensagem enviada com sucesso! Respondo em breve.", "Message sent successfully! I'll reply soon.")}</span>
                   </div>
                 )}
                 {status === "error" && (
                   <div className="rounded-xl border border-rose-500/20 bg-rose-500/10 px-4 py-2 text-xs font-medium text-rose-400" role="alert">
-                    <span>Falha ao enviar. Favor utilizar o e-mail ou WhatsApp ao lado.</span>
+                    <span>{t("Falha ao enviar. Favor utilizar o e-mail ou WhatsApp ao lado.", "Sending failed. Please use the email or WhatsApp links instead.")}</span>
                   </div>
                 )}
               </div>

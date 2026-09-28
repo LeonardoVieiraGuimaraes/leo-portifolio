@@ -3,17 +3,19 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { FaMoon, FaSun } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 import { useTheme } from "../context/ThemeContext";
+import { useLanguage } from "../context/LanguageContext";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const { theme, toggleTheme } = useTheme();
+  const { language, toggleLanguage, t } = useLanguage();
 
   const navLinks = [
-    { name: "Projetos", to: "/projects" },
-    { name: "Competências", to: "/skills" },
-    { name: "Experiência", to: "/experience" },
-    { name: "Sobre", to: "/sobre" },
-    { name: "Contato", to: "/contact" },
+    { name: t("Projetos", "Projects"), to: "/projects" },
+    { name: t("Competências", "Skills"), to: "/skills" },
+    { name: t("Experiência", "Experience"), to: "/experience" },
+    { name: t("Sobre", "About"), to: "/sobre" },
+    { name: t("Contato", "Contact"), to: "/contact" },
   ];
 
   const navItemClass = (isActive: boolean) =>
@@ -22,6 +24,20 @@ export default function Header() {
         ? "bg-sky-500/10 text-sky-300 [.light_&]:bg-sky-50 [.light_&]:text-sky-700"
         : "text-slate-300 hover:bg-white/5 hover:text-white [.light_&]:text-slate-600 [.light_&]:hover:bg-slate-100 [.light_&]:hover:text-slate-950"
     }`;
+
+  const languageLabel = t("Switch to English", "Mudar para português");
+  const languageButton = (
+    <button
+      onClick={toggleLanguage}
+      className="flex h-10 items-center gap-1 rounded-lg border border-white/10 px-3 text-xs font-semibold text-slate-500 transition hover:border-sky-400/40 [.light_&]:border-slate-200 [.light_&]:text-slate-400"
+      title={languageLabel}
+      aria-label={languageLabel}
+    >
+      <span className={language === "pt-br" ? "text-sky-300 [.light_&]:text-sky-700" : undefined}>PT-BR</span>
+      <span aria-hidden="true">|</span>
+      <span className={language === "en" ? "text-sky-300 [.light_&]:text-sky-700" : undefined}>EN</span>
+    </button>
+  );
 
   return (
     <header className="sticky top-0 z-50 border-b border-white/5 bg-slate-950/85 backdrop-blur-xl [.light_&]:border-slate-200 [.light_&]:bg-white/90">
@@ -49,18 +65,20 @@ export default function Header() {
           <button
             onClick={toggleTheme}
             className="ml-2 grid h-10 w-10 place-items-center rounded-lg border border-white/10 text-slate-300 transition hover:border-sky-400/40 hover:text-sky-300 [.light_&]:border-slate-200 [.light_&]:text-slate-600"
-            title={`Mudar para o modo ${theme === "dark" ? "claro" : "escuro"}`}
-            aria-label={`Mudar para o modo ${theme === "dark" ? "claro" : "escuro"}`}
+            title={t(`Mudar para o modo ${theme === "dark" ? "claro" : "escuro"}`, `Switch to ${theme === "dark" ? "light" : "dark"} mode`)}
+            aria-label={t(`Mudar para o modo ${theme === "dark" ? "claro" : "escuro"}`, `Switch to ${theme === "dark" ? "light" : "dark"} mode`)}
           >
             {theme === "dark" ? <FaSun /> : <FaMoon />}
           </button>
+          <div className="ml-2">{languageButton}</div>
         </div>
 
         <div className="ml-3 flex shrink-0 items-center gap-2 md:hidden">
+          {languageButton}
           <button
             onClick={toggleTheme}
             className="grid h-10 w-10 place-items-center rounded-lg border border-white/10 text-slate-300 [.light_&]:border-slate-200 [.light_&]:text-slate-600"
-            aria-label="Alternar tema"
+            aria-label={t("Alternar tema", "Toggle theme")}
           >
             {theme === "dark" ? <FaSun /> : <FaMoon />}
           </button>
@@ -71,7 +89,7 @@ export default function Header() {
             aria-controls="mobile-menu"
             onClick={() => setIsOpen((value) => !value)}
           >
-            <span className="sr-only">Abrir menu</span>
+            <span className="sr-only">{t("Abrir menu", "Open menu")}</span>
             {isOpen ? <XMarkIcon className="h-6 w-6" /> : <Bars3Icon className="h-6 w-6" />}
           </button>
         </div>

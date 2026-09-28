@@ -1,26 +1,32 @@
 import { HiArrowUpRight, HiBriefcase, HiCheckCircle } from "react-icons/hi2";
 import { getImagePath } from "../utils/paths";
 import { experiences } from "../data/experience";
+import { useLanguage } from "../context/LanguageContext";
 
 export default function Experience() {
+  const { t } = useLanguage();
+
   return (
     <section className="py-24" id="experience">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-[0.75fr_1.25fr]">
           <div className="lg:sticky lg:top-28 lg:self-start">
-            <p className="eyebrow">Experiência profissional</p>
-            <h2 className="section-title">Tecnologia com contexto, responsabilidade e entrega.</h2>
+            <p className="eyebrow">{t("Experiência profissional", "Professional experience")}</p>
+            <h2 className="section-title">{t("Tecnologia com contexto, responsabilidade e entrega.", "Technology with context, accountability and delivery.")}</h2>
             <p className="section-copy">
-              Uma trajetória que combina desenvolvimento de software, transformação digital no setor público e comunicação técnica.
+              {t(
+                "Uma trajetória que combina desenvolvimento de software, transformação digital no setor público e comunicação técnica.",
+                "A career that combines software development, digital transformation in the public sector and technical communication."
+              )}
             </p>
-            <a href={getImagePath("curriculo-leonardo-fullstack.pdf")} download className="mt-7 inline-flex items-center gap-2 text-sm font-semibold text-sky-300 hover:text-sky-200 [.light_&]:text-sky-700">
-              Currículo completo
+            <a href={getImagePath(t("curriculo-leonardo-fullstack.pdf", "curriculo-leonardo-fullstack-en.pdf"))} download className="mt-7 inline-flex items-center gap-2 text-sm font-semibold text-sky-300 hover:text-sky-200 [.light_&]:text-sky-700">
+              {t("Currículo completo", "Full resume")}
               <HiArrowUpRight className="h-4 w-4" />
             </a>
           </div>
 
           <div className="relative space-y-4 before:absolute before:bottom-8 before:left-6 before:top-8 before:w-px before:bg-white/10 [.light_&]:before:bg-slate-200">
-            {experiences.map((experience) => (
+            {experiences.map((entry) => t(entry, { ...entry, ...entry.en })).map((experience) => (
               <article key={`${experience.role}-${experience.company}`} className="card relative rounded-2xl p-6 pl-16">
                 <span className={`absolute left-[1.1rem] top-7 grid h-7 w-7 place-items-center rounded-full border ${experience.primary ? "border-sky-400 bg-sky-500 text-white" : "border-white/15 bg-slate-900 text-slate-400 [.light_&]:border-slate-300 [.light_&]:bg-white [.light_&]:text-slate-600"}`}>
                   <HiBriefcase className="h-3.5 w-3.5" />
