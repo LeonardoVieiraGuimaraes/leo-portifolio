@@ -1,17 +1,21 @@
 import { NavLink } from "react-router-dom";
 import { getImagePath } from "../utils/paths";
+import { useLanguage } from "../context/LanguageContext";
 
 export default function AboutSimple() {
+  const { t } = useLanguage();
   return (
     <section className="container mx-auto px-4 pt-24 pb-16" id="about">
       <div className="relative mx-auto max-w-6xl">
         <div className="card relative w-full overflow-hidden rounded-2xl border border-white/10 bg-slate-900/80 p-6 md:p-8">
           <div className="relative grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
             <div className="space-y-4">
-              <h2 className="text-2xl md:text-3xl font-semibold text-cyan-700 dark:text-cyan-200">Sobre mim</h2>
+              <h2 className="text-2xl md:text-3xl font-semibold text-cyan-700 dark:text-cyan-200">{t("Sobre mim", "About me")}</h2>
               <p className="text-slate-500 dark:text-slate-200">
-                Professor universitário e desenvolvedor full stack. Busco unir engenharia e
-                educação para criar produtos digitais claros e eficientes.
+                {t(
+                  "Professor universitário e desenvolvedor full stack. Busco unir engenharia e educação para criar produtos digitais claros e eficientes.",
+                  "University professor and full stack developer. I combine engineering and education to create clear, efficient digital products."
+                )}
               </p>
               <div>
                 <NavLink
@@ -19,9 +23,9 @@ export default function AboutSimple() {
                   className={({ isActive }) =>
                     `button-secondary inline-flex items-center gap-2 ${isActive ? "opacity-90" : ""}`
                   }
-                  title="Ver detalhes"
+                  title={t("Ver detalhes", "See details")}
                 >
-                  Ver mais detalhes
+                  {t("Ver mais detalhes", "See more details")}
                 </NavLink>
               </div>
             </div>

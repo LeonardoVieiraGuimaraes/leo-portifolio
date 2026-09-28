@@ -1,10 +1,12 @@
 import { FaGithub } from "react-icons/fa";
 import { getImagePath } from "../utils/paths";
 import { useTheme } from "../context/ThemeContext";
+import { useLanguage } from "../context/LanguageContext";
 
 export default function About() {
   const { theme } = useTheme ? useTheme() : { theme: "dark" };
   const isLight = theme === "light";
+  const { t } = useLanguage();
   const background = isLight
     ? "linear-gradient(180deg, #f9fafb 0%, #eef2f7 55%, #f9fafb 100%)"
     : "linear-gradient(135deg, #0b1220 0%, #0f172a 60%, #0b1220 100%)";
@@ -18,13 +20,16 @@ export default function About() {
       <div className="relative container mx-auto max-w-6xl px-4">
         <div className="text-center space-y-3">
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-cyan-900 dark:text-cyan-200">
-            Sobre
+            {t("Sobre", "About")}
           </p>
           <h2 className="text-3xl md:text-4xl font-semibold text-cyan-900 dark:text-cyan-200">
-            Sobre mim
+            {t("Sobre mim", "About me")}
           </h2>
             <p className="text-cyan-900 dark:text-cyan-200">
-              Professor universitário e desenvolvedor full stack. Uso engenharia e matemática para transformar produtos digitais e experiências de aprendizagem.
+              {t(
+                "Professor universitário e desenvolvedor full stack. Uso engenharia e matemática para transformar produtos digitais e experiências de aprendizagem.",
+                "University professor and full stack developer. I use engineering and mathematics to transform digital products and learning experiences."
+              )}
             </p>
         </div>
         <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-3 items-start">
@@ -38,10 +43,13 @@ export default function About() {
           <div className="space-y-6 md:col-span-2">
             <div className="space-y-4 text-slate-700 dark:text-slate-200 leading-relaxed text-justify">
               <p className="text-cyan-900 dark:text-cyan-100">
-                Mestre em Modelagem Computacional e Sistemas (UNIMONTES) e doutorando em Modelagem Computacional (CEFET/MG). Atuo em APIs, front-ends e automações, leciono Arquitetura Web, Programação e Banco de Dados, e apoio projetos de TI no NIM (Cidade Administrativa).
+                {t(
+                  "Mestre em Modelagem Computacional e Sistemas (UNIMONTES) e doutorando em Modelagem Computacional (CEFET/MG). Atuo em APIs, front-ends e automações, leciono Arquitetura Web, Programação e Banco de Dados, e apoio projetos de TI no NIM (Cidade Administrativa).",
+                  "M.Sc. in Computational Modeling and Systems (UNIMONTES) and Ph.D. candidate in Computational Modeling (CEFET/MG). I work on APIs, front-ends and automation, teach Web Architecture, Programming and Databases, and support IT projects at NIM (Administrative City)."
+                )}
               </p>
               <p className="text-cyan-900 dark:text-cyan-100">
-                No GitHub compartilho projetos variados: dashboards e automações em Python/Node, APIs em Django/Django Ninja e Spring Boot, <span className="font-semibold text-cyan-900 dark:text-cyan-200">front-ends</span> em <span className="font-semibold text-cyan-900 dark:text-cyan-100">React/TypeScript</span>, <span className="font-semibold text-cyan-900 dark:text-cyan-200">back-end</span> com <span className="font-semibold text-cyan-900 dark:text-cyan-100">Node.js, Django, Spring Boot</span> e protótipos <span className="font-semibold text-cyan-900 dark:text-cyan-200">mobile</span> com <span className="font-semibold text-cyan-900 dark:text-cyan-100">React Native</span>. Foco em código limpo, documentação e entregas reprodutíveis.
+                {t("No GitHub compartilho projetos variados: dashboards e automações em Python/Node, APIs em Django/Django Ninja e Spring Boot, ", "On GitHub I share a variety of projects: dashboards and automation in Python/Node, APIs with Django/Django Ninja and Spring Boot, ")}<span className="font-semibold text-cyan-900 dark:text-cyan-200">front-ends</span> {t("em", "with")} <span className="font-semibold text-cyan-900 dark:text-cyan-100">React/TypeScript</span>, <span className="font-semibold text-cyan-900 dark:text-cyan-200">back-end</span> {t("com", "with")} <span className="font-semibold text-cyan-900 dark:text-cyan-100">Node.js, Django, Spring Boot</span> {t("e protótipos", "and")} <span className="font-semibold text-cyan-900 dark:text-cyan-200">mobile</span> {t("com", "prototypes with")} <span className="font-semibold text-cyan-900 dark:text-cyan-100">React Native</span>. {t("Foco em código limpo, documentação e entregas reprodutíveis.", "I focus on clean code, documentation and reproducible deliveries.")}
               </p>
             </div>
             <div className="flex flex-wrap gap-3">
@@ -70,7 +78,7 @@ export default function About() {
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
                 <span className="relative inline-flex h-3 w-3 rounded-full bg-emerald-400" />
               </span>
-              Disponível para projetos e oportunidades
+              {t("Disponível para projetos e oportunidades", "Available for projects and opportunities")}
             </div>
 
           </div>

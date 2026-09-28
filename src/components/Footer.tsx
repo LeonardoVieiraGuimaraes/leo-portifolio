@@ -4,6 +4,7 @@ import {
 } from "react-icons/fa";
 import { useTheme } from "../context/ThemeContext";
 import { getImagePath } from "../utils/paths";
+import { useLanguage } from "../context/LanguageContext";
 const socialLinks = [
   {
     name: "Github",
@@ -33,6 +34,7 @@ const socialLinks = [
 
 export default function Footer() {
   const { theme } = useTheme();
+  const { t } = useLanguage();
   const isLight = theme === "light";
   const background = isLight ? "var(--panel)" : "rgba(15, 23, 42, 0.8)";
   const borderColor = "var(--border)";
@@ -48,7 +50,7 @@ export default function Footer() {
           <img src={getImagePath("images/logo.svg")} alt="Logo" className="h-12 w-auto" />
           <div>
             <p className="text-white font-semibold">Leonardo Vieira Guimarães</p>
-            <p className="text-xs text-slate-400">Portfólio • Produtos digitais, dados e educação</p>
+            <p className="text-xs text-slate-400">{t("Portfólio • Produtos digitais, dados e educação", "Portfolio • Digital products, data and education")}</p>
           </div>
         </div>
         <ul className="flex flex-nowrap items-center gap-5 md:gap-6">

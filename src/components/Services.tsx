@@ -4,30 +4,41 @@ import {
   HiDevicePhoneMobile,
   HiOutlineAcademicCap,
 } from "react-icons/hi2";
+import { useLanguage } from "../context/LanguageContext";
 
 export default function Services() {
+  const { t } = useLanguage();
   const services = [
     {
       title: "Web",
       description:
+        t(
         "Desenvolvimento de sites e sistemas web estáticos e dinâmicos com React.js, Next.js, HTML5 e CSS3.",
+        "Static and dynamic websites and web systems with React.js, Next.js, HTML5 and CSS3."
+      ),
       icon: <HiComputerDesktop className="h-12 w-12" />,
     },
     {
-      title: "Sistemas",
-      description: "Desenvolvimento de Sistemas e analise de dados com Python.",
+      title: t("Sistemas", "Systems"),
+      description: t("Desenvolvimento de Sistemas e analise de dados com Python.", "Systems development and data analysis with Python."),
       icon: <HiCommandLine className="h-12 w-12" />,
     },
     {
       title: "Mobile",
       description:
+        t(
         "Desenvolvimento de aplicativos Android com React Native, Kivy e Kodular.",
+        "Android app development with React Native, Kivy and Kodular."
+      ),
       icon: <HiDevicePhoneMobile className="h-12 w-12" />,
     },
     {
-      title: "Professor",
+      title: t("Professor", "Teaching"),
       description:
+        t(
         "Professor das diversas áread da Matemática e Tecnologia da Informação.",
+        "Professor across several areas of Mathematics and Information Technology."
+      ),
       icon: <HiOutlineAcademicCap className="h-12 w-12" />,
     },
   ];
@@ -36,13 +47,13 @@ export default function Services() {
     <section className="container mx-auto max-w-6xl px-4 pt-20 pb-16" id="services">
       <div className="text-center space-y-3">
         <p className="text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200 dark:text-cyan-200">
-          O que faço
+          {t("O que faço", "What I do")}
         </p>
         <h2 className="text-3xl md:text-4xl font-semibold text-cyan-300 dark:text-cyan-200">
-          Soluções ponta a ponta para produtos digitais e educação
+          {t("Soluções ponta a ponta para produtos digitais e educação", "End-to-end solutions for digital products and education")}
         </h2>
         <p className="text-slate-400 dark:text-slate-200">
-          Do discovery à entrega: <span className="font-semibold text-cyan-700 dark:text-cyan-200">front-end</span>, <span className="font-semibold text-cyan-700 dark:text-cyan-200">back-end</span>, dados, <span className="font-semibold text-cyan-700 dark:text-cyan-200">mobile</span> e trilhas educacionais.
+          {t("Do discovery à entrega: ", "From discovery to delivery: ")}<span className="font-semibold text-cyan-700 dark:text-cyan-200">front-end</span>, <span className="font-semibold text-cyan-700 dark:text-cyan-200">back-end</span>, {t("dados", "data")}, <span className="font-semibold text-cyan-700 dark:text-cyan-200">mobile</span> {t("e trilhas educacionais.", "and learning paths.")}
         </p>
       </div>
 
