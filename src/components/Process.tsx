@@ -1,25 +1,39 @@
 import { HiArrowTrendingUp, HiMagnifyingGlassCircle, HiSparkles, HiWrenchScrewdriver } from "react-icons/hi2";
+import { useLanguage } from "../context/LanguageContext";
 
 export default function Process() {
+  const { t } = useLanguage();
   const steps = [
     {
-      title: "Coleta de dados",
-      description: "Mapeio fontes, levanto requisitos e garanto qualidade dos insumos antes de construir.",
+      title: t("Coleta de dados", "Data collection"),
+      description: t(
+        "Mapeio fontes, levanto requisitos e garanto qualidade dos insumos antes de construir.",
+        "I map sources, gather requirements and ensure input quality before building."
+      ),
       icon: <HiMagnifyingGlassCircle className="h-8 w-8" />,
     },
     {
-      title: "Tratamento",
-      description: "Limpeza, padronização e modelagem para deixar dados e requisitos prontos para uso.",
+      title: t("Tratamento", "Processing"),
+      description: t(
+        "Limpeza, padronização e modelagem para deixar dados e requisitos prontos para uso.",
+        "Cleaning, standardization and modeling to get data and requirements ready for use."
+      ),
       icon: <HiWrenchScrewdriver className="h-8 w-8" />,
     },
     {
-      title: "Construção",
-      description: "Desenvolvimento de APIs, front-end, dashboards ou automações focadas no resultado.",
+      title: t("Construção", "Building"),
+      description: t(
+        "Desenvolvimento de APIs, front-end, dashboards ou automações focadas no resultado.",
+        "Result-focused development of APIs, front-ends, dashboards or automation."
+      ),
       icon: <HiSparkles className="h-8 w-8" />,
     },
     {
-      title: "Entrega e iteração",
-      description: "Deploy automatizado, monitoramento e evolução contínua com feedbacks rápidos.",
+      title: t("Entrega e iteração", "Delivery and iteration"),
+      description: t(
+        "Deploy automatizado, monitoramento e evolução contínua com feedbacks rápidos.",
+        "Automated deployment, monitoring and continuous improvement with fast feedback."
+      ),
       icon: <HiArrowTrendingUp className="h-8 w-8" />,
     },
   ];
@@ -28,13 +42,16 @@ export default function Process() {
     <section className="container mx-auto max-w-6xl px-4 pt-20 pb-16" id="process">
       <div className="text-center space-y-3">
         <p className="text-xs font-semibold uppercase tracking-[0.3em] text-cyan-200 dark:text-cyan-200">
-          Metodologia
+          {t("Metodologia", "Methodology")}
         </p>
         <h2 className="text-3xl md:text-4xl font-semibold text-cyan-300 dark:text-cyan-200">
-          Processo estruturado para entregar com qualidade
+          {t("Processo estruturado para entregar com qualidade", "A structured process for quality delivery")}
         </h2>
         <p className="text-slate-400 dark:text-slate-200">
-          Passos claros para reduzir risco, alinhar expectativas e garantir valor em produção.
+          {t(
+            "Passos claros para reduzir risco, alinhar expectativas e garantir valor em produção.",
+            "Clear steps to reduce risk, align expectations and ensure value in production."
+          )}
         </p>
       </div>
 

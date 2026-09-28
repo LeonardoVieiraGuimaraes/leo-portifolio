@@ -1,9 +1,12 @@
 import { HiArrowDownTray } from "react-icons/hi2";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { useTheme } from "../context/ThemeContext";
+import { useLanguage } from "../context/LanguageContext";
+import { getImagePath } from "../utils/paths";
 
 export default function Hero() {
   const { theme } = useTheme();
+  const { t } = useLanguage();
   const isLight = theme === "light";
 
   const background = isLight
@@ -27,22 +30,26 @@ export default function Hero() {
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75 [.light_&]:bg-emerald-600" />
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400 [.light_&]:bg-emerald-600" />
               </span>
-              Disponível para novos projetos
+              {t("Disponível para novos projetos", "Available for new projects")}
             </span>
-            <span className="text-slate-300 dark:text-slate-200">Professor | Dev Full Stack</span>
+            <span className="text-slate-300 dark:text-slate-200">{t("Professor | Dev Full Stack", "Professor | Full Stack Dev")}</span>
           </div>
 
           <h1 className="text-4xl font-semibold leading-tight text-cyan-900 dark:text-cyan-100 sm:text-5xl md:text-6xl">
-            Transformando dados e código em produtos digitais que entregam impacto real.
+            {t(
+              "Transformando dados e código em produtos digitais que entregam impacto real.",
+              "Turning data and code into digital products that deliver real impact."
+            )}
           </h1>
 
           <p className="text-lg text-slate-300 dark:text-slate-200">
-            Sou Leonardo Vieira Guimarães, desenvolvedor full stack e professor. Construo produtos
-            web/mobile e plataformas de dados que alinham tecnologia, educação e resultado de
-            negócio.
+            {t(
+              "Sou Leonardo Vieira Guimarães, desenvolvedor full stack e professor. Construo produtos web/mobile e plataformas de dados que alinham tecnologia, educação e resultado de negócio.",
+              "I'm Leonardo Vieira Guimarães, a full stack developer and professor. I build web/mobile products and data platforms that align technology, education and business results."
+            )}
           </p>
 
-          <div className="flex flex-wrap gap-2 sm:gap-3 sm:flex-nowrap sm:overflow-visible">
+          <div className="flex flex-wrap gap-2 sm:gap-3">
             <a
               href="https://docs.google.com/document/d/1hLeOBX7zAz-BtYLxXKWK6RtYEWqWnCo4Z5IA5Kvwzsk/edit?usp=drive_link"
               target="_blank"
@@ -50,7 +57,17 @@ export default function Hero() {
               className="button-hero"
             >
               <HiArrowDownTray className="h-5 w-5" />
-              Currículo
+              {t("Currículo", "Resume (PT-BR)")}
+            </a>
+            <a
+              href={getImagePath("curriculo/resume-leonardo-guimaraes-en.pdf")}
+              target="_blank"
+              rel="noopener"
+              download
+              className="button-hero"
+            >
+              <HiArrowDownTray className="h-5 w-5" />
+              {t("Currículo (Inglês)", "Resume (English)")}
             </a>
             <a
               href="https://www.linkedin.com/in/leonardo-vieira-guimaraes/"
@@ -77,14 +94,14 @@ export default function Hero() {
               className="button-hero"
             >
               <HiArrowDownTray className="h-5 w-5" />
-              Currículo Lattes
+              {t("Currículo Lattes", "Lattes CV")}
             </a>
           </div>
 
           <div className="grid grid-cols-1 gap-4 pt-6 sm:grid-cols-2">
             {[
-              { label: "+12 anos docência", icon: "👨‍🏫" },
-              { label: "+8 anos desenvolvimento", icon: "💻" },
+              { label: t("+12 anos docência", "12+ years teaching"), icon: "👨‍🏫" },
+              { label: t("+8 anos desenvolvimento", "8+ years developing"), icon: "💻" },
             ].map((item) => (
               <div
                 key={item.label}
@@ -102,12 +119,12 @@ export default function Hero() {
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(34,211,238,0.18),transparent_30%),radial-gradient(circle_at_80%_0%,rgba(167,139,250,0.2),transparent_35%)]" />
             <div className="relative flex h-full flex-col justify-start gap-4">
               <div>
-                <p className="text-xs uppercase tracking-[0.2em] text-cyan-900 dark:text-cyan-200 font-semibold">Perfil</p>
+                <p className="text-xs uppercase tracking-[0.2em] text-cyan-900 dark:text-cyan-200 font-semibold">{t("Perfil", "Profile")}</p>
                 <h3 className="text-xl md:text-2xl font-bold text-white dark:text-cyan-100 mt-1">Leonardo V. Guimarães</h3>
-                <p className="text-xs text-slate-400 dark:text-slate-300 mt-0.5">Belo Horizonte • Remoto Brasil</p>
+                <p className="text-xs text-slate-400 dark:text-slate-300 mt-0.5">{t("Belo Horizonte • Remoto Brasil", "Belo Horizonte • Remote, Brazil")}</p>
               </div>
               <div className="space-y-4 text-base text-slate-200 dark:text-slate-200">
-                <p className="text-cyan-900 dark:text-cyan-200 font-bold text-lg leading-tight">Professor Universitário</p>
+                <p className="text-cyan-900 dark:text-cyan-200 font-bold text-lg leading-tight">{t("Professor Universitário", "University Professor")}</p>
                 <div className="space-y-2 text-base">
                   <p className="text-cyan-900 dark:text-cyan-200 font-bold text-base mt-2">Full Stack</p>
                   <p className="pl-2">
@@ -124,11 +141,11 @@ export default function Hero() {
                   </p>
                 </div>
                 <div className="space-y-2 border-t border-white/10 pt-3 text-base">
-                  <p className="text-cyan-900 font-bold text-base">Formação Acadêmica</p>
-                  <p className="pl-2"><span className="font-semibold text-white">Engenharia da Computação</span></p>
-                  <p className="pl-2"><span className="font-semibold text-white">Licenciatura em Matemática</span></p>
-                  <p className="pl-2"><span className="font-semibold text-white">Mestre Modelagem Computacional</span></p>
-                  <p className="pl-2"><span className="font-semibold text-white">Doutorando Modelagem Computacional</span></p>
+                  <p className="text-cyan-900 font-bold text-base">{t("Formação Acadêmica", "Education")}</p>
+                  <p className="pl-2"><span className="font-semibold text-white">{t("Engenharia da Computação", "Computer Engineering")}</span></p>
+                  <p className="pl-2"><span className="font-semibold text-white">{t("Licenciatura em Matemática", "Mathematics Teaching Degree")}</span></p>
+                  <p className="pl-2"><span className="font-semibold text-white">{t("Mestre Modelagem Computacional", "M.Sc. Computational Modeling")}</span></p>
+                  <p className="pl-2"><span className="font-semibold text-white">{t("Doutorando Modelagem Computacional", "Ph.D. Candidate Computational Modeling")}</span></p>
                 </div>
               </div>
             </div>

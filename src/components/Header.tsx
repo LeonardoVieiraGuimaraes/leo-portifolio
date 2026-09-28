@@ -4,29 +4,44 @@ import { FaSun, FaMoon } from "react-icons/fa";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { NavLink } from "react-router-dom";
 import { useTheme } from "../context/ThemeContext";
+import { useLanguage } from "../context/LanguageContext";
 import { getImagePath } from "../utils/paths";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const { theme, toggleTheme } = useTheme();
+  const { language, toggleLanguage, t } = useLanguage();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
   const navLinks = [
-    { name: "Início", to: "/inicio" },
-    { name: "Projetos", to: "/projects" },
-    { name: "Habilidades", to: "/skills" },
-    { name: "Experiência", to: "/experience" },
-    { name: "Sobre", to: "/sobre" },
-    { name: "Contato", to: "/contact" },
+    { name: t("Início", "Home"), to: "/inicio" },
+    { name: t("Projetos", "Projects"), to: "/projects" },
+    { name: t("Habilidades", "Skills"), to: "/skills" },
+    { name: t("Experiência", "Experience"), to: "/experience" },
+    { name: t("Sobre", "About"), to: "/sobre" },
+    { name: t("Contato", "Contact"), to: "/contact" },
   ];
 
   const navItemClass = (isActive: boolean) =>
     `px-2 py-3 rounded-md font-headline text-base font-medium transition leading-none ${
       isActive ? "text-cyan-300 dark:text-cyan-200 bg-white/10 border-b-2 border-cyan-400" : "text-slate-500 dark:text-slate-300 hover:text-cyan-300 hover:bg-white/5"
     }`;
+
+  const languageButton = (extraClass: string) => (
+    <button
+      onClick={toggleLanguage}
+      className={`text-slate-500 dark:text-slate-300 hover:text-cyan-300 hover:bg-white/5 rounded-md flex items-center justify-center font-headline text-sm font-semibold transition leading-none gap-1 ${extraClass}`}
+      title={t("Switch to English", "Mudar para Português")}
+      aria-label={t("Switch to English", "Mudar para Português")}
+    >
+      <span className={language === "pt-br" ? "text-cyan-400" : ""}>PT-BR</span>
+      <span>|</span>
+      <span className={language === "en" ? "text-cyan-400" : ""}>EN</span>
+    </button>
+  );
 
   return (
     <header>
@@ -64,20 +79,22 @@ export default function Header() {
             <button
               onClick={toggleTheme}
               className="text-slate-500 dark:text-slate-300 hover:text-cyan-300 hover:bg-white/5 px-3 py-5 rounded-md flex items-center justify-center font-headline text-lg font-semibold transition ml-2 leading-none"
-              title={`Mudar para ${theme === "dark" ? "light" : "dark"} mode`}
+              title={t(`Mudar para ${theme === "dark" ? "light" : "dark"} mode`, `Switch to ${theme === "dark" ? "light" : "dark"} mode`)}
             >
               {theme === "dark" ? <FaSun /> : <FaMoon />}
             </button>
+            {languageButton("px-3 py-5")}
           </div>
         </div>
         <div className="md:hidden flex items-center gap-2">
           <button
             onClick={toggleTheme}
             className="text-slate-500 dark:text-slate-300 hover:text-cyan-300 hover:bg-white/5 px-3 py-2 rounded-md flex items-center justify-center font-headline text-lg font-semibold transition leading-none"
-            title={`Mudar para ${theme === "dark" ? "light" : "dark"} mode`}
+            title={t(`Mudar para ${theme === "dark" ? "light" : "dark"} mode`, `Switch to ${theme === "dark" ? "light" : "dark"} mode`)}
           >
             {theme === "dark" ? <FaSun /> : <FaMoon />}
           </button>
+          {languageButton("px-2 py-2")}
           <button
             type="button"
             className="inline-flex items-center justify-center p-2 rounded-md text-slate-400 dark:text-slate-300 hover:text-cyan-300 hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-cyan-300"
@@ -85,7 +102,7 @@ export default function Header() {
             aria-expanded={isOpen}
             onClick={toggleMenu}
           >
-            <span className="sr-only">Open main menu</span>
+            <span className="sr-only">{t("Abrir menu", "Open main menu")}</span>
             {isOpen ? (
               <XMarkIcon className="h-8 w-8" aria-hidden="true" />
             ) : (

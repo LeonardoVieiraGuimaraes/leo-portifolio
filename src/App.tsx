@@ -14,6 +14,7 @@ import Experience from "./components/Experience";
 import About from "./components/About";
 import AboutSimple from "./components/AboutSimple";
 import { ThemeProvider } from "./context/ThemeContext";
+import { LanguageProvider } from "./context/LanguageContext";
 
 // import Textimonials from "./components/Textimonials";
 
@@ -86,20 +87,22 @@ function App() {
 
   return (
     <ThemeProvider>
-      <HashRouter>
-        <ScrollToSection />
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/inicio" element={<HomePage />} />
-          <Route path="/sobre" element={<><Header /><About /><Footer /></>} />
-          <Route path="/projects" element={<ProjectsPage />} />
-          <Route path="/skills" element={<SkillsPage />} />
-          <Route path="/experience" element={<ExperiencePage />} />
+      <LanguageProvider>
+        <HashRouter>
+          <ScrollToSection />
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/inicio" element={<HomePage />} />
+            <Route path="/sobre" element={<><Header /><About /><Footer /></>} />
+            <Route path="/projects" element={<ProjectsPage />} />
+            <Route path="/skills" element={<SkillsPage />} />
+            <Route path="/experience" element={<ExperiencePage />} />
 
-          <Route path="/contact" element={<ContactPage />} />
-          <Route path="*" element={<HomePage />} />
-        </Routes>
-      </HashRouter>
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="*" element={<HomePage />} />
+          </Routes>
+        </HashRouter>
+      </LanguageProvider>
     </ThemeProvider>
   );
 }
