@@ -270,7 +270,7 @@ experiencias = [
     {
         "cargo":   "Professor de Ensino Superior - Banco de Dados & Arquitetura Web",
         "empresa": "Centro Universitário Newton Paiva",
-        "periodo": "2024 - atual",
+        "periodo": "ago 2024 - dez 2025",
         "itens": [
             "Docência prática em Banco de Dados e Arquitetura Web com foco em mercado.",
             "Orientação de projetos integradores de desenvolvimento de software e APIs RESTful.",
@@ -279,7 +279,7 @@ experiencias = [
     {
         "cargo":   "Professor, Tutor e Autor de Tecnologia",
         "empresa": "UNIASSELVI / Vitru Brasil Empreendimentos",
-        "periodo": "2022 - atual",
+        "periodo": "fev 2022 - fev 2025",
         "itens": [
             "Tutoria acadêmica nos cursos de ADS e Sistemas para Internet.",
             "Autoria da disciplina 'Backend II com Banco de Dados' (conteúdo didático próprio).",
@@ -400,7 +400,7 @@ projetos = [
     ("Portfólio Profissional V3",
      "Website pessoal responsivo - React, TypeScript, TailwindCSS, tema dark/light.",
      "leoproti.com.br"),
-    ("A&G Enfermagem",
+    ("A&amp;G Enfermagem",
      "App de enfermagem prisional em React Native/Expo - publicado na Google Play Store.",
      "aeg.leoproti.com.br"),
     ("Plataforma DAE/PIX v2",
